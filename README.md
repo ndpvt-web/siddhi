@@ -1,11 +1,10 @@
 <div align="center">
 
 # ATLAS
+## The World's First Self-Evolving Desktop Computer-Use Agent.
 
 ### Autonomous Task Learning and Adaptive Strategy
 
-**The world's first self-evolving desktop computer-use agent.**
-<br/>
 It sees your screen. It clicks, types, and navigates. And unlike every other agent --
 <br/>
 *it remembers what worked, learns from what didn't, and gets better every time it runs.*
