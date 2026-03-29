@@ -9,6 +9,10 @@ It sees your screen. It clicks, types, and navigates. And unlike every other age
 <br/>
 *it remembers what worked, learns from what didn't, and gets better every time it runs.*
 
+**Nivesh Dandyan** &middot; [LinkedIn](https://www.linkedin.com/in/nivesh-dandyan/) &middot; [@ndpvt-web](https://github.com/ndpvt-web)
+<br/>
+JC STEM Lab of Cyber Security, The University of Hong Kong
+
 </div>
 
 <p align="center">
@@ -17,10 +21,6 @@ It sees your screen. It clicks, types, and navigates. And unlike every other age
   <img src="https://img.shields.io/badge/Learning-Zero%20Retraining-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Modules-41-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Tools-45+-orange?style=for-the-badge" />
-</p>
-
-<p align="center">
-  <a href="https://www.cs.hku.hk/research/lab/jcstem">JC STEM Lab of Cyber Security</a>, The University of Hong Kong
 </p>
 
 ---
@@ -240,14 +240,6 @@ Built March 2026. From first screenshot capture to graduated strategies in 18 da
 | Mar 25 | Public repository |
 
 ---
-
-<p align="center">
-
-**Nivesh Dandyan** &middot; [LinkedIn](https://www.linkedin.com/in/nivesh-dandyan/) &middot; [@ndpvt-web](https://github.com/ndpvt-web)
-
-In collaboration with the [JC STEM Lab of Cyber Security](https://www.cs.hku.hk/research/lab/jcstem), The University of Hong Kong
-
-</p>
 
 <p align="center">
   <sub>ATLAS: because an agent that forgets everything it learned is just an expensive screenshot viewer.</sub>
