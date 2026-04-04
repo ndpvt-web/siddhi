@@ -33,6 +33,7 @@
 // Direct function imports from brain-macos-bridge (no HTTP, bypasses auth)
 const macBridge = require('./brain-macos-bridge');
 const semanticSearch = require('./ax-semantic-search');
+const { queryClaudeGrounding } = require("./claude-grounding");
 
 // Configuration
 const AX_ENABLED = process.env.AX_GROUNDING !== '0';
@@ -840,6 +841,44 @@ function setupRoutes(app) {
   });
 }
 
+
+/**
+ * Resolve click coordinates to a human-readable element description.
+ * Uses the cached AX tree (from the same iteration's snap/fetchClickable).
+ * This is a READ-ONLY lookup -- does NOT snap or modify coordinates.
+ *
+ * @param {number} x - Click X coordinate
+ * @param {number} y - Click Y coordinate
+ * @param {number} [maxDist=80] - Max distance to consider a match
+ * @returns {{ label: string, role: string, app: string|null, distance: number }|null}
+ */
+function resolveActionTarget(x, y, maxDist = 80) {
+  if (!_clickableCache || !_clickableCache.clickable) return null;
+
+  let bestDist = Infinity;
+  let bestEl = null;
+
+  for (const el of _clickableCache.clickable) {
+    const dx = el.x - x;
+    const dy = el.y - y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < bestDist) {
+      bestDist = dist;
+      bestEl = el;
+    }
+  }
+
+  if (!bestEl || bestDist > maxDist) return null;
+
+  const label = bestEl.title || bestEl.description || '(unlabeled)';
+  return {
+    label,
+    role: bestEl.role || 'Element',
+    app: _clickableCache.app || null,
+    distance: Math.round(bestDist),
+  };
+}
+
 // ============================================================================
 // EXPORTS
 // ============================================================================
@@ -857,6 +896,9 @@ module.exports = {
   getContext,
   snap,
   findByTitle,
+
+  // Action enrichment
+  resolveActionTarget,
 
   // Cache management
   invalidateCache,

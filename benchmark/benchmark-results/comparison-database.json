@@ -1,0 +1,735 @@
+{
+  "benchmark": "Atlas Benchmark Comparison Database",
+  "generatedAt": "2026-04-03T21:12:12.499Z",
+  "summary": {
+    "tasksCompared": 30,
+    "fixed": 11,
+    "regressed": 0,
+    "same": 19,
+    "fasterCount": 25,
+    "slowerCount": 5,
+    "avgTimeDeltaMs": -42731
+  },
+  "comparisons": [
+    {
+      "taskId": 3,
+      "app": "Safari",
+      "complexity": "easy",
+      "instruction": "Open Safari preferences and change the default search engine to DuckDuckGo",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 215350,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 201361,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -13989,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 7,
+      "app": "Safari",
+      "complexity": "medium",
+      "instruction": "Open Safari, navigate to example.com, and use Reader Mode to view the page content",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 200482,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 143596,
+        "iterations": 14,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -56886,
+        "iterationDelta": -1,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 8,
+      "app": "Safari",
+      "complexity": "hard",
+      "instruction": "Open Safari, navigate to a webpage, and save the page as a PDF to the Desktop",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 229703,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 138081,
+        "iterations": 12,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -91622,
+        "iterationDelta": -3,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 9,
+      "app": "Safari",
+      "complexity": "medium",
+      "instruction": "Open Safari and clear all browsing history",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 247507,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 148422,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -99085,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 16,
+      "app": "Finder",
+      "complexity": "medium",
+      "instruction": "Open Finder, navigate to Downloads, and move a file to the Documents folder",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 162051,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 199270,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": 37219,
+        "iterationDelta": 0,
+        "faster": false
+      }
+    },
+    {
+      "taskId": 18,
+      "app": "Finder",
+      "complexity": "easy",
+      "instruction": "Open Finder and show hidden files using Cmd+Shift+.",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 208915,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 169661,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -39254,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 23,
+      "app": "Finder",
+      "complexity": "hard",
+      "instruction": "Open Finder, create a new folder, then create 3 text files inside it using TextEdit",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 156985,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 137188,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -19797,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 25,
+      "app": "TextEdit",
+      "complexity": "easy",
+      "instruction": "Open TextEdit, create a new document, type 'Hello World', and save it to the Desktop as 'hello.txt'",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 180012,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 169820,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -10192,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 26,
+      "app": "TextEdit",
+      "complexity": "medium",
+      "instruction": "Open TextEdit, write a 3-line poem, make the title bold, and save as RTF",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 309558,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 179518,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -130040,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 27,
+      "app": "TextEdit",
+      "complexity": "medium",
+      "instruction": "Open TextEdit, paste a paragraph of text, then use Find & Replace to change 'the' to 'THE'",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 274911,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 241684,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -33227,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 28,
+      "app": "TextEdit",
+      "complexity": "hard",
+      "instruction": "Open TextEdit, create a document with a bulleted list of 5 items, change font to Helvetica 14pt",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 168086,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 185218,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": 17132,
+        "iterationDelta": 0,
+        "faster": false
+      }
+    },
+    {
+      "taskId": 29,
+      "app": "TextEdit",
+      "complexity": "easy",
+      "instruction": "Open TextEdit in plain text mode and type a simple Python script",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 216931,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 196287,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -20644,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 32,
+      "app": "Notes",
+      "complexity": "medium",
+      "instruction": "Open Notes and create a new folder called 'Work' and move an existing note into it",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 192600,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 136463,
+        "iterations": 13,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -56137,
+        "iterationDelta": -2,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 34,
+      "app": "Notes",
+      "complexity": "easy",
+      "instruction": "Open Notes and use the search function to find a note containing 'meeting'",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 238716,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 52004,
+        "iterations": 5,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -186712,
+        "iterationDelta": -10,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 35,
+      "app": "Notes",
+      "complexity": "hard",
+      "instruction": "Open Notes, create a note, add a table with 3 columns and 4 rows, fill in sample data",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 173718,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 168762,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -4956,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 36,
+      "app": "Notes",
+      "complexity": "medium",
+      "instruction": "Open Notes, create a note with mixed formatting: heading, body text, and a link",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 177343,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 204777,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": 27434,
+        "iterationDelta": 0,
+        "faster": false
+      }
+    },
+    {
+      "taskId": 39,
+      "app": "Calendar",
+      "complexity": "easy",
+      "instruction": "Open Calendar and create a new event called 'Team Standup' for tomorrow at 10 AM",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 154852,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 144771,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -10081,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 40,
+      "app": "Calendar",
+      "complexity": "medium",
+      "instruction": "Open Calendar and create a recurring weekly event every Monday at 9 AM",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 178511,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 175275,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -3236,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 42,
+      "app": "Calendar",
+      "complexity": "hard",
+      "instruction": "Open Calendar, create an event with a 15-minute reminder alert and a specific location",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 254462,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 225791,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -28671,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 47,
+      "app": "Reminders",
+      "complexity": "medium",
+      "instruction": "Open Reminders, create a new list called 'Shopping', and add 3 items to it",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 195163,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 152984,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -42179,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 52,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open Preview, open an image, and use the markup tools to add a text annotation",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 189400,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 170256,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -19144,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 54,
+      "app": "Preview",
+      "complexity": "hard",
+      "instruction": "Open Preview, combine two PDF files into one using the sidebar thumbnails",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 196318,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 171321,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -24997,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 55,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open an image in Preview and crop it to a specific region",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 160106,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 107522,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -52584,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 58,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open an image in Preview and export it as JPEG with 80% quality",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 202998,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 212328,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": 9330,
+        "iterationDelta": 0,
+        "faster": false
+      }
+    },
+    {
+      "taskId": 60,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open an image in Preview and resize it to 800x600 pixels",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 216536,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 194436,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": -22100,
+        "iterationDelta": 0,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 63,
+      "app": "Terminal",
+      "complexity": "medium",
+      "instruction": "Open Terminal and write a bash script that prints numbers 1-10, save it, and run it",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 149415,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 138361,
+        "iterations": 13,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -11054,
+        "iterationDelta": -2,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 65,
+      "app": "Terminal",
+      "complexity": "hard",
+      "instruction": "Open Terminal and set up a cron job that runs every hour to log the date to a file",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 211280,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": false,
+        "elapsedMs": 224523,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "SAME",
+        "timeDelta": 13243,
+        "iterationDelta": 0,
+        "faster": false
+      }
+    },
+    {
+      "taskId": 66,
+      "app": "Terminal",
+      "complexity": "medium",
+      "instruction": "Open Terminal and check disk usage of the home directory with du -sh",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 267907,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 76535,
+        "iterations": 7,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -191372,
+        "iterationDelta": -8,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 67,
+      "app": "Terminal",
+      "complexity": "easy",
+      "instruction": "Open Terminal and display the current date and system uptime",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 175714,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 63634,
+        "iterations": 5,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -112080,
+        "iterationDelta": -10,
+        "faster": true
+      }
+    },
+    {
+      "taskId": 70,
+      "app": "Terminal",
+      "complexity": "hard",
+      "instruction": "Open Terminal and write a Python script that reads a CSV file and prints the first 5 rows",
+      "phase1": {
+        "success": false,
+        "elapsedMs": 220737,
+        "iterations": 15,
+        "checkpoints": 0
+      },
+      "phase2": {
+        "success": true,
+        "elapsedMs": 114498,
+        "iterations": 11,
+        "checkpoints": 0
+      },
+      "improvement": {
+        "successFlip": "FIXED",
+        "timeDelta": -106239,
+        "iterationDelta": -4,
+        "faster": true
+      }
+    }
+  ]
+}

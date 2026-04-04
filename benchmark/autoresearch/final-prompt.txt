@@ -1,0 +1,7 @@
+Read all iteration results in /Users/nivesh/Projects/atlas-copy/benchmark/autoresearch/iteration-*/reflection.md and /Users/nivesh/Projects/atlas-copy/benchmark/autoresearch/loop-state.json.
+Write a concise final research report to /Users/nivesh/Projects/atlas-copy/benchmark/autoresearch/final-report.md covering:
+1. Starting baseline vs final performance
+2. What optimizations worked and which didnt
+3. Key insights about the Atlas architecture
+4. Remaining failure modes
+5. Recommendations for future improvement

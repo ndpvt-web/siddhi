@@ -130,6 +130,8 @@ class TrajectoryGraph {
       surprise: null,        // { score: 0-1, expected: string, observed: string }
       branch: this.branches[this.activeBranchIndex]?.id || 'branch-0-main',
       semanticState: null,  // LLM-generated 1-sentence description (set via SCENE markers)
+      resolvedTarget: null,   // AX-resolved element name for click actions (e.g., "Save button")
+      assistantIntent: null,  // LLM's stated intent before this action (from assistant message)
       axContext: axContext || null, // Phase 0 AX semantic data (app, focusedElement)
     };
 
@@ -1573,14 +1575,49 @@ document.addEventListener('keydown', (e) => {
    */
   _autoSemanticState(node) {
     if (node.semanticState) return; // Already set by SCENE marker
-    // Derive from action + result (free, no LLM call)
-    if (node.action) {
-      const actionStr = typeof node.action === 'string' ? node.action : (node.action.raw || '');
-      const resultStr = typeof node.toolResult === 'string' ? node.toolResult : '';
-      node.semanticState = actionStr + (resultStr ? ' -> ' + resultStr.slice(0, 80) : '');
-    } else {
-      node.semanticState = 'initial state (no action)';
+
+    // Priority 1: Use resolved AX target + app context (best auto-generated quality)
+    if (node.resolvedTarget) {
+      const target = node.resolvedTarget;
+      const appSuffix = target.app ? ' in ' + target.app : '';
+      const actionType = node.action?.type || 'Interacted with';
+      let verb = 'Interacted with';
+      if (actionType === 'left_click') verb = 'Clicked';
+      else if (actionType === 'double_click') verb = 'Double-clicked';
+      else if (actionType === 'right_click') verb = 'Right-clicked';
+      node.semanticState = verb + " '" + target.label + "' (" + target.role + ")" + appSuffix;
+      return;
     }
+
+    // Priority 2: Use assistant's stated intent (second best)
+    if (node.assistantIntent) {
+      node.semanticState = node.assistantIntent;
+      return;
+    }
+
+    // Priority 3: Build from action type + any available info
+    if (node.action) {
+      const actionType = node.action.type || 'unknown';
+      const text = node.action.text || '';
+      const coords = node.action.coordinates;
+
+      if (actionType === 'key') {
+        node.semanticState = 'Pressed key: ' + text;
+      } else if (actionType === 'type') {
+        node.semanticState = 'Typed: "' + text.slice(0, 50) + '"';
+      } else if (actionType === 'left_click' && coords) {
+        // Fallback: coordinates only (least useful, but better than nothing)
+        node.semanticState = 'Clicked at (' + coords[0] + ', ' + coords[1] + ')';
+      } else if (actionType === 'screenshot') {
+        node.semanticState = 'Screenshot captured';
+      } else {
+        const raw = node.action.raw || actionType;
+        node.semanticState = raw;
+      }
+      return;
+    }
+
+    node.semanticState = 'initial state (no action)';
   }
 
   // ============================================================

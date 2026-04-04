@@ -1,58 +1,32 @@
 #!/bin/bash
-# capy-ax-helper.sh - Route capy-ax queries through Terminal.app for TCC access
-# Same pattern as capy-screenshot.sh daemon
-#
-# Usage: capy-ax-helper.sh <command> [args...]
-# Commands: clickable, tree [depth], text-fields, click "title" [role], focused, frontapp
-
-CAPY_AX="/Users/nivesh/capy-bridge/capy-ax"
-TRIGGER="/tmp/capy-ax-trigger"
+# capy-ax-helper.sh v2 - Simplified daemon communication
+# Relies on pre-started daemon (launched via Terminal.app at boot)
 RESULT="/tmp/capy-ax-result.json"
-DAEMON_PID="/tmp/capy-ax-daemon.pid"
-DAEMON_SCRIPT="/tmp/capy-ax-daemon.sh"
+TRIGGER="/tmp/capy-ax-trigger"
+DONE="/tmp/capy-ax-result.done"
+PID_FILE="/tmp/capy-ax-daemon.pid"
 
-# Method 1: DISABLED - direct execution triggers TCC dialog for node
-# Always use Terminal.app daemon (Method 2) which already has Accessibility
-
-# Method 2: Route through Terminal.app daemon
-# Check if daemon is running
-if [ -f "$DAEMON_PID" ] && kill -0 "$(cat "$DAEMON_PID")" 2>/dev/null; then
+# Check daemon is alive
+if [ -f "$PID_FILE" ] && kill -0 "$(cat "$PID_FILE")" 2>/dev/null; then
     : # daemon alive
 else
-    # Create daemon script
-    cat > "$DAEMON_SCRIPT" << 'DEOF'
-#!/bin/bash
-echo $$ > /tmp/capy-ax-daemon.pid
-while true; do
-    if [ -f /tmp/capy-ax-trigger ]; then
-        CMD=$(cat /tmp/capy-ax-trigger)
-        rm -f /tmp/capy-ax-trigger
-        eval "/Users/nivesh/capy-bridge/capy-ax $CMD" > /tmp/capy-ax-result.json 2>&1
-        touch /tmp/capy-ax-result.done
-    fi
-    sleep 0.2
-done
-DEOF
-    chmod +x "$DAEMON_SCRIPT"
-    
-    # Launch daemon in Terminal.app (gets TCC access)
-    osascript -e 'tell application "Terminal" to do script "/tmp/capy-ax-daemon.sh"' 2>/dev/null
-    sleep 2  # Wait for daemon to start
+    echo '{"error": "AX daemon not running. Start it first."}'
+    exit 1
 fi
 
-# Send command via trigger file
-rm -f "$RESULT" /tmp/capy-ax-result.done
+# Send command
+rm -f "$RESULT" "$DONE"
 echo "$@" > "$TRIGGER"
 
-# Wait for result (up to 10s)
-for i in $(seq 1 50); do
-    if [ -f /tmp/capy-ax-result.done ]; then
-        rm -f /tmp/capy-ax-result.done
+# Wait for result (up to 8s)
+for i in $(seq 1 80); do
+    if [ -f "$DONE" ]; then
+        rm -f "$DONE"
         cat "$RESULT"
         exit 0
     fi
-    sleep 0.2
+    sleep 0.1
 done
 
-echo '{"error": "AX query timed out (10s)"}'
+echo '{"error": "AX query timed out (8s)"}'
 exit 1

@@ -98,7 +98,7 @@ function runJXAFile(code, timeout = 15000) {
 function getAccessibilityTree(maxDepth = 3) {
   // PATCHED: Use native capy-ax binary via Terminal.app daemon
   try {
-    const result = execSync(`"/Users/nivesh/capy-bridge/capy-ax-helper.sh" tree ${maxDepth}`, {
+    const result = execSync(`"/Users/nivesh/Projects/atlas-copy/capy-ax-helper.sh" tree ${maxDepth}`, {
       timeout: 15000,
       encoding: 'utf8',
       maxBuffer: 1024 * 1024,
@@ -116,7 +116,7 @@ function getAccessibilityTree(maxDepth = 3) {
 function getClickableElements() {
   // PATCHED: Use native capy-ax binary via Terminal.app daemon
   try {
-    const result = execSync('"/Users/nivesh/capy-bridge/capy-ax-helper.sh" clickable', {
+    const result = execSync('"/Users/nivesh/Projects/atlas-copy/capy-ax-helper.sh" clickable', {
       timeout: 15000,
       encoding: 'utf8',
       maxBuffer: 1024 * 1024,
@@ -133,7 +133,7 @@ function getClickableElements() {
 function getTextFields() {
   // PATCHED: Use native capy-ax binary via Terminal.app daemon
   try {
-    const result = execSync('"/Users/nivesh/capy-bridge/capy-ax-helper.sh" text-fields', {
+    const result = execSync('"/Users/nivesh/Projects/atlas-copy/capy-ax-helper.sh" text-fields', {
       timeout: 10000,
       encoding: 'utf8',
       maxBuffer: 1024 * 1024,
@@ -151,7 +151,7 @@ function accessibilityClick(targetTitle, targetRole) {
   // PATCHED: Use native capy-ax binary via Terminal.app daemon
   try {
     const args = targetRole ? `click "${targetTitle}" "${targetRole}"` : `click "${targetTitle}"`;
-    const result = execSync(`"/Users/nivesh/capy-bridge/capy-ax-helper.sh" ${args}`, {
+    const result = execSync(`"/Users/nivesh/Projects/atlas-copy/capy-ax-helper.sh" ${args}`, {
       timeout: 10000,
       encoding: 'utf8',
       maxBuffer: 1024 * 1024,

@@ -33,9 +33,15 @@ const fs = require('fs');
 const path = require('path');
 const { TrajectoryGraph, listTrajectories, loadTrajectory, TRAJECTORY_DIR } = require('./trajectory');
 const { getRelevantContext, learnFromTrajectory } = require('./learning');
+const contextManager = require('../context-manager');
+// Action enrichment: resolve coordinates to element names for trajectory SCENE descriptions
+let _lastPreResolvedTarget = null; // Store last resolved target BEFORE action execution
+let _lastPreResolvedIntent = null; // Store last assistant intent
+const semanticSearch = require('./ax-semantic-search');
 const http = require('http');
 const axg = require('./ax-grounding');
 const inputBridge = require('./input-bridge');
+const { queryClaudeGrounding } = require("./claude-grounding");
 
 const SCREENSHOT_DIR = '/tmp/capy-screenshots';
 const MAX_IMAGE_BYTES = 4.5 * 1024 * 1024; // 4.5MB - safely under Claude's 5MB limit
@@ -44,7 +50,7 @@ try { fs.mkdirSync(SCREENSHOT_DIR, { recursive: true }); } catch (e) {}
 // --- ShowUI-2B Grounding Worker ---
 // Persistent Python child process for sub-second coordinate refinement
 // Protocol: stdin/stdout JSON lines. Model stays warm in memory (~2.5GB).
-const SHOWUI_ENABLED = process.env.SHOWUI_ENABLED !== '0';
+const SHOWUI_ENABLED = false; // Replaced by claude-grounding.js
 let _showuiProc = null;
 let _showuiReady = false;
 let _showuiCallbacks = {};
@@ -1177,14 +1183,14 @@ async function executeToolCall(toolName, input) {
     console.log('[Grounding-Pipeline] ' + action + ': Claude=' + JSON.stringify(input.coordinate) + ' -> Screen=' + JSON.stringify(scaledInput.coordinate) + ' target="' + (_lastClickTarget || 'none') + '"');
   }
 
-  if (SHOWUI_ENABLED && _showuiReady && CLICK_ACTIONS.includes(action) && scaledInput.coordinate) {
+  if (CLICK_ACTIONS.includes(action) && scaledInput.coordinate) {
     try {
       // Take FRESH screenshot right now (0.3s) - this is the CURRENT screen state
       const freshSS = ACTIONS.screenshot();
       const freshPath = path.join(SCREENSHOT_DIR, 'showui-verify.jpg');
       if (freshSS && freshSS.base64) {
         fs.writeFileSync(freshPath, Buffer.from(freshSS.base64, 'base64'));
-        console.log('[ShowUI] Fresh pre-action screenshot captured for refinement');
+        console.log('[ClaudeGround] Fresh pre-action screenshot captured for refinement');
 
         // Use the click target hint if available (set by agent loop)
         // PATCH: Better target extraction for ShowUI grounding
@@ -1197,7 +1203,7 @@ async function executeToolCall(toolName, input) {
         if (!targetDesc) {
           targetDesc = 'the interactive element at this position';  // Better than "clickable element"
         }
-        const showuiResult = await queryShowUI(freshPath, targetDesc, 2500);
+        const showuiResult = await queryClaudeGrounding(freshPath, targetDesc, SCREEN_W, SCREEN_H, 15000);
         if (showuiResult && showuiResult.pixels) {
           const [sx, sy] = showuiResult.pixels;
           const [cx, cy] = scaledInput.coordinate;
@@ -1207,25 +1213,25 @@ async function executeToolCall(toolName, input) {
 
           if (drift < 200 && drift > 5) {
             // Normal refinement: ShowUI found the element nearby, use its coords
-            console.log('[ShowUI] Refined ' + action + ': (' + cx + ',' + cy + ') -> (' + sx + ',' + sy + ') drift=' + drift.toFixed(0) + 'px target="' + targetDesc + '" (' + showuiResult.elapsed_ms + 'ms)');
+            console.log('[ClaudeGround] Refined ' + action + ': (' + cx + ',' + cy + ') -> (' + sx + ',' + sy + ') drift=' + drift.toFixed(0) + 'px target="' + targetDesc + '" (' + showuiResult.elapsed_ms + 'ms)');
             scaledInput.coordinate = [sx, sy];
             _showuiStats.refined++;
             if (typeof onStep === 'function') onStep({ type: 'showui_refine', from: [cx, cy], to: [sx, sy], drift: Math.round(drift), target: targetDesc, ms: showuiResult.elapsed_ms });
           } else if (drift >= 200) {
             // Large drift: ShowUI found a different element, not necessarily a screen change.
             // Keep Claude's original coordinates - they're based on the screenshot Claude analyzed.
-            console.log('[ShowUI] Large drift ' + drift.toFixed(0) + 'px for "' + targetDesc + '" - keeping Claude coords (' + cx + ',' + cy + ')');
+            console.log('[ClaudeGround] Large drift ' + drift.toFixed(0) + 'px for "' + targetDesc + '" - keeping Claude coords (' + cx + ',' + cy + ')');
             _showuiStats.failures++;
           } else {
-            console.log('[ShowUI] Coords already precise (drift ' + drift.toFixed(0) + 'px)');
+            console.log('[ClaudeGround] Coords already precise (drift ' + drift.toFixed(0) + 'px)');
           }
         } else {
           // ShowUI failed to find element - fall back to Claude's coords
-          console.log('[ShowUI] Could not locate "' + targetDesc + '" on fresh screenshot, using Claude coords');
+          console.log('[ClaudeGround] Could not locate "' + targetDesc + '" on fresh screenshot, using Claude coords');
         }
       }
     } catch (e) {
-      console.log('[ShowUI] Refinement error (non-fatal): ' + e.message);
+      console.log('[ClaudeGround] Refinement error (non-fatal): ' + e.message);
     }
     _lastClickTarget = null; // Reset after use
   }
@@ -1452,47 +1458,24 @@ async function agentLoop(apiKey, task, opts = {}) {
 
     console.log(`[Agent] --- Iteration ${iteration}/${maxIter} [${MODELS[currentModel].label}] ---`);
 
-    // === INJECT TRAJECTORY HINTS + LEARNING CONTEXT ===
-    // Two layers of context injection:
-    //   1. Learning context: past experience (reflections, skills, segments)
-    //   2. Recovery hints: current session state (checkpoints, recovery level)
-    // PATCHED: Pre-fetch AX elements for hybrid grounding
-    let _axContext = '';
-    try {
-      _axContext = await axg.getContext(2500);
-      if (_axContext) {
-        console.log(`[Agent] AX context: ${axg.getStats().cachedElements} elements pre-fetched`);
-      }
-    } catch (axErr) {
-      console.log('[Agent] AX pre-fetch failed (non-fatal):', axErr.message);
-    }
-
-    let effectiveSystemPrompt = systemPrompt;
-    try {
-      if (trajectory) {
-        const trajectoryHints = trajectory.getAgentHints(learningContext);
-        if (trajectoryHints) {
-          const base = effectiveSystemPrompt || DEFAULT_SYSTEM_PROMPT;
-          effectiveSystemPrompt = base + '\n\n' + trajectoryHints;
-          const recoveryLvl = trajectory.getRecoveryLevel();
-          console.log(`[Agent] Hints injected: recovery L${recoveryLvl}, checkpoints: ${trajectory.checkpoints.length}, learning: ${learningContext ? 'yes' : 'no'}`);
-        } else if (learningContext) {
-          // No recovery hints but we have learning context - inject it directly
-          const base = effectiveSystemPrompt || DEFAULT_SYSTEM_PROMPT;
-          effectiveSystemPrompt = base + '\n\n===== LEARNED EXPERIENCE (from past tasks) =====\n' + learningContext;
-          console.log(`[Agent] Learning context injected (no recovery needed)`);
-        }
-      } else if (learningContext) {
-        const base = effectiveSystemPrompt || DEFAULT_SYSTEM_PROMPT;
-        effectiveSystemPrompt = base + '\n\n===== LEARNED EXPERIENCE (from past tasks) =====\n' + learningContext;
-        console.log(`[Agent] Learning context injected (no trajectory)`);
-      }
-    } catch (e) { console.error(`[Trajectory] hints error: ${e.message}`); }
-
-    // PATCHED: Append AX element context to system prompt (hybrid grounding)
-    if (_axContext) {
-      effectiveSystemPrompt = (effectiveSystemPrompt || DEFAULT_SYSTEM_PROMPT) + '\n' + _axContext;
-    }
+    // === CONTEXT MANAGER: Layered context assembly ===
+    // Replaces manual AX pre-fetch + hint injection + AX append
+    // Layer 0: Task-relevant AX elements (semantic filtered)
+    // Layer 1+2: Message history (recent images kept, old -> SCENE text)
+    // Layer 3: Trajectory hints + learning context
+    const _ctxResult = await contextManager.assembleContext({
+      baseSystemPrompt: systemPrompt || DEFAULT_SYSTEM_PROMPT,
+      messages,
+      trajectory,
+      learningContext,
+      taskDescription: task,
+      axGrounding: axg,
+      semanticSearch,
+      axTimeout: 2500,
+    });
+    let effectiveSystemPrompt = _ctxResult.systemPrompt;
+    const _recoveryLvl = trajectory ? trajectory.getRecoveryLevel() : 0;
+    console.log(`[Agent] Context assembled: recovery L${_recoveryLvl}, AX: ${_ctxResult.axElementCount} elements, history: ${_ctxResult.historyStats.kept} images kept, ${_ctxResult.historyStats.replaced} replaced with SCENE`);
 
     let response;
     try {
@@ -1643,6 +1626,28 @@ async function agentLoop(apiKey, task, opts = {}) {
           }
         }
 
+        // DEBUG: log pre-resolve conditions
+        console.log('[Agent] PRE-RESOLVE check: name=' + name + ' coord=' + JSON.stringify(input.coordinate) + ' axg=' + !!axg + ' resolve=' + !!(axg && axg.resolveActionTarget));
+        // === PRE-RESOLVE: capture AX element + assistant intent BEFORE action ===
+        // Extract assistant intent from the text block that preceded this tool_use
+        if (finalText && finalText.length > 10) {
+          const _intentSentence = finalText.split(/[.!\n]/).filter(s => s.trim().length > 10)[0];
+          if (_intentSentence) _lastPreResolvedIntent = _intentSentence.trim().slice(0, 120);
+        }
+        if (name === 'computer' && input.coordinate && input.coordinate.length === 2 && axg && axg.resolveActionTarget) {
+          try {
+            // Scale Claude coordinates to screen coordinates (AX uses screen coords)
+            const _scaleFactor = typeof SCALE_FACTOR !== 'undefined' ? SCALE_FACTOR : 1;
+            const _screenX = Math.round(input.coordinate[0] / _scaleFactor);
+            const _screenY = Math.round(input.coordinate[1] / _scaleFactor);
+            const _preResolved = axg.resolveActionTarget(_screenX, _screenY);
+            if (_preResolved) {
+              _lastPreResolvedTarget = _preResolved;
+              console.log('[Agent] Pre-resolved target: "' + _preResolved.label + '" (' + _preResolved.role + ') in ' + (_preResolved.app || 'unknown'));
+            }
+          } catch (_e) { /* non-fatal */ }
+        }
+
         let result;
         try {
           result = await executeToolCall(name, input);
@@ -1715,11 +1720,62 @@ async function agentLoop(apiKey, task, opts = {}) {
               for (let si = steps.length - 2; si >= 0; si--) {
                 if (steps[si].action !== 'screenshot') { prevAction = steps[si]; break; }
               }
+              // === ACTION ENRICHMENT: resolve coordinates to element names ===
+              let _resolvedTarget = null;
+              let _assistantIntent = null;
+              if (prevAction && prevAction.input) {
+                const inp = prevAction.input;
+                // Resolve click coordinates against AX cache
+                // Use pre-resolved target (captured before cache invalidation)
+                if (_lastPreResolvedTarget) {
+                  _resolvedTarget = _lastPreResolvedTarget;
+                  _lastPreResolvedTarget = null;
+                } else if (inp.coordinate && inp.coordinate.length === 2 && axg && axg.resolveActionTarget) {
+                  try {
+                    _resolvedTarget = axg.resolveActionTarget(inp.coordinate[0], inp.coordinate[1]);
+                  } catch (_e) { /* non-fatal */ }
+                }
+                // Extract assistant's stated intent from the last assistant message
+                for (let mi = messages.length - 1; mi >= 0; mi--) {
+                  if (messages[mi].role === 'assistant') {
+                    const txt = typeof messages[mi].content === 'string' ? messages[mi].content :
+                      (Array.isArray(messages[mi].content) ? messages[mi].content.filter(b => b.type === 'text').map(b => b.text).join(' ') : '');
+                    if (txt && txt.length > 10) {
+                      // Take the first meaningful sentence (the intent)
+                      const firstSentence = txt.split(/[.!\n]/).filter(s => s.trim().length > 10)[0];
+                      if (firstSentence) {
+                        _assistantIntent = firstSentence.trim().slice(0, 120);
+                      }
+                    }
+                    break;
+                  }
+                }
+              }
+
               const trajResult = trajectory.addNode(
                 result.base64,
                 prevAction ? { type: 'tool_use', name: prevAction.tool, input: prevAction.input } : null,
                 prevAction ? prevAction.result : null
               );
+
+              // Use pre-resolved intent if available
+              if (_lastPreResolvedIntent && !_assistantIntent) {
+                _assistantIntent = _lastPreResolvedIntent;
+                _lastPreResolvedIntent = null;
+              }
+
+              // Inject enrichment data into the node AFTER creation
+              const _lastNode = trajectory.nodes[trajectory.nodes.length - 1];
+              if (_lastNode) {
+                if (_resolvedTarget) _lastNode.resolvedTarget = _resolvedTarget;
+                if (_assistantIntent) _lastNode.assistantIntent = _assistantIntent;
+                // Re-run auto semantic state with the enriched data
+                _lastNode.semanticState = null;  // Clear the auto-generated one
+                trajectory._autoSemanticState(_lastNode);
+                if (_resolvedTarget) {
+                  console.log('[Agent] Action enriched: ' + _lastNode.semanticState);
+                }
+              }
 
               if (trajResult.loopDetected) {
                 stepData.loopDetected = true;
@@ -1879,42 +1935,7 @@ async function agentLoop(apiKey, task, opts = {}) {
     // Add tool results for next iteration
     messages.push({ role: 'user', content: toolResults });
 
-    // MEMORY MANAGEMENT: Strip old screenshot base64 data to prevent OOM
-    // Keep only the last 3 screenshots in the conversation history
-    // Replace older ones with a text placeholder
-    let screenshotCount = 0;
-    for (let i = messages.length - 1; i >= 0; i--) {
-      const msg = messages[i];
-      if (!msg.content || !Array.isArray(msg.content)) continue;
-      for (let j = msg.content.length - 1; j >= 0; j--) {
-        const block = msg.content[j];
-        // tool_result with image
-        if (block.type === 'tool_result' && Array.isArray(block.content)) {
-          for (let k = block.content.length - 1; k >= 0; k--) {
-            if (block.content[k].type === 'image' && block.content[k].source?.data) {
-              screenshotCount++;
-              if (screenshotCount > 3) {
-                block.content[k] = { type: 'text', text: '[screenshot taken - image trimmed to save memory]' };
-              }
-            }
-          }
-        }
-        // direct image in user message
-        if (block.type === 'image' && block.source?.data) {
-          screenshotCount++;
-          if (screenshotCount > 3) {
-            msg.content[j] = { type: 'text', text: '[initial screenshot - image trimmed to save memory]' };
-          }
-        }
-      }
-    }
-
-    // Limit conversation history to prevent OOM on long runs
-    const MAX_MESSAGES = 40; // 20 turns (user+assistant)
-    if (messages.length > MAX_MESSAGES + 1) { // +1 for initial task message
-      const removed = messages.splice(1, messages.length - MAX_MESSAGES - 1);
-      console.log(`[Agent] Trimmed ${removed.length} old messages (keeping last ${MAX_MESSAGES})`);
-    }
+    // Memory management handled by contextManager.assembleContext() above
   }
 
   // Clean up display wake process
