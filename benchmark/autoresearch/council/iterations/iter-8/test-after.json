@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-04-04T11:37:38.172Z",
+  "results": [
+    {
+      "taskId": 1,
+      "task": "Open Safari, navigate to wikipedia.org, search for 'Alan Turing', and take a screenshot of the article page",
+      "success": false,
+      "iterations": 15,
+      "duration": 124584
+    },
+    {
+      "taskId": 2,
+      "task": "Open Safari and create a new bookmark for apple.com in the Favorites folder",
+      "success": true,
+      "iterations": 10,
+      "duration": 78166
+    },
+    {
+      "taskId": 3,
+      "task": "Open Safari preferences and change the default search engine to DuckDuckGo",
+      "success": true,
+      "iterations": 5,
+      "duration": 41882
+    },
+    {
+      "taskId": 4,
+      "task": "Open Safari, navigate to news.ycombinator.com, and find the top story title",
+      "success": true,
+      "iterations": 8,
+      "duration": 69804
+    },
+    {
+      "taskId": 5,
+      "task": "Open Safari with 3 tabs: apple.com, google.com, and github.com, then close the middle tab",
+      "success": true,
+      "iterations": 14,
+      "duration": 149782
+    },
+    {
+      "taskId": 6,
+      "task": "Open Safari and enable the Develop menu in Safari preferences",
+      "success": true,
+      "iterations": 5,
+      "duration": 45495
+    },
+    {
+      "taskId": 7,
+      "task": "Open Safari, navigate to example.com, and use Reader Mode to view the page content",
+      "success": true,
+      "iterations": 10,
+      "duration": 89336
+    },
+    {
+      "taskId": 8,
+      "task": "Open Safari, navigate to a webpage, and save the page as a PDF to the Desktop",
+      "success": true,
+      "iterations": 10,
+      "duration": 94215
+    },
+    {
+      "taskId": 9,
+      "task": "Open Safari and clear all browsing history",
+      "success": true,
+      "iterations": 10,
+      "duration": 103963
+    },
+    {
+      "taskId": 10,
+      "task": "Open Safari, navigate to github.com, inspect an element using the Web Inspector",
+      "success": true,
+      "iterations": 12,
+      "duration": 132921
+    },
+    {
+      "taskId": 11,
+      "task": "Open Finder and create a new folder called 'BenchmarkTest' on the Desktop",
+      "success": true,
+      "iterations": 7,
+      "duration": 107326
+    },
+    {
+      "taskId": 12,
+      "task": "Open Finder and switch to List View in the Documents folder",
+      "success": true,
+      "iterations": 5,
+      "duration": 53121
+    },
+    {
+      "taskId": 13,
+      "task": "Open Finder, navigate to the Applications folder, and sort by Date Modified",
+      "success": true,
+      "iterations": 3,
+      "duration": 34728
+    },
+    {
+      "taskId": 14,
+      "task": "Open Finder and create a new Smart Folder that searches for all PDF files",
+      "success": true,
+      "iterations": 15,
+      "duration": 180656
+    },
+    {
+      "taskId": 15,
+      "task": "Open Finder and use Quick Look to preview a file on the Desktop",
+      "success": true,
+      "iterations": 7,
+      "duration": 74134
+    }
+  ],
+  "stats": {
+    "total": 15,
+    "successes": 14,
+    "failures": 1,
+    "successRate": "93.3%"
+  }
+}

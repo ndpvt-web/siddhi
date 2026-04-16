@@ -184,7 +184,28 @@ function getSceneForStep(trajectory, stepIndex) {
     return node.assistantIntent;
   }
 
-  // Priority 5: Structured action description (type + text, no raw coordinates)
+  // Priority 5: Semantic action target (from Fix 2 - both target and coordinates)
+  if (node.action && node.action.target && node.action.target.label) {
+    const t = node.action.target;
+    const appSuffix = t.app ? ' in ' + t.app : '';
+    const action = node.action.type || 'Interacted with';
+    let verb = action;
+    if (action === 'left_click') verb = 'Clicked';
+    else if (action === 'double_click') verb = 'Double-clicked';
+    else if (action === 'right_click') verb = 'Right-clicked';
+    const coords = node.action.coordinates ? ' at (' + node.action.coordinates.join(',') + ')' : '';
+    return verb + " '" + t.label + "' (" + (t.role || 'element') + ")" + appSuffix + coords;
+  }
+
+  // Priority 6: AX context from the frame (app + focused element)
+  if (node.axContext) {
+    const ax = node.axContext;
+    const app = ax.app || ax.appName || 'unknown app';
+    const focused = ax.focusedElement ? ', focused: ' + ax.focusedElement : '';
+    return 'In ' + app + focused;
+  }
+
+  // Priority 7: Structured action description (type + text, no raw coordinates)
   if (node.action) {
     const action = node.action.action || node.action.type || 'unknown';
     const text = node.action.text || '';

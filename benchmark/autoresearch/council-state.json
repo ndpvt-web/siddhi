@@ -1,5 +1,5 @@
 {
-  "iteration": 6,
+  "iteration": 8,
   "history": [
     {
       "iteration": 1,
@@ -40,9 +40,17 @@
       "result": "REVERT",
       "successRate": "0.0%",
       "winner": "strategist"
+    },
+    {
+      "iteration": 8,
+      "hypothesis": "Add an automatic AX cache invalidation after every UI action to ensure grounding uses fresh AX trees.",
+      "verdict": "REVERT",
+      "result": "REVERT",
+      "successRate": "0.0%",
+      "winner": "strategist"
     }
   ],
   "bestSuccessRate": 80.0,
-  "convergenceCount": 4,
-  "status": "running"
+  "convergenceCount": 2,
+  "status": "complete"
 }

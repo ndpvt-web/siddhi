@@ -1,0 +1,488 @@
+{
+  "timestamp": "2026-04-04T10:50:23.942Z",
+  "summary": {
+    "totalTasks": 130,
+    "successes": 62,
+    "failures": 68,
+    "successRate": "47.7%"
+  },
+  "failuresByApp": {
+    "Safari": [
+      {
+        "id": 3,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 7,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 8,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 9,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Finder": [
+      {
+        "id": 16,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 18,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 23,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "TextEdit": [
+      {
+        "id": 25,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 26,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 27,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 28,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 29,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Notes": [
+      {
+        "id": 32,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 34,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 35,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 36,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Calendar": [
+      {
+        "id": 39,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 40,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 42,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Reminders": [
+      {
+        "id": 47,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Preview": [
+      {
+        "id": 52,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 54,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 55,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 58,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 60,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Terminal": [
+      {
+        "id": 63,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 65,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 66,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 67,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 70,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "System Settings": [
+      {
+        "id": 77,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 80,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 82,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 83,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 84,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 85,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 87,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 89,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Mail": [
+      {
+        "id": 95,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Contacts": [
+      {
+        "id": 97,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 98,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 99,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 100,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "VS Code": [
+      {
+        "id": 101,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 104,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 105,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 106,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 107,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 108,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 109,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 110,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Numbers": [
+      {
+        "id": 111,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 112,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 113,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 114,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 115,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Pages": [
+      {
+        "id": 116,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 117,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 118,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Keynote": [
+      {
+        "id": 120,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 121,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 122,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 123,
+        "error": "",
+        "iterations": 15
+      }
+    ],
+    "Multi-app": [
+      {
+        "id": 124,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 126,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 127,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 128,
+        "error": "",
+        "iterations": 15
+      },
+      {
+        "id": 129,
+        "error": "",
+        "iterations": 15
+      }
+    ]
+  },
+  "errorPatterns": {
+    "unknown": [
+      3,
+      7,
+      8,
+      9,
+      16,
+      18,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      32,
+      34,
+      35,
+      36,
+      39,
+      40,
+      42,
+      47,
+      52,
+      54,
+      55,
+      58,
+      60,
+      63,
+      65,
+      66,
+      67,
+      70,
+      77,
+      80,
+      82,
+      83,
+      84,
+      85,
+      87,
+      89,
+      95,
+      97,
+      98,
+      99,
+      100,
+      101,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      120,
+      121,
+      122,
+      123,
+      124,
+      126,
+      127,
+      128,
+      129
+    ]
+  },
+  "phase2Analysis": {
+    "fixed": [],
+    "regressed": [],
+    "same": 0
+  },
+  "sourceFileSnippets": {
+    "modules/computer-use.js": "/**\n * SOTA Computer Use Agent - Graph-Theoretic State Management\n *\n * Full desktop control using macOS native tools (cliclick, osascript, screencapture)\n * with Claude Sonnet 4.6 (fast) and Opus 4.6 (powerful) as the vision+reasoning brain.\n *\n * Architecture:\n *   HANDS: cliclick (mouse), osascript (keyboard), screencapture (screen)\n *   BRAIN: Sonnet 4.6 (default, fast) -> Opus 4.6 (escalation on complexity/loops/stagnation)\n *   LOOP:  screenshot -> Claude analyzes -> returns tool_use -> execute -> screenshot -> repeat\n *   GRAPH: State graph where screenshots = vertices, actions = edges\n *     - TASK PLANNING: Agent decomposes complex tasks into numbered sub-goals (DAG)\n *     - CHECKPOINTS: Verified-good states marked as safe return points (marked vertices)\n *     - CYCLE DETECTION: Screenshot hash matching detects loops (back-edges in DFS)\n *     - RECOVERY ESCALATION: 4 levels of backtracking (try alt -> undo -> checkpoint -> clean slate)\n *     - MODEL ESCALATION: Sonnet -> Opus when stuck or task is complex\n *\n * Endpoints:\n *   POST /computer/agent       - Full agentic loop (give task, agent does it autonomously)\n *   POST /computer/agent/stream - SSE streaming of agent steps\n *   POST /computer/screenshot  - Capture screen\n *   POST /computer/action      - Execute single action\n *   POST /computer/actions     - Execute action sequence\n *   GET  /computer/info        - Screen size, mouse, front app\n *   GET  /computer/actions     - List supported actions\n *   POST /computer/app         - Activate app\n *   POST /computer/open        - Open URL/file\n */\n\nconst { execSync, spawn, execFile } = require('child_process');\nconst https = require('https');\nconst fs = require('fs');\nconst path = require('path');\nconst { TrajectoryGraph, listTrajectories, loadTrajectory, TRAJECTORY_DIR } = require('./trajectory');\nconst { getRelevantContext, learnFromTrajectory } = require('./learning');\nconst contextManager = require('../context-manager');\n// Action enrichment: resolve coordinates to element names for trajectory SCENE descriptions\nlet _lastPreResolvedTarget = null; // Store last resolved target BEFORE action execution\nlet _lastPreResolvedIntent = null; // Store last assistant intent\nconst semanticSearch = require('./ax-semantic-search');\nconst http = require('http');\nconst axg = require('./ax-grounding');\nconst inputBridge = require('./input-bridge');\nconst { queryClaudeGrounding } = require(\"./claude-grounding\");\n\nconst SCREENSHOT_DIR = '/tmp/capy-screenshots';\nconst MAX_IMAGE_BYTES = 4.5 * 1024 * 1024; // 4.5MB - safely under Claude's 5MB limit\ntry { fs.mkdirSync(SCREENSHOT_DIR, { recursive: true }); } catch (e) {}\n\n// --- ShowUI-2B Grounding Worker ---\n// Persistent Python child process for sub-second coordinate refinement\n// Protocol: stdin/stdout JSON lines. Model stays warm in memory (~2.5GB).\nconst SHOWUI_ENABLED = false; // Replaced by claude-grounding.js\nlet _showuiProc = null;\nlet _showuiReady = false;\nlet _showuiCallbacks = {};\nlet _s",
+    "modules/ax-grounding.js": "/**\n * ax-grounding.js - Hybrid AX + ShowUI grounding for ATLAS Computer-Use Agent\n *\n * ARISTOTELIAN ARCHITECTURE (PHASE 0 - AX INVERSION):\n *   P1: AX API provides pixel-perfect element coordinates in ~10ms (fast, exact, free).\n *   P2: ShowUI provides visual grounding for unlabeled elements in ~500ms (slower, approximate, free).\n *   P3: Claude vision coordinates have 5-20px typical error (slow, approximate, costly).\n *   C:  The optimal cascade is: AX FIRST (primary) -> ShowUI fallback (secondary) -> legacy snap (tertiary).\n *\n * ARCHITECTURE CHANGE (Phase 0):\n *   OLD: Vision-first with AX post-correction (60px snap after vision returns coordinates)\n *   NEW: AX-first grounding with semantic search, vision fallback for edge cases\n *\n * TWO INTEGRATION POINTS:\n *   1. PRIMARY GROUNDING: groundElement() queries AX tree first, uses semantic search,\n *      falls back to ShowUI only for Canvas/sparse trees/visual tasks.\n *   2. PRE-ANALYSIS: getContext() injects AX elements into Claude's prompt (unchanged).\n *   3. LEGACY SNAP: snap() function preserved for backward compatibility.\n *\n * USAGE:\n *   const axg = require('./ax-grounding');\n *   // Primary grounding (NEW in Phase 0)\n *   const result = await axg.groundElement('click the Save button', context);\n *   const coords = await axg.resolveElementToCoordinates(result.elements[0]);\n *   // Pre-fetch for injection into prompt (existing)\n *   const context = await axg.getContext();\n *   // Legacy snap for backward compatibility (existing)\n *   const snapped = axg.snap(x, y);\n *   // Clear cache after UI changes\n *   axg.invalidateCache();\n */\n\n// Direct function imports from brain-macos-bridge (no HTTP, bypasses auth)\nconst macBridge = require('./brain-macos-bridge');\nconst semanticSearch = require('./ax-semantic-search');\nconst { queryClaudeGrounding } = require(\"./claude-grounding\");\n\n// Configuration\nconst AX_ENABLED = process.env.AX_GROUNDING !== '0';\nconst AX_FIRST_ENABLED = process.env.AX_FIRST_GROUNDING !== '0';\nconst SNAP_RADIUS = parseInt(process.env.AX_SNAP_RADIUS || '30');  // Reduced from 60->30 (less aggressive)\n\n// Web browsers: AX only sees toolbar chrome, NOT web page content.\n// Skip snap for clicks below toolbar area in these apps.\nconst WEB_BROWSERS = new Set(['Safari', 'Google Chrome', 'Chrome', 'Firefox', 'Arc', 'Brave Browser', 'Microsoft Edge', 'Opera']);\nconst TOOLBAR_MAX_Y = 100;  // Below this Y = web content, not browser chrome\n\n// Cache\nlet _clickableCache = null;\nlet _textFieldCache = null;\nlet _axTreeCache = null;\nlet _cacheTimestamp = 0;\nconst CACHE_TTL = 3000; // 3 seconds\n\n// Stats\nconst stats = {\n  totalSnaps: 0,\n  successfulSnaps: 0,\n  preFetches: 0,\n  preFetchHits: 0,\n  avgFetchMs: 0,\n  _fetchTimes: [],\n  // Phase 0 stats\n  axGroundingCalls: 0,\n  axGroundingSuccess: 0,\n  fallbackInvocations: 0,\n  avgGroundingMs: 0,\n  _groundingTimes: [],\n};\n\n// ============================================================================\n// PHASE 0: PRIMARY GROUNDING - AX-FIRST",
+    "modules/trajectory.js": "/**\n * Trajectory Graph - Agent execution tracking with graph-theoretic state management\n *\n * Treats computer-use agent execution as graph traversal:\n *   - Each screenshot = a STATE NODE (vertex in the state graph)\n *   - Each action = an EDGE (transition between states)\n *   - Hashing enables LOOP DETECTION (cycle detection in the graph)\n *   - Stagnation detection: action had no effect (self-loop / identity edge)\n *   - CHECKPOINT system: verified-good states marked as safe return points\n *   - TASK PLAN tracking: DAG of sub-goals with completion status\n *   - RECOVERY LEVELS: escalating backtracking strategies (0-3)\n *   - Forensic trail: every step logged with screenshot on disk\n *   - HTML viewer: visual graph of the entire trajectory\n *\n * Graph Theory Concepts Used:\n *   - Cycle detection (DFS back-edge detection via hash matching)\n *   - Checkpoints (marked vertices in the graph for backtracking)\n *   - Recovery = finding shortest path back to a checkpoint vertex\n *   - Task DAG = directed acyclic graph of sub-goals with dependencies\n *\n * Usage:\n *   const traj = new TrajectoryGraph('task-123', 'open Safari and search');\n *   traj.addNode(screenshotBase64, null, null);           // initial state\n *   traj.setTaskPlan([{n:1, desc:'Open Safari'}, {n:2, desc:'Search google'}]);\n *   const loop = traj.addNode(screenshotBase64, action, result);\n *   if (loop.loopDetected) { ... try different action ... }\n *   traj.addCheckpoint(1, 'Safari is open');              // mark verified state\n *   traj.complete(true, 'Searched google successfully');\n */\n\nconst fs = require('fs');\nconst path = require('path');\nconst crypto = require('crypto');\nconst { execSync } = require('child_process');\nconst os = require('os');\n\nconst TRAJECTORY_DIR = path.join(os.homedir(), '.capy-trajectories');\n\nclass TrajectoryGraph {\n  constructor(taskId, taskDescription = '') {\n    this.taskId = taskId || `task-${Date.now()}`;\n    this.taskDescription = taskDescription;\n    this.nodes = [];\n    this.edges = [];\n    this.startTime = Date.now();\n    this.endTime = null;\n    this.success = null;\n    this.finalText = '';\n    this.loopsDetected = 0;\n    this.stagnationsDetected = 0;\n\n    // === CHECKPOINT SYSTEM (graph backtracking support) ===\n    this.checkpoints = [];       // { stepNumber, description, nodeId, nodeIndex, screenshotHash, timestamp }\n    this.taskPlan = null;        // { steps: [{n, desc, done}], totalSteps }\n    this.currentStep = 0;        // Which plan step the agent is working on\n    this.consecutiveIssues = 0;  // Consecutive loops/stagnations without progress (resets on checkpoint)\n    this._expectNavigation = false;  // PATCH: Set externally to suppress surprise for navigation actions\n    this.surprisesDetected = 0;  // Count of frames where observation didn't match expectation\n\n    // === BRANCHING SYSTEM (retrospective annotations on the timeline) ===\n    // Branches label frame ranges after the fact. The agent doesn't need to know about them.\n    //",
+    "modules/brain-macos-bridge.js": "/**\n * brain-macos-bridge.js - Deep macOS System Integration for Jarvis Brain\n *\n * ARISTOTELIAN FIRST PRINCIPLES:\n * Axiom: A personal AI's value = depth of integration with user's environment\n * Deduction: macOS provides structured APIs (Accessibility, JXA, AppleScript)\n *   that are FASTER, MORE RELIABLE, and WORK WITHOUT DISPLAY than vision-only.\n * Conclusion: Dual-modality (structured API + vision fallback) is strictly superior.\n *\n * Capabilities:\n * 1. Accessibility Bridge - AXUIElement queries via JXA (5ms per query)\n * 2. Native App Tools - Reminders, Calendar, Notes, Mail, Contacts, Finder\n * 3. System Integration - Display wake, clipboard, notifications, volume, WiFi\n * 4. App Control - Open, close, switch, list running apps\n */\n\nconst { execSync, exec } = require('child_process');\nconst path = require('path');\n\n// ============================================================================\n// HELPERS\n// ============================================================================\n\nfunction runAppleScript(script, timeout = 10000) {\n  try {\n    const result = execSync(`osascript -e '${script.replace(/'/g, \"'\\\\''\")}'`, {\n      timeout,\n      encoding: 'utf8',\n      maxBuffer: 1024 * 1024,\n    });\n    return { success: true, output: result.trim() };\n  } catch (err) {\n    return { success: false, error: err.message.split('\\n')[0] };\n  }\n}\n\nfunction runJXA(code, timeout = 10000) {\n  try {\n    const result = execSync(`osascript -l JavaScript -e '${code.replace(/'/g, \"'\\\\''\")}'`, {\n      timeout,\n      encoding: 'utf8',\n      maxBuffer: 1024 * 1024,\n    });\n    return { success: true, output: result.trim() };\n  } catch (err) {\n    return { success: false, error: err.message.split('\\n')[0] };\n  }\n}\n\n// Run longer scripts via temp file (avoids shell escaping)\nfunction runAppleScriptFile(script, timeout = 15000) {\n  const fs = require('fs');\n  const tmpFile = `/tmp/capy-as-${Date.now()}.scpt`;\n  try {\n    fs.writeFileSync(tmpFile, script);\n    const result = execSync(`osascript \"${tmpFile}\"`, {\n      timeout,\n      encoding: 'utf8',\n      maxBuffer: 1024 * 1024,\n    });\n    try { fs.unlinkSync(tmpFile); } catch (e) {}\n    return { success: true, output: result.trim() };\n  } catch (err) {\n    try { require('fs').unlinkSync(tmpFile); } catch (e) {}\n    return { success: false, error: err.message.split('\\n')[0] };\n  }\n}\n\n// PATCHED: Run JXA via temp file -- the -e approach breaks on complex scripts\n// with nested quotes ('AXButton', 'AXLink', etc.)\nfunction runJXAFile(code, timeout = 15000) {\n  const fs = require('fs');\n  const tmpFile = `/tmp/capy-jxa-${Date.now()}.js`;\n  try {\n    fs.writeFileSync(tmpFile, code);\n    const result = execSync(`osascript -l JavaScript \"${tmpFile}\"`, {\n      timeout,\n      encoding: 'utf8',\n      maxBuffer: 1024 * 1024,\n    });\n    try { fs.unlinkSync(tmpFile); } catch (e) {}\n    return { success: true, output: result.trim() };\n  } catch (err) {\n    try { require('fs').unlinkSync(tmpFile); } catch (e) {}\n    return {"
+  },
+  "worstApps": [
+    {
+      "app": "System Settings",
+      "failCount": 8
+    },
+    {
+      "app": "VS Code",
+      "failCount": 8
+    },
+    {
+      "app": "TextEdit",
+      "failCount": 5
+    },
+    {
+      "app": "Preview",
+      "failCount": 5
+    },
+    {
+      "app": "Terminal",
+      "failCount": 5
+    }
+  ]
+}

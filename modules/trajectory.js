@@ -75,6 +75,10 @@ class TrajectoryGraph {
     }];
     this.activeBranchIndex = 0;  // Index into this.branches
 
+    // === DEFERRED SURPRISE SYSTEM ===
+    this._pendingSurpriseNodeIndex = null;  // Node index awaiting surprise resolution
+    this._agentSurpriseSet = false;         // Whether setSurprise() was called for pending node
+
     this.screenshotDir = path.join(TRAJECTORY_DIR, this.taskId);
     fs.mkdirSync(this.screenshotDir, { recursive: true });
   }
@@ -123,7 +127,7 @@ class TrajectoryGraph {
       screenshotPath,
       exactHash,
       thumbnailHash,
-      action: action ? this._summarizeAction(action) : null,
+      action: action ? this._summarizeAction(action, axContext) : null,
       toolResult: toolResult ? this._summarizeResult(toolResult) : null,
       flags: [],
       expectation: null,     // What the agent expected BEFORE this screenshot
@@ -150,7 +154,7 @@ class TrajectoryGraph {
       this.edges.push({
         from: parentId,
         to: nodeId,
-        action: this._summarizeAction(action),
+        action: this._summarizeAction(action, axContext),
         timestamp: Date.now(),
       });
     }
@@ -171,34 +175,54 @@ class TrajectoryGraph {
       console.log(`[Trajectory] STAGNATION at ${nodeId}: action had no visible effect`);
     }
 
-    // === SURPRISE DETECTION (with navigation suppression) ===
-    // If the previous node had an expectation set, compute surprise for THIS node.
-    // PATCH: If _expectNavigation was set by computer-use.js, suppress surprise entirely.
-    //   Browser navigation (Return, type+newline, link clicks) ALWAYS changes the page.
-    //   This is EXPECTED behavior, not a surprise.
+    // === SURPRISE DETECTION (deferred for agent-driven surprise) ===
+    // Phase 1: Resolve any PENDING surprise from the previous node.
+    //   If setSurprise() was called (agent-driven), it already handled everything.
+    //   If not, fall back to keyword overlap on the previous node.
+    if (this._pendingSurpriseNodeIndex !== undefined && this._pendingSurpriseNodeIndex !== null) {
+      const pendingNode = this.nodes[this._pendingSurpriseNodeIndex];
+      if (pendingNode && !this._agentSurpriseSet && !pendingNode.surprise) {
+        // No agent surprise was set -- fall back to keyword overlap
+        const keywordResult = this._computeSurpriseKeyword(pendingNode);
+        if (keywordResult && keywordResult.score > 0.5) {
+          pendingNode.flags.push('surprise');
+          pendingNode.surprise = keywordResult;
+          this.surprisesDetected++;
+          this.consecutiveIssues++;
+          console.log(`[Trajectory] SURPRISE (keyword fallback) at ${pendingNode.id}: score=${keywordResult.score.toFixed(2)}`);
+        } else if (keywordResult) {
+          pendingNode.surprise = keywordResult; // Store low-surprise for forensics
+        }
+      }
+      this._pendingSurpriseNodeIndex = null;
+      this._agentSurpriseSet = false;
+    }
+
+    // Phase 2: Check if THIS node should have surprise detection.
     const isNavAction = this._expectNavigation;
-    this._expectNavigation = false;  // Reset after reading
+    this._expectNavigation = false;
     if (isNavAction) {
       node.flags.push('navigation');
       console.log('[Trajectory] NAV action at ' + nodeId + ': surprise suppressed (expected page change)');
     }
-    const surpriseResult = isNavAction ? null : this._computeSurprise(node);
-    if (surpriseResult && surpriseResult.score > 0.5) {
-      node.flags.push('surprise');
-      node.surprise = surpriseResult;
-      this.surprisesDetected++;
-      this.consecutiveIssues++; // Surprises count as issues for recovery
-      console.log(`[Trajectory] SURPRISE at ${nodeId}: score=${surpriseResult.score.toFixed(2)} (expected: "${surpriseResult.expected.slice(0, 60)}...")`);
-    } else if (surpriseResult) {
-      node.surprise = surpriseResult; // Store even low-surprise for forensics
+
+    // If the previous node had an expectation, mark this node as pending surprise.
+    // The actual computation happens either via setSurprise() (agent) or on next addNode() (fallback).
+    const prevNode = nodeIndex > 0 ? this.nodes[nodeIndex - 1] : null;
+    if (!isNavAction && prevNode && prevNode.expectation) {
+      this._pendingSurpriseNodeIndex = nodeIndex;
+      this._agentSurpriseSet = false;
     }
 
+    // Note: Surprise for THIS node is deferred (resolved on next addNode or via setSurprise).
+    // We report surprise for the PREVIOUS node if it was just resolved by the fallback above.
+    const prevNodeResolved = (nodeIndex > 0 && this.nodes[nodeIndex - 1]?.surprise?.score > 0.5) || false;
     return {
       nodeId,
       loopDetected: !!loopResult,
       stagnationDetected: !!stagnation,
-      surpriseDetected: !!(surpriseResult && surpriseResult.score > 0.5),
-      surpriseScore: surpriseResult?.score || 0,
+      surpriseDetected: prevNodeResolved,
+      surpriseScore: prevNodeResolved ? this.nodes[nodeIndex - 1].surprise.score : 0,
       matchedNodeId: loopResult?.matchedNodeId || null,
       stepsBack: loopResult?.stepsBack || 0,
     };
@@ -294,6 +318,37 @@ class TrajectoryGraph {
     if (!currentNode) return;
     currentNode.expectation = expectationText;
     console.log(`[Trajectory] EXPECT set on ${currentNode.id}: "${expectationText.slice(0, 80)}"`);
+  }
+
+  /**
+   * Agent-reported surprise (semantic, replaces keyword overlap).
+   * Called by computer-use.js when it parses a SURPRISE: marker from the LLM output.
+   * The agent has ALREADY compared the screenshot to its expectation -- this is its verdict.
+   *
+   * @param {number} score - 0.0 (no surprise) to 1.0 (complete mismatch)
+   * @param {string} reason - Why the agent was surprised (semantic description)
+   */
+  setSurprise(score, reason) {
+    const currentNode = this.nodes[this.nodes.length - 1];
+    if (!currentNode) return;
+
+    const prevNode = currentNode.index > 0 ? this.nodes[currentNode.index - 1] : null;
+    currentNode.surprise = {
+      score: Math.max(0, Math.min(1, score)),
+      expected: prevNode?.expectation || '',
+      observed: reason || '',
+      method: 'agent',  // Distinguishes from legacy 'keyword' method
+    };
+
+    // Mark that agent-driven surprise was set (prevents fallback)
+    this._agentSurpriseSet = true;
+
+    if (score > 0.5) {
+      currentNode.flags.push('surprise');
+      this.surprisesDetected++;
+      this.consecutiveIssues++;
+      console.log(`[Trajectory] SURPRISE (agent) at ${currentNode.id}: score=${score.toFixed(2)} reason="${(reason || '').slice(0, 80)}"`);
+    }
   }
 
   // ============================================================
@@ -420,7 +475,7 @@ class TrajectoryGraph {
    * @param {object} currentNode - The node just added
    * @returns {object|null} - { score, expected, observed } or null if no expectation
    */
-  _computeSurprise(currentNode) {
+  _computeSurpriseKeyword(currentNode) {
     if (currentNode.index < 1) return null;
     const prevNode = this.nodes[currentNode.index - 1];
     if (!prevNode.expectation) return null;
@@ -487,6 +542,7 @@ class TrajectoryGraph {
       observed: observedText.slice(0, 200),
       expectedKeywords: expectedKw.length,
       matchedKeywords: matches,
+      method: 'keyword',  // Legacy fallback method
     };
   }
 
@@ -654,7 +710,7 @@ class TrajectoryGraph {
   // ACTION/RESULT SUMMARIZATION
   // ============================================================
 
-  _summarizeAction(action) {
+  _summarizeAction(action, axContext = null) {
     if (!action) return null;
     if (typeof action === 'string') return action;
 
@@ -662,13 +718,32 @@ class TrajectoryGraph {
     if (action.type === 'tool_use') {
       const input = action.input || {};
       switch (action.name) {
-        case 'computer':
-          return {
+        case 'computer': {
+          const summary = {
             type: input.action,
             coordinates: input.coordinate,
             text: input.text,
-            raw: `${input.action}${input.coordinate ? ` (${input.coordinate.join(',')})` : ''}${input.text ? `: "${input.text.slice(0, 50)}"` : ''}`,
           };
+
+          // Semantic target from AX context (essential property - what was clicked)
+          if (axContext) {
+            summary.target = {
+              label: axContext.label || axContext.title || null,
+              role: axContext.role || null,
+              app: axContext.app || null,
+            };
+          }
+
+          // Build human-readable 'raw': semantic first, coordinates as fallback
+          if (summary.target && summary.target.label) {
+            const appSuffix = summary.target.app ? ` in ${summary.target.app}` : '';
+            summary.raw = `${input.action} ${summary.target.role || ''}[${summary.target.label}]${appSuffix} at (${input.coordinate ? input.coordinate.join(',') : '?'})`;
+          } else {
+            summary.raw = `${input.action}${input.coordinate ? ` (${input.coordinate.join(',')})` : ''}${input.text ? `: "${input.text.slice(0, 50)}"` : ''}`;
+          }
+
+          return summary;
+        }
         case 'bash':
           return {
             type: 'bash',
@@ -698,6 +773,22 @@ class TrajectoryGraph {
     this.endTime = Date.now();
     this.success = success;
     this.finalText = finalText;
+
+    // Resolve any pending surprise before final save
+    if (this._pendingSurpriseNodeIndex !== null && this._pendingSurpriseNodeIndex !== undefined) {
+      const pendingNode = this.nodes[this._pendingSurpriseNodeIndex];
+      if (pendingNode && !this._agentSurpriseSet && !pendingNode.surprise) {
+        const keywordResult = this._computeSurpriseKeyword(pendingNode);
+        if (keywordResult) {
+          if (keywordResult.score > 0.5) {
+            pendingNode.flags.push('surprise');
+            this.surprisesDetected++;
+          }
+          pendingNode.surprise = keywordResult;
+        }
+      }
+      this._pendingSurpriseNodeIndex = null;
+    }
     // Close active branch based on task outcome
     const activeBranch = this.branches[this.activeBranchIndex];
     if (activeBranch && activeBranch.status === 'exploring') {
@@ -737,6 +828,18 @@ class TrajectoryGraph {
       edges: this.edges,
       branches: this.branches,
       activeBranchIndex: this.activeBranchIndex,
+
+      // Compact narrative for learning pipeline (no images needed, ~30-50 tokens per entry)
+      // Consumers (learning.js, brain-learning.js) should use this instead of raw nodes+screenshots
+      narrative: this.nodes.map(n => {
+        const entry = { step: n.index, state: n.semanticState || 'unknown' };
+        if (n.action?.raw) entry.action = n.action.raw;
+        if (n.action?.target) entry.target = n.action.target;
+        if (n.flags.length > 0) entry.flags = n.flags;
+        if (n.surprise?.score > 0.5) entry.surprise = { score: n.surprise.score, reason: n.surprise.observed };
+        if (n.expectation) entry.expectation = n.expectation;
+        return entry;
+      }).filter(n => n.action || (n.flags && n.flags.length > 0)),
     };
 
     const trajPath = path.join(this.screenshotDir, 'trajectory.json');

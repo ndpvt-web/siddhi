@@ -994,14 +994,23 @@ PERSONALITY:
    If you keep getting surprised (action results don't match expectations),
    stop and take a fresh screenshot to rebuild your understanding.
 
-6. SCENE DESCRIPTIONS (describe what you see at key moments):
-   After each CHECKPOINT, also describe what's on screen:
-   SCENE: [1-sentence description of what's visible on screen]
-   Example: "SCENE: Safari browser open, showing Google.com homepage with search bar focused"
-   Example: "SCENE: System Settings app with Bluetooth pane selected, toggle is ON"
+   SURPRISE REPORTING: After taking a screenshot, if the result does NOT match your EXPECT:
+   SURPRISE: [score 0.0-1.0] [reason why it doesn't match]
+   Score 0.0 = exactly as expected. Score 1.0 = completely different from expected.
+   Example: "SURPRISE: 0.8 Expected Safari window but got a permissions dialog instead"
+   Example: "SURPRISE: 0.2 Settings opened correctly but the sidebar layout is different than expected"
+   Only emit SURPRISE when you previously set an EXPECT. Omit if reality matches expectation.
 
-   Also describe the initial screen when you first see it:
-   SCENE: [what's on screen right now]
+6. SCENE DESCRIPTIONS (REQUIRED after every screenshot):
+   After EVERY screenshot you receive, describe what's on screen in one sentence:
+   SCENE: [1-sentence description of what's currently visible on screen]
+   Example: "SCENE: Safari browser showing google.com search results for 'capybara habitat', 10 results visible"
+   Example: "SCENE: System Settings app with Bluetooth pane selected, toggle is ON, 3 paired devices shown"
+
+   This is CRITICAL for your own memory. When old screenshots are removed from context,
+   only this SCENE description remains. Be specific: app names, window titles, UI state,
+   visible content. The more specific you are, the better you can reason about past steps.
+   Bad: "Desktop is shown"  Good: "macOS desktop with Dock visible, Safari and Finder in Dock, no windows open"
 
    SCENE descriptions enable learning across tasks - be specific about which app,
    which page/pane, and what state the UI is in.
@@ -1331,6 +1340,16 @@ function parseAgentMarkers(text) {
     result.scene = sceneMatch[1].trim();
   }
 
+  // Parse SURPRISE: score reason (agent-driven semantic surprise detection)
+  const surpriseRegex = /SURPRISE:\s*([01](?:\.\d+)?)\s+(.*)/g;
+  let surpriseMatch;
+  while ((surpriseMatch = surpriseRegex.exec(text)) !== null) {
+    result.surprise = {
+      score: parseFloat(surpriseMatch[1]),
+      reason: surpriseMatch[2].trim(),
+    };
+  }
+
   return result;
 }
 
@@ -1607,6 +1626,13 @@ async function agentLoop(apiKey, task, opts = {}) {
             if (onStep) onStep({ type: 'expectation', text: markers.expectation });
           }
 
+          // Store agent-reported surprise on current trajectory node
+          if (markers.surprise && trajectory) {
+            trajectory.setSurprise(markers.surprise.score, markers.surprise.reason);
+            console.log(`[Agent] Surprise reported: score=${markers.surprise.score} reason="${markers.surprise.reason.slice(0, 80)}"`);
+            if (onStep) onStep({ type: 'surprise', score: markers.surprise.score, reason: markers.surprise.reason });
+          }
+
         } catch (e) {
           console.error(`[Agent] Marker parse error (non-fatal): ${e.message}`);
         }
@@ -1755,7 +1781,8 @@ async function agentLoop(apiKey, task, opts = {}) {
               const trajResult = trajectory.addNode(
                 result.base64,
                 prevAction ? { type: 'tool_use', name: prevAction.tool, input: prevAction.input } : null,
-                prevAction ? prevAction.result : null
+                prevAction ? prevAction.result : null,
+                _resolvedTarget || null  // Pass AX context so action summary includes semantic target
               );
 
               // Use pre-resolved intent if available
