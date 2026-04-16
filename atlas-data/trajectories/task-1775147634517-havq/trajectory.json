@@ -1,0 +1,311 @@
+{
+  "taskId": "task-1775147634517-havq",
+  "taskDescription": "Open the Notes application using Spotlight (Cmd+Space, type Notes, press Enter). Then type 'Hello from Atlas with Claude grounding' into the note.",
+  "startTime": 1775147634518,
+  "endTime": 1775147948919,
+  "duration": 314401,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Spotlight is open! The search bar is visible at the top center of the screen. There's also an AirPods notification but Spotlight is ready to go.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "a23deb7a86ec6141bb6c668ee1142ce5",
+      "semanticState": "Spotlight search bar is open and focused, ready for input.",
+      "timestamp": 1775147662005
+    },
+    {
+      "stepNumber": 2,
+      "description": "\"Notes\" is typed in Spotlight and the Notes app is the top result, highlighted and ready to open.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "456d1ad44c8cf2d24d87cceffe685436",
+      "semanticState": "Spotlight showing \"Notes\" search with Notes app as the top result, highlighted in the dropdown.",
+      "timestamp": 1775147685703
+    },
+    {
+      "stepNumber": 3,
+      "description": "Notes app is open with 361 notes in iCloud, showing the note list and a selected note about \"Ant / ALIBABA\".",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "317532b5c54e9d76672d34abc9971811",
+      "semanticState": "Notes app is open, showing sidebar with folders, note list in the middle, and a note preview on the right.",
+      "timestamp": 1775147777755
+    },
+    {
+      "stepNumber": 4,
+      "description": "New blank note created successfully with cursor ready for input. The note shows \"3 April 2026 at 12:36 AM\" and is blank with a cursor.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "d72fe63847304bb3b3a2f33bd10b2f79",
+      "semanticState": "Notes app with a new blank note open on the right side, cursor blinking, ready for text input.",
+      "timestamp": 1775147857446
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Spotlight with Cmd+Space",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Type \"Notes\" and press Enter",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Once Notes opens, type the text into a note",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775147636197,
+      "relativeTime": 1679,
+      "screenshotPath": "step-0.png",
+      "exactHash": "50eea1e65ed3e56d9e2fb5a11490b868",
+      "thumbnailHash": "c58fadb0f2aaefaa52bf9e8de3ecfe8f",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight search bar should appear in the center of the screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775147651697,
+      "relativeTime": 17179,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a23deb7a86ec6141bb6c668ee1142ce5",
+      "thumbnailHash": "fe2b5649b6b460a45e3c1c9f25e9ead7",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Should see \"Notes\" typed in the search bar with Notes app as a result",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar should appear in the center of the screen",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar is open and focused, ready for input.",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775147677392,
+      "relativeTime": 42874,
+      "screenshotPath": "step-2.png",
+      "exactHash": "456d1ad44c8cf2d24d87cceffe685436",
+      "thumbnailHash": "f4b5917f0259fc99c8a38bc12fc69f57",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Notes app should open with a window showing notes",
+      "surprise": {
+        "score": 0.6428571428571428,
+        "expected": "Should see \"Notes\" typed in the search bar with Notes app as a result",
+        "observed": "success type: \"notes\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 2.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight showing \"Notes\" search with Notes app as the top result, highlighted in the dropdown.",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775147703167,
+      "relativeTime": 68649,
+      "screenshotPath": "step-3.png",
+      "exactHash": "317532b5c54e9d76672d34abc9971811",
+      "thumbnailHash": "126f3f817cfa9a964b5b33e9ff4883d5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new blank note should be created and focused for typing",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app is open, showing sidebar with folders, note list in the middle, and a note preview on the right.",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775147822346,
+      "relativeTime": 187828,
+      "screenshotPath": "step-4.png",
+      "exactHash": "d72fe63847304bb3b3a2f33bd10b2f79",
+      "thumbnailHash": "fab81bb1104da2f4273ff590db56c531",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          714,
+          122
+        ],
+        "raw": "left_click (714,122)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The text \"Hello from Atlas with Claude grounding\" should appear in the note",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank note should be created and focused for typing",
+        "observed": "success left_click (714,122)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with a new blank note open on the right side, cursor blinking, ready for text input.",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775147890199,
+      "relativeTime": 255681,
+      "screenshotPath": "step-5.png",
+      "exactHash": "fdeb01b8ea5107d0c2f8fb146f02f7c2",
+      "thumbnailHash": "3d0d11daca2148bb05a928643fe5c18a",
+      "action": {
+        "type": "type",
+        "text": "Hello from Atlas with Claude grounding",
+        "raw": "type: \"Hello from Atlas with Claude grounding\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": {
+        "score": 0.4285714285714286,
+        "expected": "The text \"Hello from Atlas with Claude grounding\" should appear in the note",
+        "observed": "success type: \"hello from atlas with claude grounding\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 4
+      },
+      "branch": "branch-0-main",
+      "semanticState": "type: \"Hello from Atlas with Claude grounding\" -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775147651697
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "timestamp": 1775147677392
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775147703167
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          714,
+          122
+        ],
+        "raw": "left_click (714,122)"
+      },
+      "timestamp": 1775147822346
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "Hello from Atlas with Claude grounding",
+        "raw": "type: \"Hello from Atlas with Claude grounding\""
+      },
+      "timestamp": 1775147890199
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

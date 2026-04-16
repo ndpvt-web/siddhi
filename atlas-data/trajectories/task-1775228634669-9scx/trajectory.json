@@ -1,0 +1,446 @@
+{
+  "taskId": "task-1775228634669-9scx",
+  "taskDescription": "Open Preview, open an image, and use the markup tools to add a text annotation",
+  "startTime": 1775228634669,
+  "endTime": 1775228823754,
+  "duration": 189085,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 9,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Preview is active and Tools menu is open - I can see the Annotate submenu option.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "9510cf40cc3ecf40e3bffbc0d5b2b449",
+      "semanticState": "Clicked 'zoom out' (Button) in Preview",
+      "timestamp": 1775228725165
+    },
+    {
+      "stepNumber": 2,
+      "description": "Annotate submenu is open, showing all annotation options including \"Text\".",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "49ac8fbf3d5bfc8d5ae4f795ec4b315b",
+      "semanticState": "The Tools menu is open and I can see \"Annotate\" submenu",
+      "timestamp": 1775228751833
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Make sure Preview is the active window (click on it)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Enable Markup toolbar if not already visible",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Use the Text tool to add a text annotation",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Type some text and position it",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775228636458,
+      "relativeTime": 1789,
+      "screenshotPath": "step-0.png",
+      "exactHash": "a5cb090afa71cbbe4b407817910f6002",
+      "thumbnailHash": "c55f4529cf34f521d12044c806d992ee",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775228644993,
+      "relativeTime": 10324,
+      "screenshotPath": "step-1.png",
+      "exactHash": "063f3da54b865005f3e6193b83bdcd46",
+      "thumbnailHash": "cca0f85d90b9b0998297a6dbdfec19bf",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The markup toolbar should expand/appear with additional annotation tools.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Preview is already open with a screenshot image. I can see the toolbar with markup tools including what appears to be a pen/markup icon. The \"Markup\" checkbox in the toolbar should enable the markup toolbar.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, looks like Preview is already open with a screenshot image",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775228672858,
+      "relativeTime": 38189,
+      "screenshotPath": "step-2.png",
+      "exactHash": "e0fdc64930f60c0cf6f5efc696957a5a",
+      "thumbnailHash": "0de4dcbc3ff4f4163a72b10ea1d557d6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          848,
+          56
+        ],
+        "raw": "left_click (848,56)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The markup toolbar should expand/appear with additional annotation tools.",
+        "observed": "success left_click (848,56)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Inspector' (CheckBox) in Preview",
+      "resolvedTarget": {
+        "label": "Inspector",
+        "role": "CheckBox",
+        "app": "Preview",
+        "distance": 1
+      },
+      "assistantIntent": "Hmm, that snapped to Inspector instead of Markup",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775228696557,
+      "relativeTime": 61888,
+      "screenshotPath": "step-3.png",
+      "exactHash": "49ed042bb1e91e4f2394f8e51a7da4b6",
+      "thumbnailHash": "d7d869fda24958502258286cf1e2969d",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          849,
+          56
+        ],
+        "raw": "left_click (849,56)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Inspector' (CheckBox) in Preview",
+      "resolvedTarget": {
+        "label": "Inspector",
+        "role": "CheckBox",
+        "app": "Preview",
+        "distance": 2
+      },
+      "assistantIntent": "Oops, I accidentally opened the Inspector panel which shows file info",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775228717989,
+      "relativeTime": 83320,
+      "screenshotPath": "step-4.png",
+      "exactHash": "9510cf40cc3ecf40e3bffbc0d5b2b449",
+      "thumbnailHash": "e9bdbbc1a91b2ac17f0a668ebf1699ff",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          296,
+          13
+        ],
+        "raw": "left_click (296,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'zoom out' (Button) in Preview",
+      "resolvedTarget": {
+        "label": "zoom out",
+        "role": "Button",
+        "app": "Preview",
+        "distance": 55
+      },
+      "assistantIntent": "Good, Inspector is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775228744093,
+      "relativeTime": 109424,
+      "screenshotPath": "step-5.png",
+      "exactHash": "49ac8fbf3d5bfc8d5ae4f795ec4b315b",
+      "thumbnailHash": "df9409c72cc45d183d0e02742bf8f6ef",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          306,
+          257
+        ],
+        "raw": "left_click (306,257)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "The cursor should change to a text tool and I should be able to click on the image to add a text annotation.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The Tools menu is open and I can see \"Annotate\" submenu",
+      "resolvedTarget": null,
+      "assistantIntent": "The Tools menu is open and I can see \"Annotate\" submenu",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775228772358,
+      "relativeTime": 137689,
+      "screenshotPath": "step-6.png",
+      "exactHash": "b15436911a2bbfffb980f822bd7145d4",
+      "thumbnailHash": "ad9e2175fcc78279918246f84a3293fb",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          521,
+          481
+        ],
+        "raw": "left_click (521,481)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A text box should appear where I click, ready for typing.",
+      "surprise": {
+        "score": 0.9,
+        "expected": "The cursor should change to a text tool and I should be able to click on the image to add a text annotation.",
+        "observed": "success left_click (521,481)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "YOOO the Annotate submenu is open and I can see \"Text\" option right there",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO the Annotate submenu is open and I can see \"Text\" option right there",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775228802077,
+      "relativeTime": 167408,
+      "screenshotPath": "step-7.png",
+      "exactHash": "5a3faf9c0a914aef765ab268ab2d7a59",
+      "thumbnailHash": "299ca83e696607ef3e69be78442adbf0",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          600,
+          480
+        ],
+        "raw": "left_click (600,480)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.8333333333333334,
+        "expected": "A text box should appear where I click, ready for typing.",
+        "observed": "success left_click (600,480)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "🎉 The text tool is active",
+      "resolvedTarget": null,
+      "assistantIntent": "🎉 The text tool is active",
+      "axContext": null
+    },
+    {
+      "id": "step-8",
+      "index": 8,
+      "parentId": "step-7",
+      "timestamp": 1775228823754,
+      "relativeTime": 189085,
+      "screenshotPath": "step-8.png",
+      "exactHash": "1b8adfd6bc11b2ac834bbe78add0abc0",
+      "thumbnailHash": "74785dd858e77e228a389a7d3254ec45",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          222,
+          97
+        ],
+        "raw": "left_click (222,97)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Preview",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Preview",
+        "distance": 4
+      },
+      "assistantIntent": "Hmm, I can see the cursor is a crosshair which means the text tool is still active",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          848,
+          56
+        ],
+        "raw": "left_click (848,56)"
+      },
+      "timestamp": 1775228672858
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          849,
+          56
+        ],
+        "raw": "left_click (849,56)"
+      },
+      "timestamp": 1775228696557
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          296,
+          13
+        ],
+        "raw": "left_click (296,13)"
+      },
+      "timestamp": 1775228717989
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          306,
+          257
+        ],
+        "raw": "left_click (306,257)"
+      },
+      "timestamp": 1775228744093
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          521,
+          481
+        ],
+        "raw": "left_click (521,481)"
+      },
+      "timestamp": 1775228772358
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          600,
+          480
+        ],
+        "raw": "left_click (600,480)"
+      },
+      "timestamp": 1775228802077
+    },
+    {
+      "from": "step-7",
+      "to": "step-8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          222,
+          97
+        ],
+        "raw": "left_click (222,97)"
+      },
+      "timestamp": 1775228823754
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 8,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

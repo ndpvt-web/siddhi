@@ -1,0 +1,309 @@
+{
+  "taskId": "task-1775243205953-jfl4",
+  "taskDescription": "Open Pages and create a new document with a title and two paragraphs of text",
+  "startTime": 1775243205953,
+  "endTime": 1775243352440,
+  "duration": 146487,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 2,
+  "surprisesDetected": 2,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Pages via Spotlight",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Create a new blank document",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Add a title",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Add two paragraphs of text",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775243207638,
+      "relativeTime": 1685,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4634d007484c933a581f5e02731a7d16",
+      "thumbnailHash": "f00a989e4e276cc43ab0470d0cde63ab",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight search bar appears",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775243223089,
+      "relativeTime": 17136,
+      "screenshotPath": "step-1.png",
+      "exactHash": "e7dda4c338359c8b7cecd270786d759e",
+      "thumbnailHash": "75b818a30ebf76b51f5d97ab422bcf42",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar appears",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see VS Code is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see VS Code is open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775243249719,
+      "relativeTime": 43766,
+      "screenshotPath": "step-2.png",
+      "exactHash": "1de4b2dbec65927cc7168dfb99034f87",
+      "thumbnailHash": "2ee7521a0fd40b0078bb99bb96acdf5f",
+      "action": {
+        "type": "type",
+        "text": "Pages",
+        "raw": "type: \"Pages\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "lol it pre-filled \"Numbers\" - that's not what I want",
+      "resolvedTarget": null,
+      "assistantIntent": "lol it pre-filled \"Numbers\" - that's not what I want",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775243267708,
+      "relativeTime": 61755,
+      "screenshotPath": "step-3.png",
+      "exactHash": "1de4b2dbec65927cc7168dfb99034f87",
+      "thumbnailHash": "2ee7521a0fd40b0078bb99bb96acdf5f",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, I can see \"Pages: 創作文件\" in the results which seems to be Pages in the App Store (needs download)",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, I can see \"Pages: 創作文件\" in the results which seems to be Pages in the App Store (needs download)",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775243303686,
+      "relativeTime": 97733,
+      "screenshotPath": "step-4.png",
+      "exactHash": "62d3df686f98aec64a4d0492712339cf",
+      "thumbnailHash": "55580e981158b5b28002707d0d68f7d5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, the bash tool seems to be having issues",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, the bash tool seems to be having issues",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775243321861,
+      "relativeTime": 115908,
+      "screenshotPath": "step-5.png",
+      "exactHash": "62d3df686f98aec64a4d0492712339cf",
+      "thumbnailHash": "55580e981158b5b28002707d0d68f7d5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": "Pages app opens or starts downloading",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "OK so Spotlight is still showing",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so Spotlight is still showing",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775243352440,
+      "relativeTime": 146487,
+      "screenshotPath": "step-6.png",
+      "exactHash": "6c8a1342aa2bc7ed4bf7369acdb89b86",
+      "thumbnailHash": "1460e76889cd00345f07459d96f014a9",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          437,
+          291
+        ],
+        "raw": "left_click (437,291)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Pages app opens or starts downloading",
+        "observed": "success left_click (437,291)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "OK Spotlight is still showing with \"Pages\" typed",
+      "resolvedTarget": null,
+      "assistantIntent": "OK Spotlight is still showing with \"Pages\" typed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775243223089
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Pages",
+        "raw": "type: \"Pages\""
+      },
+      "timestamp": 1775243249719
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775243267708
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775243303686
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775243321861
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          437,
+          291
+        ],
+        "raw": "left_click (437,291)"
+      },
+      "timestamp": 1775243352440
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

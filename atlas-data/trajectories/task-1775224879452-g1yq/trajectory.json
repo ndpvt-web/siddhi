@@ -1,0 +1,368 @@
+{
+  "taskId": "task-1775224879452-g1yq",
+  "taskDescription": "Open Notes and create a new note titled 'Meeting Agenda' with 3 bullet points",
+  "startTime": 1775224879452,
+  "endTime": 1775225050144,
+  "duration": 170692,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Spotlight search bar is open and focused.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "57120cdf242efa2cc815b35fcdd49d3e",
+      "semanticState": "Spotlight search bar visible at the top center of the screen, ready for input.",
+      "timestamp": 1775224906399
+    },
+    {
+      "stepNumber": 2,
+      "description": "Notes app is open showing All iCloud with the note list and a pinned note visible.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "7c5f8f7539928d9d869c708897c154c0",
+      "semanticState": "Notes app open with sidebar showing folders, notes list in middle, and \"Hello from Atlas with Claude grounding\" note currently selected.",
+      "timestamp": 1775224943262
+    },
+    {
+      "stepNumber": 3,
+      "description": "New blank note created and cursor is focused in the note editing area.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "79874dbbaa1da82896ef49967cbe078c",
+      "semanticState": "Notes app with a new blank note open on the right side, cursor blinking at the top ready for input. \"New Note\" shows in the list as today's note.",
+      "timestamp": 1775224966729
+    },
+    {
+      "stepNumber": 4,
+      "description": "Title \"Meeting Agenda\" typed successfully - visible as bold title in note and in the notes list.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "7135df51727ea401dcb764d63f81284a",
+      "semanticState": "Notes app showing \"Meeting Agenda\" as the bold title in the note editor, and the note appears in the \"Today\" section of the notes list.",
+      "timestamp": 1775225002571
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Notes app using Spotlight (Cmd+Space)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new note (Cmd+N)",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type the title 'Meeting Agenda'",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Add 3 bullet points",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775224881081,
+      "relativeTime": 1629,
+      "screenshotPath": "step-0.png",
+      "exactHash": "3426dc4924e71b8b82a4caa11622a90f",
+      "thumbnailHash": "dd772450636dd7cb0ae72ed7abedf830",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775224898915,
+      "relativeTime": 19463,
+      "screenshotPath": "step-1.png",
+      "exactHash": "57120cdf242efa2cc815b35fcdd49d3e",
+      "thumbnailHash": "fe3d5406e343ba14d0aa696bad88c7b0",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar visible at the top center of the screen, ready for input.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see a messy TextEdit window with some table dialog open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775224913741,
+      "relativeTime": 34289,
+      "screenshotPath": "step-2.png",
+      "exactHash": "95555559193952c5f9a480a570700b63",
+      "thumbnailHash": "1f589173c70733e94a768e768d4bed5c",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Notes app should open and be in the foreground.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775224934312,
+      "relativeTime": 54860,
+      "screenshotPath": "step-3.png",
+      "exactHash": "7c5f8f7539928d9d869c708897c154c0",
+      "thumbnailHash": "2159b907bdd0059739132e1685e5c3a5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new blank note should appear ready for typing.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app open with sidebar showing folders, notes list in middle, and \"Hello from Atlas with Claude grounding\" note currently selected.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is the top result",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775224950532,
+      "relativeTime": 71080,
+      "screenshotPath": "step-4.png",
+      "exactHash": "79874dbbaa1da82896ef49967cbe078c",
+      "thumbnailHash": "27271a93f6222a579da53cad66502349",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "\"Meeting Agenda\" will appear as the title (first line) of the note.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank note should appear ready for typing.",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with a new blank note open on the right side, cursor blinking at the top ready for input. \"New Note\" shows in the list as today's note.",
+      "resolvedTarget": null,
+      "assistantIntent": "Notes is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775224985278,
+      "relativeTime": 105826,
+      "screenshotPath": "step-5.png",
+      "exactHash": "7135df51727ea401dcb764d63f81284a",
+      "thumbnailHash": "04574bb0b3e7a6a2bea230d47f23921c",
+      "action": {
+        "type": "type",
+        "text": "Meeting Agenda",
+        "raw": "type: \"Meeting Agenda\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "After pressing Enter and using Format > Bullet List, I'll get bullet point formatting.",
+      "surprise": {
+        "score": 0.7142857142857143,
+        "expected": "\"Meeting Agenda\" will appear as the title (first line) of the note.",
+        "observed": "success type: \"meeting agenda\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Notes app showing \"Meeting Agenda\" as the bold title in the note editor, and the note appears in the \"Today\" section of the notes list.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "Notes",
+        "distance": 72
+      },
+      "assistantIntent": "A new blank note is created and the cursor is ready in the editing area",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775225035628,
+      "relativeTime": 156176,
+      "screenshotPath": "step-6.png",
+      "exactHash": "66f183a741bf79ebdd1a5a1252a5db83",
+      "thumbnailHash": "9bbc13c47b718d4d6a18f2ace5a3fce2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          207,
+          14
+        ],
+        "raw": "left_click (207,14)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Now let me use the Format menu to activate bullet list",
+      "resolvedTarget": null,
+      "assistantIntent": "Now let me use the Format menu to activate bullet list",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775224898915
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "timestamp": 1775224913741
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775224934312
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775224950532
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "Meeting Agenda",
+        "raw": "type: \"Meeting Agenda\""
+      },
+      "timestamp": 1775224985278
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          207,
+          14
+        ],
+        "raw": "left_click (207,14)"
+      },
+      "timestamp": 1775225035628
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Notes app is open showing All iCloud with the note list and a pinned note visible.\", tried [type: \"Notes\", key: \"Return\", key: \"cmd+n\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,388 @@
+{
+  "taskId": "task-1775296214354-vdhm",
+  "taskDescription": "Open Safari, navigate to a webpage, and save the page as a PDF to the Desktop",
+  "startTime": 1775296214354,
+  "endTime": 1775296328892,
+  "duration": 114538,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Successfully navigated to example.com! The page is loaded and showing \"Example Domain\" with clean content.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "53ee0cb3bd9d19f37e3907ad14ff322a",
+      "semanticState": "Safari showing example.com with the \"Example Domain\" page fully loaded. Clean white page with title and description text.",
+      "timestamp": 1775296272435
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate to example.com (it looks like it's already there, but let me make sure by pressing Enter or clicking away first)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Save the page as PDF using Cmd+P → Save as PDF → Desktop",
+        "done": false
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775296216094,
+      "relativeTime": 1740,
+      "screenshotPath": "step-0.png",
+      "exactHash": "5afc63157c8332ed9fc45db6e88f6a26",
+      "thumbnailHash": "126d2e43aca319d909c2958c01d80871",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775296231380,
+      "relativeTime": 17026,
+      "screenshotPath": "step-1.png",
+      "exactHash": "c31d0e5c2c915b75aeb8a807142ed2f3",
+      "thumbnailHash": "88c6368212bed5640a2a6d3e4439eea8",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Safari is already open and I can see it's showing example",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari is already open and I can see it's showing example",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775296249165,
+      "relativeTime": 34811,
+      "screenshotPath": "step-2.png",
+      "exactHash": "52cafcc18b7c775a6feb23ec02999546",
+      "thumbnailHash": "440f9c9ce03113544245ea2c4c707eba",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          400
+        ],
+        "raw": "left_click (700,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The dropdown is still showing",
+      "resolvedTarget": null,
+      "assistantIntent": "The dropdown is still showing",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775296265560,
+      "relativeTime": 51206,
+      "screenshotPath": "step-3.png",
+      "exactHash": "53ee0cb3bd9d19f37e3907ad14ff322a",
+      "thumbnailHash": "c42ff8b70189cc281e235c33f495e41b",
+      "action": {
+        "type": "type",
+        "text": "https://example.com\n",
+        "raw": "type: \"https://example.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Print dialog should open with a PDF dropdown button at the bottom-left.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing example.com with the \"Example Domain\" page fully loaded. Clean white page with title and description text.",
+      "resolvedTarget": null,
+      "assistantIntent": "The favorites dropdown is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775296277232,
+      "relativeTime": 62878,
+      "screenshotPath": "step-4.png",
+      "exactHash": "fc89ba5e6b33e13502043b8e037708af",
+      "thumbnailHash": "daeba18a4485657ee4805c095bf99c4a",
+      "action": {
+        "type": "key",
+        "text": "cmd+p",
+        "raw": "key: \"cmd+p\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A dropdown menu should appear with options including \"Save as PDF...\"",
+      "surprise": {
+        "score": 1,
+        "expected": "Print dialog should open with a PDF dropdown button at the bottom-left.",
+        "observed": "success key: \"cmd+p\"",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Successfully navigated to example",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Successfully navigated to example",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775296295121,
+      "relativeTime": 80767,
+      "screenshotPath": "step-5.png",
+      "exactHash": "c097e8372ff11ec10d2b5de92b69158e",
+      "thumbnailHash": "7459a6fbff75c536e24ce016d11e4f9a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          570,
+          652
+        ],
+        "raw": "left_click (570,652)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The dialog should close and the PDF should be saved to the Desktop.",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu should appear with options including \"Save as PDF...\"",
+        "observed": "success left_click (570,652)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "The Print dialog is open and I can see the PDF button at the bottom-left",
+      "resolvedTarget": null,
+      "assistantIntent": "The Print dialog is open and I can see the PDF button at the bottom-left",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775296312829,
+      "relativeTime": 98475,
+      "screenshotPath": "step-6.png",
+      "exactHash": "75b36e2344811c3f130df20537f72840",
+      "thumbnailHash": "9f8b9eb237c019b9ebe01ffb14d01024",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          725,
+          565
+        ],
+        "raw": "left_click (725,565)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The dialog should close and the PDF should be saved to the Desktop.",
+      "surprise": {
+        "score": 1,
+        "expected": "The dialog should close and the PDF should be saved to the Desktop.",
+        "observed": "success left_click (725,565)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "OH HELL YES",
+      "resolvedTarget": null,
+      "assistantIntent": "OH HELL YES",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775296328891,
+      "relativeTime": 114537,
+      "screenshotPath": "step-7.png",
+      "exactHash": "b79e1bff412d87b40c1456f11b05c2d9",
+      "thumbnailHash": "df3c755addbbbd5c7da472c8f0404c05",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          659,
+          499
+        ],
+        "raw": "left_click (659,499)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The dialog should close and the PDF should be saved to the Desktop.",
+        "observed": "success left_click (659,499)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Ah, it's asking if we want to replace an existing file with the same name",
+      "resolvedTarget": null,
+      "assistantIntent": "Ah, it's asking if we want to replace an existing file with the same name",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775296231380
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          400
+        ],
+        "raw": "left_click (700,400)"
+      },
+      "timestamp": 1775296249165
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "https://example.com\n",
+        "raw": "type: \"https://example.com\n\""
+      },
+      "timestamp": 1775296265560
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "cmd+p",
+        "raw": "key: \"cmd+p\""
+      },
+      "timestamp": 1775296277232
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          570,
+          652
+        ],
+        "raw": "left_click (570,652)"
+      },
+      "timestamp": 1775296295121
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          725,
+          565
+        ],
+        "raw": "left_click (725,565)"
+      },
+      "timestamp": 1775296312829
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          659,
+          499
+        ],
+        "raw": "left_click (659,499)"
+      },
+      "timestamp": 1775296328891
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully navigated to example.com! The page is loaded and showing \"Example Domain\" with clean content.\", tried [left_click (700,400), type: \"https://example.com\n\", key: \"cmd+p\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

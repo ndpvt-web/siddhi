@@ -1,0 +1,427 @@
+{
+  "taskId": "task-1775240076782-kr76",
+  "taskDescription": "Open Contacts and create a new group called 'Work Team' and add a contact to it",
+  "startTime": 1775240076782,
+  "endTime": 1775240260071,
+  "duration": 183289,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 9,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Dismissed the contact editing form - Contacts app is showing the contact list with \"John\" visible and selected.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "b2c789720b87f6ac3c9dc1fb6fac57db",
+      "semanticState": "Contacts app with a contact \"John\" visible in list view and contact detail on right side. No sidebar is visible.",
+      "timestamp": 1775240167207
+    },
+    {
+      "stepNumber": 2,
+      "description": "Sidebar is now visible showing contact groups - \"All Contacts\", \"iCloud\", \"On My Mac\", \"Other Known\".",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "27ba07836b29883d11202b7198f16a76",
+      "semanticState": "Contacts app with sidebar visible on left showing group categories, contact list in middle, and \"John\" contact details on right.",
+      "timestamp": 1775240219706
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close/dismiss the current contact editing view",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new group called 'Work Team'",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Add an existing contact to the 'Work Team' group",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775240078475,
+      "relativeTime": 1693,
+      "screenshotPath": "step-0.png",
+      "exactHash": "034b2ce8f314170c166a809608af19ce",
+      "thumbnailHash": "a3e2cb8ee3d9c787fcfdbcb658c410e2",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775240087457,
+      "relativeTime": 10675,
+      "screenshotPath": "step-1.png",
+      "exactHash": "22ff3c9b76b0bce94bcf7d09c6b9ee28",
+      "thumbnailHash": "49ea68d12df773f6f9b399f2f53c2ee0",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app is open with a contact editing form visible (new contact with \"John\" in the first name field). There's also Mail app behind it. I need to dismiss this contact creation first.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Contacts is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775240103710,
+      "relativeTime": 26928,
+      "screenshotPath": "step-2.png",
+      "exactHash": "dedf060908af94bd4395ae079dc9e9f8",
+      "thumbnailHash": "8143dad594574a6809e038cfd299a3a8",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "SCENE: Contacts app is open with a contact editing form visible (new contact with \"John\" in the first name field)",
+      "resolvedTarget": null,
+      "assistantIntent": "SCENE: Contacts app is open with a contact editing form visible (new contact with \"John\" in the first name field)",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775240129726,
+      "relativeTime": 52944,
+      "screenshotPath": "step-3.png",
+      "exactHash": "fcc3f8e3ed1ecf98eaa303c5c0e87bdf",
+      "thumbnailHash": "93db23a8180c27a46d90e3f8e1569654",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          820,
+          358
+        ],
+        "raw": "left_click (820,358)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Done' (Button) in Contacts",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 2
+      },
+      "assistantIntent": "The editing form is still showing",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775240155358,
+      "relativeTime": 78576,
+      "screenshotPath": "step-4.png",
+      "exactHash": "b2c789720b87f6ac3c9dc1fb6fac57db",
+      "thumbnailHash": "0b0ca04b4431a40ef6e127112c4642ee",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          820,
+          358
+        ],
+        "raw": "left_click (820,358)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app with a contact \"John\" visible in list view and contact detail on right side. No sidebar is visible.",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 2
+      },
+      "assistantIntent": "Still in edit mode",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775240185092,
+      "relativeTime": 108310,
+      "screenshotPath": "step-5.png",
+      "exactHash": "4efd36b0ee5f3c7f4c3eaad110d0111f",
+      "thumbnailHash": "e3ae3362af27803ddab4b2518e95f45a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          640,
+          540
+        ],
+        "raw": "left_click (640,540)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Contacts",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 74
+      },
+      "assistantIntent": "I can see Contacts is now showing a contact named \"John\" (the one that was being created) in the list",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775240208841,
+      "relativeTime": 132059,
+      "screenshotPath": "step-6.png",
+      "exactHash": "27ba07836b29883d11202b7198f16a76",
+      "thumbnailHash": "24e1ddc6e76dbb9509bc2ded1d7cbe6e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          325,
+          358
+        ],
+        "raw": "left_click (325,358)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "File menu should show \"New Group\" option.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app with sidebar visible on left showing group categories, contact list in middle, and \"John\" contact details on right.",
+      "resolvedTarget": {
+        "label": "Sidebar",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 1
+      },
+      "assistantIntent": "Ok so the sidebar is hidden in the Contacts window",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775240237055,
+      "relativeTime": 160273,
+      "screenshotPath": "step-7.png",
+      "exactHash": "0120d4bfbea0be582b52c24e84814612",
+      "thumbnailHash": "fdebf476370e1022d7dd3e56f930e70b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          136,
+          14
+        ],
+        "raw": "left_click (136,14)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Clicking \"New List\" should create a new list/group in the sidebar that I can name.",
+      "surprise": {
+        "score": 1,
+        "expected": "File menu should show \"New Group\" option.",
+        "observed": "success left_click (136,14)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Now I can see the sidebar with groups: \"All Contacts\", \"iCloud\" > \"All iCloud\", \"On My Mac\" > \"All on My Mac\", \"Other Kn",
+      "resolvedTarget": null,
+      "assistantIntent": "Now I can see the sidebar with groups: \"All Contacts\", \"iCloud\" > \"All iCloud\", \"On My Mac\" > \"All on My Mac\", \"Other Kn",
+      "axContext": null
+    },
+    {
+      "id": "step-8",
+      "index": 8,
+      "parentId": "step-7",
+      "timestamp": 1775240260071,
+      "relativeTime": 183289,
+      "screenshotPath": "step-8.png",
+      "exactHash": "d0dad3b69713950393be79a01e0868ef",
+      "thumbnailHash": "8610e8d87f2df50705cb45ae57299c7d",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          163,
+          67
+        ],
+        "raw": "left_click (163,67)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.9444444444444444,
+        "expected": "Clicking \"New List\" should create a new list/group in the sidebar that I can name.",
+        "observed": "success left_click (163,67)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Interesting",
+      "resolvedTarget": null,
+      "assistantIntent": "Interesting",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775240103710
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          820,
+          358
+        ],
+        "raw": "left_click (820,358)"
+      },
+      "timestamp": 1775240129726
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          820,
+          358
+        ],
+        "raw": "left_click (820,358)"
+      },
+      "timestamp": 1775240155358
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          640,
+          540
+        ],
+        "raw": "left_click (640,540)"
+      },
+      "timestamp": 1775240185092
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          325,
+          358
+        ],
+        "raw": "left_click (325,358)"
+      },
+      "timestamp": 1775240208841
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          136,
+          14
+        ],
+        "raw": "left_click (136,14)"
+      },
+      "timestamp": 1775240237055
+    },
+    {
+      "from": "step-7",
+      "to": "step-8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          163,
+          67
+        ],
+        "raw": "left_click (163,67)"
+      },
+      "timestamp": 1775240260071
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 8,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

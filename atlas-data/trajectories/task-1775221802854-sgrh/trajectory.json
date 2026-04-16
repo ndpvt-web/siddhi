@@ -1,0 +1,301 @@
+{
+  "taskId": "task-1775221802854-sgrh",
+  "taskDescription": "Open Finder, navigate to Downloads, and move a file to the Documents folder",
+  "startTime": 1775221802854,
+  "endTime": 1775221964634,
+  "duration": 161780,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Downloads folder is open! I can see 144 items in Downloads. There's a quick look preview popup in the middle showing the Downloads folder info. Let me dismiss that by pressing Escape or clicking elsewhere, then pick a file to move.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "0a7058c34e725fb0d3fd5ed1dc404cfc",
+      "semanticState": "Finder showing Downloads folder with list of files, and a folder preview popup in the center.",
+      "timestamp": 1775221857356
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on Downloads in the Finder sidebar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Identify a file to move",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Move the file to the Documents folder",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775221804447,
+      "relativeTime": 1593,
+      "screenshotPath": "step-0.png",
+      "exactHash": "be6d5cd2edfa0c5c5f40144048e0a5aa",
+      "thumbnailHash": "9356d6cd5e2b70b3eb832aae39ad669e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Downloads folder opens showing its contents.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775221825714,
+      "relativeTime": 22860,
+      "screenshotPath": "step-1.png",
+      "exactHash": "fd74bef1b9004761c8b34f5e6530de63",
+      "thumbnailHash": "c97ad94b7068f81beffc355b34a692af",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          150,
+          299
+        ],
+        "raw": "left_click (150,299)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Downloads folder opens showing its contents.",
+        "observed": "success left_click (150,299)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Finder's already open",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Finder's already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775221848999,
+      "relativeTime": 46145,
+      "screenshotPath": "step-2.png",
+      "exactHash": "0a7058c34e725fb0d3fd5ed1dc404cfc",
+      "thumbnailHash": "0bb034d1e7fbc9b3825f55f57e8fa281",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          150,
+          299
+        ],
+        "raw": "left_click (150,299)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Downloads folder with list of files, and a folder preview popup in the center.",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, it clicked Downloads in the sidebar but the main content panel is still showing that markdown file preview",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775221865936,
+      "relativeTime": 63082,
+      "screenshotPath": "step-3.png",
+      "exactHash": "edb343b8efcddb7a26d2b6e4405c976c",
+      "thumbnailHash": "c705ca09bfd34d3f3975c1972c830d15",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Downloads folder is open",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Downloads folder is open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775221885305,
+      "relativeTime": 82451,
+      "screenshotPath": "step-4.png",
+      "exactHash": "8ebc3c595ee5dc949e8b193630c32bd1",
+      "thumbnailHash": "fbc6d67118791edf80b7aa2402c52575",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          419,
+          267
+        ],
+        "raw": "left_click (419,267)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Finder",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Finder",
+        "distance": 1
+      },
+      "assistantIntent": "That popup is still there",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775221902068,
+      "relativeTime": 99214,
+      "screenshotPath": "step-5.png",
+      "exactHash": "8ebc3c595ee5dc949e8b193630c32bd1",
+      "thumbnailHash": "fbc6d67118791edf80b7aa2402c52575",
+      "action": {
+        "type": "key",
+        "text": "space",
+        "raw": "key: \"space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "That Quick Look preview popup is persistent af lol",
+      "resolvedTarget": null,
+      "assistantIntent": "That Quick Look preview popup is persistent af lol",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          150,
+          299
+        ],
+        "raw": "left_click (150,299)"
+      },
+      "timestamp": 1775221825714
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          150,
+          299
+        ],
+        "raw": "left_click (150,299)"
+      },
+      "timestamp": 1775221848999
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775221865936
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          419,
+          267
+        ],
+        "raw": "left_click (419,267)"
+      },
+      "timestamp": 1775221885305
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "space",
+        "raw": "key: \"space\""
+      },
+      "timestamp": 1775221902068
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "action had no visible effect (stagnation)",
+      "lesson": "After \"Downloads folder is open! I can see 144 items in Downloads. There's a quick look preview popup in the middle showing the Downloads folder info. Let me dismiss that by pressing Escape or clicking elsewhere, then pick a file to move.\", tried [key: \"Escape\", left_click (419,267), key: \"space\"] but action had no visible effect (stagnation)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 6,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: action had no visible effect (stagnation)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

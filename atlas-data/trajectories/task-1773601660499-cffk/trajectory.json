@@ -1,0 +1,123 @@
+{
+  "taskId": "task-1773601660499-cffk",
+  "taskDescription": "[Capy] can you open our new tab in Safari in the same window?",
+  "startTime": 1773601660499,
+  "endTime": 1773601752162,
+  "duration": 91663,
+  "success": true,
+  "finalText": "Done, new tab's open in the same window.",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773601661926,
+      "relativeTime": 1427,
+      "screenshotPath": "step-0.png",
+      "exactHash": "aa6802e68455cae1e5258f96efa938c1",
+      "thumbnailHash": "22bb3b8a884394fab69f2534fc532206",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773601675935,
+      "relativeTime": 15436,
+      "screenshotPath": "step-1.png",
+      "exactHash": "0f0f97dde75005560c226794854b9d0b",
+      "thumbnailHash": "f5648684b460ff7c5ef45af1eb855e0e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1076,
+          98
+        ],
+        "raw": "left_click (1076,98)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (1076,98) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773601745214,
+      "relativeTime": 84715,
+      "screenshotPath": "step-2.png",
+      "exactHash": "512e810b40d36c195e8cbc97f7fc5151",
+      "thumbnailHash": "5acb123e171718e85467b0589085d732",
+      "action": {
+        "type": "key",
+        "text": "cmd+t",
+        "raw": "key: \"cmd+t\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+t\" -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1076,
+          98
+        ],
+        "raw": "left_click (1076,98)"
+      },
+      "timestamp": 1773601675936
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+t",
+        "raw": "key: \"cmd+t\""
+      },
+      "timestamp": 1773601745214
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

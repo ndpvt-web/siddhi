@@ -1,0 +1,312 @@
+{
+  "taskId": "task-1775249084069-9zig",
+  "taskDescription": "Open Reminders, create a new list called 'Shopping', and add 3 items to it",
+  "startTime": 1775249084069,
+  "endTime": 1775249236769,
+  "duration": 152700,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Reminders app is open with sidebar showing. There's already a \"Shopping\" list with 2 items.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "7459baf5094ffc5e7c2f403683ed9fc0",
+      "semanticState": "Reminders app open with sidebar showing Today (15), Scheduled (16), All (19), Completed, and My Lists including Reminders, Work 11, Mar 4-Mar 7, and Shopping (2 items).",
+      "timestamp": 1775249143201
+    },
+    {
+      "stepNumber": 2,
+      "description": "Shopping list is open showing existing items (Bread, Pick up package + 1 completed).",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "5f946677b588a6849c4647172eddf510",
+      "semanticState": "Reminders app showing the Shopping list with 2 visible items and a \"1 Completed\" section.",
+      "timestamp": 1775249170924
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Reminders app via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new list called 'Shopping'",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Add 3 items to the Shopping list",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Verify all 3 items are there",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775249085805,
+      "relativeTime": 1736,
+      "screenshotPath": "step-0.png",
+      "exactHash": "958dd64a584d2f90eb2eebaf5f2ff684",
+      "thumbnailHash": "21fb0c5d0bb190502cc4656f2c06330c",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775249105353,
+      "relativeTime": 21284,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a6e04aab940106136778a54ef1076b9d",
+      "thumbnailHash": "ba96b3de30c2fd85151d4f1979fa99c9",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Reminders app should open with its sidebar visible",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, got a busy screen going on here",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, got a busy screen going on here",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775249129519,
+      "relativeTime": 45450,
+      "screenshotPath": "step-2.png",
+      "exactHash": "7459baf5094ffc5e7c2f403683ed9fc0",
+      "thumbnailHash": "a79892a85e89b3060d85e972e79d10ad",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Reminders app open with sidebar showing Today (15), Scheduled (16), All (19), Completed, and My Lists including Reminders, Work 11, Mar 4-Mar 7, and Shopping (2 items).",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775249161544,
+      "relativeTime": 77475,
+      "screenshotPath": "step-3.png",
+      "exactHash": "5f946677b588a6849c4647172eddf510",
+      "thumbnailHash": "7458bd59c3c2eded2a9e91054fd2bdbd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          236,
+          611
+        ],
+        "raw": "left_click (236,611)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "A new text field should appear at the bottom of the list for me to type in.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Reminders app showing the Shopping list with 2 visible items and a \"1 Completed\" section.",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh nice, Reminders is open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775249187368,
+      "relativeTime": 103299,
+      "screenshotPath": "step-4.png",
+      "exactHash": "644733a36fd69f7c80475d93ba8677be",
+      "thumbnailHash": "40820769f60d4a16b50420334064f736",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          627,
+          187
+        ],
+        "raw": "left_click (627,187)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "After typing \"Milk\" and pressing Return, a new empty field should appear for the next item.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new text field should appear at the bottom of the list for me to type in.",
+        "observed": "success left_click (627,187)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Add Reminder' (Button) in Reminders",
+      "resolvedTarget": {
+        "label": "Add Reminder",
+        "role": "Button",
+        "app": "Reminders",
+        "distance": 1
+      },
+      "assistantIntent": "The Shopping list is open and showing 2 existing items: \"Bread\" and \"Pick up package\"",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775249220337,
+      "relativeTime": 136268,
+      "screenshotPath": "step-5.png",
+      "exactHash": "dc01a651f91bc093447868944052d31a",
+      "thumbnailHash": "020545ad758ce6a7abea6b23fea0c7e9",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": "After typing \"Eggs\" and pressing Return, another empty field should appear and the counter should go to 4.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "A new text field appeared in the Shopping list",
+      "resolvedTarget": null,
+      "assistantIntent": "A new text field appeared in the Shopping list",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775249105353
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775249129519
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          236,
+          611
+        ],
+        "raw": "left_click (236,611)"
+      },
+      "timestamp": 1775249161544
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          627,
+          187
+        ],
+        "raw": "left_click (627,187)"
+      },
+      "timestamp": 1775249187368
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775249220337
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Shopping list is open showing existing items (Bread, Pick up package + 1 completed).\", tried [key: \"Return\", left_click (236,611), left_click (627,187)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,407 @@
+{
+  "taskId": "task-1775294989671-k3cc",
+  "taskDescription": "Open Finder and create a new folder called 'BenchmarkTest' on the Desktop",
+  "startTime": 1775294989671,
+  "endTime": 1775295148063,
+  "duration": 158392,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Finder is open and showing Desktop — Local. There's a preview popup open that I need to dismiss.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "1459040b83ad85961f4f5c0c4e151293",
+      "semanticState": "Finder showing Desktop with a color gradient image preview popup open.",
+      "timestamp": 1775295023374
+    },
+    {
+      "stepNumber": 2,
+      "description": "Finder is open showing Desktop — Local with all files visible, no popups blocking.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "69621c0135a256535ed48eadd20dc004",
+      "semanticState": "Finder showing Desktop — Local with icons view, Desktop is selected in the sidebar.",
+      "timestamp": 1775295097807
+    },
+    {
+      "stepNumber": 3,
+      "description": "New \"untitled folder\" created with name field editable and highlighted.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "2ca36b8bacf82ff52915ccdca0cffe6c",
+      "semanticState": "Now I can see the Desktop clearly",
+      "timestamp": 1775295112137
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Finder via the dock",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to Desktop in the sidebar",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Create a new folder with Shift+Cmd+N",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Type 'BenchmarkTest' as the folder name and press Return",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775294991350,
+      "relativeTime": 1679,
+      "screenshotPath": "step-0.png",
+      "exactHash": "97c4ea3aac4f2336fea1feb01f1f41b3",
+      "thumbnailHash": "e758fa70bf2383ad61450838378fb597",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Finder window should open showing some directory.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775295014244,
+      "relativeTime": 24573,
+      "screenshotPath": "step-1.png",
+      "exactHash": "1459040b83ad85961f4f5c0c4e151293",
+      "thumbnailHash": "1ec2510ad45114740100c62d66c2d250",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          52,
+          819
+        ],
+        "raw": "left_click (52,819)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Finder window should open showing some directory.",
+        "observed": "success left_click (52,819)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Desktop with a color gradient image preview popup open.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let me handle this",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775295038185,
+      "relativeTime": 48514,
+      "screenshotPath": "step-2.png",
+      "exactHash": "1459040b83ad85961f4f5c0c4e151293",
+      "thumbnailHash": "1ec2510ad45114740100c62d66c2d250",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Oh nice, Finder is open and already on the Desktop",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh nice, Finder is open and already on the Desktop",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775295056264,
+      "relativeTime": 66593,
+      "screenshotPath": "step-3.png",
+      "exactHash": "9545385345f48df2a0902220f39ba307",
+      "thumbnailHash": "43485844d886b9c9973a6083ce363294",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1200,
+          600
+        ],
+        "raw": "left_click (1200,600)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The preview popup is still there",
+      "resolvedTarget": null,
+      "assistantIntent": "The preview popup is still there",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775295083785,
+      "relativeTime": 94114,
+      "screenshotPath": "step-4.png",
+      "exactHash": "69621c0135a256535ed48eadd20dc004",
+      "thumbnailHash": "5b6084949ade47fbaada55580f0ac94b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          421,
+          272
+        ],
+        "raw": "left_click (421,272)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "A new folder should appear with an editable name field highlighted.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Desktop — Local with icons view, Desktop is selected in the sidebar.",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, now there's another popup showing the Desktop folder info",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775295104535,
+      "relativeTime": 114864,
+      "screenshotPath": "step-5.png",
+      "exactHash": "2ca36b8bacf82ff52915ccdca0cffe6c",
+      "thumbnailHash": "22b26a8ed3fc5d2723c15b0337be2f59",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+n",
+        "raw": "key: \"shift+cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The folder name should change to 'BenchmarkTest' as I type.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new folder should appear with an editable name field highlighted.",
+        "observed": "success key: \"shift+cmd+n\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Now I can see the Desktop clearly",
+      "resolvedTarget": null,
+      "assistantIntent": "Now I can see the Desktop clearly",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775295117355,
+      "relativeTime": 127684,
+      "screenshotPath": "step-6.png",
+      "exactHash": "ad68ee0058daa13fcfb391d9f9285802",
+      "thumbnailHash": "c99e54e5cda393b5e0608f2fa01f7069",
+      "action": {
+        "type": "type",
+        "text": "BenchmarkTest",
+        "raw": "type: \"BenchmarkTest\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.6,
+        "expected": "The folder name should change to 'BenchmarkTest' as I type.",
+        "observed": "success type: \"benchmarktest\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "YOOO LET'S GOOO",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO LET'S GOOO",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775295131737,
+      "relativeTime": 142066,
+      "screenshotPath": "step-7.png",
+      "exactHash": "d53627ae93d8e6c2476c43c26d1c3e24",
+      "thumbnailHash": "bcbdba007381610fc0a61b015b713c15",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "I can see the folder name now shows \"BenchmarkTest\" and it's still in the editing state (blue outline around the name)",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the folder name now shows \"BenchmarkTest\" and it's still in the editing state (blue outline around the name)",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          52,
+          819
+        ],
+        "raw": "left_click (52,819)"
+      },
+      "timestamp": 1775295014244
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775295038185
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1200,
+          600
+        ],
+        "raw": "left_click (1200,600)"
+      },
+      "timestamp": 1775295056264
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          421,
+          272
+        ],
+        "raw": "left_click (421,272)"
+      },
+      "timestamp": 1775295083785
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+n",
+        "raw": "key: \"shift+cmd+n\""
+      },
+      "timestamp": 1775295104535
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "BenchmarkTest",
+        "raw": "type: \"BenchmarkTest\""
+      },
+      "timestamp": 1775295117355
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775295131737
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Finder is open showing Desktop — Local with all files visible, no popups blocking.\", tried [left_click (1200,600), left_click (421,272), key: \"shift+cmd+n\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 4,
+      "startFrameIndex": 6,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,452 @@
+{
+  "taskId": "task-1775293321231-g03k",
+  "taskDescription": "Open Safari and clear all browsing history",
+  "startTime": 1775293321231,
+  "endTime": 1775293464290,
+  "duration": 143059,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "History menu is open showing browsing history items and navigation options.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "2df9bd573780873f2e3437660a7186a8",
+      "semanticState": "Safari History dropdown menu is open, showing lots of history entries and date categories. Need to scroll down to find \"Clear History...\"",
+      "timestamp": 1775293349296
+    },
+    {
+      "stepNumber": 2,
+      "description": "Clear History dialog is open with the time range dropdown showing \"Last Hour\"",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "254cde7c49710bcc8ebe1da812a5f6ee",
+      "semanticState": "Safari Clear History dialog is open showing \"Clear: Last Hour\" dropdown and Cancel/Clear History buttons.",
+      "timestamp": 1775293392638
+    },
+    {
+      "stepNumber": 3,
+      "description": "Time range dropdown changed to \"All History\" successfully",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "9bab3082e87879c53ebb526cf1676c49",
+      "semanticState": "Safari Clear History dialog showing \"Clear: All History\" with Cancel and Clear History buttons.",
+      "timestamp": 1775293432638
+    },
+    {
+      "stepNumber": 4,
+      "description": "Browsing history cleared successfully - dialog dismissed, Safari showing clean state.",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "9cfdecfa9f40f88bc7e9e1246ddaad4f",
+      "semanticState": "Safari browser showing example.com with two tabs (Apple and Example Domain). No dialog visible - history has been cleared.",
+      "timestamp": 1775293457968
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the History menu in the menu bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click \"Clear History...\"",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "In the dialog, change the time range dropdown to \"all history\"",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Click \"Clear History\" to confirm",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775293322924,
+      "relativeTime": 1693,
+      "screenshotPath": "step-0.png",
+      "exactHash": "c89a53632dad437a1c8f76d0235316c1",
+      "thumbnailHash": "7c421249412ae38dbcd7ccd8bcefdaca",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "History menu should drop down showing options including \"Clear History...\" at the bottom",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775293341241,
+      "relativeTime": 20010,
+      "screenshotPath": "step-1.png",
+      "exactHash": "2df9bd573780873f2e3437660a7186a8",
+      "thumbnailHash": "0d2926f71b04b267aad236bafe3f9f53",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          254,
+          13
+        ],
+        "raw": "left_click (254,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "History menu should drop down showing options including \"Clear History...\" at the bottom",
+        "observed": "success left_click (254,13)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari History dropdown menu is open, showing lots of history entries and date categories. Need to scroll down to find \"Clear History...\"",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari's already open - nice",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775293355242,
+      "relativeTime": 34011,
+      "screenshotPath": "step-2.png",
+      "exactHash": "a8aa7a8b44acdb6d6ea898aa449585b1",
+      "thumbnailHash": "529c73863f0297312c7e5afa3a83b0f6",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          454,
+          500
+        ],
+        "raw": "scroll (454,500)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "History menu is open",
+      "resolvedTarget": null,
+      "assistantIntent": "History menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775293366505,
+      "relativeTime": 45274,
+      "screenshotPath": "step-3.png",
+      "exactHash": "db0d0c61a0aeed16528dcc662a3ba149",
+      "thumbnailHash": "38f4310e1a2764bf3179dec1d9d163cf",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          454,
+          600
+        ],
+        "raw": "scroll (454,600)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "A dialog should appear asking me to select a time range for clearing history",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Menu scrolled, can see more history dates but \"Clear History",
+      "resolvedTarget": null,
+      "assistantIntent": "Menu scrolled, can see more history dates but \"Clear History",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775293385576,
+      "relativeTime": 64345,
+      "screenshotPath": "step-4.png",
+      "exactHash": "254cde7c49710bcc8ebe1da812a5f6ee",
+      "thumbnailHash": "ec958cbe49d3cf9a41f482308ff1df9c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          299,
+          769
+        ],
+        "raw": "left_click (299,769)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown menu should appear with time range options including \"all history\"",
+      "surprise": {
+        "score": 1,
+        "expected": "A dialog should appear asking me to select a time range for clearing history",
+        "observed": "success left_click (299,769)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari Clear History dialog is open showing \"Clear: Last Hour\" dropdown and Cancel/Clear History buttons.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO I can see \"Clear History",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775293404875,
+      "relativeTime": 83644,
+      "screenshotPath": "step-5.png",
+      "exactHash": "5940ef2ffc88ccfe0190e4d0e946c50f",
+      "thumbnailHash": "1c54c491b6f4a2ed12439f91e8b636c7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          612,
+          423
+        ],
+        "raw": "left_click (612,423)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The dropdown should close and show \"All History\" selected in the Clear field",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu should appear with time range options including \"all history\"",
+        "observed": "success left_click (612,423)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "The dialog is up",
+      "resolvedTarget": null,
+      "assistantIntent": "The dialog is up",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775293425513,
+      "relativeTime": 104282,
+      "screenshotPath": "step-6.png",
+      "exactHash": "9bab3082e87879c53ebb526cf1676c49",
+      "thumbnailHash": "4adfdc37ed60968183bbac3c9991f08a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          578,
+          488
+        ],
+        "raw": "left_click (578,488)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Dialog should close and all browsing history should be cleared",
+      "surprise": {
+        "score": 1,
+        "expected": "The dropdown should close and show \"All History\" selected in the Clear field",
+        "observed": "success left_click (578,488)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari Clear History dialog showing \"Clear: All History\" with Cancel and Clear History buttons.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO THE DROPDOWN IS OPEN",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775293450510,
+      "relativeTime": 129279,
+      "screenshotPath": "step-7.png",
+      "exactHash": "9cfdecfa9f40f88bc7e9e1246ddaad4f",
+      "thumbnailHash": "9fae6110ceb34fe9efbbce89ffaa2226",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          735,
+          457
+        ],
+        "raw": "left_click (735,457)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog should close and all browsing history should be cleared",
+        "observed": "success left_click (735,457)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari browser showing example.com with two tabs (Apple and Example Domain). No dialog visible - history has been cleared.",
+      "resolvedTarget": null,
+      "assistantIntent": "The dropdown now shows **\"All History\"** - exactly what we need",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          254,
+          13
+        ],
+        "raw": "left_click (254,13)"
+      },
+      "timestamp": 1775293341241
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          454,
+          500
+        ],
+        "raw": "scroll (454,500)"
+      },
+      "timestamp": 1775293355242
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          454,
+          600
+        ],
+        "raw": "scroll (454,600)"
+      },
+      "timestamp": 1775293366505
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          299,
+          769
+        ],
+        "raw": "left_click (299,769)"
+      },
+      "timestamp": 1775293385576
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          612,
+          423
+        ],
+        "raw": "left_click (612,423)"
+      },
+      "timestamp": 1775293404875
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          578,
+          488
+        ],
+        "raw": "left_click (578,488)"
+      },
+      "timestamp": 1775293425513
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          735,
+          457
+        ],
+        "raw": "left_click (735,457)"
+      },
+      "timestamp": 1775293450510
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"History menu is open showing browsing history items and navigation options.\", tried [scroll (454,500), scroll (454,600), left_click (299,769)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 1,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,371 @@
+{
+  "taskId": "task-1775240262382-6w3o",
+  "taskDescription": "Open Contacts and search for a contact, then edit their phone number",
+  "startTime": 1775240262382,
+  "endTime": 1775240443033,
+  "duration": 180651,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Searched for \"John\" - got results showing \"Johnson 1F\" and \"John\" contacts. \"John\" is currently selected and shown in the right panel.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "235b1f4f242fa599faacf30d6886ff31",
+      "semanticState": "Contacts app with search bar showing \"John\", two results visible - \"Johnson 1F\" and \"John\" (currently selected showing a large \"J\" avatar and the name \"John\").",
+      "timestamp": 1775240345882
+    },
+    {
+      "stepNumber": 2,
+      "description": "Contact \"John\" is now in edit mode! I can see the edit form with fields like \"Last\", \"Company\", mobile \"Phone\", home \"Email\", etc. The \"Done\" button is visible at the top.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "34a20a57a8c0da0cd8f33311575797a3",
+      "semanticState": "Contacts app in edit mode for \"John\" - edit form is visible with name fields, mobile phone field (empty), email field, and other contact fields. \"Done\" button is at top.",
+      "timestamp": 1775240392435
+    },
+    {
+      "stepNumber": 3,
+      "description": "Phone number \"+1 (555) 867-5309\" has been entered in the mobile phone field for contact \"John\". The number is clearly visible in the field.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "a468dc2efea743112c0db313bfd18b02",
+      "semanticState": "Contacts app in edit mode for \"John\" - mobile phone field now shows \"+1 (555) 867-5309\", with an additional empty \"iPhone\" phone field below it, and the \"Done\" button ready to save.",
+      "timestamp": 1775240435537
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the Contacts search bar and search for a contact",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Select the contact from search results",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Click Edit to edit the contact",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Update the phone number",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Save the changes",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775240264155,
+      "relativeTime": 1773,
+      "screenshotPath": "step-0.png",
+      "exactHash": "1bc8198f36fa91df6e1dc4df13894cc7",
+      "thumbnailHash": "be40228a42b34ee4007b799e469b5f69",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775240287352,
+      "relativeTime": 24970,
+      "screenshotPath": "step-1.png",
+      "exactHash": "559e292ac08dcdc8494dbdc5203c9e18",
+      "thumbnailHash": "b892bfb1f3374c25aeb3eb4617143ee2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          990,
+          358
+        ],
+        "raw": "left_click (990,358)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Contacts",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 66
+      },
+      "assistantIntent": "Alright, Contacts is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775240308775,
+      "relativeTime": 46393,
+      "screenshotPath": "step-2.png",
+      "exactHash": "0573f2a692d64a97bfd5c6eb2f869814",
+      "thumbnailHash": "625fb9536f9ae8a7f75d01fff49a2169",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          397
+        ],
+        "raw": "left_click (265,397)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Contacts",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 41
+      },
+      "assistantIntent": "I see the search bar is focused but it's showing \"untitled list\" which is filtering a specific group",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775240336923,
+      "relativeTime": 74541,
+      "screenshotPath": "step-3.png",
+      "exactHash": "235b1f4f242fa599faacf30d6886ff31",
+      "thumbnailHash": "c94760b60c38d3e541b2b970e574fac1",
+      "action": {
+        "type": "type",
+        "text": "John",
+        "raw": "type: \"John\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app with search bar showing \"John\", two results visible - \"Johnson 1F\" and \"John\" (currently selected showing a large \"J\" avatar and the name \"John\").",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 66
+      },
+      "assistantIntent": "Now I can see All Contacts is selected and there are contacts showing up",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775240383679,
+      "relativeTime": 121297,
+      "screenshotPath": "step-4.png",
+      "exactHash": "34a20a57a8c0da0cd8f33311575797a3",
+      "thumbnailHash": "4428dc725ce8dcfb8397e44c97065d2c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          769,
+          358
+        ],
+        "raw": "left_click (769,358)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app in edit mode for \"John\" - edit form is visible with name fields, mobile phone field (empty), email field, and other contact fields. \"Done\" button is at top.",
+      "resolvedTarget": {
+        "label": "Edit",
+        "role": "Button",
+        "app": "Contacts",
+        "distance": 1
+      },
+      "assistantIntent": "CHECKPOINT [1]: Searched for \"John\" - got results showing \"Johnson 1F\" and \"John\" contacts",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775240406643,
+      "relativeTime": 144261,
+      "screenshotPath": "step-5.png",
+      "exactHash": "66530839390f85f347004caab94b1806",
+      "thumbnailHash": "9aa5dd1892b30b2e7eeccc545e82dae9",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          807,
+          502
+        ],
+        "raw": "left_click (807,502)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Company' (CheckBox) in Contacts",
+      "resolvedTarget": {
+        "label": "Company",
+        "role": "CheckBox",
+        "app": "Contacts",
+        "distance": 52
+      },
+      "assistantIntent": "CHECKPOINT [2]: Contact \"John\" is now in edit mode",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775240427610,
+      "relativeTime": 165228,
+      "screenshotPath": "step-6.png",
+      "exactHash": "a468dc2efea743112c0db313bfd18b02",
+      "thumbnailHash": "ebc9dd24d061fbb9b08a0a085343ab9c",
+      "action": {
+        "type": "type",
+        "text": "+1 (555) 867-5309",
+        "raw": "type: \"+1 (555) 867-5309\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app in edit mode for \"John\" - mobile phone field now shows \"+1 (555) 867-5309\", with an additional empty \"iPhone\" phone field below it, and the \"Done\" button ready to save.",
+      "resolvedTarget": null,
+      "assistantIntent": "The phone field is now focused (I can see it's highlighted/active next to \"mobile\")",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          990,
+          358
+        ],
+        "raw": "left_click (990,358)"
+      },
+      "timestamp": 1775240287352
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          397
+        ],
+        "raw": "left_click (265,397)"
+      },
+      "timestamp": 1775240308775
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "John",
+        "raw": "type: \"John\""
+      },
+      "timestamp": 1775240336923
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          769,
+          358
+        ],
+        "raw": "left_click (769,358)"
+      },
+      "timestamp": 1775240383679
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          807,
+          502
+        ],
+        "raw": "left_click (807,502)"
+      },
+      "timestamp": 1775240406643
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "+1 (555) 867-5309",
+        "raw": "type: \"+1 (555) 867-5309\""
+      },
+      "timestamp": 1775240427610
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

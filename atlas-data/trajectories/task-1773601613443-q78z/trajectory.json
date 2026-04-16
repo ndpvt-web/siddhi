@@ -1,0 +1,52 @@
+{
+  "taskId": "task-1773601613443-q78z",
+  "taskDescription": "[Capy] what's on my screen right now?",
+  "startTime": 1773601613443,
+  "endTime": 1773601621098,
+  "duration": 7655,
+  "success": true,
+  "finalText": "You've got the Happycapy dashboard open in Safari, showing a session with a system status rundown — all your daemons like CapyOverlay, Screenshot Daemon, and Kokoro TTS are running fine.",
+  "totalSteps": 1,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773601615005,
+      "relativeTime": 1562,
+      "screenshotPath": "step-0.png",
+      "exactHash": "9a9009289f308eecbf060fbb33a5f94d",
+      "thumbnailHash": "b4f0aa4e1aa316019f8db3c057d6a0ea",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    }
+  ],
+  "edges": [],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 0,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

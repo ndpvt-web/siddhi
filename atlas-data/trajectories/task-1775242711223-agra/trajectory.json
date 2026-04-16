@@ -1,0 +1,246 @@
+{
+  "taskId": "task-1775242711223-agra",
+  "taskDescription": "Open Numbers, create a dataset, and generate a bar chart from the data",
+  "startTime": 1775242711223,
+  "endTime": 1775242879502,
+  "duration": 168279,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Microsoft Excel has opened with a welcome screen. There's also a VS Code permission dialog that I need to dismiss.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "8d427a1c35060ecd17052b983e8806e9",
+      "semanticState": "Excel welcome screen visible with \"Start Using Excel\" button, VS Code dialog requesting data access.",
+      "timestamp": 1775242849144
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Numbers app",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new spreadsheet",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Enter a dataset (something interesting)",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Select the data and insert a bar chart",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Verify the chart looks good",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775242712883,
+      "relativeTime": 1660,
+      "screenshotPath": "step-0.png",
+      "exactHash": "27abc85098e4cd3985ef623ebcd0364e",
+      "thumbnailHash": "782fc9e25a9a5537137326f13b6825cf",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775242728240,
+      "relativeTime": 17017,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a35d4e5db50a39b682f7d1272bd914d0",
+      "thumbnailHash": "8146dc9ff81d811dd488a71f0ac9522d",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, let's get Numbers open and make a dope bar chart",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let's get Numbers open and make a dope bar chart",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775242769315,
+      "relativeTime": 58092,
+      "screenshotPath": "step-2.png",
+      "exactHash": "488960f5208254865d20695805aed556",
+      "thumbnailHash": "0eb0b3177dc693bd1c37a76b94a79de0",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open and already has \"Numbers\" typed in it",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open and already has \"Numbers\" typed in it",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775242839180,
+      "relativeTime": 127957,
+      "screenshotPath": "step-3.png",
+      "exactHash": "8d427a1c35060ecd17052b983e8806e9",
+      "thumbnailHash": "cac9982c7fbae51081813b516be98186",
+      "action": {
+        "type": "bash",
+        "command": "open -a \"Microsoft Excel\"",
+        "raw": "bash: open -a \"Microsoft Excel\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "VS Code dialog dismissed, Excel welcome still visible.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Excel welcome screen visible with \"Start Using Excel\" button, VS Code dialog requesting data access.",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, Numbers isn't installed but **Microsoft Excel** IS",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775242865090,
+      "relativeTime": 153867,
+      "screenshotPath": "step-4.png",
+      "exactHash": "eebf6d3663fb1e90bf9421fbc1f8104d",
+      "thumbnailHash": "50ee68e9f160c4531ccd6c1174c274eb",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          621,
+          363
+        ],
+        "raw": "left_click (621,363)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "VS Code dialog dismissed, Excel welcome still visible.",
+        "observed": "success left_click (621,363)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "EXPECT: VS Code dialog dismissed, Excel welcome still visible",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: VS Code dialog dismissed, Excel welcome still visible",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775242728240
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "timestamp": 1775242769315
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "bash",
+        "command": "open -a \"Microsoft Excel\"",
+        "raw": "bash: open -a \"Microsoft Excel\""
+      },
+      "timestamp": 1775242839180
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          621,
+          363
+        ],
+        "raw": "left_click (621,363)"
+      },
+      "timestamp": 1775242865090
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,412 @@
+{
+  "taskId": "task-1775246467546-57eo",
+  "taskDescription": "Open Finder, navigate to Downloads, and move a file to the Documents folder",
+  "startTime": 1775246467546,
+  "endTime": 1775246666506,
+  "duration": 198960,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Dialog dismissed! The Clear History dialog is gone and Safari is showing example.com cleanly.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "d9df088e65e36997ee899124f71b721b",
+      "semanticState": "Safari browser showing example.com with the Example Domain page. Clean state, no dialogs.",
+      "timestamp": 1775246540701
+    },
+    {
+      "stepNumber": 2,
+      "description": "Finder is open! I can see it's showing Recents with a bunch of files. The sidebar has Downloads and Documents folders visible.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "06b0ae5022ca71f9cff8a7ec6dea5920",
+      "semanticState": "Finder window open showing Recents view in list mode, with sidebar showing Favourites (Applications, Desktop, Documents, Downloads) and Locations.",
+      "timestamp": 1775246572691
+    },
+    {
+      "stepNumber": 3,
+      "description": "Downloads folder is open! I can see a ton of files sorted by Date Added. The sidebar shows Documents right above Downloads.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "f5e4bca6cf93b5d47f8529f07c91e13f",
+      "semanticState": "Finder showing Downloads folder with many files - PDFs, images, markdown files, etc. Sorted by Date Added descending.",
+      "timestamp": 1775246603577
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Dismiss the Safari dialog (Escape)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Finder",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Navigate to Downloads folder",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Find a file and move it to Documents",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775246469081,
+      "relativeTime": 1535,
+      "screenshotPath": "step-0.png",
+      "exactHash": "a1c6e756e6df733ebb0e9746733d82b4",
+      "thumbnailHash": "1d6e4bbbbc5efd4c00badfec8e4394c7",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Dialog closes",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775246482498,
+      "relativeTime": 14952,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a1c6e756e6df733ebb0e9746733d82b4",
+      "thumbnailHash": "1d6e4bbbbc5efd4c00badfec8e4394c7",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 2,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (PopUpButton) in Safari",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "PopUpButton",
+        "app": "Safari",
+        "distance": 1
+      },
+      "assistantIntent": "Yo there's a \"Clear History\" dialog open in Safari right now",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775246504147,
+      "relativeTime": 36601,
+      "screenshotPath": "step-2.png",
+      "exactHash": "9a74a872ee584fc5b5c278bf46400189",
+      "thumbnailHash": "cc7c67c52ae6175499a031127a8bc96b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          437,
+          457
+        ],
+        "raw": "left_click (437,457)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Dialog closes completely",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Help' (Button) in Safari",
+      "resolvedTarget": {
+        "label": "Help",
+        "role": "Button",
+        "app": "Safari",
+        "distance": 1
+      },
+      "assistantIntent": "Bruh, Escape didn't close that dropdown/dialog",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775246527108,
+      "relativeTime": 59562,
+      "screenshotPath": "step-3.png",
+      "exactHash": "d9df088e65e36997ee899124f71b721b",
+      "thumbnailHash": "d3ae3c71835853c1258ae68b644fb581",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          636,
+          457
+        ],
+        "raw": "left_click (636,457)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Finder window opens",
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes completely",
+        "observed": "success left_click (636,457)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing example.com with the Example Domain page. Clean state, no dialogs.",
+      "resolvedTarget": {
+        "label": "Cancel",
+        "role": "Button",
+        "app": "Safari",
+        "distance": 1
+      },
+      "assistantIntent": "OK the dropdown closed, now I can see the \"Cancel\" button",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775246563006,
+      "relativeTime": 95460,
+      "screenshotPath": "step-4.png",
+      "exactHash": "06b0ae5022ca71f9cff8a7ec6dea5920",
+      "thumbnailHash": "399c7cda6c692c16415d19ff20ddde4b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          48,
+          819
+        ],
+        "raw": "left_click (48,819)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Finder navigates to Downloads folder showing its contents",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder window opens",
+        "observed": "success left_click (48,819)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder window open showing Recents view in list mode, with sidebar showing Favourites (Applications, Desktop, Documents, Downloads) and Locations.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Dialog dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775246586992,
+      "relativeTime": 119446,
+      "screenshotPath": "step-5.png",
+      "exactHash": "f5e4bca6cf93b5d47f8529f07c91e13f",
+      "thumbnailHash": "ce838eca588678c2d61012ee9783f664",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          273
+        ],
+        "raw": "left_click (124,273)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "File gets moved to Documents folder",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder navigates to Downloads folder showing its contents",
+        "observed": "success left_click (124,273)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Finder showing Downloads folder with many files - PDFs, images, markdown files, etc. Sorted by Date Added descending.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Finder is open",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775246611645,
+      "relativeTime": 144099,
+      "screenshotPath": "step-6.png",
+      "exactHash": "41de910709bf02f2c07472ae2562f416",
+      "thumbnailHash": "8074ee89d5436861d9cbc2f8985eec19",
+      "action": {
+        "type": "left_click_drag",
+        "coordinates": [
+          126,
+          243
+        ],
+        "raw": "left_click_drag (126,243)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "File gets moved successfully",
+      "surprise": {
+        "score": 1,
+        "expected": "File gets moved to Documents folder",
+        "observed": "success left_click_drag (126,243)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "CHECKPOINT [3]: Downloads folder is open",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [3]: Downloads folder is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775246482498
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          437,
+          457
+        ],
+        "raw": "left_click (437,457)"
+      },
+      "timestamp": 1775246504147
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          636,
+          457
+        ],
+        "raw": "left_click (636,457)"
+      },
+      "timestamp": 1775246527108
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          48,
+          819
+        ],
+        "raw": "left_click (48,819)"
+      },
+      "timestamp": 1775246563006
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          273
+        ],
+        "raw": "left_click (124,273)"
+      },
+      "timestamp": 1775246586992
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click_drag",
+        "coordinates": [
+          126,
+          243
+        ],
+        "raw": "left_click_drag (126,243)"
+      },
+      "timestamp": 1775246611645
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Dialog dismissed! The Clear History dialog is gone and Safari is showing example.com cleanly.\", tried [left_click (437,457), left_click (636,457), left_click (48,819)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

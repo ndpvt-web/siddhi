@@ -1,0 +1,442 @@
+{
+  "taskId": "task-1775220440006-i626",
+  "taskDescription": "Open Safari, navigate to a webpage, and save the page as a PDF to the Desktop",
+  "startTime": 1775220440006,
+  "endTime": 1775220669382,
+  "duration": 229376,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 6,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Print dialog is open! I can see the preview of example.com on the left and the PDF button at the bottom left.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "5a8ae4df6e09e724148ad7c817d39771",
+      "semanticState": "Print dialog is open with a page preview on the left and PDF dropdown button visible at the bottom left corner.",
+      "timestamp": 1775220465450
+    },
+    {
+      "stepNumber": 2,
+      "description": "Save as PDF dialog is open with filename \"Example Domain\" and currently set to save in Downloads folder.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "f24a11c8f3457d91d64ac1bbe5021089",
+      "semanticState": "Save as PDF dialog showing filename \"Example Domain\", with \"Where\" set to Downloads folder. Need to change to Desktop.",
+      "timestamp": 1775220493403
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Safari is already open with example.com loaded ✓",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Use File > Print to open the print dialog",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Click \"PDF\" dropdown at the bottom left and select \"Save as PDF\"",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save to Desktop",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775220441674,
+      "relativeTime": 1668,
+      "screenshotPath": "step-0.png",
+      "exactHash": "354f575bb5c442a3ee3a79750c922681",
+      "thumbnailHash": "a99006d0f451afc9401ff5749eae14ff",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Print dialog should open with a PDF button at the bottom left.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775220456947,
+      "relativeTime": 16941,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5a8ae4df6e09e724148ad7c817d39771",
+      "thumbnailHash": "f25485ef21023bb3624b6afc5da9a3c4",
+      "action": {
+        "type": "key",
+        "text": "cmd+p",
+        "raw": "key: \"cmd+p\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown menu should appear with options including \"Save as PDF\".",
+      "surprise": {
+        "score": 1,
+        "expected": "Print dialog should open with a PDF button at the bottom left.",
+        "observed": "success key: \"cmd+p\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Print dialog is open with a page preview on the left and PDF dropdown button visible at the bottom left corner.",
+      "resolvedTarget": null,
+      "assistantIntent": "Ayy, Safari's already open and we're on example",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775220479528,
+      "relativeTime": 39522,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f24a11c8f3457d91d64ac1bbe5021089",
+      "thumbnailHash": "ba999d08796123735250df3c97443243",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          570,
+          652
+        ],
+        "raw": "left_click (570,652)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown will appear showing folder options including Desktop.",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu should appear with options including \"Save as PDF\".",
+        "observed": "success left_click (570,652)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Save as PDF dialog showing filename \"Example Domain\", with \"Where\" set to Downloads folder. Need to change to Desktop.",
+      "resolvedTarget": {
+        "label": "PDF",
+        "role": "Button",
+        "app": "Safari",
+        "distance": 11
+      },
+      "assistantIntent": "CHECKPOINT [1]: Print dialog is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775220510111,
+      "relativeTime": 70105,
+      "screenshotPath": "step-3.png",
+      "exactHash": "34607aaa7672ef312abed7de986d6118",
+      "thumbnailHash": "df5143b24ac80e962516cee5e007e57c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          614,
+          308
+        ],
+        "raw": "left_click (614,308)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A dropdown menu will appear showing folder options including Desktop.",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown will appear showing folder options including Desktop.",
+        "observed": "success left_click (614,308)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Where:' (PopUpButton) in Safari",
+      "resolvedTarget": {
+        "label": "Where:",
+        "role": "PopUpButton",
+        "app": "Safari",
+        "distance": 4
+      },
+      "assistantIntent": "LETSSS GOOO",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775220539414,
+      "relativeTime": 99408,
+      "screenshotPath": "step-4.png",
+      "exactHash": "83cdd34d9bac36731d57e8fe925e84e6",
+      "thumbnailHash": "dc146b8c5a2673db66cba15c7bd243ca",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          618,
+          308
+        ],
+        "raw": "left_click (618,308)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The tags dropdown will close and I'll see the Save as PDF dialog again.",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu will appear showing folder options including Desktop.",
+        "observed": "success left_click (618,308)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked 'Where:' (PopUpButton) in Safari",
+      "resolvedTarget": {
+        "label": "Where:",
+        "role": "PopUpButton",
+        "app": "Safari",
+        "distance": 1
+      },
+      "assistantIntent": "Hmm, the click didn't hit the \"Where\" dropdown - it clicked somewhere else",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775220580916,
+      "relativeTime": 140910,
+      "screenshotPath": "step-5.png",
+      "exactHash": "d99780c0de326e601d4d17c7e55401e2",
+      "thumbnailHash": "a06bd2204cbbf2d1070c2048e7d5fb8a",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Tags dropdown closes, and I can see the full Save as PDF dialog clearly.",
+      "surprise": {
+        "score": 1,
+        "expected": "The tags dropdown will close and I'll see the Save as PDF dialog again.",
+        "observed": "success key: \"escape\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Oh wait, that opened the Tags dropdown, not the Where dropdown",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh wait, that opened the Tags dropdown, not the Where dropdown",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775220616693,
+      "relativeTime": 176687,
+      "screenshotPath": "step-6.png",
+      "exactHash": "ba42506c6682e72909eeb85c8359cd1f",
+      "thumbnailHash": "a5307c83914e9d58ac0fd5c4cb25c1e1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          630,
+          240
+        ],
+        "raw": "left_click (630,240)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Tags dropdown closes, and I can see the full Save as PDF dialog clearly.",
+        "observed": "success left_click (630,240)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked 'Where:' (PopUpButton) in Safari",
+      "resolvedTarget": {
+        "label": "Where:",
+        "role": "PopUpButton",
+        "app": "Safari",
+        "distance": 74
+      },
+      "assistantIntent": "The tags dropdown is still showing",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775220654325,
+      "relativeTime": 214319,
+      "screenshotPath": "step-7.png",
+      "exactHash": "a97cd20c4732bdf53d1507a7154ee853",
+      "thumbnailHash": "856843789184ce3400fd9cd99818da70",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Ugh, the tags dropdown is STILL open",
+      "resolvedTarget": null,
+      "assistantIntent": "Ugh, the tags dropdown is STILL open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+p",
+        "raw": "key: \"cmd+p\""
+      },
+      "timestamp": 1775220456947
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          570,
+          652
+        ],
+        "raw": "left_click (570,652)"
+      },
+      "timestamp": 1775220479528
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          614,
+          308
+        ],
+        "raw": "left_click (614,308)"
+      },
+      "timestamp": 1775220510111
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          618,
+          308
+        ],
+        "raw": "left_click (618,308)"
+      },
+      "timestamp": 1775220539414
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775220580916
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          630,
+          240
+        ],
+        "raw": "left_click (630,240)"
+      },
+      "timestamp": 1775220616693
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775220654325
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Save as PDF dialog is open with filename \"Example Domain\" and currently set to save in Downloads folder.\", tried [key: \"cmd+p\", left_click (570,652), left_click (614,308)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

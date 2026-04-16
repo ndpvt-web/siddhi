@@ -1,0 +1,128 @@
+{
+  "taskId": "task-1775154364062-2l8k",
+  "taskDescription": "Open Notes app using Spotlight. Press Cmd+Space, type Notes, press Enter. Then create a new note with Cmd+N and type Hello World.",
+  "startTime": 1775154364062,
+  "endTime": 1775154617498,
+  "duration": 253436,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Typed \"Notes\" in Spotlight - Notes app is showing as the top result with \"— Open\" next to it.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "002ba2306553b2e18709d6ce5a460728",
+      "semanticState": "Spotlight search showing \"Notes\" with the Notes app highlighted at the top, along with other notes-related results below.",
+      "timestamp": 1775154482470
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Type \"Notes\" in the Spotlight search bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Press Enter to open Notes",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Create a new note with Cmd+N",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Type \"Hello World\"",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775154365727,
+      "relativeTime": 1665,
+      "screenshotPath": "step-0.png",
+      "exactHash": "a166d3f38c3bf9f1d52e71dd80af6fb4",
+      "thumbnailHash": "3f044cde47be322e80c4ef20bbf3b3de",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight should show Notes app as a result.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775154460748,
+      "relativeTime": 96686,
+      "screenshotPath": "step-1.png",
+      "exactHash": "002ba2306553b2e18709d6ce5a460728",
+      "thumbnailHash": "0b7c0ac0af99c21c44e074525e90ef33",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Notes app should open.",
+      "surprise": {
+        "score": 0.8,
+        "expected": "Spotlight should show Notes app as a result.",
+        "observed": "success type: \"notes\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search showing \"Notes\" with the Notes app highlighted at the top, along with other notes-related results below.",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "timestamp": 1775154460748
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

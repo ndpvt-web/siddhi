@@ -1,0 +1,395 @@
+{
+  "taskId": "task-1775248532223-cim0",
+  "taskDescription": "Open Calendar and create a new event called 'Team Standup' for tomorrow at 10 AM",
+  "startTime": 1775248532223,
+  "endTime": 1775248676651,
+  "duration": 144428,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 3,
+      "description": "Navigated to the next week! Calendar now shows April 5-11, 2026. I can see Sunday April 5 is the first column - that's tomorrow!",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "56c4ab2cc67d46323417cc9a9e838b09",
+      "semanticState": "Calendar in Week view showing April 5-11, 2026. Sunday April 5 is visible as the first column with some all-day events. The 10 AM row is visible and empty on April 5.",
+      "timestamp": 1775248620823
+    },
+    {
+      "stepNumber": 4,
+      "description": "Quick event creation dialog is open with a text field for creating events using natural language.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "2551d261af3d444f7d4f84681c826634",
+      "semanticState": "Calendar app showing a \"Create Quick Event\" popover with a text input field. There are also \"New Event\" and \"New Reminder\" buttons at the top.",
+      "timestamp": 1775248639360
+    },
+    {
+      "stepNumber": 5,
+      "description": "Event details are correctly parsed - \"Team Standup, Tomorrow, 10 AM to 11 AM\" is shown as the first suggestion.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "daaa9072aebfc8dbc11d76edb8fe6061",
+      "semanticState": "Calendar quick event dialog showing \"Team Standup tomorrow at 10 AM\" typed in, with two suggestions - the first one highlighted showing \"Team Standup, Tomorrow, 10 AM to 11 AM\".",
+      "timestamp": 1775248661960
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Dismiss the current menu/close Notes",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Open Calendar via Spotlight",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Navigate to tomorrow (April 5, 2026)",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Create a new event called 'Team Standup' at 10 AM",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775248533950,
+      "relativeTime": 1727,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4e0089df0eb3acf197975b33ae45b7b6",
+      "thumbnailHash": "b712b94ed87e0513620bfc3681192dde",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775248555503,
+      "relativeTime": 23280,
+      "screenshotPath": "step-1.png",
+      "exactHash": "cbf3fd1d339070ef9845e97c97605f6e",
+      "thumbnailHash": "2228669bb6e23a0251d9664d8627ced3",
+      "action": {
+        "type": "key",
+        "text": "super+space",
+        "raw": "key: \"super+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Calendar app should open after typing and pressing Enter",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see Notes is open with a Format menu dropped down",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see Notes is open with a Format menu dropped down",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775248571604,
+      "relativeTime": 39381,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f3d58fa9c9783a855a4236b2916208eb",
+      "thumbnailHash": "b1ff48fc5419a17f6b1622e87333bae3",
+      "action": {
+        "type": "type",
+        "text": "Calendar",
+        "raw": "type: \"Calendar\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.8333333333333334,
+        "expected": "Calendar app should open after typing and pressing Enter",
+        "observed": "success type: \"calendar\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775248585844,
+      "relativeTime": 53621,
+      "screenshotPath": "step-3.png",
+      "exactHash": "86f956d0434e7bc75ee2ba2bf3baeee4",
+      "thumbnailHash": "8adf31da0370c2c5e6c6a37a31c45078",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": "Calendar will show the week of April 5-11, 2026",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app in Week view showing the week of March 29 - April 4, 2026. Today (Sat 4) is highlighted. I need to navigate to April 5 (tomorrow/Sunday).",
+      "resolvedTarget": null,
+      "assistantIntent": "app is the top result",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775248610270,
+      "relativeTime": 78047,
+      "screenshotPath": "step-4.png",
+      "exactHash": "56c4ab2cc67d46323417cc9a9e838b09",
+      "thumbnailHash": "6a3b38e5c249d60869bfdc8ae98d4a28",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1044,
+          156
+        ],
+        "raw": "left_click (1044,156)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A new event creation dialog should appear",
+      "surprise": {
+        "score": 1,
+        "expected": "Calendar will show the week of April 5-11, 2026",
+        "observed": "success left_click (1044,156)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar in Week view showing April 5-11, 2026. Sunday April 5 is visible as the first column with some all-day events. The 10 AM row is visible and empty on April 5.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 1
+      },
+      "assistantIntent": "CHECKPOINT [1 & 2]: Calendar is open showing Week view for April 2026",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775248627759,
+      "relativeTime": 95536,
+      "screenshotPath": "step-5.png",
+      "exactHash": "2551d261af3d444f7d4f84681c826634",
+      "thumbnailHash": "64fa545cdf5a7b9a2970d3a7b045ebe2",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The text should appear in the quick event field",
+      "surprise": {
+        "score": 1,
+        "expected": "A new event creation dialog should appear",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app showing a \"Create Quick Event\" popover with a text input field. There are also \"New Event\" and \"New Reminder\" buttons at the top.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [3]: Navigated to the next week",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775248647053,
+      "relativeTime": 114830,
+      "screenshotPath": "step-6.png",
+      "exactHash": "daaa9072aebfc8dbc11d76edb8fe6061",
+      "thumbnailHash": "2d76f19c987872d2d409cf5ac9fcbf3c",
+      "action": {
+        "type": "type",
+        "text": "Team Standup tomorrow at 10 AM",
+        "raw": "type: \"Team Standup tomorrow at 10 AM\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The event will be created and the dialog will close, showing the event on the calendar",
+      "surprise": {
+        "score": 1,
+        "expected": "The text should appear in the quick event field",
+        "observed": "success type: \"team standup tomorrow at 10 am\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar quick event dialog showing \"Team Standup tomorrow at 10 AM\" typed in, with two suggestions - the first one highlighted showing \"Team Standup, Tomorrow, 10 AM to 11 AM\".",
+      "resolvedTarget": null,
+      "assistantIntent": "A \"Create Quick Event\" dialog appeared with options for \"New Event\" and \"New Reminder\"",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775248676651,
+      "relativeTime": 144428,
+      "screenshotPath": "step-7.png",
+      "exactHash": "ea7c1f0c25711d6e38f4993bd5f092af",
+      "thumbnailHash": "ef0108b0faeb685b9094055578e9e189",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "🎉 This is PERFECT",
+      "resolvedTarget": null,
+      "assistantIntent": "🎉 This is PERFECT",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "super+space",
+        "raw": "key: \"super+space\""
+      },
+      "timestamp": 1775248555503
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Calendar",
+        "raw": "type: \"Calendar\""
+      },
+      "timestamp": 1775248571604
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775248585844
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1044,
+          156
+        ],
+        "raw": "left_click (1044,156)"
+      },
+      "timestamp": 1775248610270
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775248627759
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Team Standup tomorrow at 10 AM",
+        "raw": "type: \"Team Standup tomorrow at 10 AM\""
+      },
+      "timestamp": 1775248647053
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775248676651
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

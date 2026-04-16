@@ -1,0 +1,176 @@
+{
+  "taskId": "task-1775214736761-n3cp",
+  "taskDescription": "Open Finder, click on Documents in the sidebar, then click on Desktop in the sidebar",
+  "startTime": 1775214736761,
+  "endTime": 1775214863467,
+  "duration": 126706,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Navigated to Documents folder - showing 4 items (Capy Meetings, harris-undergr...otes.pdf, Capy Memory, Zoom). Title bar says \"Documents — Local\".",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "e1a1ddaf4f692d56f9d5097fdd768a97",
+      "semanticState": "Finder window open showing Documents folder contents with 4 items, sidebar visible with Documents highlighted.",
+      "timestamp": 1775214806635
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on Documents in the sidebar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click on Desktop in the sidebar",
+        "done": false
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775214738435,
+      "relativeTime": 1674,
+      "screenshotPath": "step-0.png",
+      "exactHash": "44bd4ce233a9bda2afea6ceaa0930a13",
+      "thumbnailHash": "1f68f814c157eb0fddd661d2067ca441",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Finder should navigate to Documents folder, showing its contents",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775214797597,
+      "relativeTime": 60836,
+      "screenshotPath": "step-1.png",
+      "exactHash": "e1a1ddaf4f692d56f9d5097fdd768a97",
+      "thumbnailHash": "67d9e4f4aeea5b330b6de30782a29086",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          125,
+          242
+        ],
+        "raw": "left_click (125,242)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Finder should navigate to Desktop folder, showing all those screenshots and files we saw earlier.",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder should navigate to Documents folder, showing its contents",
+        "observed": "success left_click (125,242)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder window open showing Documents folder contents with 4 items, sidebar visible with Documents highlighted.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775214835750,
+      "relativeTime": 98989,
+      "screenshotPath": "step-2.png",
+      "exactHash": "11df43032345e733b92e337e92d26959",
+      "thumbnailHash": "f50b938081e4caa027d97d1583f7c19f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          116,
+          212
+        ],
+        "raw": "left_click (116,212)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Title bar should change to \"Desktop\" and show Desktop contents",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder should navigate to Desktop folder, showing all those screenshots and files we saw earlier.",
+        "observed": "success left_click (116,212)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Hmm wait, let me check that actually clicked Desktop and not Documents again",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm wait, let me check that actually clicked Desktop and not Documents again",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          125,
+          242
+        ],
+        "raw": "left_click (125,242)"
+      },
+      "timestamp": 1775214797598
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          116,
+          212
+        ],
+        "raw": "left_click (116,212)"
+      },
+      "timestamp": 1775214835750
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

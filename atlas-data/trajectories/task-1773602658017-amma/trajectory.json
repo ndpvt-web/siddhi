@@ -1,0 +1,117 @@
+{
+  "taskId": "task-1773602658017-amma",
+  "taskDescription": "Take a screenshot first, then click the Reload button in Safari toolbar",
+  "startTime": 1773602658018,
+  "endTime": 1773602714963,
+  "duration": 56945,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773602659476,
+      "relativeTime": 1458,
+      "screenshotPath": "step-0.png",
+      "exactHash": "62a4c9ac89a1c962949bdf5c64354935",
+      "thumbnailHash": "ad611b6102d3cbfa63ebd54a16eb4e51",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773602666010,
+      "relativeTime": 7992,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a84d73e0b602b4b4a2fa106ec9e240dd",
+      "thumbnailHash": "fc9db2621f4d6607d51ddda8c2ec74fe",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Page should start reloading — the reload icon might briefly turn into an X (stop button) then the page refreshes.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser open on happycapy.ai, showing a session page with task logs and a \"Processing Bash...\" status. The Reload button is that circular arrow icon in the toolbar at the top right of the address bar area.",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773602714963,
+      "relativeTime": 56945,
+      "screenshotPath": "step-2.png",
+      "exactHash": "b28b345e8022edcf4168cb141502c80f",
+      "thumbnailHash": "5368b0e2141ea8105eb8acd797dbdf7d",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          938,
+          24
+        ],
+        "raw": "left_click (938,24)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Page should start reloading — the reload icon might briefly turn into an X (stop button) then the page refreshes.",
+        "observed": "success left_click (938,24)",
+        "expectedKeywords": 11,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "left_click (938,24) -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          938,
+          24
+        ],
+        "raw": "left_click (938,24)"
+      },
+      "timestamp": 1773602714963
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

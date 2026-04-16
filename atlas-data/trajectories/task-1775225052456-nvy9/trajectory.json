@@ -1,0 +1,383 @@
+{
+  "taskId": "task-1775225052456-nvy9",
+  "taskDescription": "Open Notes and create a new folder called 'Work' and move an existing note into it",
+  "startTime": 1775225052456,
+  "endTime": 1775225244775,
+  "duration": 192319,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Successfully created the \"Work\" folder in Notes. It's visible in the sidebar with 0 notes, and it's currently selected.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "9946a97bc81d6861aa4e0327b56ca99a",
+      "semanticState": "Notes app with \"Work\" folder selected in the sidebar (highlighted yellow), showing \"No Notes\" in the main content area.",
+      "timestamp": 1775225201195
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a new folder called 'Work' in Notes",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Move an existing note into the 'Work' folder",
+        "done": false
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775225054160,
+      "relativeTime": 1704,
+      "screenshotPath": "step-0.png",
+      "exactHash": "94bb24e8020b6b54c11721f43ba525cd",
+      "thumbnailHash": "116e7b811070135ada3b79c211d05bb3",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app is open with the sidebar showing iCloud folders. I can see \"All iCloud\" selected with 366 notes, and various folders like Notes, 2396-Java, Comp3160, etc.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775225064373,
+      "relativeTime": 11917,
+      "screenshotPath": "step-1.png",
+      "exactHash": "94bb24e8020b6b54c11721f43ba525cd",
+      "thumbnailHash": "116e7b811070135ada3b79c211d05bb3",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "A new folder should be created in the sidebar with an editable name field",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Notes is already open and I can see the sidebar with folders",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Notes is already open and I can see the sidebar with folders",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775225088330,
+      "relativeTime": 35874,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f646ceb86a472c0ff7851093d83e49ee",
+      "thumbnailHash": "98e13d4173d923f212fa2214fc21dabd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          362,
+          122
+        ],
+        "raw": "left_click (362,122)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The text field should show \"Work\" after I type it",
+      "surprise": {
+        "score": 1,
+        "expected": "A new folder should be created in the sidebar with an editable name field",
+        "observed": "success left_click (362,122)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Add Folder' (Button) in Notes",
+      "resolvedTarget": {
+        "label": "Add Folder",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 2
+      },
+      "assistantIntent": "I can see the Notes app clearly",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775225109530,
+      "relativeTime": 57074,
+      "screenshotPath": "step-3.png",
+      "exactHash": "76978b674e57abe2cfcf092a7291555d",
+      "thumbnailHash": "4ab8d928980199698fec4e38749a18db",
+      "action": {
+        "type": "type",
+        "text": "Work",
+        "raw": "type: \"Work\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.6,
+        "expected": "The text field should show \"Work\" after I type it",
+        "observed": "success type: \"work\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Yo a \"New Folder\" dialog has popped up with the name field already focused and showing \"New Folder\"",
+      "resolvedTarget": null,
+      "assistantIntent": "Yo a \"New Folder\" dialog has popped up with the name field already focused and showing \"New Folder\"",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775225147394,
+      "relativeTime": 94938,
+      "screenshotPath": "step-4.png",
+      "exactHash": "90219d0b0025343aae1e826d22f850cd",
+      "thumbnailHash": "163658ba88e76c2c886c72207ef405c4",
+      "action": {
+        "type": "type",
+        "text": "Work",
+        "raw": "type: \"Work\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "The dialog should close and a new \"Work\" folder should appear in the sidebar",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in Notes",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 80
+      },
+      "assistantIntent": "Bruh, I see the issue - it shows \"WorkNew Folder\" instead of just \"Work\"",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775225189944,
+      "relativeTime": 137488,
+      "screenshotPath": "step-5.png",
+      "exactHash": "9946a97bc81d6861aa4e0327b56ca99a",
+      "thumbnailHash": "bc2e7f54b59156127d398e46f6f937f2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          810,
+          475
+        ],
+        "raw": "left_click (810,475)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The notes list should populate with all 366 notes",
+      "surprise": {
+        "score": 1,
+        "expected": "The dialog should close and a new \"Work\" folder should appear in the sidebar",
+        "observed": "success left_click (810,475)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with \"Work\" folder selected in the sidebar (highlighted yellow), showing \"No Notes\" in the main content area.",
+      "resolvedTarget": {
+        "label": "OK",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 2
+      },
+      "assistantIntent": "The field now shows \"Work\" perfectly",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775225220510,
+      "relativeTime": 168054,
+      "screenshotPath": "step-6.png",
+      "exactHash": "8bc31aaf31c146369aa6559011bcf618",
+      "thumbnailHash": "086321cbfeee326611ebf244aa2af55e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          278,
+          223
+        ],
+        "raw": "left_click (278,223)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A context menu should appear with options including \"Move to Folder\" or similar",
+      "surprise": {
+        "score": 1,
+        "expected": "The notes list should populate with all 366 notes",
+        "observed": "success left_click (278,223)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "🎉 The \"Work\" folder has been created",
+      "resolvedTarget": null,
+      "assistantIntent": "🎉 The \"Work\" folder has been created",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775225244775,
+      "relativeTime": 192319,
+      "screenshotPath": "step-7.png",
+      "exactHash": "79602af280492635176fd818bf7a4226",
+      "thumbnailHash": "6b4e71739cc3d9ed85f75c600337acb5",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          555,
+          667
+        ],
+        "raw": "right_click (555,667)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A context menu should appear with options including \"Move to Folder\" or similar",
+        "observed": "success right_click (555,667)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "I can see all 366 notes now",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see all 366 notes now",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          362,
+          122
+        ],
+        "raw": "left_click (362,122)"
+      },
+      "timestamp": 1775225088330
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "Work",
+        "raw": "type: \"Work\""
+      },
+      "timestamp": 1775225109530
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Work",
+        "raw": "type: \"Work\""
+      },
+      "timestamp": 1775225147394
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          810,
+          475
+        ],
+        "raw": "left_click (810,475)"
+      },
+      "timestamp": 1775225189945
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          278,
+          223
+        ],
+        "raw": "left_click (278,223)"
+      },
+      "timestamp": 1775225220510
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          555,
+          667
+        ],
+        "raw": "right_click (555,667)"
+      },
+      "timestamp": 1775225244775
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

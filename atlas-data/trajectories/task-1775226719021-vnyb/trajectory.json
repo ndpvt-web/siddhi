@@ -1,0 +1,277 @@
+{
+  "taskId": "task-1775226719021-vnyb",
+  "taskDescription": "Open Calendar, switch to Week view, and navigate to next week",
+  "startTime": 1775226719021,
+  "endTime": 1775226810537,
+  "duration": 91516,
+  "success": true,
+  "finalText": "EZ CLAP! 🎉 We're now on next week!\n\nCHECKPOINT [2]: Successfully navigated to next week - Calendar now shows April 12-18, 2026 (Sun 12 to Sat 18) in Week view with all the class events like COMP2121-2C Discrete Math, ENGG1300-2C Fundamental Mechanics, COMP3520-2A Special Topics in Data Science, and more visible.\n\nSCENE: Calendar in Week view showing April 12-18, 2026 with multiple university course events displayed across the weekdays (Mon 13 through Fri 17), still in Week view with \"Week\" button highlighted.\n\nBoth tasks are done! ✅\n- ✅ Switched to **Week view**\n- ✅ Navigated to **next week** (April 12-18, 2026)\n\nLooks like you've got a pretty packed week ahead — lots of classes lined up Mon through Fri. Grind season fr 📚",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Successfully switched to Week view - Calendar now shows the week of April 5-11, 2026 with Day/Week/Month/Year buttons visible and \"Week\" is highlighted.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "7d5f16811341356c99de6b59bc548838",
+      "semanticState": "Calendar in Week view showing April 2026, week of Sun 5 to Sat 11, with events like Easter Monday, Weekly Monday Meeting, and class events visible.",
+      "timestamp": 1775226781702
+    },
+    {
+      "stepNumber": 2,
+      "description": "Successfully navigated to next week - Calendar now shows April 12-18, 2026 (Sun 12 to Sat 18) in Week view with all the class events like COMP2121-2C Discrete Math, ENGG1300-2C Fundamental Mechanics, COMP3520-2A Special Topics in Data Science, and more visible.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "3abe070c6f313e804081bdb9817eda52",
+      "semanticState": "Calendar in Week view showing April 12-18, 2026 with multiple university course events displayed across the weekdays (Mon 13 through Fri 17), still in Week view with \"Week\" button highlighted.",
+      "timestamp": 1775226810536
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click the \"Week\" button to switch to Week view",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to next week using the forward arrow",
+        "done": true
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775226720667,
+      "relativeTime": 1646,
+      "screenshotPath": "step-0.png",
+      "exactHash": "2c4f67d71de04deec9d9ffbae67f9828",
+      "thumbnailHash": "73cb2d91eaab301c086f33dc7623fd90",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Calendar should switch to show the full week view",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775226740297,
+      "relativeTime": 21276,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5984abff30a4acf6494a35b2dbcadc0e",
+      "thumbnailHash": "a790245c72ebcfe6f18e9174c7e35c6e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          599,
+          105
+        ],
+        "raw": "left_click (599,105)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Calendar should switch to show the full week view",
+        "observed": "success left_click (599,105)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Week' (RadioButton) in Calendar",
+      "resolvedTarget": {
+        "label": "Week",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 1
+      },
+      "assistantIntent": "Aight, I can see Calendar is already open and showing Day view",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775226754603,
+      "relativeTime": 35582,
+      "screenshotPath": "step-2.png",
+      "exactHash": "bb04e6a88f6a2970ec127a19ebc9f2ca",
+      "thumbnailHash": "a06e0a3fdfa33869cc7e795b7e5f69b9",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Still in Day view - my click missed the \"Week\" button",
+      "resolvedTarget": null,
+      "assistantIntent": "Still in Day view - my click missed the \"Week\" button",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775226769687,
+      "relativeTime": 50666,
+      "screenshotPath": "step-3.png",
+      "exactHash": "7d5f16811341356c99de6b59bc548838",
+      "thumbnailHash": "70f5a4176777ef91701e99ec08a08774",
+      "action": {
+        "type": "key",
+        "text": "cmd+2",
+        "raw": "key: \"cmd+2\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Calendar should advance one week forward, showing April 12-18, 2026.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar in Week view showing April 2026, week of Sun 5 to Sat 11, with events like Easter Monday, Weekly Monday Meeting, and class events visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "That popup is still lingering",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775226799514,
+      "relativeTime": 80493,
+      "screenshotPath": "step-4.png",
+      "exactHash": "3abe070c6f313e804081bdb9817eda52",
+      "thumbnailHash": "f101fac596044925caba5b3542f71f2e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1044,
+          156
+        ],
+        "raw": "left_click (1044,156)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Calendar should advance one week forward, showing April 12-18, 2026.",
+        "observed": "success left_click (1044,156)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar in Week view showing April 12-18, 2026 with multiple university course events displayed across the weekdays (Mon 13 through Fri 17), still in Week view with \"Week\" button highlighted.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 1
+      },
+      "assistantIntent": "Week view is active",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          599,
+          105
+        ],
+        "raw": "left_click (599,105)"
+      },
+      "timestamp": 1775226740297
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775226754603
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+2",
+        "raw": "key: \"cmd+2\""
+      },
+      "timestamp": 1775226769687
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1044,
+          156
+        ],
+        "raw": "left_click (1044,156)"
+      },
+      "timestamp": 1775226799514
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully switched to Week view - Calendar now shows the week of April 5-11, 2026 with Day/Week/Month/Year buttons visible and \"Week\" is highlighted.\", tried [key: \"Escape\", key: \"cmd+2\", left_click (1044,156)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 4,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,267 @@
+{
+  "taskId": "task-1775148674917-0uer",
+  "taskDescription": "Open Safari browser using Spotlight. Press Cmd+Space, type Safari, press Enter. Once Safari opens, click the address bar, type apple.com, press Enter.",
+  "startTime": 1775148674917,
+  "endTime": 1775148761280,
+  "duration": 86363,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Spotlight search bar is open and visible at the top center of the screen.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "4a5a559f9a5001fd42e9596bfa37a1f4",
+      "semanticState": "Spotlight search bar showing \"Spotlight Search\" placeholder text, ready for input.",
+      "timestamp": 1775148698658
+    },
+    {
+      "stepNumber": 2,
+      "description": "Spotlight shows \"Safari — Open\" as the top result with the Safari icon.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "ad4edbbc0358bf6247bbe556cd08137f",
+      "semanticState": "Spotlight search showing \"Safari\" typed, with Safari app as the top result highlighted.",
+      "timestamp": 1775148715796
+    },
+    {
+      "stepNumber": 3,
+      "description": "Safari browser is open and showing the start page with Favourites.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "d2cf883961b90980be2ebf901b7e531b",
+      "semanticState": "Safari browser open with start page showing Favourites including Apple, iCloud, Google etc., address bar visible at top.",
+      "timestamp": 1775148734667
+    },
+    {
+      "stepNumber": 4,
+      "description": "Address bar shows \"apple.com\" with autocomplete suggestions showing Apple website.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "20a5aa2ed94dcf86f5dbbfc7ff5645f4",
+      "semanticState": "Safari address bar with \"apple.com\" typed, dropdown showing \"Apple - apple.com\" as first suggestion.",
+      "timestamp": 1775148760952
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Spotlight with Cmd+Space, type \"Safari\", press Enter",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Once Safari opens, focus the address bar with Cmd+L",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type apple.com and press Enter",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775148676602,
+      "relativeTime": 1685,
+      "screenshotPath": "step-0.png",
+      "exactHash": "311412107edb6e607e3b8502069e3c74",
+      "thumbnailHash": "48547609412cefc8944003043437709f",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight search bar should appear in the center of the screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775148690618,
+      "relativeTime": 15701,
+      "screenshotPath": "step-1.png",
+      "exactHash": "4a5a559f9a5001fd42e9596bfa37a1f4",
+      "thumbnailHash": "0aa3930e7db2374e403b442a76a0bac0",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Safari should appear as a search result",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar should appear in the center of the screen",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar showing \"Spotlight Search\" placeholder text, ready for input.",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775148707371,
+      "relativeTime": 32454,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ad4edbbc0358bf6247bbe556cd08137f",
+      "thumbnailHash": "26ebcc6dbca5ecbbda0cd046367ab9df",
+      "action": {
+        "type": "type",
+        "text": "Safari",
+        "raw": "type: \"Safari\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Safari browser should open",
+      "surprise": {
+        "score": 0.75,
+        "expected": "Safari should appear as a search result",
+        "observed": "success type: \"safari\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search showing \"Safari\" typed, with Safari app as the top result highlighted.",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775148724435,
+      "relativeTime": 49518,
+      "screenshotPath": "step-3.png",
+      "exactHash": "d2cf883961b90980be2ebf901b7e531b",
+      "thumbnailHash": "39dda1e4982344799355173ef742ecba",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Address bar should be focused and ready for input",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser open with start page showing Favourites including Apple, iCloud, Google etc., address bar visible at top.",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775148749283,
+      "relativeTime": 74366,
+      "screenshotPath": "step-4.png",
+      "exactHash": "20a5aa2ed94dcf86f5dbbfc7ff5645f4",
+      "thumbnailHash": "bfacafa9c87324ec3aac84f8380e91aa",
+      "action": {
+        "type": "type",
+        "text": "apple.com",
+        "raw": "type: \"apple.com\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Safari should navigate to apple.com website",
+      "surprise": {
+        "score": 1,
+        "expected": "Address bar should be focused and ready for input",
+        "observed": "success type: \"apple.com\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari address bar with \"apple.com\" typed, dropdown showing \"Apple - apple.com\" as first suggestion.",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775148690619
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Safari",
+        "raw": "type: \"Safari\""
+      },
+      "timestamp": 1775148707371
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775148724435
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "apple.com",
+        "raw": "type: \"apple.com\""
+      },
+      "timestamp": 1775148749283
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

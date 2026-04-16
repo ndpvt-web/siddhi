@@ -1,0 +1,290 @@
+{
+  "taskId": "task-1775238016184-iact",
+  "taskDescription": "Open System Settings and configure Time Machine backup settings",
+  "startTime": 1775238016184,
+  "endTime": 1775238190341,
+  "duration": 174157,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [
+    {
+      "stepNumber": 0,
+      "description": "System Settings is open on Bluetooth page with \"Time Machine\" typed in the search bar but search results are still showing Bluetooth items.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "9b8740ec0363ed76e04153daae0f1055",
+      "semanticState": "System Settings with Bluetooth page active, search bar showing \"Time Machine\", sidebar listing Bluetooth-related items.",
+      "timestamp": 1775238175346
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Clear the current search and type \"Time Machine\" in the search bar",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to Time Machine settings",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Show/configure the Time Machine backup settings",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775238017824,
+      "relativeTime": 1640,
+      "screenshotPath": "step-0.png",
+      "exactHash": "5a94a943e378dda38e97769e571fc8e6",
+      "thumbnailHash": "57531ea15e1b654030dc17c367118f91",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Search bar will clear and I can type \"Time Machine\"",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775238050585,
+      "relativeTime": 34401,
+      "screenshotPath": "step-1.png",
+      "exactHash": "3b1bd076d1c4503a3c558cffa7150fc1",
+      "thumbnailHash": "3c5a82adbfa93c1e96512f2b182da0cf",
+      "action": {
+        "type": "type",
+        "text": "Time Machine",
+        "raw": "type: \"Time Machine\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": {
+        "score": 0.5,
+        "expected": "Search bar will clear and I can type \"Time Machine\"",
+        "observed": "success type: \"time machine\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 3
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 64
+      },
+      "assistantIntent": "Alright, System Settings is already open showing Bluetooth",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775238100152,
+      "relativeTime": 83968,
+      "screenshotPath": "step-2.png",
+      "exactHash": "5c0473747d71b4aece8969587c625ed2",
+      "thumbnailHash": "fa86d704cbcc67351f793e1be2135e9f",
+      "action": {
+        "type": "key",
+        "text": "Delete",
+        "raw": "key: \"Delete\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 64
+      },
+      "assistantIntent": "Hmm, it looks like the text got selected but didn't replace with my typed text",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775238115677,
+      "relativeTime": 99493,
+      "screenshotPath": "step-3.png",
+      "exactHash": "68d580c92ac7ac26e9609316d0a2abc3",
+      "thumbnailHash": "0aced6f0c7c535f7fbbc95920e7da746",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Oh nice, \"Time Machine\" is already typed in the search bar",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh nice, \"Time Machine\" is already typed in the search bar",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775238154626,
+      "relativeTime": 138442,
+      "screenshotPath": "step-4.png",
+      "exactHash": "9b8740ec0363ed76e04153daae0f1055",
+      "thumbnailHash": "e57e992f5000f704dd49b092e8171822",
+      "action": {
+        "type": "key",
+        "text": "BackSpace",
+        "raw": "key: \"BackSpace\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "System Settings with Bluetooth page active, search bar showing \"Time Machine\", sidebar listing Bluetooth-related items.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 61
+      },
+      "assistantIntent": "The sidebar still shows Bluetooth stuff and not Time Machine results",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775238190341,
+      "relativeTime": 174157,
+      "screenshotPath": "step-5.png",
+      "exactHash": "fd23107d35d5c93d9e624192b7e3e9f0",
+      "thumbnailHash": "cac71a12d426588375cd5f8e0c471e49",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          379,
+          99
+        ],
+        "raw": "left_click (379,99)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 7
+      },
+      "assistantIntent": "Hmm, the search bar still shows \"Time Machine\" but the sidebar is still showing Bluetooth-related items",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "Time Machine",
+        "raw": "type: \"Time Machine\""
+      },
+      "timestamp": 1775238050585
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Delete",
+        "raw": "key: \"Delete\""
+      },
+      "timestamp": 1775238100152
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775238115677
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "BackSpace",
+        "raw": "key: \"BackSpace\""
+      },
+      "timestamp": 1775238154626
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          379,
+          99
+        ],
+        "raw": "left_click (379,99)"
+      },
+      "timestamp": 1775238190341
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

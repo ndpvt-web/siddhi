@@ -1,0 +1,95 @@
+{
+  "taskId": "task-1775211462798-h9ek",
+  "taskDescription": "Click Finder",
+  "startTime": 1775211462798,
+  "endTime": 1775211553970,
+  "duration": 91172,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775211465690,
+      "relativeTime": 2892,
+      "screenshotPath": "step-0.png",
+      "exactHash": "d561e6e7c2b01fda734fa4d012e4f629",
+      "thumbnailHash": "18b4ee622dd50e4780c00acb4b93989a",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775211553970,
+      "relativeTime": 91172,
+      "screenshotPath": "step-1.png",
+      "exactHash": "efc51f8d2b5fcca168d7ad29d1ebd7da",
+      "thumbnailHash": "abd96003fc1f923ed400dcc5f57b8368",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          63,
+          812
+        ],
+        "raw": "left_click (63,812)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked at (63, 812)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          63,
+          812
+        ],
+        "raw": "left_click (63,812)"
+      },
+      "timestamp": 1775211553970
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

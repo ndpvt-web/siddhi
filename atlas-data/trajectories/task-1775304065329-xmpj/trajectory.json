@@ -1,0 +1,255 @@
+{
+  "taskId": "task-1775304065329-xmpj",
+  "taskDescription": "Open Finder and use Quick Look to preview a file on the Desktop",
+  "startTime": 1775304065329,
+  "endTime": 1775304170669,
+  "duration": 105340,
+  "success": true,
+  "finalText": "CHECKPOINT [3]: Quick Look preview is open showing the contents of `capybara-facts.txt`! 🎉\n\nSCENE: Quick Look preview window showing \"capybara-facts.txt\" with a full CAPYBARA FACT SHEET including scientific classification, physical characteristics, habitat & range, interesting facts, and conservation status. Finder is visible in the background.\n\nLETS GOOO! 🐹 Nailed it! Quick Look is showing my boy the capybara fact sheet and honestly this is amazing content:\n\n- **Scientific Name**: Hydrochoerus hydrochaeris (try saying that 5 times fast lol)\n- **Weight**: 35 to 66 kg — absolute units\n- **Notable**: Largest living rodent 👑\n- They can stay submerged underwater for up to 5 minutes\n- They eat their own feces for bacterial gut flora (ngl that's kinda metal)\n- **Conservation Status**: Least Concern — capys are thriving, as they should\n\nTask complete! Opened Finder → navigated to Desktop → selected `capybara-facts.txt` → pressed Space to trigger Quick Look preview. Ez clap 🎯",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Desktop is open in Finder! I can see a bunch of files - screenshots, text files, PDFs, the whole shebang.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "96708ba10bda0126448ceab8bc5e6847",
+      "semanticState": "Finder showing \"Desktop — Local\" with a list of files including screenshots, text files, folders, etc.",
+      "timestamp": 1775304107439
+    },
+    {
+      "stepNumber": 2,
+      "description": "`capybara-facts.txt` is selected (highlighted in blue)!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "047b6d62b3db1c7c1bd7997092c0f526",
+      "semanticState": "Finder showing Desktop — Local, with `capybara-facts.txt` highlighted/selected in blue.",
+      "timestamp": 1775304144289
+    },
+    {
+      "stepNumber": 3,
+      "description": "Quick Look preview is open showing the contents of `capybara-facts.txt`! 🎉",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "347e88ab849566f537885468fc1957de",
+      "semanticState": "Quick Look preview window showing \"capybara-facts.txt\" with a full CAPYBARA FACT SHEET including scientific classification, physical characteristics, habitat & range, interesting facts, and conservation status. Finder is visible in the background.",
+      "timestamp": 1775304170668
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on Desktop in the sidebar to navigate there",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Select a file on the Desktop",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Press Space to trigger Quick Look preview",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775304067004,
+      "relativeTime": 1675,
+      "screenshotPath": "step-0.png",
+      "exactHash": "37711fa670d41299ccc695c9ad391205",
+      "thumbnailHash": "81e8fffe4b6ea3e7d4fe340708f46941",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Clicking Desktop in the sidebar should show the files on the Desktop",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775304092261,
+      "relativeTime": 26932,
+      "screenshotPath": "step-1.png",
+      "exactHash": "96708ba10bda0126448ceab8bc5e6847",
+      "thumbnailHash": "ccf81171f251329b2bd4f72f8ae8f36e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          170,
+          267
+        ],
+        "raw": "left_click (170,267)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The file will highlight/select when I click it",
+      "surprise": {
+        "score": 0.9166666666666666,
+        "expected": "Clicking Desktop in the sidebar should show the files on the Desktop",
+        "observed": "success left_click (170,267)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing \"Desktop — Local\" with a list of files including screenshots, text files, folders, etc.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Finder is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775304136220,
+      "relativeTime": 70891,
+      "screenshotPath": "step-2.png",
+      "exactHash": "047b6d62b3db1c7c1bd7997092c0f526",
+      "thumbnailHash": "2bf6f524770f2d060836506dc98c6916",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          434,
+          266
+        ],
+        "raw": "left_click (434,266)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A Quick Look popup window should appear showing the contents of capybara-facts.txt",
+      "surprise": {
+        "score": 0.75,
+        "expected": "The file will highlight/select when I click it",
+        "observed": "success left_click (434,266)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Desktop — Local, with `capybara-facts.txt` highlighted/selected in blue.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Desktop is open in Finder",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775304157155,
+      "relativeTime": 91826,
+      "screenshotPath": "step-3.png",
+      "exactHash": "347e88ab849566f537885468fc1957de",
+      "thumbnailHash": "73f217fa7a8530c409d54d7ee6c610b8",
+      "action": {
+        "type": "key",
+        "text": "space",
+        "raw": "key: \"space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A Quick Look popup window should appear showing the contents of capybara-facts.txt",
+        "observed": "success key: \"space\"",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Quick Look preview window showing \"capybara-facts.txt\" with a full CAPYBARA FACT SHEET including scientific classification, physical characteristics, habitat & range, interesting facts, and conservation status. Finder is visible in the background.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: `capybara-facts",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          170,
+          267
+        ],
+        "raw": "left_click (170,267)"
+      },
+      "timestamp": 1775304092261
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          434,
+          266
+        ],
+        "raw": "left_click (434,266)"
+      },
+      "timestamp": 1775304136220
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "space",
+        "raw": "key: \"space\""
+      },
+      "timestamp": 1775304157155
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"`capybara-facts.txt` is selected (highlighted in blue)!\", tried [left_click (170,267), left_click (434,266), key: \"space\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 3,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

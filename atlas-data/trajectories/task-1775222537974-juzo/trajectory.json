@@ -1,0 +1,260 @@
+{
+  "taskId": "task-1775222537974-juzo",
+  "taskDescription": "Open Finder and use the search to find all .txt files on the computer",
+  "startTime": 1775222537974,
+  "endTime": 1775222617583,
+  "duration": 79609,
+  "success": true,
+  "finalText": "LETS GOOO! 🎉 That worked perfectly!\n\nCHECKPOINT [2]: Selected \"Name Contains .txt\" filter - Finder is now showing all .txt files on the Mac.\nSCENE: Finder searching \"This Mac\" with the filter \"NAME ≈ .txt\" in the search bar. Results show dozens of .txt files including __commit.txt, 91a6d84c.txt, api_keys.txt, capybara-facts.txt, hello.txt, and many more.\n\nThe search is set to **\"This Mac\"** (highlighted in blue) and it's filtering by **filename containing \".txt\"**. I can see tons of .txt files showing up — everything from `__commit.txt` to `hello.txt` to `capybara-facts.txt` (lol nice). \n\nAll .txt files on the computer are now displayed! The search is working exactly as expected — it's scanning the entire Mac and showing every file with `.txt` in the name. Ez clap! 🎯",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Search bar is focused and ready for input.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "0b6bfc83c04910d5e98b592c895cff82",
+      "semanticState": "Finder showing Downloads folder with the search bar highlighted/focused at top right.",
+      "timestamp": 1775222574313
+    },
+    {
+      "stepNumber": 2,
+      "description": "Selected \"Name Contains .txt\" filter - Finder is now showing all .txt files on the Mac.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "6ccc378b3b374e2cd2062fa86074424c",
+      "semanticState": "Finder searching \"This Mac\" with the filter \"NAME ≈ .txt\" in the search bar. Results show dozens of .txt files including __commit.txt, 91a6d84c.txt, api_keys.txt, capybara-facts.txt, hello.txt, and many more.",
+      "timestamp": 1775222617583
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click the Search bar in Finder",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Type `.txt` to search for txt files",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Make sure the search scope is set to \"This Mac\" (not just the current folder)",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Verify the results show all .txt files",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775222539686,
+      "relativeTime": 1712,
+      "screenshotPath": "step-0.png",
+      "exactHash": "85824ac1c184dff002dfd2820d5b5aac",
+      "thumbnailHash": "7c3d3517f216f6aa521084186bd67ec0",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The search bar should become focused and ready for input",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775222566620,
+      "relativeTime": 28646,
+      "screenshotPath": "step-1.png",
+      "exactHash": "0b6bfc83c04910d5e98b592c895cff82",
+      "thumbnailHash": "0e67cf1e0fcb5f2cf8f7fb02d40fdf83",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1089,
+          80
+        ],
+        "raw": "left_click (1089,80)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Search results should appear showing .txt files",
+      "surprise": {
+        "score": 1,
+        "expected": "The search bar should become focused and ready for input",
+        "observed": "success left_click (1089,80)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Downloads folder with the search bar highlighted/focused at top right.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Finder",
+        "distance": 35
+      },
+      "assistantIntent": "Alright, Finder is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775222581302,
+      "relativeTime": 43328,
+      "screenshotPath": "step-2.png",
+      "exactHash": "c5654d8c46084640cb2fde2ca5f9658f",
+      "thumbnailHash": "cbb6014460bb863db0f97aebe36bb63b",
+      "action": {
+        "type": "type",
+        "text": ".txt",
+        "raw": "type: \".txt\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Search results should now only show files with `.txt` in their names",
+      "surprise": {
+        "score": 0.8333333333333334,
+        "expected": "Search results should appear showing .txt files",
+        "observed": "success type: \".txt\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "The search bar is now focused and highlighted in blue",
+      "resolvedTarget": null,
+      "assistantIntent": "The search bar is now focused and highlighted in blue",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775222606554,
+      "relativeTime": 68580,
+      "screenshotPath": "step-3.png",
+      "exactHash": "6ccc378b3b374e2cd2062fa86074424c",
+      "thumbnailHash": "8547a6b848a3ceb7809884351f66389c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1113,
+          133
+        ],
+        "raw": "left_click (1113,133)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Search results should now only show files with `.txt` in their names",
+        "observed": "success left_click (1113,133)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder searching \"This Mac\" with the filter \"NAME ≈ .txt\" in the search bar. Results show dozens of .txt files including __commit.txt, 91a6d84c.txt, api_keys.txt, capybara-facts.txt, hello.txt, and many more.",
+      "resolvedTarget": {
+        "label": "Name Contains “.txt”",
+        "role": "MenuItem",
+        "app": "Finder",
+        "distance": 68
+      },
+      "assistantIntent": "Oh nice, Finder is already searching \"This Mac\" and there's a dropdown with options",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1089,
+          80
+        ],
+        "raw": "left_click (1089,80)"
+      },
+      "timestamp": 1775222566620
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": ".txt",
+        "raw": "type: \".txt\""
+      },
+      "timestamp": 1775222581302
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1113,
+          133
+        ],
+        "raw": "left_click (1113,133)"
+      },
+      "timestamp": 1775222606554
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Search bar is focused and ready for input.\", tried [left_click (1089,80), type: \".txt\", left_click (1113,133)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 1,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 3,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

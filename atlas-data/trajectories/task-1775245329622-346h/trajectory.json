@@ -1,0 +1,226 @@
+{
+  "taskId": "task-1775245329622-346h",
+  "taskDescription": "Open Numbers, create a spreadsheet with data, export as CSV, then open the CSV in TextEdit",
+  "startTime": 1775245329622,
+  "endTime": 1775245462948,
+  "duration": 133326,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Numbers via Spotlight",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Create a new spreadsheet with some data",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Export the spreadsheet as CSV",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Open the CSV file in TextEdit",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775245331211,
+      "relativeTime": 1589,
+      "screenshotPath": "step-0.png",
+      "exactHash": "97c5386689a09ac2c11c2c112bc11e96",
+      "thumbnailHash": "27016719e54d93de30adbc57c6677319",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775245359124,
+      "relativeTime": 29502,
+      "screenshotPath": "step-1.png",
+      "exactHash": "f81a6813703726e44ee89746994ee10b",
+      "thumbnailHash": "2d3ec86191f648008311670316181cac",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with 'View Options' (MenuButton) in Notes",
+      "resolvedTarget": {
+        "label": "View Options",
+        "role": "MenuButton",
+        "app": "Notes",
+        "distance": 52
+      },
+      "assistantIntent": "Alright, I can see Spotlight is open with \"Notes\" typed in it",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775245382105,
+      "relativeTime": 52483,
+      "screenshotPath": "step-2.png",
+      "exactHash": "54d8af09b3884da9b93ad2f9609b5ae0",
+      "thumbnailHash": "09f97303ed0b205288f95d5af59bb730",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, it's showing file results but not the Numbers app directly",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, it's showing file results but not the Numbers app directly",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775245396736,
+      "relativeTime": 67114,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c0891748fafd55d5636e39676bb4d893",
+      "thumbnailHash": "f43cf81b1a1481275a3f256cb390dc97",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight didn't open, Notes is still in focus",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight didn't open, Notes is still in focus",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775245417638,
+      "relativeTime": 88016,
+      "screenshotPath": "step-4.png",
+      "exactHash": "3dc031626f07b8aabd1f09cca45d91ef",
+      "thumbnailHash": "d6756e81dd4843215594d5ec81828072",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          614,
+          380
+        ],
+        "raw": "scroll (614,380)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open with \"Numbers\" already typed",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open with \"Numbers\" already typed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "timestamp": 1775245359124
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775245382105
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775245396736
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          614,
+          380
+        ],
+        "raw": "scroll (614,380)"
+      },
+      "timestamp": 1775245417638
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

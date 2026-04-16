@@ -1,0 +1,186 @@
+{
+  "taskId": "task-1775293718012-ah0x",
+  "taskDescription": "Open Finder and switch to List View in the Documents folder",
+  "startTime": 1775293718012,
+  "endTime": 1775293767529,
+  "duration": 49517,
+  "success": true,
+  "finalText": "CHECKPOINT [2]: LETS GOOO! List View is activated! 🎉\n\nSCENE: Finder showing Documents — Local in List View with columns for Name, Date Modified, Size, and Kind. All 11 items are neatly listed with their details.\n\nDone and dusted! Finder is now showing the Documents folder in List View. You can see all your files with their names, dates modified, sizes, and file types all nicely laid out in a clean list. Way more useful than icon view tbh 😎",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Documents folder is open! I can see it's showing \"Documents — Local\" with all the files in icon view.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "97b742fdd23e274cd13cc83b64879337",
+      "semanticState": "Finder showing Documents folder with 11 items in icon/grid view. Now I need to click the List View button in the toolbar.",
+      "timestamp": 1775293748686
+    },
+    {
+      "stepNumber": 2,
+      "description": "LETS GOOO! List View is activated! 🎉",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "f555359ff5bdbb2a25fef5362546fad4",
+      "semanticState": "Finder showing Documents — Local in List View with columns for Name, Date Modified, Size, and Kind. All 11 items are neatly listed with their details.",
+      "timestamp": 1775293767528
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on Documents in the sidebar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Switch to List View using the toolbar button",
+        "done": true
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775293719711,
+      "relativeTime": 1699,
+      "screenshotPath": "step-0.png",
+      "exactHash": "65efe923a95e409226b4f585e7bcce8c",
+      "thumbnailHash": "c76342221c000c95024286a2f0d53a8e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Documents folder opens showing its contents.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775293740746,
+      "relativeTime": 22734,
+      "screenshotPath": "step-1.png",
+      "exactHash": "97b742fdd23e274cd13cc83b64879337",
+      "thumbnailHash": "d1ac9b8c51e2a469e9e3cc22a84270fd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          242
+        ],
+        "raw": "left_click (124,242)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The view switches to list view showing files with details like date, size, kind.",
+      "surprise": {
+        "score": 1,
+        "expected": "Documents folder opens showing its contents.",
+        "observed": "success left_click (124,242)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Documents folder with 11 items in icon/grid view. Now I need to click the List View button in the toolbar.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Finder is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775293760981,
+      "relativeTime": 42969,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f555359ff5bdbb2a25fef5362546fad4",
+      "thumbnailHash": "4d4b5bdc868e86277eece57cbfed23fe",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          724,
+          52
+        ],
+        "raw": "left_click (724,52)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The view switches to list view showing files with details like date, size, kind.",
+        "observed": "success left_click (724,52)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Documents — Local in List View with columns for Name, Date Modified, Size, and Kind. All 11 items are neatly listed with their details.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Documents folder is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          242
+        ],
+        "raw": "left_click (124,242)"
+      },
+      "timestamp": 1775293740746
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          724,
+          52
+        ],
+        "raw": "left_click (724,52)"
+      },
+      "timestamp": 1775293760981
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

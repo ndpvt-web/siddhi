@@ -1,0 +1,327 @@
+{
+  "taskId": "task-1775296100140-b8px",
+  "taskDescription": "Open Safari, navigate to example.com, and use Reader Mode to view the page content",
+  "startTime": 1775296100140,
+  "endTime": 1775296214039,
+  "duration": 113899,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Dialog is CLOSED. Safari is now showing github.com fully, no more Advanced settings popup.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "ea66669c9ceb58b8f66e7f7ac12f4ebc",
+      "semanticState": "Safari browser showing GitHub.com homepage with the \"future of building happens together\" tagline. No dialogs open.",
+      "timestamp": 1775296131331
+    },
+    {
+      "stepNumber": 2,
+      "description": "Navigated to example.com successfully!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "2894a19cf35ed610e24b6beecf5a2714",
+      "semanticState": "Safari showing example.com with \"Example Domain\" title, a brief description, and a \"Learn more\" link. Super minimal page.",
+      "timestamp": 1775296150948
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Advanced settings dialog",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to example.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Attempt to activate Reader Mode",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775296101847,
+      "relativeTime": 1707,
+      "screenshotPath": "step-0.png",
+      "exactHash": "7ccb87cd140af1ff1622790f4438b32f",
+      "thumbnailHash": "9c7b01225b445b56562ad17eccd8b865",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Dialog closes, Safari browser with github.com becomes fully visible.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775296121919,
+      "relativeTime": 21779,
+      "screenshotPath": "step-1.png",
+      "exactHash": "ea66669c9ceb58b8f66e7f7ac12f4ebc",
+      "thumbnailHash": "21ceafe39abf2cdea963e8fc47f89799",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          409,
+          188
+        ],
+        "raw": "left_click (409,188)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Address bar gets focused and I can type example.com.",
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes, Safari browser with github.com becomes fully visible.",
+        "observed": "success left_click (409,188)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing GitHub.com homepage with the \"future of building happens together\" tagline. No dialogs open.",
+      "resolvedTarget": null,
+      "assistantIntent": "Aight, so Safari is already open but there's an Advanced settings dialog in the way",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775296143467,
+      "relativeTime": 43327,
+      "screenshotPath": "step-2.png",
+      "exactHash": "2894a19cf35ed610e24b6beecf5a2714",
+      "thumbnailHash": "9ee9255263857b5e60f9c40ababbee9a",
+      "action": {
+        "type": "type",
+        "text": "example.com\n",
+        "raw": "type: \"example.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing example.com with \"Example Domain\" title, a brief description, and a \"Learn more\" link. Super minimal page.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Dialog is CLOSED",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775296162676,
+      "relativeTime": 62536,
+      "screenshotPath": "step-3.png",
+      "exactHash": "8b74bdc900a3b8d92548a530295c9114",
+      "thumbnailHash": "5e856fd809d897d9ae4092d5475118fc",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          603,
+          52
+        ],
+        "raw": "left_click (603,52)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: Navigated to example",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Navigated to example",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775296174047,
+      "relativeTime": 73907,
+      "screenshotPath": "step-4.png",
+      "exactHash": "a7d3df885ba115521c4ab50bfe800ce8",
+      "thumbnailHash": "fb62b1bfd74c21ce441a4ae503ba6c68",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, this just opened the address bar dropdown",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, this just opened the address bar dropdown",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775296191604,
+      "relativeTime": 91464,
+      "screenshotPath": "step-5.png",
+      "exactHash": "0d608d84e992256873a0ee0b649d429d",
+      "thumbnailHash": "17154d2e1603c309cc6c6c5e91876561",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          600,
+          400
+        ],
+        "raw": "left_click (600,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The dropdown is still showing",
+      "resolvedTarget": null,
+      "assistantIntent": "The dropdown is still showing",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775296202511,
+      "relativeTime": 102371,
+      "screenshotPath": "step-6.png",
+      "exactHash": "5afc63157c8332ed9fc45db6e88f6a26",
+      "thumbnailHash": "126d2e43aca319d909c2958c01d80871",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "This dropdown is being stubborn lol",
+      "resolvedTarget": null,
+      "assistantIntent": "This dropdown is being stubborn lol",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          409,
+          188
+        ],
+        "raw": "left_click (409,188)"
+      },
+      "timestamp": 1775296121919
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "example.com\n",
+        "raw": "type: \"example.com\n\""
+      },
+      "timestamp": 1775296143467
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          603,
+          52
+        ],
+        "raw": "left_click (603,52)"
+      },
+      "timestamp": 1775296162676
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775296174047
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          600,
+          400
+        ],
+        "raw": "left_click (600,400)"
+      },
+      "timestamp": 1775296191604
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775296202511
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

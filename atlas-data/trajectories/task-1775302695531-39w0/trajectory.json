@@ -1,0 +1,409 @@
+{
+  "taskId": "task-1775302695531-39w0",
+  "taskDescription": "Open Safari, navigate to wikipedia.org, search for 'Alan Turing', and take a screenshot of the article page",
+  "startTime": 1775302695531,
+  "endTime": 1775302809924,
+  "duration": 114393,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Color picker popup dismissed successfully - Finder window is now clean and fully visible",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "d8311ae534aed7dfe1d0625a357033b4",
+      "semanticState": "Finder window showing Desktop - Local with various files and folders, no popups blocking the screen.",
+      "timestamp": 1775302738991
+    },
+    {
+      "stepNumber": 2,
+      "description": "Spotlight search bar is open and visible at the top of the screen",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "f880680ec1cad6d6006f8fe7a9ec6db7",
+      "semanticState": "Spotlight search bar is open and focused, ready for input.",
+      "timestamp": 1775302752104
+    },
+    {
+      "stepNumber": 3,
+      "description": "Safari is open and active - showing github.com with developer tools open",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "215d22b65ab8f743201a92761bbcefc7",
+      "semanticState": "Safari browser open showing github.com with Web Inspector/developer tools taking up the bottom half of the screen.",
+      "timestamp": 1775302781342
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Dismiss the current popup/dialog blocking the screen",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Safari using Spotlight",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Navigate to wikipedia.org",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Search for 'Alan Turing'",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Take a screenshot of the article page",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775302697250,
+      "relativeTime": 1719,
+      "screenshotPath": "step-0.png",
+      "exactHash": "3f7c282335e109a442ca38ea32dea414",
+      "thumbnailHash": "dd7569536bc1d52ba43a49f354c4daf2",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The color picker popup will close",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775302710254,
+      "relativeTime": 14723,
+      "screenshotPath": "step-1.png",
+      "exactHash": "3f7c282335e109a442ca38ea32dea414",
+      "thumbnailHash": "dd7569536bc1d52ba43a49f354c4daf2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The color picker popup will close",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see there's a Finder window open with a color picker popup floating around",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see there's a Finder window open with a color picker popup floating around",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775302729464,
+      "relativeTime": 33933,
+      "screenshotPath": "step-2.png",
+      "exactHash": "d8311ae534aed7dfe1d0625a357033b4",
+      "thumbnailHash": "518fc934257b94df0148139549856ec8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          501,
+          266
+        ],
+        "raw": "left_click (501,266)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Spotlight search bar will appear at the center of the screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder window showing Desktop - Local with various files and folders, no popups blocking the screen.",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, Escape did nothing lol",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775302745287,
+      "relativeTime": 49756,
+      "screenshotPath": "step-3.png",
+      "exactHash": "f880680ec1cad6d6006f8fe7a9ec6db7",
+      "thumbnailHash": "a65c8003941876e0dbe31f3abb64ce3d",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Safari will appear in the search results",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar will appear at the center of the screen",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar is open and focused, ready for input.",
+      "resolvedTarget": null,
+      "assistantIntent": "That popup is gone",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775302758775,
+      "relativeTime": 63244,
+      "screenshotPath": "step-4.png",
+      "exactHash": "1e8cdd2469ca3e27343f19672904c865",
+      "thumbnailHash": "e337fc67d199377ccd4368bc56f2df95",
+      "action": {
+        "type": "type",
+        "text": "Safari",
+        "raw": "type: \"Safari\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Safari browser will open",
+      "surprise": {
+        "score": 0.75,
+        "expected": "Safari will appear in the search results",
+        "observed": "success type: \"safari\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775302773372,
+      "relativeTime": 77841,
+      "screenshotPath": "step-5.png",
+      "exactHash": "215d22b65ab8f743201a92761bbcefc7",
+      "thumbnailHash": "1a0e8405fc75614a7adf5a0b0b351ba8",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Dev tools will close, then I'll navigate to wikipedia.org",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Safari browser open showing github.com with Web Inspector/developer tools taking up the bottom half of the screen.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is right there at the top of the results",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775302787872,
+      "relativeTime": 92341,
+      "screenshotPath": "step-6.png",
+      "exactHash": "bfbb9e89c95604b25ae4223b5f851f4a",
+      "thumbnailHash": "3b6b2103d0d80db6f4412b2b776c057a",
+      "action": {
+        "type": "key",
+        "text": "alt+cmd+i",
+        "raw": "key: \"alt+cmd+i\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Address bar will be focused and I can type wikipedia.org",
+      "surprise": {
+        "score": 1,
+        "expected": "Dev tools will close, then I'll navigate to wikipedia.org",
+        "observed": "success key: \"alt+cmd+i\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Safari is open but it's showing GitHub with dev tools open",
+      "resolvedTarget": null,
+      "assistantIntent": "Safari is open but it's showing GitHub with dev tools open",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775302809923,
+      "relativeTime": 114392,
+      "screenshotPath": "step-7.png",
+      "exactHash": "c19f1fdd7d91bdae349a099d456ddb35",
+      "thumbnailHash": "a9bf49fa3b271558665c1cd5798239bc",
+      "action": {
+        "type": "type",
+        "text": "wikipedia.org\n",
+        "raw": "type: \"wikipedia.org\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Dev tools are closed",
+      "resolvedTarget": null,
+      "assistantIntent": "Dev tools are closed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775302710255
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          501,
+          266
+        ],
+        "raw": "left_click (501,266)"
+      },
+      "timestamp": 1775302729464
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775302745287
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Safari",
+        "raw": "type: \"Safari\""
+      },
+      "timestamp": 1775302758775
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775302773372
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "alt+cmd+i",
+        "raw": "key: \"alt+cmd+i\""
+      },
+      "timestamp": 1775302787872
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "type",
+        "text": "wikipedia.org\n",
+        "raw": "type: \"wikipedia.org\n\""
+      },
+      "timestamp": 1775302809923
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Color picker popup dismissed successfully - Finder window is now clean and fully visible\", tried [key: \"Escape\", left_click (501,266), key: \"cmd+space\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

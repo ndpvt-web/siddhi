@@ -1,0 +1,341 @@
+{
+  "taskId": "task-1775235135528-jt1n",
+  "taskDescription": "Open Terminal and display the current date and system uptime",
+  "startTime": 1775235135528,
+  "endTime": 1775235310962,
+  "duration": 175434,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "I can see the Terminal app is open, but the current terminal window is running a daemon script and not accepting regular commands.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "112ec6001f9d8ffb6a65e2119bb51785",
+      "semanticState": "Terminal app is open with a window running capy-screenshot-daemon script, plus other terminal windows and a desktop with various documents visible.",
+      "timestamp": 1775235291408
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the Terminal window to focus it",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Run `date` to get current date",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Run `uptime` to get system uptime",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775235137218,
+      "relativeTime": 1690,
+      "screenshotPath": "step-0.png",
+      "exactHash": "7f91363911d1891f69552200eb7385c4",
+      "thumbnailHash": "543b57366d24ab0685058596c9e690b1",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775235162541,
+      "relativeTime": 27013,
+      "screenshotPath": "step-1.png",
+      "exactHash": "8dbfe8b102b0230ee9fee91ccd7f73b2",
+      "thumbnailHash": "6c07e5e28b2ca361b244547494aeb632",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          470,
+          355
+        ],
+        "raw": "left_click (470,355)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Both date and uptime output will display in the terminal",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Yo, Terminal's already open",
+      "resolvedTarget": null,
+      "assistantIntent": "Yo, Terminal's already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775235182550,
+      "relativeTime": 47022,
+      "screenshotPath": "step-2.png",
+      "exactHash": "750c96607a8ac9a17c8e47dcf4ffe9f3",
+      "thumbnailHash": "30351c398b9c46f2b38a66628dd15d9b",
+      "action": {
+        "type": "type",
+        "text": "date && uptime\n",
+        "raw": "type: \"date && uptime\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal is focused and the cursor is in the input area",
+      "resolvedTarget": null,
+      "assistantIntent": "Terminal is focused and the cursor is in the input area",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775235191017,
+      "relativeTime": 55489,
+      "screenshotPath": "step-3.png",
+      "exactHash": "710f3700016af018d206eb2bb51f0c26",
+      "thumbnailHash": "f5e46d8e8f83a3707ff70f3a4628290b",
+      "action": {
+        "type": "type",
+        "text": "date && uptime\n",
+        "raw": "type: \"date && uptime\n\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, I can see `date && uptime` was typed but the output isn't showing clearly - looks like it might still be processing",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, I can see `date && uptime` was typed but the output isn't showing clearly - looks like it might still be processing",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775235230753,
+      "relativeTime": 95225,
+      "screenshotPath": "step-4.png",
+      "exactHash": "be3221ac7b50c91dd55f7f1ba80acc85",
+      "thumbnailHash": "aacc8e038114f8dac2dcba3b9dce595f",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Bruh, the Terminal window seems like the command ran but the output isn't visible - the terminal looks stuck at `date &&",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, the Terminal window seems like the command ran but the output isn't visible - the terminal looks stuck at `date &&",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775235256659,
+      "relativeTime": 121131,
+      "screenshotPath": "step-5.png",
+      "exactHash": "d5f773fcdada7c30a1dd5ce6758ab42a",
+      "thumbnailHash": "f119c662e5553a1f1004b8a3dc869b7c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          470,
+          380
+        ],
+        "raw": "left_click (470,380)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Okay something's off",
+      "resolvedTarget": null,
+      "assistantIntent": "Okay something's off",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775235279415,
+      "relativeTime": 143887,
+      "screenshotPath": "step-6.png",
+      "exactHash": "112ec6001f9d8ffb6a65e2119bb51785",
+      "thumbnailHash": "2cc22c3e7b0ef5ada16b32c43a13e08d",
+      "action": {
+        "type": "type",
+        "text": "date && uptime\n",
+        "raw": "type: \"date && uptime\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal app is open with a window running capy-screenshot-daemon script, plus other terminal windows and a desktop with various documents visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "Okay NOW I can see the terminal is focused (there's a cursor blinking at the prompt)",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775235310961,
+      "relativeTime": 175433,
+      "screenshotPath": "step-7.png",
+      "exactHash": "746f4a407a9792d86913d92dc8e9d141",
+      "thumbnailHash": "0888a0bd07b05d5e8759f2baa225f375",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The commands work",
+      "resolvedTarget": null,
+      "assistantIntent": "The commands work",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          470,
+          355
+        ],
+        "raw": "left_click (470,355)"
+      },
+      "timestamp": 1775235162541
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "date && uptime\n",
+        "raw": "type: \"date && uptime\n\""
+      },
+      "timestamp": 1775235182550
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "date && uptime\n",
+        "raw": "type: \"date && uptime\n\""
+      },
+      "timestamp": 1775235191017
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775235230753
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          470,
+          380
+        ],
+        "raw": "left_click (470,380)"
+      },
+      "timestamp": 1775235256659
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "date && uptime\n",
+        "raw": "type: \"date && uptime\n\""
+      },
+      "timestamp": 1775235279415
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775235310961
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,422 @@
+{
+  "taskId": "task-1775244489302-y86s",
+  "taskDescription": "Create a text file in TextEdit, save it, then open Finder and verify the file exists on the Desktop",
+  "startTime": 1775244489302,
+  "endTime": 1775244638201,
+  "duration": 148899,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "TextEdit is open showing the file picker dialog with a \"New Document\" button visible.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "747bf4e7e4752784f0a270c51e51baf5",
+      "semanticState": "TextEdit Open dialog showing iCloud TextEdit files with New Document button at bottom left.",
+      "timestamp": 1775244556303
+    },
+    {
+      "stepNumber": 2,
+      "description": "New TextEdit document \"Untitled 2\" is open and visible.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "84c18f673d649de1184874175a9fd5d0",
+      "semanticState": "TextEdit \"Untitled 2\" document window is open overlapping PowerPoint - it's a blank dark document area.",
+      "timestamp": 1775244580058
+    },
+    {
+      "stepNumber": 3,
+      "description": "Text \"Hello from CAPY! This file was created on the Desktop.\" has been typed into the TextEdit document.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "4f897e16d64fb29875531f3daee764e7",
+      "semanticState": "TextEdit document with text visible at the top, title shows \"Untitled 2.rtf — Edited\".",
+      "timestamp": 1775244623410
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open TextEdit using Spotlight (Cmd+Space)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new document and type some text",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Save the file to the Desktop as a .txt file",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Open Finder and navigate to Desktop to verify the file exists",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775244491024,
+      "relativeTime": 1722,
+      "screenshotPath": "step-0.png",
+      "exactHash": "532e2ac30b5823b48a49793c7ee3fd38",
+      "thumbnailHash": "a4758c701f0e43332c00623fe73cdb5b",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775244508239,
+      "relativeTime": 18937,
+      "screenshotPath": "step-1.png",
+      "exactHash": "457de9e849ed4bd8bb43985492407722",
+      "thumbnailHash": "2f6a1083cb3ee4f8c17a23218dee7c66",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Aight let's get this done",
+      "resolvedTarget": null,
+      "assistantIntent": "Aight let's get this done",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775244532687,
+      "relativeTime": 43385,
+      "screenshotPath": "step-2.png",
+      "exactHash": "46d9543580d9cfb4713be2d1bffffe70",
+      "thumbnailHash": "efc3bcecd510b2cde2226d442d4a4cf9",
+      "action": {
+        "type": "type",
+        "text": "TextEdit",
+        "raw": "type: \"TextEdit\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "TextEdit should open with either a new document or the Open dialog.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open but it has \"Keynote\" from a previous search",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open but it has \"Keynote\" from a previous search",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775244547137,
+      "relativeTime": 57835,
+      "screenshotPath": "step-3.png",
+      "exactHash": "747bf4e7e4752784f0a270c51e51baf5",
+      "thumbnailHash": "2599bc08b2f03fc0e46b95e18190527b",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A blank TextEdit document should open.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit Open dialog showing iCloud TextEdit files with New Document button at bottom left.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is at the top",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775244570241,
+      "relativeTime": 80939,
+      "screenshotPath": "step-4.png",
+      "exactHash": "84c18f673d649de1184874175a9fd5d0",
+      "thumbnailHash": "d7a5f53cd024d0401098bc7cc658dcde",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          547,
+          506
+        ],
+        "raw": "left_click (547,506)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Cursor should appear in the document and I can type text.",
+      "surprise": {
+        "score": 1,
+        "expected": "A blank TextEdit document should open.",
+        "observed": "success left_click (547,506)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit \"Untitled 2\" document window is open overlapping PowerPoint - it's a blank dark document area.",
+      "resolvedTarget": {
+        "label": "New Document",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 1
+      },
+      "assistantIntent": "TextEdit opened and it's showing the Open dialog",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775244594636,
+      "relativeTime": 105334,
+      "screenshotPath": "step-5.png",
+      "exactHash": "33e495d98b240df564bfad1ced240374",
+      "thumbnailHash": "c91ab78ed83fa2d8b216baacbc2add4a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          410,
+          350
+        ],
+        "raw": "left_click (410,350)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Text should appear in the dark document area.",
+      "surprise": {
+        "score": 1,
+        "expected": "Cursor should appear in the document and I can type text.",
+        "observed": "success left_click (410,350)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "OK so a new TextEdit document opened",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so a new TextEdit document opened",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775244610957,
+      "relativeTime": 121655,
+      "screenshotPath": "step-6.png",
+      "exactHash": "4f897e16d64fb29875531f3daee764e7",
+      "thumbnailHash": "6de546767b69e3b85d3e0f8423bfce87",
+      "action": {
+        "type": "type",
+        "text": "Hello from CAPY! This file was created on the Desktop.",
+        "raw": "type: \"Hello from CAPY! This file was created on the Desk\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Format menu should show \"Make Plain Text\" option.",
+      "surprise": {
+        "score": 1,
+        "expected": "Text should appear in the dark document area.",
+        "observed": "success type: \"hello from capy! this file was created on the desk\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "TextEdit document with text visible at the top, title shows \"Untitled 2.rtf — Edited\".",
+      "resolvedTarget": null,
+      "assistantIntent": "OK I can see the TextEdit document is there with a cursor blinking",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775244638201,
+      "relativeTime": 148899,
+      "screenshotPath": "step-7.png",
+      "exactHash": "228d59392af44602a0f83fe8f5f67899",
+      "thumbnailHash": "2e68729c4f71821376b97444b87d1f48",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          222,
+          13
+        ],
+        "raw": "left_click (222,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Format menu should show \"Make Plain Text\" option.",
+        "observed": "success left_click (222,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 74
+      },
+      "assistantIntent": "The text appeared",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775244508239
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "TextEdit",
+        "raw": "type: \"TextEdit\""
+      },
+      "timestamp": 1775244532687
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775244547137
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          547,
+          506
+        ],
+        "raw": "left_click (547,506)"
+      },
+      "timestamp": 1775244570241
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          410,
+          350
+        ],
+        "raw": "left_click (410,350)"
+      },
+      "timestamp": 1775244594637
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Hello from CAPY! This file was created on the Desktop.",
+        "raw": "type: \"Hello from CAPY! This file was created on the Desk\""
+      },
+      "timestamp": 1775244610957
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          222,
+          13
+        ],
+        "raw": "left_click (222,13)"
+      },
+      "timestamp": 1775244638201
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"TextEdit is open showing the file picker dialog with a \"New Document\" button visible.\", tried [type: \"TextEdit\", key: \"Return\", left_click (547,506)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

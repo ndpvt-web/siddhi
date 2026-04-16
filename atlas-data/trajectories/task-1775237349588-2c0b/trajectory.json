@@ -1,0 +1,349 @@
+{
+  "taskId": "task-1775237349588-2c0b",
+  "taskDescription": "Open System Settings and adjust the mouse tracking speed to maximum",
+  "startTime": 1775237349588,
+  "endTime": 1775237543088,
+  "duration": 193500,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Locations dialog is closed, we're back to the Network settings pane.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "fec62c0c06934beeb6b8dfec66c55d38",
+      "semanticState": "System Settings showing Network pane with Wi-Fi connected, search bar shows \"Network\".",
+      "timestamp": 1775237400229
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Locations dialog by clicking \"Done\"",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to Mouse settings in System Settings",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Set tracking speed to maximum",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775237351188,
+      "relativeTime": 1600,
+      "screenshotPath": "step-0.png",
+      "exactHash": "441496d4c6be737bfc1fa2a53aa451cc",
+      "thumbnailHash": "57d484d7e141e4e0bcac6b434bc8ee33",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The Locations dialog will close and we'll be back to the Network settings pane.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775237390833,
+      "relativeTime": 41245,
+      "screenshotPath": "step-1.png",
+      "exactHash": "fec62c0c06934beeb6b8dfec66c55d38",
+      "thumbnailHash": "f99691d01ab4517d8ab9a51b937d6154",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          625,
+          487
+        ],
+        "raw": "left_click (625,487)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Clearing the search and typing \"Mouse\" should show Mouse-related settings in the sidebar.",
+      "surprise": {
+        "score": 1,
+        "expected": "The Locations dialog will close and we'll be back to the Network settings pane.",
+        "observed": "success left_click (625,487)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "System Settings showing Network pane with Wi-Fi connected, search bar shows \"Network\".",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 3
+      },
+      "assistantIntent": "Alright, I can see System Settings is already open with the Network pane showing, and there's a Locations dialog open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775237437004,
+      "relativeTime": 87416,
+      "screenshotPath": "step-2.png",
+      "exactHash": "76572a6d140fd763fbf5ffecbaf1776f",
+      "thumbnailHash": "c225cb8b1e3bc78b43a48af318f0a9e8",
+      "action": {
+        "type": "type",
+        "text": "Mouse",
+        "raw": "type: \"Mouse\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.7777777777777778,
+        "expected": "Clearing the search and typing \"Mouse\" should show Mouse-related settings in the sidebar.",
+        "observed": "success type: \"mouse\"",
+        "expectedKeywords": 9,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 64
+      },
+      "assistantIntent": "CHECKPOINT [1]: Locations dialog is closed, we're back to the Network settings pane",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775237463684,
+      "relativeTime": 114096,
+      "screenshotPath": "step-3.png",
+      "exactHash": "fb6a6e86e45a02eac0ff92ba53f2bcd6",
+      "thumbnailHash": "f749032dac4a41b8c2fbe7f3a647a9fb",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          384,
+          98
+        ],
+        "raw": "left_click (384,98)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 1
+      },
+      "assistantIntent": "Nice, the search results are showing Mouse-related options",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775237481923,
+      "relativeTime": 132335,
+      "screenshotPath": "step-4.png",
+      "exactHash": "f7c0f8eea406db9d08956d052727eeaa",
+      "thumbnailHash": "d0885fa077219354920ee88fce3a17b9",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          306,
+          400
+        ],
+        "raw": "scroll (306,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Good, the search is cleared and I can see the sidebar with all settings categories",
+      "resolvedTarget": null,
+      "assistantIntent": "Good, the search is cleared and I can see the sidebar with all settings categories",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775237506623,
+      "relativeTime": 157035,
+      "screenshotPath": "step-5.png",
+      "exactHash": "97939b989b4878657c6144f603dddcba",
+      "thumbnailHash": "a6aee30473527444e35815dad4aa0e33",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          306,
+          400
+        ],
+        "raw": "scroll (306,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "I can see the sidebar now has Keyboard, Trackpad, and Printers & Scanners visible",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the sidebar now has Keyboard, Trackpad, and Printers & Scanners visible",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775237543088,
+      "relativeTime": 193500,
+      "screenshotPath": "step-6.png",
+      "exactHash": "d0adf56e93571b4d9471af5cbe8b3bac",
+      "thumbnailHash": "2ad835179fff74c6cc28d231e8242c85",
+      "action": {
+        "type": "type",
+        "text": "Mouse",
+        "raw": "type: \"Mouse\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 64
+      },
+      "assistantIntent": "Hmm, I don't see a dedicated \"Mouse\" entry in the sidebar",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          625,
+          487
+        ],
+        "raw": "left_click (625,487)"
+      },
+      "timestamp": 1775237390833
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Mouse",
+        "raw": "type: \"Mouse\""
+      },
+      "timestamp": 1775237437004
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          384,
+          98
+        ],
+        "raw": "left_click (384,98)"
+      },
+      "timestamp": 1775237463684
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          306,
+          400
+        ],
+        "raw": "scroll (306,400)"
+      },
+      "timestamp": 1775237481923
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          306,
+          400
+        ],
+        "raw": "scroll (306,400)"
+      },
+      "timestamp": 1775237506623
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Mouse",
+        "raw": "type: \"Mouse\""
+      },
+      "timestamp": 1775237543088
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

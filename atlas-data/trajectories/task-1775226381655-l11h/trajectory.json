@@ -1,0 +1,396 @@
+{
+  "taskId": "task-1775226381655-l11h",
+  "taskDescription": "Open Calendar and create a new event called 'Team Standup' for tomorrow at 10 AM",
+  "startTime": 1775226381655,
+  "endTime": 1775226536094,
+  "duration": 154439,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Calendar app is open showing April 2026 in Month view. Today is Friday April 3 (highlighted in red circle), and I can see April 4 (Saturday - tomorrow) in the top right of the calendar grid.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "c2df36069048126c39e539c4bfecf975",
+      "semanticState": "Calendar app showing April 2026 month view with today (April 3) highlighted. April 4 is visible as a Saturday.",
+      "timestamp": 1775226439356
+    },
+    {
+      "stepNumber": 2,
+      "description": "Calendar is now showing Day view for April 4, 2026 (Saturday) with the Easter Saturday popup dismissed. \"No Event Selected\" shown on the right panel.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "07ce65bef1985015de64dc1b39d9b591",
+      "semanticState": "Calendar app in Day view for Saturday, April 4, 2026. Showing PM hours, need to scroll up to find 10 AM.",
+      "timestamp": 1775226507164
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Calendar app via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to tomorrow (April 4, 2026)",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Create a new event called 'Team Standup' at 10 AM",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775226383386,
+      "relativeTime": 1731,
+      "screenshotPath": "step-0.png",
+      "exactHash": "117eabcf32d9457c1570b2dc5517e308",
+      "thumbnailHash": "f5ed8bfe29771b8a0079855e4d36e4ef",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775226396844,
+      "relativeTime": 15189,
+      "screenshotPath": "step-1.png",
+      "exactHash": "6031e21e2ba492d7197515b24de1e7df",
+      "thumbnailHash": "458ed52b6b063a1f71acab4ad3323013",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, let me open Calendar and create that event",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let me open Calendar and create that event",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775226413730,
+      "relativeTime": 32075,
+      "screenshotPath": "step-2.png",
+      "exactHash": "6fe73d8d585ccbbc35665c5f1c2ef458",
+      "thumbnailHash": "df236c116fa9be4e150cebd6f02c0d18",
+      "action": {
+        "type": "type",
+        "text": "Calendar",
+        "raw": "type: \"Calendar\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Calendar app should open showing the current month view.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775226429534,
+      "relativeTime": 47879,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c2df36069048126c39e539c4bfecf975",
+      "thumbnailHash": "3aaac282924f40654d57d7314a1f23a1",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new event creation dialog should appear for April 4.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app showing April 2026 month view with today (April 3) highlighted. April 4 is visible as a Saturday.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is right there at the top",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775226456830,
+      "relativeTime": 75175,
+      "screenshotPath": "step-4.png",
+      "exactHash": "2e012016206d157c92e1fdc55a2b0599",
+      "thumbnailHash": "f048d3058ab9d0fb1fe94fa3fc25aad9",
+      "action": {
+        "type": "double_click",
+        "coordinates": [
+          1052,
+          222
+        ],
+        "raw": "double_click (1052,222)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The Easter Saturday popup should close and I can then create a new event at 10 AM.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new event creation dialog should appear for April 4.",
+        "observed": "success double_click (1052,222)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Double-clicked '(unlabeled)' (Button) in Calendar",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 70
+      },
+      "assistantIntent": "CHECKPOINT [1]: Calendar app is open showing April 2026 in Month view",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775226477217,
+      "relativeTime": 95562,
+      "screenshotPath": "step-5.png",
+      "exactHash": "2e012016206d157c92e1fdc55a2b0599",
+      "thumbnailHash": "f048d3058ab9d0fb1fe94fa3fc25aad9",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The Easter Saturday popup should close and I can then create a new event at 10 AM.",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-double-click",
+      "semanticState": "Now let me double-click on the 10 PM time slot",
+      "resolvedTarget": null,
+      "assistantIntent": "Now let me double-click on the 10 PM time slot",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775226497595,
+      "relativeTime": 115940,
+      "screenshotPath": "step-6.png",
+      "exactHash": "07ce65bef1985015de64dc1b39d9b591",
+      "thumbnailHash": "d175e5ad3a2195ee7db5f7a85f205019",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          450,
+          400
+        ],
+        "raw": "left_click (450,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "After scrolling up, I should see the 10 AM time slot.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-double-click",
+      "semanticState": "Calendar app in Day view for Saturday, April 4, 2026. Showing PM hours, need to scroll up to find 10 AM.",
+      "resolvedTarget": null,
+      "assistantIntent": "The Easter Saturday popup is still there",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775226520968,
+      "relativeTime": 139313,
+      "screenshotPath": "step-7.png",
+      "exactHash": "c6d8ffce5458ae0f0e19b76ee0c6eb54",
+      "thumbnailHash": "a65e6db907138d8b3879b96aa55c22f7",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          450,
+          400
+        ],
+        "raw": "scroll (450,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A new event should be created at 10 AM with a text field ready for me to type the event name.",
+      "surprise": {
+        "score": 0.8333333333333334,
+        "expected": "After scrolling up, I should see the 10 AM time slot.",
+        "observed": "success scroll (450,400)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-1-attempt-1-double-click",
+      "semanticState": "The Easter Saturday popup is dismissed",
+      "resolvedTarget": null,
+      "assistantIntent": "The Easter Saturday popup is dismissed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775226396844
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Calendar",
+        "raw": "type: \"Calendar\""
+      },
+      "timestamp": 1775226413730
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775226429534
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "double_click",
+        "coordinates": [
+          1052,
+          222
+        ],
+        "raw": "double_click (1052,222)"
+      },
+      "timestamp": 1775226456830
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775226477217
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          450,
+          400
+        ],
+        "raw": "left_click (450,400)"
+      },
+      "timestamp": 1775226497595
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          450,
+          400
+        ],
+        "raw": "scroll (450,400)"
+      },
+      "timestamp": 1775226520968
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Calendar app is open showing April 2026 in Month view. Today is Friday April 3 (highlighted in red circle), and I can see April 4 (Saturday - tomorrow) in the top right of the calendar grid.\", tried [type: \"Calendar\", key: \"Return\", double_click (1052,222)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-double-click",
+      "name": "attempt-1-double_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

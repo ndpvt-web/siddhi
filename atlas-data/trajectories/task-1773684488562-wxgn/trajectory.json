@@ -1,0 +1,323 @@
+{
+  "taskId": "task-1773684488562-wxgn",
+  "taskDescription": "Open Safari, navigate to wikipedia.org, search for \"capybara\", and read the first paragraph of the article.",
+  "startTime": 1773684488563,
+  "endTime": 1773684626916,
+  "duration": 138353,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the \"Capybara - Wikipedia\" tab in Safari",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Read the first paragraph of the article",
+        "done": false
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773684490418,
+      "relativeTime": 1855,
+      "screenshotPath": "step-0.png",
+      "exactHash": "8aef7638821c1763703769f2fdbc88e6",
+      "thumbnailHash": "f301ee11a3926bd100ee30484a01e957",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The Safari browser should come to the front showing the Wikipedia article on Capybara.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "HappyCapy desktop app is open, but I can see Safari tabs in the background including one that says \"Capybara - Wikip...\"",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773684510400,
+      "relativeTime": 21837,
+      "screenshotPath": "step-1.png",
+      "exactHash": "dc3e7cfa162f9521d5019f0e69ad242b",
+      "thumbnailHash": "243208f61eabfa9be49f9fe80a8e7c79",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1283,
+          64
+        ],
+        "raw": "left_click (1283,64)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The Safari browser should come to the front showing the Wikipedia article on Capybara.",
+        "observed": "success left_click (1283,64)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "left_click (1283,64) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773684523201,
+      "relativeTime": 34638,
+      "screenshotPath": "step-2.png",
+      "exactHash": "cdc00ab9d8b230ed9c3a586abadc9092",
+      "thumbnailHash": "92a791f074efb9f582fdac73c4be4af5",
+      "action": {
+        "type": "key",
+        "text": "cmd+Tab",
+        "raw": "key: \"cmd+Tab\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+Tab\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773684541191,
+      "relativeTime": 52628,
+      "screenshotPath": "step-3.png",
+      "exactHash": "684e39e554a1beed9417aa2612575214",
+      "thumbnailHash": "92a791f074efb9f582fdac73c4be4af5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1283,
+          64
+        ],
+        "raw": "left_click (1283,64)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (1283,64) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1773684561091,
+      "relativeTime": 72528,
+      "screenshotPath": "step-4.png",
+      "exactHash": "dec5c8d754ace74523b44ab132d915df",
+      "thumbnailHash": "cab4cb4ae1f084fefbc3c101a0a5688c",
+      "action": {
+        "type": "key",
+        "text": "cmd+9",
+        "raw": "key: \"cmd+9\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+9\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1773684577269,
+      "relativeTime": 88706,
+      "screenshotPath": "step-5.png",
+      "exactHash": "3a022022bd910dc5356b9eb6c3e0e638",
+      "thumbnailHash": "8e7ef38d6beba9eefc25076fb824f43c",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+l\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1773684595761,
+      "relativeTime": 107198,
+      "screenshotPath": "step-6.png",
+      "exactHash": "ebdb821a6209237bc4aa5877dc216d89",
+      "thumbnailHash": "c587cf0faa1ec3270f535124ffe492db",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (678,24) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1773684614587,
+      "relativeTime": 126024,
+      "screenshotPath": "step-7.png",
+      "exactHash": "e1c2e73ab533737bcacc833ff406e620",
+      "thumbnailHash": "77a89ccd7233045d0c62c9b21ea8dbd8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1275,
+          64
+        ],
+        "raw": "left_click (1275,64)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "A new empty tab should open in Safari",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (1275,64) -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1283,
+          64
+        ],
+        "raw": "left_click (1283,64)"
+      },
+      "timestamp": 1773684510400
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+Tab",
+        "raw": "key: \"cmd+Tab\""
+      },
+      "timestamp": 1773684523201
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1283,
+          64
+        ],
+        "raw": "left_click (1283,64)"
+      },
+      "timestamp": 1773684541191
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "cmd+9",
+        "raw": "key: \"cmd+9\""
+      },
+      "timestamp": 1773684561091
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "timestamp": 1773684577269
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "timestamp": 1773684595761
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1275,
+          64
+        ],
+        "raw": "left_click (1275,64)"
+      },
+      "timestamp": 1773684614587
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

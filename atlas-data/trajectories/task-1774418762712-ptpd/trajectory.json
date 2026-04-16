@@ -1,0 +1,513 @@
+{
+  "taskId": "task-1774418762712-ptpd",
+  "taskDescription": "Open Safari browser and navigate to https://www.instagram.com. Take a screenshot of what you see. If it shows a login page, just take a screenshot of the current state. If it shows a feed, scroll down",
+  "startTime": 1774418762712,
+  "endTime": 1774418976459,
+  "duration": 213747,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 12,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Safari is open, Instagram is loaded and showing a logged-in feed for user **n_dandyan1 / Nivesh Dandyan**!",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "5f910c9deda91d33b103c4551aa76e25",
+      "semanticState": "Instagram feed in dark mode showing a post from **hkuniversity and mryuskaz** — looks like a group photo at some kind of academic/arts event called \"Faith and Global Engagement\" with \"Cedars\" branding and HKU Arts banners. Big group of students smiling and posing. There are stories at the top from various accounts. On the right sidebar there are \"Suggested for you\" accounts like Solomon Kim, Jass, samson, zhaniya k., and Sumit Agarwal.",
+      "timestamp": 1774418849681
+    },
+    {
+      "stepNumber": 2,
+      "description": "Safari is in focus showing Instagram feed, scrolled down to reveal new posts.",
+      "nodeId": "step-8",
+      "nodeIndex": 8,
+      "screenshotHash": "459d63b61216d73211ad3680835cd82f",
+      "semanticState": "Instagram feed showing a **BBC News** post about the death of the OnlyFans billionaire owner Leonid Radvinsky who \"passed away peacefully after a long battle with cancer\" at age 43. Below that is a **reMarkable** (e-ink tablet company) sponsored ad for \"reMarkable for Business\" with the tagline \"More structure.\"",
+      "timestamp": 1774418914604
+    },
+    {
+      "stepNumber": 3,
+      "description": "Scrolled down further on Instagram feed, seeing more posts.",
+      "nodeId": "step-9",
+      "nodeIndex": 9,
+      "screenshotHash": "8aa502e0608ad796c0c9359e8d283302",
+      "semanticState": "Instagram feed showing the bottom of the reMarkable ad and a new post from **Deccan Herald** (@deccanherald).",
+      "timestamp": 1774418943386
+    },
+    {
+      "stepNumber": 4,
+      "description": "Scrolled down more, seeing the Deccan Herald article and a suggested post from 101xfounders.",
+      "nodeId": "step-10",
+      "nodeIndex": 10,
+      "screenshotHash": "876aaa740d1e6f0a3b319505655a7340",
+      "semanticState": "Instagram feed showing Deccan Herald's news graphic about the Bangalore job rejection story, plus a suggested post from **101xfounders**.",
+      "timestamp": 1774418967656
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Safari browser",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to https://www.instagram.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Take a screenshot of what's visible (login page or feed)",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "If feed is visible, scroll and describe interesting posts",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1774418764273,
+      "relativeTime": 1561,
+      "screenshotPath": "step-0.png",
+      "exactHash": "1a1dafb9f7227cb237d490e56e10f51d",
+      "thumbnailHash": "3347006a390aae21bf306ce7c016de7e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1774418770529,
+      "relativeTime": 7817,
+      "screenshotPath": "step-1.png",
+      "exactHash": "1a1dafb9f7227cb237d490e56e10f51d",
+      "thumbnailHash": "3347006a390aae21bf306ce7c016de7e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Safari should open and show instagram.com",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1774418787110,
+      "relativeTime": 24398,
+      "screenshotPath": "step-2.png",
+      "exactHash": "e69df235af10a0323712618b3575a0cc",
+      "thumbnailHash": "fd8c89537a66fec1cbf4f8a110c75962",
+      "action": {
+        "type": "bash",
+        "command": "open -a Safari \"https://www.instagram.com\"",
+        "raw": "bash: open -a Safari \"https://www.instagram.com\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Safari window should come to focus showing Instagram",
+      "surprise": {
+        "score": 0.19999999999999996,
+        "expected": "Safari should open and show instagram.com",
+        "observed": "success bash: open -a safari \"https://www.instagram.com\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 4
+      },
+      "branch": "branch-0-main",
+      "semanticState": "bash: open -a Safari \"https://www.instagram.com\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1774418796243,
+      "relativeTime": 33531,
+      "screenshotPath": "step-3.png",
+      "exactHash": "754098d338be6b4dd4cbcc965ab67f18",
+      "thumbnailHash": "4f9e38d39ce7192a51ce2be259ca5713",
+      "action": {
+        "type": "bash",
+        "command": "open -a Safari \"https://www.instagram.com\"",
+        "raw": "bash: open -a Safari \"https://www.instagram.com\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.5833333333333333,
+        "expected": "Safari window should come to focus showing Instagram",
+        "observed": "success bash: open -a safari \"https://www.instagram.com\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 2.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "bash: open -a Safari \"https://www.instagram.com\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1774418811929,
+      "relativeTime": 49217,
+      "screenshotPath": "step-4.png",
+      "exactHash": "78e6226d834c515bcc7f557bae59d612",
+      "thumbnailHash": "55eb06c15b64f4274fbe21cf63700cc1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+space\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1774418834628,
+      "relativeTime": 71916,
+      "screenshotPath": "step-5.png",
+      "exactHash": "5f910c9deda91d33b103c4551aa76e25",
+      "thumbnailHash": "dec10c513573b8a57316a6f73fa33f8d",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Instagram feed in dark mode showing a post from **hkuniversity and mryuskaz** — looks like a group photo at some kind of academic/arts event called \"Faith and Global Engagement\" with \"Cedars\" branding and HKU Arts banners. Big group of students smiling and posing. There are stories at the top from various accounts. On the right sidebar there are \"Suggested for you\" accounts like Solomon Kim, Jass, samson, zhaniya k., and Sumit Agarwal.",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1774418850313,
+      "relativeTime": 87601,
+      "screenshotPath": "step-6.png",
+      "exactHash": "5f910c9deda91d33b103c4551aa76e25",
+      "thumbnailHash": "dec10c513573b8a57316a6f73fa33f8d",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"Return\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1774418879878,
+      "relativeTime": 117166,
+      "screenshotPath": "step-7.png",
+      "exactHash": "087fca3f1d9d1e10ad5ea528e60e18e1",
+      "thumbnailHash": "a407edeef8704796968084d35b0e0115",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          500
+        ],
+        "raw": "scroll (497,500)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "scroll (497,500) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-8",
+      "index": 8,
+      "parentId": "step-7",
+      "timestamp": 1774418897657,
+      "relativeTime": 134945,
+      "screenshotPath": "step-8.png",
+      "exactHash": "459d63b61216d73211ad3680835cd82f",
+      "thumbnailHash": "c73f5f0e6b72c1e205af5d2d18e3ef40",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e 'tell application \"Safari\" to activate'",
+        "raw": "bash: osascript -e 'tell application \"Safari\" to activate'"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Instagram feed showing a **BBC News** post about the death of the OnlyFans billionaire owner Leonid Radvinsky who \"passed away peacefully after a long battle with cancer\" at age 43. Below that is a **reMarkable** (e-ink tablet company) sponsored ad for \"reMarkable for Business\" with the tagline \"More structure.\"",
+      "axContext": null
+    },
+    {
+      "id": "step-9",
+      "index": 9,
+      "parentId": "step-8",
+      "timestamp": 1774418924344,
+      "relativeTime": 161632,
+      "screenshotPath": "step-9.png",
+      "exactHash": "8aa502e0608ad796c0c9359e8d283302",
+      "thumbnailHash": "49e769b9579b7049a51e05549e78c99f",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          400
+        ],
+        "raw": "scroll (497,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Instagram feed showing the bottom of the reMarkable ad and a new post from **Deccan Herald** (@deccanherald).",
+      "axContext": null
+    },
+    {
+      "id": "step-10",
+      "index": 10,
+      "parentId": "step-9",
+      "timestamp": 1774418951926,
+      "relativeTime": 189214,
+      "screenshotPath": "step-10.png",
+      "exactHash": "876aaa740d1e6f0a3b319505655a7340",
+      "thumbnailHash": "3c04b13d7b015f821b6cc5f4aaf59e24",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          400
+        ],
+        "raw": "scroll (497,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Instagram feed showing Deccan Herald's news graphic about the Bangalore job rejection story, plus a suggested post from **101xfounders**.",
+      "axContext": null
+    },
+    {
+      "id": "step-11",
+      "index": 11,
+      "parentId": "step-10",
+      "timestamp": 1774418976459,
+      "relativeTime": 213747,
+      "screenshotPath": "step-11.png",
+      "exactHash": "de9010bd06b3df1b0f746c42f03a0358",
+      "thumbnailHash": "e2ee4aa2f20b39c959c5eb51bcd7b58d",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          400
+        ],
+        "raw": "scroll (497,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "scroll (497,400) -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "bash",
+        "command": "open -a Safari \"https://www.instagram.com\"",
+        "raw": "bash: open -a Safari \"https://www.instagram.com\""
+      },
+      "timestamp": 1774418787115
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "bash",
+        "command": "open -a Safari \"https://www.instagram.com\"",
+        "raw": "bash: open -a Safari \"https://www.instagram.com\""
+      },
+      "timestamp": 1774418796243
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1774418811929
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1774418834628
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1774418850313
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          500
+        ],
+        "raw": "scroll (497,500)"
+      },
+      "timestamp": 1774418879878
+    },
+    {
+      "from": "step-7",
+      "to": "step-8",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e 'tell application \"Safari\" to activate'",
+        "raw": "bash: osascript -e 'tell application \"Safari\" to activate'"
+      },
+      "timestamp": 1774418897657
+    },
+    {
+      "from": "step-8",
+      "to": "step-9",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          400
+        ],
+        "raw": "scroll (497,400)"
+      },
+      "timestamp": 1774418924344
+    },
+    {
+      "from": "step-9",
+      "to": "step-10",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          400
+        ],
+        "raw": "scroll (497,400)"
+      },
+      "timestamp": 1774418951926
+    },
+    {
+      "from": "step-10",
+      "to": "step-11",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          497,
+          400
+        ],
+        "raw": "scroll (497,400)"
+      },
+      "timestamp": 1774418976459
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "action had no visible effect (stagnation)",
+      "lesson": "After \"Safari is open, Instagram is loaded and showing a logged-in feed for user **n_dandyan1 / Nivesh Dandyan**!\", tried [key: \"cmd+space\", key: \"Return\", key: \"Return\"] but action had no visible effect (stagnation)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 5,
+      "startFrameIndex": 7,
+      "tipFrameIndex": 11,
+      "status": "succeeded",
+      "approach": "retry after: action had no visible effect (stagnation)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

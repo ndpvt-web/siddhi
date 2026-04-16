@@ -1,0 +1,173 @@
+{
+  "taskId": "task-1775234335910-yloe",
+  "taskDescription": "Open Terminal and create a directory structure: ~/projects/test/src",
+  "startTime": 1775234335910,
+  "endTime": 1775234425572,
+  "duration": 89662,
+  "success": true,
+  "finalText": "CHECKPOINT [1]: Directory structure `~/projects/test/src` has been successfully created. The `ls -la` output confirms the `src` directory exists inside `~/projects/test/`.\n\nSCENE: Terminal window showing previous commands; directory creation verified via bash — `src` folder is present in `~/projects/test/`.\n\nLETS GOOO 🎉 Done! The full directory structure `~/projects/test/src` has been created using `mkdir -p`, which creates all parent directories as needed:\n- `~/projects/`\n- `~/projects/test/`\n- `~/projects/test/src/`\n\nAll three directories are in place and ready to go! 🚀",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Directory structure `~/projects/test/src` has been successfully created. The `ls -la` output confirms the `src` directory exists inside `~/projects/test/`.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "42845f90fd6a61d1a5abb350d495b897",
+      "semanticState": "Terminal window showing previous commands; directory creation verified via bash — `src` folder is present in `~/projects/test/`.",
+      "timestamp": 1775234425572
+    }
+  ],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775234337574,
+      "relativeTime": 1664,
+      "screenshotPath": "step-0.png",
+      "exactHash": "5f88b953d96f7a35bf98be459ec87e03",
+      "thumbnailHash": "299b5c15852ef005558baf05bf28d075",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal window is open and focused, showing a shell prompt ready for input.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775234363139,
+      "relativeTime": 27229,
+      "screenshotPath": "step-1.png",
+      "exactHash": "9bb055af6e6f3979f632eee9a01dc8fb",
+      "thumbnailHash": "6ef1a637c869148cdfcc6f42699bf0b2",
+      "action": {
+        "type": "type",
+        "text": "mkdir -p ~/projects/test/src\n",
+        "raw": "type: \"mkdir -p ~/projects/test/src\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal is already open and ready to go",
+      "resolvedTarget": null,
+      "assistantIntent": "Terminal is already open and ready to go",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775234377331,
+      "relativeTime": 41421,
+      "screenshotPath": "step-2.png",
+      "exactHash": "aac6feb64acdf9acbf5d4c1a620c3de9",
+      "thumbnailHash": "8ecae49a67fc00f2c34596c091369e69",
+      "action": {
+        "type": "type",
+        "text": "ls -la ~/projects/test/\n",
+        "raw": "type: \"ls -la ~/projects/test/\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The command ran with no errors (no output = success in Unix land",
+      "resolvedTarget": null,
+      "assistantIntent": "The command ran with no errors (no output = success in Unix land",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775234385561,
+      "relativeTime": 49651,
+      "screenshotPath": "step-3.png",
+      "exactHash": "42845f90fd6a61d1a5abb350d495b897",
+      "thumbnailHash": "b128f8d47a569dd6bd0ea919ef8822da",
+      "action": {
+        "type": "type",
+        "text": "ls -la ~/projects/test/\n",
+        "raw": "type: \"ls -la ~/projects/test/\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal window showing previous commands; directory creation verified via bash — `src` folder is present in `~/projects/test/`.",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, the output isn't showing yet, let me wait a sec and grab another screenshot:",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "mkdir -p ~/projects/test/src\n",
+        "raw": "type: \"mkdir -p ~/projects/test/src\n\""
+      },
+      "timestamp": 1775234363139
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "ls -la ~/projects/test/\n",
+        "raw": "type: \"ls -la ~/projects/test/\n\""
+      },
+      "timestamp": 1775234377331
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "ls -la ~/projects/test/\n",
+        "raw": "type: \"ls -la ~/projects/test/\n\""
+      },
+      "timestamp": 1775234385561
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

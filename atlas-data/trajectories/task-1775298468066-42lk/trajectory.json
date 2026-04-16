@@ -1,0 +1,377 @@
+{
+  "taskId": "task-1775298468066-42lk",
+  "taskDescription": "Open Safari, navigate to example.com, and use Reader Mode to view the page content",
+  "startTime": 1775298468066,
+  "endTime": 1775298602287,
+  "duration": 134221,
+  "success": true,
+  "finalText": "LETS GOOO! 🎉\n\nCHECKPOINT [3]: Reader Mode is now ACTIVE on example.com! The page is displayed in a clean, reader-friendly format with a light gray background, the \"Example Domain\" heading in bold, the description text \"This domain is for use in documentation examples without needing permission. Avoid use in operations.\" and the \"Learn more\" link. I can also see the Reader Mode icon (the little book/page icon) is now active in the toolbar area near the address bar.\n\nSCENE: Safari in Reader Mode showing example.com content - clean layout with \"Example Domain\" heading, description text, and \"Learn more\" link on a light gray background. Reader icon visible and active in the toolbar.\n\nAll three steps done! ✅\n\n1. ✅ Opened Safari (was already open)\n2. ✅ Navigated to example.com\n3. ✅ Activated Reader Mode via View > Show Reader\n\nNailed it! Reader Mode is showing the example.com content in that clean, distraction-free format. The page looks crisp with just the heading, the description text, and the \"Learn more\" link. Ez clap 😎",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Advanced settings dialog is closed! Safari is showing github.com.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "7b33c1788d71e6bf6116fe1aeb6e1a88",
+      "semanticState": "Safari browser open on GitHub.com homepage, no dialogs visible.",
+      "timestamp": 1775298496483
+    },
+    {
+      "stepNumber": 2,
+      "description": "We're on example.com! The page loaded successfully showing \"Example Domain\" with a short description and a \"Learn more\" link.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "8adead71fcd06e4e6e1c4551430a805a",
+      "semanticState": "Safari showing example.com with \"Example Domain\" heading, brief text, and a \"Learn more\" link.",
+      "timestamp": 1775298516885
+    },
+    {
+      "stepNumber": 3,
+      "description": "Reader Mode is now ACTIVE on example.com! The page is displayed in a clean, reader-friendly format with a light gray background, the \"Example Domain\" heading in bold, the description text \"This domain is for use in documentation examples without needing permission. Avoid use in operations.\" and the \"Learn more\" link. I can also see the Reader Mode icon (the little book/page icon) is now active in the toolbar area near the address bar.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "1698f50544b9c2219f35233fbc24ada7",
+      "semanticState": "Safari in Reader Mode showing example.com content - clean layout with \"Example Domain\" heading, description text, and \"Learn more\" link on a light gray background. Reader icon visible and active in the toolbar.",
+      "timestamp": 1775298602287
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Advanced settings dialog",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to example.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Activate Reader Mode",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775298469680,
+      "relativeTime": 1614,
+      "screenshotPath": "step-0.png",
+      "exactHash": "6c64ef3eb0022472879cc41685904209",
+      "thumbnailHash": "19846a710bdf7675c726e66da4d304f0",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Dialog closes, Safari with GitHub.com is visible.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775298489730,
+      "relativeTime": 21664,
+      "screenshotPath": "step-1.png",
+      "exactHash": "7b33c1788d71e6bf6116fe1aeb6e1a88",
+      "thumbnailHash": "01faca724f53ff859569cb65de63b412",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          411,
+          188
+        ],
+        "raw": "left_click (411,188)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Address bar gets focused and I can type.",
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes, Safari with GitHub.com is visible.",
+        "observed": "success left_click (411,188)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser open on GitHub.com homepage, no dialogs visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari is already open with an Advanced settings panel showing",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775298506963,
+      "relativeTime": 38897,
+      "screenshotPath": "step-2.png",
+      "exactHash": "8adead71fcd06e4e6e1c4551430a805a",
+      "thumbnailHash": "e62be6c5259593446e5c4396c11f368c",
+      "action": {
+        "type": "type",
+        "text": "example.com\n",
+        "raw": "type: \"example.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Reader Mode activates and reformats the page content in a clean reading view.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing example.com with \"Example Domain\" heading, brief text, and a \"Learn more\" link.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Advanced settings dialog is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775298527966,
+      "relativeTime": 59900,
+      "screenshotPath": "step-3.png",
+      "exactHash": "bbc4b2a913022b199383cf3f0f7850e5",
+      "thumbnailHash": "981711d6ea50dcb936a715154bc4ad8d",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          379,
+          52
+        ],
+        "raw": "left_click (379,52)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Reader Mode activates and reformats the page content in a clean reading view.",
+        "observed": "success left_click (379,52)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: We're on example",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: We're on example",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775298552379,
+      "relativeTime": 84313,
+      "screenshotPath": "step-4.png",
+      "exactHash": "6553db0f34416a4189480bc8e3fff154",
+      "thumbnailHash": "6b7a6969b00cdda2c963ca4d4ddd779e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Ok that opened a \"Page Settings\" type dropdown with \"Hide Distracting Items\", \"Zoom\", \"Find on Page\", \"Website Settings\"",
+      "resolvedTarget": null,
+      "assistantIntent": "Ok that opened a \"Page Settings\" type dropdown with \"Hide Distracting Items\", \"Zoom\", \"Find on Page\", \"Website Settings\"",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775298570401,
+      "relativeTime": 102335,
+      "screenshotPath": "step-5.png",
+      "exactHash": "ce1e3a0c502441b7c5660275ed098995",
+      "thumbnailHash": "ed48d9edaaf16f54ee2de8b4a7f1bbef",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Reader Mode activates and the page content is displayed in a clean, reader-friendly format.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "OK so I can see the page clearly - we're on example",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so I can see the page clearly - we're on example",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775298590364,
+      "relativeTime": 122298,
+      "screenshotPath": "step-6.png",
+      "exactHash": "1698f50544b9c2219f35233fbc24ada7",
+      "thumbnailHash": "8784e5f89097b5b88370c09de087e8e7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          248,
+          302
+        ],
+        "raw": "left_click (248,302)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Reader Mode activates and the page content is displayed in a clean, reader-friendly format.",
+        "observed": "success left_click (248,302)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari in Reader Mode showing example.com content - clean layout with \"Example Domain\" heading, description text, and \"Learn more\" link on a light gray background. Reader icon visible and active in the toolbar.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO there it is",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          411,
+          188
+        ],
+        "raw": "left_click (411,188)"
+      },
+      "timestamp": 1775298489730
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "example.com\n",
+        "raw": "type: \"example.com\n\""
+      },
+      "timestamp": 1775298506963
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          379,
+          52
+        ],
+        "raw": "left_click (379,52)"
+      },
+      "timestamp": 1775298527966
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "timestamp": 1775298552379
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "timestamp": 1775298570401
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          248,
+          302
+        ],
+        "raw": "left_click (248,302)"
+      },
+      "timestamp": 1775298590364
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"We're on example.com! The page loaded successfully showing \"Example Domain\" with a short description and a \"Learn more\" link.\", tried [left_click (411,188), type: \"example.com\n\", left_click (379,52)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

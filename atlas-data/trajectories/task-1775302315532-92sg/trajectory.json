@@ -1,0 +1,186 @@
+{
+  "taskId": "task-1775302315532-92sg",
+  "taskDescription": "Open Finder and switch to List View in the Documents folder",
+  "startTime": 1775302315532,
+  "endTime": 1775302368485,
+  "duration": 52953,
+  "success": true,
+  "finalText": "CHECKPOINT [2]: LETS GOOO! List View is active! I can see all the files in the Documents folder displayed as a clean list with Name, Date Modified, Size, and Kind columns. The List View button in the toolbar is now highlighted/selected.\n\nSCENE: Finder showing Documents — Local in List View with columns for Name, Date Modified, Size, and Kind. All files and folders are displayed as rows.\n\nEZ CLAP! Both steps done perfectly. The Documents folder is now in List View showing all your files nice and organized — folders like Capy Meetings, Capy Memory, my-web-project, Zoom, and files like the PDF, DOCX files, and images, all neatly laid out with their dates, sizes, and types. Way more useful than icon view tbh. 🎉",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Documents folder is open! I can see \"Documents — Local\" in the title bar with all the files in icon view. Now let me click the List View button in the toolbar.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "859471c58ec4ef68d51a5d508aa5a755",
+      "semanticState": "Finder showing Documents folder in icon view with various files and folders visible.",
+      "timestamp": 1775302348206
+    },
+    {
+      "stepNumber": 2,
+      "description": "LETS GOOO! List View is active! I can see all the files in the Documents folder displayed as a clean list with Name, Date Modified, Size, and Kind columns. The List View button in the toolbar is now highlighted/selected.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "f079e3c2f8cf0496e065a67e5f905092",
+      "semanticState": "Finder showing Documents — Local in List View with columns for Name, Date Modified, Size, and Kind. All files and folders are displayed as rows.",
+      "timestamp": 1775302368485
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on Documents in the sidebar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Switch to List View using the toolbar button",
+        "done": true
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775302317215,
+      "relativeTime": 1683,
+      "screenshotPath": "step-0.png",
+      "exactHash": "1b0f78201b74324d8fcaf9f037a0b132",
+      "thumbnailHash": "70d322f5a9a7c5c6034a291e3cf18340",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Documents folder opens showing its contents",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775302340999,
+      "relativeTime": 25467,
+      "screenshotPath": "step-1.png",
+      "exactHash": "859471c58ec4ef68d51a5d508aa5a755",
+      "thumbnailHash": "bb72ae481a94758ffb6af8b379121e10",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          152,
+          269
+        ],
+        "raw": "left_click (152,269)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Files will switch to list view showing names, dates, sizes in rows",
+      "surprise": {
+        "score": 1,
+        "expected": "Documents folder opens showing its contents",
+        "observed": "success left_click (152,269)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Documents folder in icon view with various files and folders visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "Finder is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775302360087,
+      "relativeTime": 44555,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f079e3c2f8cf0496e065a67e5f905092",
+      "thumbnailHash": "44b7c9c828a8422f72da14daddfc8127",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          752,
+          79
+        ],
+        "raw": "left_click (752,79)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Files will switch to list view showing names, dates, sizes in rows",
+        "observed": "success left_click (752,79)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Documents — Local in List View with columns for Name, Date Modified, Size, and Kind. All files and folders are displayed as rows.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Documents folder is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          152,
+          269
+        ],
+        "raw": "left_click (152,269)"
+      },
+      "timestamp": 1775302340999
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          752,
+          79
+        ],
+        "raw": "left_click (752,79)"
+      },
+      "timestamp": 1775302360087
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

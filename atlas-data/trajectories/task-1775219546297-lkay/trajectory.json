@@ -1,0 +1,233 @@
+{
+  "taskId": "task-1775219546297-lkay",
+  "taskDescription": "Open Safari and create a new bookmark for apple.com in the Favorites folder",
+  "startTime": 1775219546297,
+  "endTime": 1775219618841,
+  "duration": 72544,
+  "success": true,
+  "finalText": "CHECKPOINT [2]: Bookmark added successfully! The dialog is gone and we're back on the apple.com homepage — that means the bookmark was saved! ✅\n\nSCENE: Safari showing apple.com homepage cleanly with no dialog, bookmark has been saved to Favourites.\n\n**Nailed it!** �� Here's what went down:\n\n1. ✅ Navigated to **apple.com** in Safari\n2. ✅ Hit **Cmd+D** to bring up the Add Bookmark dialog — it was already pointing to **Favourites** as the destination folder\n3. ✅ Clicked **Add** and the bookmark was saved\n\nApple.com is now bookmarked in your **Favourites** folder in Safari. You'll see it pop up whenever you open a new tab or click the Favourites bar. Easy as it gets! 🍎",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Navigated to apple.com successfully - the Apple homepage is loaded and visible.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "370cb475d5a61f6ac196bac90dd13a01",
+      "semanticState": "Safari showing apple.com homepage with iPhone advertisement and Apple navigation bar.",
+      "timestamp": 1775219582541
+    },
+    {
+      "stepNumber": 2,
+      "description": "Bookmark added successfully! The dialog is gone and we're back on the apple.com homepage — that means the bookmark was saved! ✅",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "6be9d536cfde307f313f04720a6a4ac5",
+      "semanticState": "Safari showing apple.com homepage cleanly with no dialog, bookmark has been saved to Favourites.",
+      "timestamp": 1775219618841
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate to apple.com using the address bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Add a bookmark for apple.com to the Favorites folder",
+        "done": true
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775219547942,
+      "relativeTime": 1645,
+      "screenshotPath": "step-0.png",
+      "exactHash": "2c556732b43d472e3ed0b080c9fddefa",
+      "thumbnailHash": "0318edbabb934e0a2f29937d5dbdaf3e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Address bar will be focused and ready for typing",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775219572611,
+      "relativeTime": 26314,
+      "screenshotPath": "step-1.png",
+      "exactHash": "370cb475d5a61f6ac196bac90dd13a01",
+      "thumbnailHash": "6714608765cf73019a3399339d509b7b",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A \"Add Bookmark\" dialog will appear with folder selection options",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com homepage with iPhone advertisement and Apple navigation bar.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari is already open showing Wikipedia",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775219590954,
+      "relativeTime": 44657,
+      "screenshotPath": "step-2.png",
+      "exactHash": "eb0d4a697ca1ce93840c93cf678bff6a",
+      "thumbnailHash": "3b0875f4bd6c394f420369d793c59672",
+      "action": {
+        "type": "key",
+        "text": "cmd+d",
+        "raw": "key: \"cmd+d\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Dialog closes and bookmark is saved to Favourites folder",
+      "surprise": {
+        "score": 1,
+        "expected": "A \"Add Bookmark\" dialog will appear with folder selection options",
+        "observed": "success key: \"cmd+d\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Navigated to apple",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Navigated to apple",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775219610190,
+      "relativeTime": 63893,
+      "screenshotPath": "step-3.png",
+      "exactHash": "6be9d536cfde307f313f04720a6a4ac5",
+      "thumbnailHash": "fd733e0927f9b9954ab6bd561c408e65",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          771,
+          464
+        ],
+        "raw": "left_click (771,464)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes and bookmark is saved to Favourites folder",
+        "observed": "success left_click (771,464)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com homepage cleanly with no dialog, bookmark has been saved to Favourites.",
+      "resolvedTarget": {
+        "label": "Add",
+        "role": "Button",
+        "app": "Safari",
+        "distance": 2
+      },
+      "assistantIntent": "LETSSS GOOO",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "timestamp": 1775219572611
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+d",
+        "raw": "key: \"cmd+d\""
+      },
+      "timestamp": 1775219590954
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          771,
+          464
+        ],
+        "raw": "left_click (771,464)"
+      },
+      "timestamp": 1775219610190
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Navigated to apple.com successfully - the Apple homepage is loaded and visible.\", tried [type: \"apple.com\n\", key: \"cmd+d\", left_click (771,464)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 1,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 3,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

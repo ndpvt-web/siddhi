@@ -1,0 +1,361 @@
+{
+  "taskId": "task-1775293029983-jvg4",
+  "taskDescription": "Open Safari, navigate to example.com, and use Reader Mode to view the page content",
+  "startTime": 1775293029983,
+  "endTime": 1775293164836,
+  "duration": 134853,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Advanced Settings dialog is closed! GitHub page is now fully visible.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "89188732841dde03d2012976983977cd",
+      "semanticState": "Safari showing GitHub.com homepage. The Advanced Settings dialog is gone.",
+      "timestamp": 1775293064005
+    },
+    {
+      "stepNumber": 2,
+      "description": "Navigated to example.com successfully!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "d52b97182da97612fa204edb6c3411f5",
+      "semanticState": "Safari showing example.com - \"Example Domain\" page with the classic minimal content. Address bar shows \"example.com\".",
+      "timestamp": 1775293088152
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Advanced Settings dialog",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to example.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Activate Reader Mode",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775293031624,
+      "relativeTime": 1641,
+      "screenshotPath": "step-0.png",
+      "exactHash": "9f2b3201048c7280d29bb980179a9fd1",
+      "thumbnailHash": "76da89d1ea3263d51db6ca3c6b452480",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Dialog closes, leaving the GitHub page visible in Safari.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775293053257,
+      "relativeTime": 23274,
+      "screenshotPath": "step-1.png",
+      "exactHash": "89188732841dde03d2012976983977cd",
+      "thumbnailHash": "c14a5ea27fd327d0296001370c783e31",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          410,
+          188
+        ],
+        "raw": "left_click (410,188)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Address bar gets focused and I can type the URL.",
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes, leaving the GitHub page visible in Safari.",
+        "observed": "success left_click (410,188)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing GitHub.com homepage. The Advanced Settings dialog is gone.",
+      "resolvedTarget": null,
+      "assistantIntent": "Aight, Safari is already open but there's an Advanced Settings dialog covering things up",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775293077959,
+      "relativeTime": 47976,
+      "screenshotPath": "step-2.png",
+      "exactHash": "d52b97182da97612fa204edb6c3411f5",
+      "thumbnailHash": "1c28b2c9d09a80d53bc66809dfd5c94f",
+      "action": {
+        "type": "type",
+        "text": "example.com\n",
+        "raw": "type: \"example.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Either a Reader Mode view activates, or I see it's not available for this minimal page.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing example.com - \"Example Domain\" page with the classic minimal content. Address bar shows \"example.com\".",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Advanced Settings dialog is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775293094687,
+      "relativeTime": 64704,
+      "screenshotPath": "step-3.png",
+      "exactHash": "50d7bb9c0925887b21dfa8d643eb3df1",
+      "thumbnailHash": "5e73ff79e9a0a67a15c79d34c631534e",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+r",
+        "raw": "key: \"cmd+shift+r\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Either a Reader Mode view activates, or I see it's not available for this minimal page.",
+        "observed": "success key: \"cmd+shift+r\"",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: Navigated to example",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Navigated to example",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775293112419,
+      "relativeTime": 82436,
+      "screenshotPath": "step-4.png",
+      "exactHash": "c8707e364dbbd22130da84fb8185cce2",
+      "thumbnailHash": "003b8e2d2aa041accd3fcd538b466365",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          378,
+          52
+        ],
+        "raw": "left_click (378,52)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Hmm, the page looks the same but I can see the Reader Mode icon in the address bar area has changed - there's now what l",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, the page looks the same but I can see the Reader Mode icon in the address bar area has changed - there's now what l",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775293140273,
+      "relativeTime": 110290,
+      "screenshotPath": "step-5.png",
+      "exactHash": "76441b673d7983c4a45ac54f9552d0c1",
+      "thumbnailHash": "8de878523392522e9fafdb128e7b9a99",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "View menu opens with a \"Show Reader\" option if available.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Hmm, that might have clicked the wrong spot",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, that might have clicked the wrong spot",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775293156926,
+      "relativeTime": 126943,
+      "screenshotPath": "step-6.png",
+      "exactHash": "546ed42338cf79d862b271fa987e5626",
+      "thumbnailHash": "d1f868341c265237b318248bc33afd3b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "View menu opens with a \"Show Reader\" option if available.",
+        "observed": "success left_click (200,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Good, the menu is dismissed",
+      "resolvedTarget": null,
+      "assistantIntent": "Good, the menu is dismissed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          410,
+          188
+        ],
+        "raw": "left_click (410,188)"
+      },
+      "timestamp": 1775293053257
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "example.com\n",
+        "raw": "type: \"example.com\n\""
+      },
+      "timestamp": 1775293077959
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+r",
+        "raw": "key: \"cmd+shift+r\""
+      },
+      "timestamp": 1775293094687
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          378,
+          52
+        ],
+        "raw": "left_click (378,52)"
+      },
+      "timestamp": 1775293112419
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "timestamp": 1775293140273
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          200,
+          13
+        ],
+        "raw": "left_click (200,13)"
+      },
+      "timestamp": 1775293156926
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Navigated to example.com successfully!\", tried [left_click (410,188), type: \"example.com\n\", key: \"cmd+shift+r\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

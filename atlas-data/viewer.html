@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Data Explorer</title>
+<style>
+:root {
+  --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3;
+  --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --red: #f85149;
+  --orange: #d29922; --purple: #bc8cff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+.header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; gap: 16px; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 20px; font-weight: 600; }
+.header .stats { display: flex; gap: 16px; margin-left: auto; font-size: 13px; color: var(--muted); }
+.header .stats span { display: flex; align-items: center; gap: 4px; }
+.header .stats .num { color: var(--accent); font-weight: 600; font-size: 15px; }
+
+.tabs { display: flex; gap: 0; background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 24px; }
+.tab { padding: 10px 20px; cursor: pointer; color: var(--muted); font-size: 14px; font-weight: 500; border-bottom: 2px solid transparent; transition: all 0.15s; }
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 20px 24px; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* Stats cards */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+.stat-card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.stat-card .value { font-size: 28px; font-weight: 700; }
+.stat-card .value.green { color: var(--green); }
+.stat-card .value.red { color: var(--red); }
+.stat-card .value.blue { color: var(--accent); }
+.stat-card .value.orange { color: var(--orange); }
+.stat-card .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* Filter bar */
+.filter-bar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+.filter-bar input, .filter-bar select { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 12px; border-radius: 6px; font-size: 13px; }
+.filter-bar input { flex: 1; min-width: 200px; }
+.filter-bar select { min-width: 120px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+.badge.success { background: rgba(63,185,80,0.15); color: var(--green); }
+.badge.failure { background: rgba(248,81,73,0.15); color: var(--red); }
+.badge.medium { background: rgba(210,153,34,0.15); color: var(--orange); }
+.badge.hard { background: rgba(248,81,73,0.15); color: var(--red); }
+.badge.easy { background: rgba(63,185,80,0.15); color: var(--green); }
+
+/* Table */
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.data-table th { text-align: left; padding: 8px 12px; color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); }
+.data-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; max-width: 400px; }
+.data-table tr:hover { background: rgba(88,166,255,0.04); }
+.data-table tr { cursor: pointer; }
+.truncate { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 350px; display: block; }
+
+/* Detail modal */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; justify-content: center; align-items: flex-start; padding: 40px 20px; overflow-y: auto; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; max-width: 900px; width: 100%; max-height: calc(100vh - 80px); overflow-y: auto; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--surface); z-index: 1; border-radius: 12px 12px 0 0; }
+.modal-header h2 { font-size: 16px; }
+.modal-close { background: none; border: none; color: var(--muted); font-size: 24px; cursor: pointer; padding: 4px 8px; }
+.modal-close:hover { color: var(--text); }
+.modal-body { padding: 20px; }
+.detail-grid { display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; font-size: 13px; }
+.detail-grid .key { color: var(--muted); font-weight: 500; }
+.detail-grid .val { word-break: break-word; }
+.detail-section { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.detail-section h3 { font-size: 14px; margin-bottom: 8px; color: var(--accent); }
+pre.detail-text { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 12px; font-size: 12px; white-space: pre-wrap; word-break: break-word; max-height: 300px; overflow-y: auto; line-height: 1.5; }
+.step-list { list-style: none; }
+.step-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.step-list li:last-child { border-bottom: none; }
+.step-num { display: inline-block; width: 24px; height: 24px; text-align: center; line-height: 24px; border-radius: 50%; background: var(--border); font-size: 11px; font-weight: 600; margin-right: 8px; }
+.pill-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; }
+
+/* Trajectory node timeline */
+.node-timeline { position: relative; padding-left: 32px; }
+.node-timeline::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+.node-item { position: relative; margin-bottom: 12px; padding: 10px 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+.node-item.checkpoint { border-color: var(--orange); border-width: 2px; }
+.node-item.loop { border-color: var(--red); }
+.node-dot { position: absolute; left: -25px; top: 14px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--border); background: var(--surface); }
+.node-item.checkpoint .node-dot { background: var(--orange); border-color: var(--orange); }
+.node-item.loop .node-dot { background: var(--red); border-color: var(--red); }
+.node-action { font-weight: 600; font-size: 13px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+.node-action .action-type { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; }
+.node-action .action-type.click { color: var(--accent); border-color: var(--accent); }
+.node-action .action-type.type { color: var(--green); border-color: var(--green); }
+.node-action .action-type.key { color: var(--purple); border-color: var(--purple); }
+.node-action .action-type.bash { color: var(--orange); border-color: var(--orange); }
+.node-action .action-type.scroll { color: var(--muted); border-color: var(--muted); }
+.node-action .action-type.wait { color: var(--muted); border-color: var(--muted); }
+.node-expect { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 4px; }
+.node-semantic { font-size: 12px; color: var(--text); margin-top: 2px; }
+.node-result { font-size: 11px; margin-top: 3px; }
+.node-result.ok { color: var(--green); }
+.node-result.fail { color: var(--red); }
+.node-meta { display: flex; gap: 10px; font-size: 10px; color: var(--muted); margin-top: 4px; }
+.node-flag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; }
+.node-flag.checkpoint { background: rgba(210,153,34,0.2); color: var(--orange); }
+.node-flag.loop { background: rgba(248,81,73,0.2); color: var(--red); }
+.node-flag.surprise { background: rgba(188,140,255,0.2); color: var(--purple); }
+.node-cmd { font-family: monospace; font-size: 11px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px; margin-top: 4px; white-space: pre-wrap; word-break: break-all; max-height: 80px; overflow-y: auto; }
+
+/* Charts */
+.chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+.chart-card h3 { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+.bar-chart { display: flex; flex-direction: column; gap: 6px; }
+.bar-row { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.bar-label { width: 100px; text-align: right; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { flex: 1; height: 20px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s; display: flex; align-items: center; padding-left: 6px; font-size: 11px; font-weight: 600; }
+.bar-fill.green { background: var(--green); }
+.bar-fill.red { background: var(--red); }
+.bar-fill.blue { background: var(--accent); }
+.bar-fill.orange { background: var(--orange); }
+.bar-count { width: 30px; font-size: 12px; color: var(--muted); }
+
+.count-display { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Atlas Data Explorer</h1>
+  <div class="stats">
+    <span><span class="num" id="hd-results">-</span> Tasks</span>
+    <span><span class="num" id="hd-reflections">-</span> Reflections</span>
+    <span><span class="num" id="hd-segments">-</span> Segments</span>
+    <span><span class="num" id="hd-trajectories">-</span> Trajectories</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-tab="results">Task Results</div>
+  <div class="tab" data-tab="reflections">Reflections</div>
+  <div class="tab" data-tab="segments">Segments</div>
+  <div class="tab" data-tab="trajectories">Trajectories</div>
+  <div class="tab" data-tab="overview">Overview</div>
+</div>
+
+<!-- RESULTS PANEL -->
+<div class="container">
+<div class="panel active" id="panel-results">
+  <div class="stat-grid" id="results-stats"></div>
+  <div class="filter-bar">
+    <input type="text" id="results-search" placeholder="Search tasks...">
+    <select id="results-filter-status"><option value="">All Status</option><option value="true">Success</option><option value="false">Failed</option></select>
+    <select id="results-filter-complexity"><option value="">All Complexity</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select>
+    <select id="results-filter-app"><option value="">All Apps</option></select>
+  </div>
+  <div class="count-display" id="results-count"></div>
+  <table class="data-table" id="results-table">
+    <thead><tr><th>#</th><th>App</th><th>Complexity</th><th>Instruction</th><th>Status</th><th>Iterations</th><th>Time</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- REFLECTIONS PANEL -->
+<div class="panel" id="panel-reflections">
+  <div class="stat-grid" id="reflections-stats"></div>
+  <div class="filter-bar">
+    <input type="text" id="reflections-search" placeholder="Search reflections...">
+    <select id="reflections-filter-outcome"><option value="">All Outcomes</option><option value="success">Success</option><option value="failure">Failure</option></select>
+    <select id="reflections-filter-type"><option value="">All Types</option></select>
+  </div>
+  <div class="count-display" id="reflections-count"></div>
+  <table class="data-table" id="reflections-table">
+    <thead><tr><th>Task</th><th>Type</th><th>Outcome</th><th>Iterations</th><th>Loops</th><th>Duration</th><th>Confidence</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- SEGMENTS PANEL -->
+<div class="panel" id="panel-segments">
+  <div class="stat-grid" id="segments-stats"></div>
+  <div class="filter-bar">
+    <input type="text" id="segments-search" placeholder="Search segments...">
+    <select id="segments-filter-type"><option value="">All Types</option></select>
+    <select id="segments-filter-clean"><option value="">All</option><option value="true">Clean</option><option value="false">Not Clean</option></select>
+  </div>
+  <div class="count-display" id="segments-count"></div>
+  <table class="data-table" id="segments-table">
+    <thead><tr><th>Label</th><th>Type</th><th>Steps</th><th>Occurrences</th><th>Success Rate</th><th>Clean</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- TRAJECTORIES PANEL -->
+<div class="panel" id="panel-trajectories">
+  <div class="stat-grid" id="trajectories-stats"></div>
+  <div class="filter-bar">
+    <input type="text" id="trajectories-search" placeholder="Search trajectories...">
+    <select id="trajectories-filter-status"><option value="">All Status</option><option value="true">Success</option><option value="false">Failed</option></select>
+  </div>
+  <div class="count-display" id="trajectories-count"></div>
+  <table class="data-table" id="trajectories-table">
+    <thead><tr><th>ID</th><th>Task</th><th>Status</th><th>Steps</th><th>Loops</th><th>Stagnations</th><th>Duration</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- OVERVIEW PANEL -->
+<div class="panel" id="panel-overview">
+  <div class="stat-grid" id="overview-stats"></div>
+  <div class="chart-row" id="overview-charts"></div>
+</div>
+</div>
+
+<!-- DETAIL MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Detail</h2>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+let DATA = { results: [], reflections: [], segments: [], trajectories: [] };
+
+async function loadData() {
+  const [r1, r2, r3, r4] = await Promise.all([
+    fetch('/results/phase1-results.json').then(r => r.json()),
+    fetch('/reflections/reflections.json').then(r => r.json()),
+    fetch('/segments/segment_library.json').then(r => r.json()),
+    fetch('/trajectory-index.json').then(r => r.json()),
+  ]);
+  DATA.results = r1.results || r1;
+  DATA.reflections = r2;
+  DATA.segments = r3;
+  DATA.trajectories = r4;
+
+  document.getElementById('hd-results').textContent = DATA.results.length;
+  document.getElementById('hd-reflections').textContent = DATA.reflections.length;
+  document.getElementById('hd-segments').textContent = DATA.segments.length;
+  document.getElementById('hd-trajectories').textContent = DATA.trajectories.length;
+
+  populateFilters();
+  renderAll();
+}
+
+function populateFilters() {
+  const apps = [...new Set(DATA.results.map(r => r.app))].sort();
+  const appSel = document.getElementById('results-filter-app');
+  apps.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; appSel.appendChild(o); });
+
+  const rtypes = [...new Set(DATA.reflections.map(r => r.taskType))].filter(Boolean).sort();
+  const rtSel = document.getElementById('reflections-filter-type');
+  rtypes.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; rtSel.appendChild(o); });
+
+  const stypes = [...new Set(DATA.segments.map(s => s.taskType))].filter(Boolean).sort();
+  const stSel = document.getElementById('segments-filter-type');
+  stypes.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; stSel.appendChild(o); });
+}
+
+function fmtTime(ms) {
+  if (!ms) return '-';
+  const s = Math.round(ms / 1000);
+  return s < 60 ? s + 's' : Math.floor(s/60) + 'm ' + (s%60) + 's';
+}
+
+function badge(text, cls) { return `<span class="badge ${cls}">${text}</span>`; }
+
+// ---- RESULTS ----
+function getFilteredResults() {
+  const q = document.getElementById('results-search').value.toLowerCase();
+  const status = document.getElementById('results-filter-status').value;
+  const complexity = document.getElementById('results-filter-complexity').value;
+  const app = document.getElementById('results-filter-app').value;
+  return DATA.results.filter(r => {
+    if (q && !r.instruction.toLowerCase().includes(q) && !r.app.toLowerCase().includes(q)) return false;
+    if (status && String(r.success) !== status) return false;
+    if (complexity && r.complexity !== complexity) return false;
+    if (app && r.app !== app) return false;
+    return true;
+  });
+}
+
+function renderResults() {
+  const filtered = getFilteredResults();
+  const succ = filtered.filter(r => r.success).length;
+  document.getElementById('results-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Total Tasks</div><div class="value blue">${filtered.length}</div></div>
+    <div class="stat-card"><div class="label">Passed</div><div class="value green">${succ}</div><div class="sub">${(succ/filtered.length*100||0).toFixed(1)}%</div></div>
+    <div class="stat-card"><div class="label">Failed</div><div class="value red">${filtered.length - succ}</div></div>
+    <div class="stat-card"><div class="label">Avg Iterations</div><div class="value orange">${(filtered.reduce((a,r)=>a+(r.iterations||0),0)/filtered.length||0).toFixed(1)}</div></div>
+  `;
+  document.getElementById('results-count').textContent = `Showing ${filtered.length} of ${DATA.results.length} tasks`;
+  const tbody = document.querySelector('#results-table tbody');
+  tbody.innerHTML = filtered.map(r => `
+    <tr onclick="showResult(${r.taskId})">
+      <td>${r.taskId}</td>
+      <td>${r.app}</td>
+      <td>${badge(r.complexity, r.complexity)}</td>
+      <td><span class="truncate">${esc(r.instruction)}</span></td>
+      <td>${badge(r.success ? 'PASS' : 'FAIL', r.success ? 'success' : 'failure')}</td>
+      <td>${r.iterations || '-'}</td>
+      <td>${fmtTime(r.elapsedMs)}</td>
+    </tr>
+  `).join('');
+}
+
+function showResult(taskId) {
+  const r = DATA.results.find(x => x.taskId === taskId);
+  if (!r) return;
+  document.getElementById('modal-title').textContent = `Task #${r.taskId}: ${r.app}`;
+  let html = `<div class="detail-grid">
+    <span class="key">Status</span><span class="val">${badge(r.success ? 'PASS' : 'FAIL', r.success ? 'success' : 'failure')}</span>
+    <span class="key">App</span><span class="val">${r.app}</span>
+    <span class="key">Complexity</span><span class="val">${badge(r.complexity, r.complexity)}</span>
+    <span class="key">Iterations</span><span class="val">${r.iterations || '-'}</span>
+    <span class="key">Time</span><span class="val">${fmtTime(r.elapsedMs)}</span>
+    <span class="key">Model</span><span class="val">${r.model || '-'}</span>
+    <span class="key">Plan Steps</span><span class="val">${r.planSteps || '-'}</span>
+    <span class="key">Escalated</span><span class="val">${r.escalated ? 'Yes' : 'No'}</span>
+    <span class="key">Trajectory</span><span class="val">${r.trajectoryId ? `<a href="#" onclick="event.preventDefault();closeModal();setTimeout(()=>showTrajectory('${r.trajectoryId}'),100)" style="color:var(--accent)">${r.trajectoryId}</a>` : '-'}</span>
+  </div>`;
+  html += `<div class="detail-section"><h3>Instruction</h3><pre class="detail-text">${esc(r.instruction)}</pre></div>`;
+  if (r.finalText) html += `<div class="detail-section"><h3>Final Output</h3><pre class="detail-text">${esc(r.finalText)}</pre></div>`;
+  if (r.error) html += `<div class="detail-section"><h3>Error</h3><pre class="detail-text" style="color:var(--red)">${esc(String(r.error))}</pre></div>`;
+  if (r.steps && r.steps.length) {
+    html += `<div class="detail-section"><h3>Plan Steps (${r.steps.length})</h3><ol class="step-list">`;
+    r.steps.forEach((s, i) => {
+      const desc = typeof s === 'string' ? s : (s.action || s.description || JSON.stringify(s));
+      html += `<li><span class="step-num">${i+1}</span>${esc(String(desc).substring(0,200))}</li>`;
+    });
+    html += `</ol></div>`;
+  }
+  // Load trajectory nodes inline if available
+  if (r.trajectoryId) {
+    html += `<div class="detail-section" id="result-traj-section"><h3>Trajectory Timeline</h3><p style="color:var(--muted)">Loading...</p></div>`;
+  }
+  document.getElementById('modal-body').innerHTML = html;
+  document.getElementById('modal').classList.add('open');
+  if (r.trajectoryId) {
+    fetch('/api/trajectory/' + r.trajectoryId).then(res => res.json()).then(t => {
+      const nodes = t.nodes || [];
+      if (nodes.length) {
+        const sec = document.getElementById('result-traj-section');
+        if (sec) sec.innerHTML = `<h3>Trajectory Timeline (${nodes.length} steps)</h3><div class="node-timeline">${nodes.map((n,i) => renderNode(n,i)).join('')}</div>`;
+      }
+    }).catch(() => {});
+  }
+}
+
+// ---- REFLECTIONS ----
+function getFilteredReflections() {
+  const q = document.getElementById('reflections-search').value.toLowerCase();
+  const outcome = document.getElementById('reflections-filter-outcome').value;
+  const type = document.getElementById('reflections-filter-type').value;
+  return DATA.reflections.filter(r => {
+    if (q && !r.taskDescription.toLowerCase().includes(q) && !(r.reflection||'').toLowerCase().includes(q)) return false;
+    if (outcome && r.outcome !== outcome) return false;
+    if (type && r.taskType !== type) return false;
+    return true;
+  });
+}
+
+function renderReflections() {
+  const filtered = getFilteredReflections();
+  const succ = filtered.filter(r => r.outcome === 'success').length;
+  document.getElementById('reflections-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Total</div><div class="value blue">${filtered.length}</div></div>
+    <div class="stat-card"><div class="label">Success</div><div class="value green">${succ}</div></div>
+    <div class="stat-card"><div class="label">Failure</div><div class="value red">${filtered.length - succ}</div></div>
+    <div class="stat-card"><div class="label">Avg Confidence</div><div class="value orange">${(filtered.reduce((a,r)=>a+(r.confidence||0),0)/filtered.length||0).toFixed(2)}</div></div>
+  `;
+  document.getElementById('reflections-count').textContent = `Showing ${filtered.length} of ${DATA.reflections.length} reflections`;
+  const tbody = document.querySelector('#reflections-table tbody');
+  tbody.innerHTML = filtered.map((r, i) => `
+    <tr onclick="showReflection(${i})">
+      <td><span class="truncate">${esc(r.taskDescription)}</span></td>
+      <td>${r.taskType || '-'}</td>
+      <td>${badge(r.outcome, r.outcome === 'success' ? 'success' : 'failure')}</td>
+      <td>${r.iterations}</td>
+      <td>${r.loopsDetected}</td>
+      <td>${fmtTime(r.duration)}</td>
+      <td>${r.confidence}</td>
+    </tr>
+  `).join('');
+}
+
+function showReflection(idx) {
+  const r = DATA.reflections[idx];
+  if (!r) return;
+  document.getElementById('modal-title').textContent = 'Reflection: ' + r.taskDescription.substring(0, 60);
+  let html = `<div class="detail-grid">
+    <span class="key">Outcome</span><span class="val">${badge(r.outcome, r.outcome === 'success' ? 'success' : 'failure')}</span>
+    <span class="key">Task Type</span><span class="val">${r.taskType || '-'}</span>
+    <span class="key">Iterations</span><span class="val">${r.iterations}</span>
+    <span class="key">Loops</span><span class="val">${r.loopsDetected}</span>
+    <span class="key">Stagnations</span><span class="val">${r.stagnationsDetected}</span>
+    <span class="key">Duration</span><span class="val">${fmtTime(r.duration)}</span>
+    <span class="key">Confidence</span><span class="val">${r.confidence}</span>
+    <span class="key">Source</span><span class="val">${r.source || '-'}</span>
+    <span class="key">Trajectory</span><span class="val">${r.trajectoryId || '-'}</span>
+  </div>`;
+  html += `<div class="detail-section"><h3>Task</h3><pre class="detail-text">${esc(r.taskDescription)}</pre></div>`;
+  html += `<div class="detail-section"><h3>Reflection</h3><pre class="detail-text">${esc(r.reflection || '')}</pre></div>`;
+  if (r.lessons && r.lessons.length) {
+    html += `<div class="detail-section"><h3>Lessons Learned</h3><div class="pill-row">${r.lessons.map(l => `<span class="pill">${esc(String(l).substring(0,120))}</span>`).join('')}</div></div>`;
+  }
+  if (r.failurePoints && r.failurePoints.length) {
+    html += `<div class="detail-section"><h3>Failure Points</h3><div class="pill-row">${r.failurePoints.map(f => `<span class="pill" style="border-color:var(--red)">${esc(String(f).substring(0,120))}</span>`).join('')}</div></div>`;
+  }
+  if (r.effectiveStrategies && r.effectiveStrategies.length) {
+    html += `<div class="detail-section"><h3>Effective Strategies</h3><div class="pill-row">${r.effectiveStrategies.map(s => `<span class="pill" style="border-color:var(--green)">${esc(String(s).substring(0,120))}</span>`).join('')}</div></div>`;
+  }
+  document.getElementById('modal-body').innerHTML = html;
+  document.getElementById('modal').classList.add('open');
+}
+
+// ---- SEGMENTS ----
+function getFilteredSegments() {
+  const q = document.getElementById('segments-search').value.toLowerCase();
+  const type = document.getElementById('segments-filter-type').value;
+  const clean = document.getElementById('segments-filter-clean').value;
+  return DATA.segments.filter(s => {
+    if (q && !s.label.toLowerCase().includes(q) && !(s.precondition||'').toLowerCase().includes(q)) return false;
+    if (type && s.taskType !== type) return false;
+    if (clean && String(s.clean) !== clean) return false;
+    return true;
+  });
+}
+
+function renderSegments() {
+  const filtered = getFilteredSegments();
+  const cleanCount = filtered.filter(s => s.clean).length;
+  const avgRate = filtered.reduce((a,s) => a + (s.successRate||0), 0) / filtered.length || 0;
+  document.getElementById('segments-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Total</div><div class="value blue">${filtered.length}</div></div>
+    <div class="stat-card"><div class="label">Clean</div><div class="value green">${cleanCount}</div></div>
+    <div class="stat-card"><div class="label">Avg Success Rate</div><div class="value orange">${(avgRate*100).toFixed(1)}%</div></div>
+    <div class="stat-card"><div class="label">Avg Steps</div><div class="value">${(filtered.reduce((a,s)=>a+s.stepCount,0)/filtered.length||0).toFixed(1)}</div></div>
+  `;
+  document.getElementById('segments-count').textContent = `Showing ${filtered.length} of ${DATA.segments.length} segments`;
+  const tbody = document.querySelector('#segments-table tbody');
+  tbody.innerHTML = filtered.map((s, i) => `
+    <tr onclick="showSegment(${i})">
+      <td><span class="truncate">${esc(s.label)}</span></td>
+      <td>${s.taskType || '-'}</td>
+      <td>${s.stepCount}</td>
+      <td>${s.occurrences || '-'}</td>
+      <td>${((s.successRate||0)*100).toFixed(0)}%</td>
+      <td>${s.clean ? badge('Clean','success') : badge('Dirty','failure')}</td>
+    </tr>
+  `).join('');
+}
+
+function showSegment(idx) {
+  const s = DATA.segments[idx];
+  if (!s) return;
+  document.getElementById('modal-title').textContent = 'Segment: ' + s.label;
+  let html = `<div class="detail-grid">
+    <span class="key">Type</span><span class="val">${s.taskType || '-'}</span>
+    <span class="key">Steps</span><span class="val">${s.stepCount}</span>
+    <span class="key">Occurrences</span><span class="val">${s.occurrences || '-'}</span>
+    <span class="key">Success Rate</span><span class="val">${((s.successRate||0)*100).toFixed(1)}%</span>
+    <span class="key">Clean</span><span class="val">${s.clean ? 'Yes' : 'No'}</span>
+  </div>`;
+  html += `<div class="detail-section"><h3>Precondition</h3><pre class="detail-text">${esc(s.precondition || '-')}</pre></div>`;
+  html += `<div class="detail-section"><h3>Postcondition</h3><pre class="detail-text">${esc(s.postcondition || '-')}</pre></div>`;
+  if (s.steps && s.steps.length) {
+    html += `<div class="detail-section"><h3>Steps</h3><ol class="step-list">`;
+    s.steps.forEach((st, i) => {
+      const desc = typeof st === 'string' ? st : (st.action || st.description || JSON.stringify(st));
+      html += `<li><span class="step-num">${i+1}</span>${esc(String(desc).substring(0,300))}</li>`;
+    });
+    html += `</ol></div>`;
+  }
+  if (s.sourceTrajectories && s.sourceTrajectories.length) {
+    html += `<div class="detail-section"><h3>Source Trajectories (${s.sourceTrajectories.length})</h3><div class="pill-row">${s.sourceTrajectories.map(t => `<span class="pill">${esc(t)}</span>`).join('')}</div></div>`;
+  }
+  document.getElementById('modal-body').innerHTML = html;
+  document.getElementById('modal').classList.add('open');
+}
+
+// ---- TRAJECTORIES ----
+function getFilteredTrajectories() {
+  const q = document.getElementById('trajectories-search').value.toLowerCase();
+  const status = document.getElementById('trajectories-filter-status').value;
+  return DATA.trajectories.filter(t => {
+    if (q && !t.taskDescription.toLowerCase().includes(q) && !t.id.toLowerCase().includes(q)) return false;
+    if (status && String(t.success) !== status) return false;
+    return true;
+  });
+}
+
+function renderTrajectories() {
+  const filtered = getFilteredTrajectories();
+  const succ = filtered.filter(t => t.success).length;
+  document.getElementById('trajectories-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Total</div><div class="value blue">${filtered.length}</div></div>
+    <div class="stat-card"><div class="label">Success</div><div class="value green">${succ}</div></div>
+    <div class="stat-card"><div class="label">Failed</div><div class="value red">${filtered.length - succ}</div></div>
+    <div class="stat-card"><div class="label">Avg Steps</div><div class="value orange">${(filtered.reduce((a,t)=>a+t.totalSteps,0)/filtered.length||0).toFixed(1)}</div></div>
+  `;
+  document.getElementById('trajectories-count').textContent = `Showing ${filtered.length} of ${DATA.trajectories.length} trajectories`;
+  const tbody = document.querySelector('#trajectories-table tbody');
+  tbody.innerHTML = filtered.map(t => `
+    <tr onclick="showTrajectory('${t.id}')">
+      <td style="font-size:11px;font-family:monospace">${t.id.replace('task-','')}</td>
+      <td><span class="truncate">${esc(t.taskDescription)}</span></td>
+      <td>${badge(t.success ? 'PASS' : 'FAIL', t.success ? 'success' : 'failure')}</td>
+      <td>${t.totalSteps}</td>
+      <td>${t.loopsDetected}</td>
+      <td>${t.stagnationsDetected}</td>
+      <td>${fmtTime(t.duration)}</td>
+    </tr>
+  `).join('');
+}
+
+function actionTypeClass(type) {
+  if (!type) return '';
+  if (type.includes('click')) return 'click';
+  if (type === 'type') return 'type';
+  if (type === 'key') return 'key';
+  if (type === 'bash') return 'bash';
+  if (type === 'scroll' || type === 'mouse_move') return 'scroll';
+  if (type === 'wait') return 'wait';
+  return '';
+}
+
+function renderActionLabel(action) {
+  if (!action) return '<span style="color:var(--muted)">initial state</span>';
+  const type = action.type || 'unknown';
+  const cls = actionTypeClass(type);
+  let label = `<span class="action-type ${cls}">${esc(type)}</span>`;
+
+  if (type === 'left_click' || type === 'right_click' || type === 'double_click') {
+    const coords = action.coordinates;
+    label += ` <span style="color:var(--muted)">at (${coords ? coords.join(', ') : '?'})</span>`;
+  } else if (type === 'type') {
+    const txt = action.text || '';
+    label += ` <span style="color:var(--green)">"${esc(txt.length > 60 ? txt.substring(0,60) + '...' : txt)}"</span>`;
+  } else if (type === 'key') {
+    label += ` <span style="color:var(--purple)">${esc(action.text || '')}</span>`;
+  } else if (type === 'scroll') {
+    const coords = action.coordinates;
+    label += ` <span style="color:var(--muted)">at (${coords ? coords.join(', ') : '?'})</span>`;
+  } else if (type === 'bash') {
+    // show command below
+  }
+  return label;
+}
+
+function renderNode(node, idx) {
+  const flags = node.flags || [];
+  const isCheckpoint = flags.includes('checkpoint');
+  const isLoop = node.loopDetected || flags.includes('loop');
+  const isSurprise = !!node.surprise;
+  let cls = isCheckpoint ? 'checkpoint' : isLoop ? 'loop' : '';
+
+  let html = `<div class="node-item ${cls}"><div class="node-dot"></div>`;
+  html += `<div class="node-action"><span style="color:var(--muted);font-size:11px;min-width:20px">${idx}</span> ${renderActionLabel(node.action)}</div>`;
+
+  if (node.action && node.action.type === 'bash' && node.action.command) {
+    html += `<div class="node-cmd">${esc(node.action.command)}</div>`;
+  }
+
+  if (node.expectation) {
+    html += `<div class="node-expect">Expected: ${esc(String(node.expectation).substring(0,200))}</div>`;
+  }
+
+  if (node.semanticState && node.semanticState !== 'initial state (no action)') {
+    html += `<div class="node-semantic">${esc(String(node.semanticState).substring(0,200))}</div>`;
+  }
+
+  if (node.toolResult) {
+    const isOk = node.toolResult === 'success' || node.toolResult === true;
+    html += `<div class="node-result ${isOk ? 'ok' : 'fail'}">${esc(String(node.toolResult).substring(0,150))}</div>`;
+  }
+
+  if (node.surprise) {
+    let surpriseText;
+    if (typeof node.surprise === 'object') {
+      const s = node.surprise;
+      surpriseText = `Expected: "${s.expected || '?'}" | Observed: "${s.observed || '?'}" (match: ${s.matchedKeywords || 0}/${s.expectedKeywords || '?'})`;
+    } else {
+      surpriseText = String(node.surprise);
+    }
+    html += `<div style="margin-top:4px"><span class="node-flag surprise">SURPRISE: ${esc(surpriseText.substring(0,250))}</span></div>`;
+  }
+
+  let metaParts = [];
+  if (isCheckpoint) metaParts.push('<span class="node-flag checkpoint">CHECKPOINT</span>');
+  if (isLoop) metaParts.push('<span class="node-flag loop">LOOP DETECTED</span>');
+  if (node.relativeTime) metaParts.push(`t+${(node.relativeTime/1000).toFixed(1)}s`);
+  if (node.branch !== undefined) metaParts.push(`branch: ${node.branch}`);
+  if (metaParts.length) html += `<div class="node-meta">${metaParts.join(' ')}</div>`;
+
+  html += '</div>';
+  return html;
+}
+
+async function showTrajectory(id) {
+  document.getElementById('modal-title').textContent = 'Trajectory: ' + id;
+  document.getElementById('modal-body').innerHTML = '<p style="color:var(--muted)">Loading trajectory data...</p>';
+  document.getElementById('modal').classList.add('open');
+  try {
+    const t = await fetch('/api/trajectory/' + id).then(r => r.json());
+    const nodes = t.nodes || [];
+    const checkpointCount = nodes.filter(n => (n.flags||[]).includes('checkpoint')).length;
+
+    let html = `<div class="detail-grid">
+      <span class="key">Success</span><span class="val">${badge(t.success ? 'PASS' : 'FAIL', t.success ? 'success' : 'failure')}</span>
+      <span class="key">Duration</span><span class="val">${fmtTime(t.duration)}</span>
+      <span class="key">Total Steps</span><span class="val">${nodes.length}</span>
+      <span class="key">Loops</span><span class="val">${t.loopsDetected}</span>
+      <span class="key">Stagnations</span><span class="val">${t.stagnationsDetected}</span>
+      <span class="key">Surprises</span><span class="val">${t.surprisesDetected || 0}</span>
+      <span class="key">Checkpoints</span><span class="val">${checkpointCount}</span>
+      <span class="key">Recovery Level</span><span class="val">${t.recoveryLevel || '-'}</span>
+    </div>`;
+
+    html += `<div class="detail-section"><h3>Task</h3><pre class="detail-text">${esc(t.taskDescription || '')}</pre></div>`;
+
+    if (t.taskPlan) {
+      html += `<div class="detail-section"><h3>Plan</h3><pre class="detail-text">${esc(typeof t.taskPlan === 'string' ? t.taskPlan : JSON.stringify(t.taskPlan, null, 2))}</pre></div>`;
+    }
+
+    if (t.finalText) html += `<div class="detail-section"><h3>Final Output</h3><pre class="detail-text">${esc(t.finalText)}</pre></div>`;
+
+    if (t.branches && t.branches.length) {
+      html += `<div class="detail-section"><h3>Branches (${t.branches.length})</h3>`;
+      t.branches.forEach(b => {
+        html += `<div class="pill" style="margin-bottom:4px"><strong>${esc(b.name || b.id)}</strong> - ${esc(b.status || '')} ${b.outcome ? '| ' + esc(b.outcome) : ''} ${b.lesson ? '<br><em style="color:var(--muted)">' + esc(b.lesson) + '</em>' : ''}</div>`;
+      });
+      html += `</div>`;
+    }
+
+    if (nodes.length) {
+      html += `<div class="detail-section"><h3>Action Timeline (${nodes.length} steps)</h3><div class="node-timeline">`;
+      nodes.forEach((n, i) => { html += renderNode(n, i); });
+      html += `</div></div>`;
+    }
+
+    document.getElementById('modal-body').innerHTML = html;
+  } catch(e) {
+    document.getElementById('modal-body').innerHTML = `<p style="color:var(--red)">Error loading: ${e.message}</p>`;
+  }
+}
+
+// ---- OVERVIEW ----
+function renderOverview() {
+  const results = DATA.results;
+  const succ = results.filter(r => r.success).length;
+  const fail = results.length - succ;
+  const avgIter = results.reduce((a,r)=>a+(r.iterations||0),0)/results.length||0;
+  const avgTime = results.reduce((a,r)=>a+(r.elapsedMs||0),0)/results.length||0;
+
+  document.getElementById('overview-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Overall Pass Rate</div><div class="value green">${(succ/results.length*100).toFixed(1)}%</div><div class="sub">${succ}/${results.length}</div></div>
+    <div class="stat-card"><div class="label">Avg Iterations</div><div class="value orange">${avgIter.toFixed(1)}</div></div>
+    <div class="stat-card"><div class="label">Avg Time</div><div class="value blue">${fmtTime(avgTime)}</div></div>
+    <div class="stat-card"><div class="label">Total Reflections</div><div class="value purple">${DATA.reflections.length}</div></div>
+  `;
+
+  // Charts: by app, by complexity, reflection types, segment types
+  const byApp = {};
+  results.forEach(r => { if (!byApp[r.app]) byApp[r.app] = {pass:0,fail:0}; r.success ? byApp[r.app].pass++ : byApp[r.app].fail++; });
+  const appEntries = Object.entries(byApp).sort((a,b) => (b[1].pass+b[1].fail) - (a[1].pass+a[1].fail));
+  const maxApp = Math.max(...appEntries.map(([,v]) => v.pass+v.fail));
+
+  const byComplexity = {};
+  results.forEach(r => { const c = r.complexity||'unknown'; if (!byComplexity[c]) byComplexity[c] = {pass:0,fail:0}; r.success ? byComplexity[c].pass++ : byComplexity[c].fail++; });
+
+  const refByType = {};
+  DATA.reflections.forEach(r => { const t = r.taskType||'unknown'; refByType[t] = (refByType[t]||0)+1; });
+  const refEntries = Object.entries(refByType).sort((a,b) => b[1]-a[1]).slice(0,10);
+  const maxRef = Math.max(...refEntries.map(([,v]) => v));
+
+  let chartsHtml = `
+    <div class="chart-card"><h3>Results by App</h3><div class="bar-chart">
+      ${appEntries.map(([app, v]) => {
+        const total = v.pass + v.fail;
+        const pct = v.pass / total * 100;
+        return `<div class="bar-row"><span class="bar-label">${app}</span><div class="bar-track"><div class="bar-fill green" style="width:${pct}%"></div></div><span class="bar-count">${v.pass}/${total}</span></div>`;
+      }).join('')}
+    </div></div>
+
+    <div class="chart-card"><h3>Results by Complexity</h3><div class="bar-chart">
+      ${Object.entries(byComplexity).map(([c, v]) => {
+        const total = v.pass + v.fail;
+        const pct = v.pass / total * 100;
+        return `<div class="bar-row"><span class="bar-label">${c}</span><div class="bar-track"><div class="bar-fill green" style="width:${pct}%"></div></div><span class="bar-count">${v.pass}/${total}</span></div>`;
+      }).join('')}
+    </div></div>
+
+    <div class="chart-card"><h3>Reflections by Task Type (Top 10)</h3><div class="bar-chart">
+      ${refEntries.map(([type, count]) => {
+        return `<div class="bar-row"><span class="bar-label">${type}</span><div class="bar-track"><div class="bar-fill blue" style="width:${count/maxRef*100}%">${count}</div></div></div>`;
+      }).join('')}
+    </div></div>
+
+    <div class="chart-card"><h3>Segment Success Rate Distribution</h3><div class="bar-chart">
+      ${(() => {
+        const buckets = {'0-25%':0,'25-50%':0,'50-75%':0,'75-100%':0};
+        DATA.segments.forEach(s => {
+          const r = (s.successRate||0)*100;
+          if (r < 25) buckets['0-25%']++;
+          else if (r < 50) buckets['25-50%']++;
+          else if (r < 75) buckets['50-75%']++;
+          else buckets['75-100%']++;
+        });
+        const maxB = Math.max(...Object.values(buckets));
+        return Object.entries(buckets).map(([label,count]) => {
+          const cls = label === '75-100%' ? 'green' : label === '0-25%' ? 'red' : 'orange';
+          return `<div class="bar-row"><span class="bar-label">${label}</span><div class="bar-track"><div class="bar-fill ${cls}" style="width:${count/maxB*100}%">${count}</div></div></div>`;
+        }).join('');
+      })()}
+    </div></div>
+  `;
+  document.getElementById('overview-charts').innerHTML = chartsHtml;
+}
+
+function renderAll() { renderResults(); renderReflections(); renderSegments(); renderTrajectories(); renderOverview(); }
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+// Filter listeners
+['results-search','results-filter-status','results-filter-complexity','results-filter-app'].forEach(id =>
+  document.getElementById(id).addEventListener('input', renderResults));
+['reflections-search','reflections-filter-outcome','reflections-filter-type'].forEach(id =>
+  document.getElementById(id).addEventListener('input', renderReflections));
+['segments-search','segments-filter-type','segments-filter-clean'].forEach(id =>
+  document.getElementById(id).addEventListener('input', renderSegments));
+['trajectories-search','trajectories-filter-status'].forEach(id =>
+  document.getElementById(id).addEventListener('input', renderTrajectories));
+
+// Close modal on overlay click
+document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+loadData();
+</script>
+</body>
+</html>

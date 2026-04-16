@@ -1,0 +1,431 @@
+{
+  "taskId": "task-1775248679000-8x1g",
+  "taskDescription": "Open Calendar and create a recurring weekly event every Monday at 9 AM",
+  "startTime": 1775248679000,
+  "endTime": 1775248853735,
+  "duration": 174735,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Title is set to \"Weekly Monday Meeting\" and the autocomplete dropdown is dismissed. The quick-add popover shows the event with the title and \"5 Apr 2026 10:00AM - 11:00AM\" as the date/time, plus \"Add Alert, Repeat or Travel Time\" option.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "3af95afab8cea505919e813462a5fc4b",
+      "semanticState": "Calendar event creation popover showing \"Weekly Monday Meeting\" as the event title, date showing \"5 Apr 2026 10:00AM - 11:00AM\", and fields for Alert/Repeat/Travel Time, Invitees, Notes, URL, and Attachment.",
+      "timestamp": 1775248784628
+    },
+    {
+      "stepNumber": 2,
+      "description": "Date/time section expanded showing Starts: 05/04/2026 10:00 AM, Ends: 05/04/2026 11:00 AM, Repeat: Never.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "f94d26ff2a0029721c2182c392aaaa64",
+      "semanticState": "Calendar popover now showing expanded date/time section with All Day toggle, Starts/Ends dates, and Repeat set to \"Never\". The date is April 5 (Sunday) - I need to change it to a Monday.",
+      "timestamp": 1775248809445
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Clear the event title and type a new event name",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Change the date to a Monday at 9 AM",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Set up the repeat/recurrence (weekly, every Monday)",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save the event",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775248680856,
+      "relativeTime": 1856,
+      "screenshotPath": "step-0.png",
+      "exactHash": "166f6832af09a3acf22f450d4c35b2c1",
+      "thumbnailHash": "7314a8e15a1e5520374cfb1a6f159713",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The title field should be focused and editable.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app is open in Week view showing April 6-11, 2026. There's an event creation popover open with \"Team Standup\" pre-filled, showing a date of 5 Apr 2026 10:00AM-11:00AM.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775248708450,
+      "relativeTime": 29450,
+      "screenshotPath": "step-1.png",
+      "exactHash": "c498938818d42be598dd11893a8d4080",
+      "thumbnailHash": "b58ea30dbf28f3a3b76b0e1ad5e9a3f9",
+      "action": {
+        "type": "type",
+        "text": "Weekly Monday Meeting",
+        "raw": "type: \"Weekly Monday Meeting\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The title field should be focused and editable.",
+        "observed": "success type: \"weekly monday meeting\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with 'Event' (RadioButton) in Calendar",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 45
+      },
+      "assistantIntent": "Alright, Calendar is already open and I can see there's a new event dialog already popped up",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775248723852,
+      "relativeTime": 44852,
+      "screenshotPath": "step-2.png",
+      "exactHash": "fcb891de2e7a37b4eec22218fefd1a99",
+      "thumbnailHash": "d7a1ffaf3e4a2c2fc9d12dedf28f065c",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interesting",
+      "resolvedTarget": null,
+      "assistantIntent": "Interesting",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775248748085,
+      "relativeTime": 69085,
+      "screenshotPath": "step-3.png",
+      "exactHash": "4a18acae4241bfc14c729e635c5c3ed7",
+      "thumbnailHash": "52a42373e5fb1932b8a703501f669a83",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          697,
+          289
+        ],
+        "raw": "left_click (697,289)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Event' (RadioButton) in Calendar",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 38
+      },
+      "assistantIntent": "The event title shows \"Weekly Monday Meeting\" - that's set",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775248770893,
+      "relativeTime": 91893,
+      "screenshotPath": "step-4.png",
+      "exactHash": "3af95afab8cea505919e813462a5fc4b",
+      "thumbnailHash": "8de7d24a5a610a21d78be326994dc51c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          697,
+          479
+        ],
+        "raw": "left_click (697,479)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "A date/time editor will expand or the full event window will open.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar event creation popover showing \"Weekly Monday Meeting\" as the event title, date showing \"5 Apr 2026 10:00AM - 11:00AM\", and fields for Alert/Repeat/Travel Time, Invitees, Notes, URL, and Attachment.",
+      "resolvedTarget": {
+        "label": "Add Notes, URL or Attachments",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 2
+      },
+      "assistantIntent": "The dropdown suggestion list is still showing",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775248798489,
+      "relativeTime": 119489,
+      "screenshotPath": "step-5.png",
+      "exactHash": "f94d26ff2a0029721c2182c392aaaa64",
+      "thumbnailHash": "749742dcee87ad813bc49c4f29e02e22",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          697,
+          346
+        ],
+        "raw": "left_click (697,346)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A date picker will appear.",
+      "surprise": {
+        "score": 1,
+        "expected": "A date/time editor will expand or the full event window will open.",
+        "observed": "success left_click (697,346)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar popover now showing expanded date/time section with All Day toggle, Starts/Ends dates, and Repeat set to \"Never\". The date is April 5 (Sunday) - I need to change it to a Monday.",
+      "resolvedTarget": {
+        "label": "5 Apr 2026  10:00AM – 11:00AM",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 2
+      },
+      "assistantIntent": "CHECKPOINT [1]: Title is set to \"Weekly Monday Meeting\" and the autocomplete dropdown is dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775248823368,
+      "relativeTime": 144368,
+      "screenshotPath": "step-6.png",
+      "exactHash": "8b30d6813cf400db7f64ef0ccaed6da3",
+      "thumbnailHash": "7423220dc643132867cc7d6365bafe96",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          341
+        ],
+        "raw": "left_click (700,341)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The start date will change to 06/04/2026 (April 6, Monday).",
+      "surprise": {
+        "score": 1,
+        "expected": "A date picker will appear.",
+        "observed": "success left_click (700,341)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (CheckBox) in Calendar",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "CheckBox",
+        "app": "Calendar",
+        "distance": 38
+      },
+      "assistantIntent": "The date/time section expanded",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775248853735,
+      "relativeTime": 174735,
+      "screenshotPath": "step-7.png",
+      "exactHash": "a5e6ad4741f4a50582a2741bff7c3f79",
+      "thumbnailHash": "1651efab681e031922e8c2a4cd9c08bb",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          696,
+          412
+        ],
+        "raw": "left_click (696,412)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The start date will change to 06/04/2026 (April 6, Monday).",
+        "observed": "success left_click (696,412)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (PopUpButton) in Calendar",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "PopUpButton",
+        "app": "Calendar",
+        "distance": 11
+      },
+      "assistantIntent": "A date picker appeared",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "Weekly Monday Meeting",
+        "raw": "type: \"Weekly Monday Meeting\""
+      },
+      "timestamp": 1775248708450
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775248723852
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          697,
+          289
+        ],
+        "raw": "left_click (697,289)"
+      },
+      "timestamp": 1775248748085
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          697,
+          479
+        ],
+        "raw": "left_click (697,479)"
+      },
+      "timestamp": 1775248770893
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          697,
+          346
+        ],
+        "raw": "left_click (697,346)"
+      },
+      "timestamp": 1775248798489
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          341
+        ],
+        "raw": "left_click (700,341)"
+      },
+      "timestamp": 1775248823368
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          696,
+          412
+        ],
+        "raw": "left_click (696,412)"
+      },
+      "timestamp": 1775248853735
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

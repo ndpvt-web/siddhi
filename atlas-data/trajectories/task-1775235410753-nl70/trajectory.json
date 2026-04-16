@@ -1,0 +1,150 @@
+{
+  "taskId": "task-1775235410753-nl70",
+  "taskDescription": "Open Terminal and use curl to fetch the headers of https://example.com",
+  "startTime": 1775235410753,
+  "endTime": 1775235480953,
+  "duration": 70200,
+  "success": true,
+  "finalText": "LETS GOOO! 🎉 That worked perfectly!\n\nCHECKPOINT [1]: curl -I command executed successfully and returned the HTTP headers from https://example.com.\n\nSCENE: Terminal showing the full HTTP response headers from example.com, shell is back at idle prompt.\n\nHere's the breakdown of what we got back:\n\n```\nHTTP/2 200\ndate: Fri, 03 Apr 2026 16:57:32 GMT\ncontent-type: text/html\nserver: cloudflare\nlast-modified: Tue, 24 Mar 2026 22:07:32 GMT\nallow: GET, HEAD\naccept-ranges: bytes\nage: 6425\ncf-cache-status: HIT\ncf-ray: 9e699ce8f98d85a0-HKG\n```\n\nSome juicy details from those headers:\n\n- **HTTP/2 200** — site's up and healthy, responding with 200 OK ✅\n- **server: cloudflare** — example.com is sitting behind Cloudflare's CDN, interesting!\n- **content-type: text/html** — yep, it's a webpage\n- **cf-cache-status: HIT** — Cloudflare served this from cache (not directly from origin), hence the `age: 6425` (cached for ~1.7 hours)\n- **allow: GET, HEAD** — only GET and HEAD methods are allowed\n- **last-modified: Tue, 24 Mar 2026** — page was last updated recently\n\nez clap 🤙 Done and done!",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "curl -I command executed successfully and returned the HTTP headers from https://example.com.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "37eacf942ddf972edd5a55a191c7f995",
+      "semanticState": "Terminal showing the full HTTP response headers from example.com, shell is back at idle prompt.",
+      "timestamp": 1775235480953
+    }
+  ],
+  "taskPlan": null,
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775235412453,
+      "relativeTime": 1700,
+      "screenshotPath": "step-0.png",
+      "exactHash": "7196c519212b4cd208197e0b03c9acd5",
+      "thumbnailHash": "ee5cfabc4330863571284bd5af417cf3",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The terminal should be focused and ready for input.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal window is open with a zsh shell at an idle prompt (venv active). Perfect starting point.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775235436567,
+      "relativeTime": 25814,
+      "screenshotPath": "step-1.png",
+      "exactHash": "05e42544868af146d55781349121afa3",
+      "thumbnailHash": "e62111f447c79c2b47f71534b474a753",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          415,
+          560
+        ],
+        "raw": "left_click (415,560)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The curl command will execute and show the HTTP response headers from example.com.",
+      "surprise": {
+        "score": 1,
+        "expected": "The terminal should be focused and ready for input.",
+        "observed": "success left_click (415,560)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Terminal is already open and I can see a clean shell prompt ready to go",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Terminal is already open and I can see a clean shell prompt ready to go",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775235458436,
+      "relativeTime": 47683,
+      "screenshotPath": "step-2.png",
+      "exactHash": "37eacf942ddf972edd5a55a191c7f995",
+      "thumbnailHash": "8ea74824da29e5aadbce833a7a904691",
+      "action": {
+        "type": "type",
+        "text": "curl -I https://example.com\n",
+        "raw": "type: \"curl -I https://example.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal showing the full HTTP response headers from example.com, shell is back at idle prompt.",
+      "resolvedTarget": null,
+      "assistantIntent": "The terminal with the idle prompt is focused",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          415,
+          560
+        ],
+        "raw": "left_click (415,560)"
+      },
+      "timestamp": 1775235436567
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "curl -I https://example.com\n",
+        "raw": "type: \"curl -I https://example.com\n\""
+      },
+      "timestamp": 1775235458436
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

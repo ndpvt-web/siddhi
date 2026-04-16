@@ -1,0 +1,381 @@
+{
+  "taskId": "task-1775226538509-0euz",
+  "taskDescription": "Open Calendar and create a recurring weekly event every Monday at 9 AM",
+  "startTime": 1775226538509,
+  "endTime": 1775226716730,
+  "duration": 178221,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Event title \"Weekly Monday Meeting\" has been typed in successfully.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "1cba199340deca03b3710a97ce79b0f1",
+      "semanticState": "Calendar new event panel showing \"Weekly Monday Meeting\" as the title, with an autocomplete dropdown visible showing \"Weekly Meeting\" on Monday 6 April 2026.",
+      "timestamp": 1775226601935
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Give the event a name (e.g., \"Weekly Monday Meeting\" or just \"Weekly Event\")",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Set the date to a Monday",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Set the time to 9 AM - 10 AM",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Set repeat to \"Every Week\"",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Save the event",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775226540178,
+      "relativeTime": 1669,
+      "screenshotPath": "step-0.png",
+      "exactHash": "dc6b60b6a296a64061aef287f6452712",
+      "thumbnailHash": "7548d64d03948fa928aa8e46d3b5b410",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app is open showing Day view for April 4, 2026 (Saturday). There's a \"New Event\" creation panel on the right side with fields for title, date, time, etc.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775226550262,
+      "relativeTime": 11753,
+      "screenshotPath": "step-1.png",
+      "exactHash": "e1631744d29b25f219d41f77ab89818e",
+      "thumbnailHash": "7548d64d03948fa928aa8e46d3b5b410",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Title field gets focused and I can type",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Calendar is already open and I can see there's a \"New Event\" being created",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Calendar is already open and I can see there's a \"New Event\" being created",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775226571712,
+      "relativeTime": 33203,
+      "screenshotPath": "step-2.png",
+      "exactHash": "889d9824a6f95a5f5f1c86fa07c7b857",
+      "thumbnailHash": "1e5427683b1f1de7c3cafcbee26347cc",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          840,
+          357
+        ],
+        "raw": "left_click (840,357)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Title field gets focused and I can type",
+        "observed": "success left_click (840,357)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Event' (RadioButton) in Calendar",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 64
+      },
+      "assistantIntent": "Cool, the event creation panel is open on the right",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775226592144,
+      "relativeTime": 53635,
+      "screenshotPath": "step-3.png",
+      "exactHash": "1cba199340deca03b3710a97ce79b0f1",
+      "thumbnailHash": "ff023714c8d95462ff4f55de4f764b71",
+      "action": {
+        "type": "type",
+        "text": "Weekly Monday Meeting",
+        "raw": "type: \"Weekly Monday Meeting\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar new event panel showing \"Weekly Monday Meeting\" as the title, with an autocomplete dropdown visible showing \"Weekly Meeting\" on Monday 6 April 2026.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the cursor is in the title field (the \"New Event\" text has a cursor next to it)",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775226607867,
+      "relativeTime": 69358,
+      "screenshotPath": "step-4.png",
+      "exactHash": "0c40640ba0b8c8510dafb5f55a9e2f1b",
+      "thumbnailHash": "903d718d2d5d04a5638978fc092e22cb",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "A date/time picker should open allowing me to change to Monday 6 April 2026 at 9 AM.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The title \"Weekly Monday Meeting\" is typed in",
+      "resolvedTarget": null,
+      "assistantIntent": "The title \"Weekly Monday Meeting\" is typed in",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775226637249,
+      "relativeTime": 98740,
+      "screenshotPath": "step-5.png",
+      "exactHash": "9b972803a616d831c173a9336d723cb4",
+      "thumbnailHash": "6fd8a79d978c26bf5364e6fd3c72b299",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          903,
+          437
+        ],
+        "raw": "left_click (903,437)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A date/time picker should open allowing me to change to Monday 6 April 2026 at 9 AM.",
+        "observed": "success left_click (903,437)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Add Alert, Repeat or Travel Time' (Button) in Calendar",
+      "resolvedTarget": {
+        "label": "Add Alert, Repeat or Travel Time",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 32
+      },
+      "assistantIntent": "I see the title field is showing \"Weekly Monday Meeting\" with a cursor, and the dropdown autocomplete is gone",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775226665616,
+      "relativeTime": 127107,
+      "screenshotPath": "step-6.png",
+      "exactHash": "a00dd1e273423992842a829055328cf1",
+      "thumbnailHash": "58aa45df9ad3ab867ff51bca472dade0",
+      "action": {
+        "type": "triple_click",
+        "coordinates": [
+          780,
+          357
+        ],
+        "raw": "triple_click (780,357)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Interacted with 'Event' (RadioButton) in Calendar",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 52
+      },
+      "assistantIntent": "What happened here is that clicking on the autocomplete suggestion selected it",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775226716730,
+      "relativeTime": 178221,
+      "screenshotPath": "step-7.png",
+      "exactHash": "c274db8cdeae8b413117b7e32e6fd73e",
+      "thumbnailHash": "fa795e08638e943dcf158644f94d2063",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "I can see \"Weekly Meeting\" is selected in the title field (the text appears highlighted)",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see \"Weekly Meeting\" is selected in the title field (the text appears highlighted)",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          840,
+          357
+        ],
+        "raw": "left_click (840,357)"
+      },
+      "timestamp": 1775226571712
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "Weekly Monday Meeting",
+        "raw": "type: \"Weekly Monday Meeting\""
+      },
+      "timestamp": 1775226592144
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775226607867
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          903,
+          437
+        ],
+        "raw": "left_click (903,437)"
+      },
+      "timestamp": 1775226637249
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "triple_click",
+        "coordinates": [
+          780,
+          357
+        ],
+        "raw": "triple_click (780,357)"
+      },
+      "timestamp": 1775226665616
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775226716730
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Event title \"Weekly Monday Meeting\" has been typed in successfully.\", tried [type: \"Weekly Monday Meeting\", key: \"Escape\", left_click (903,437)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 6,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

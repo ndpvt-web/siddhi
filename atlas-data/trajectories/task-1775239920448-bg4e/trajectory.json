@@ -1,0 +1,460 @@
+{
+  "taskId": "task-1775239920448-bg4e",
+  "taskDescription": "Open Contacts and create a new contact: John Doe, phone 555-0100, email john@example.com",
+  "startTime": 1775239920448,
+  "endTime": 1775240074497,
+  "duration": 154049,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Dialog is closed! Mail inbox is now visible with 5 messages.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "9b64ed67fd0fcf4064798964960fb7b7",
+      "semanticState": "Mail app showing Inbox with 5 messages, no message selected. The toolbar customization dialog is gone.",
+      "timestamp": 1775239956001
+    },
+    {
+      "stepNumber": 2,
+      "description": "Spotlight is open and ready!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "5b141c52487451ab6c4026e5fdca0b36",
+      "semanticState": "Spotlight search bar is open and focused at the top center of the screen.",
+      "timestamp": 1775239971055
+    },
+    {
+      "stepNumber": 3,
+      "description": "Contacts app is open, showing list of contacts with a \"+\" button in toolbar.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "eed53ae1809b7f64670e2ad477ac6f92",
+      "semanticState": "Contacts app open with a list of contacts on the left and Nivesh Dandyan's contact on the right. Toolbar shows Edit and + buttons.",
+      "timestamp": 1775240004995
+    },
+    {
+      "stepNumber": 4,
+      "description": "New contact form is open with First name field focused!",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "1212b71ac59a0ac09cbad724ae749f66",
+      "semanticState": "New blank contact form is showing with \"First Last\" name fields, mobile/phone, home/email fields visible. \"First\" field appears selected.",
+      "timestamp": 1775240052868
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the current dialog (click Done)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Contacts app via Spotlight or dock",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Create a new contact with name John Doe",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Add phone 555-0100",
+        "done": true
+      },
+      {
+        "n": 5,
+        "desc": "Add email john@example.com",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Save the contact",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775239922144,
+      "relativeTime": 1696,
+      "screenshotPath": "step-0.png",
+      "exactHash": "c24ea2ae1d19a35ced7349d797254443",
+      "thumbnailHash": "300e8627e1188ea1a67341467117b641",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The dialog should close and Mail should be visible normally.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775239947410,
+      "relativeTime": 26962,
+      "screenshotPath": "step-1.png",
+      "exactHash": "9b64ed67fd0fcf4064798964960fb7b7",
+      "thumbnailHash": "0c48336d0d89c8c047c85b37d1eb357c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1016,
+          722
+        ],
+        "raw": "left_click (1016,722)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Spotlight search bar should open",
+      "surprise": {
+        "score": 1,
+        "expected": "The dialog should close and Mail should be visible normally.",
+        "observed": "success left_click (1016,722)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Mail app showing Inbox with 5 messages, no message selected. The toolbar customization dialog is gone.",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "Mail",
+        "distance": 2
+      },
+      "assistantIntent": "EXPECT: The dialog should close and Mail should be visible normally",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775239963711,
+      "relativeTime": 43263,
+      "screenshotPath": "step-2.png",
+      "exactHash": "5b141c52487451ab6c4026e5fdca0b36",
+      "thumbnailHash": "63a91883dd3561efca2a2759a39beaf1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar should open",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar is open and focused at the top center of the screen.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Dialog is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775239979340,
+      "relativeTime": 58892,
+      "screenshotPath": "step-3.png",
+      "exactHash": "b9992a3bf599bf6d1cefc1dd33ecefd8",
+      "thumbnailHash": "50941c6aee0f56c9a8a5e12d4c034dff",
+      "action": {
+        "type": "type",
+        "text": "Contacts",
+        "raw": "type: \"Contacts\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Contacts app should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: Spotlight is open and ready",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Spotlight is open and ready",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775239995874,
+      "relativeTime": 75426,
+      "screenshotPath": "step-4.png",
+      "exactHash": "eed53ae1809b7f64670e2ad477ac6f92",
+      "thumbnailHash": "e3e629322db0001904853f47c3c7318f",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new blank contact form should appear for editing",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Contacts app open with a list of contacts on the left and Nivesh Dandyan's contact on the right. Toolbar shows Edit and + buttons.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is right there at the top",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775240019222,
+      "relativeTime": 98774,
+      "screenshotPath": "step-5.png",
+      "exactHash": "c06204fdc87532df55c5d05304a3ad58",
+      "thumbnailHash": "3ddf0c7177a761c9083cee73eff771da",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          874,
+          358
+        ],
+        "raw": "left_click (874,358)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A new blank contact editing form should open",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank contact form should appear for editing",
+        "observed": "success left_click (874,358)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'add' (MenuButton) in Contacts",
+      "resolvedTarget": {
+        "label": "add",
+        "role": "MenuButton",
+        "app": "Contacts",
+        "distance": 2
+      },
+      "assistantIntent": "Contacts is open",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775240041941,
+      "relativeTime": 121493,
+      "screenshotPath": "step-6.png",
+      "exactHash": "1212b71ac59a0ac09cbad724ae749f66",
+      "thumbnailHash": "7add1b9c0880cf0a920582d0e3a1a9e5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          906,
+          390
+        ],
+        "raw": "left_click (906,390)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "\"John\" should appear in the First name field",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank contact editing form should open",
+        "observed": "success left_click (906,390)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "New blank contact form is showing with \"First Last\" name fields, mobile/phone, home/email fields visible. \"First\" field appears selected.",
+      "resolvedTarget": {
+        "label": "New Contact",
+        "role": "MenuItem",
+        "app": "Contacts",
+        "distance": 32
+      },
+      "assistantIntent": "A dropdown appeared with \"New Contact\" at the top",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775240074497,
+      "relativeTime": 154049,
+      "screenshotPath": "step-7.png",
+      "exactHash": "180b5eb6720ef51c096aafa89e942207",
+      "thumbnailHash": "c5110c747639df096676cc39e2bfb2ef",
+      "action": {
+        "type": "type",
+        "text": "John",
+        "raw": "type: \"John\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.8,
+        "expected": "\"John\" should appear in the First name field",
+        "observed": "success type: \"john\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Interacted with 'Company' (CheckBox) in Contacts",
+      "resolvedTarget": {
+        "label": "Company",
+        "role": "CheckBox",
+        "app": "Contacts",
+        "distance": 44
+      },
+      "assistantIntent": "A new contact form is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1016,
+          722
+        ],
+        "raw": "left_click (1016,722)"
+      },
+      "timestamp": 1775239947410
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775239963711
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "Contacts",
+        "raw": "type: \"Contacts\""
+      },
+      "timestamp": 1775239979340
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775239995874
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          874,
+          358
+        ],
+        "raw": "left_click (874,358)"
+      },
+      "timestamp": 1775240019222
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          906,
+          390
+        ],
+        "raw": "left_click (906,390)"
+      },
+      "timestamp": 1775240041941
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "type",
+        "text": "John",
+        "raw": "type: \"John\""
+      },
+      "timestamp": 1775240074497
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Contacts app is open, showing list of contacts with a \"+\" button in toolbar.\", tried [type: \"Contacts\", key: \"Return\", left_click (874,358)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 4,
+      "startFrameIndex": 6,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

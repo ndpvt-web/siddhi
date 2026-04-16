@@ -1,0 +1,321 @@
+{
+  "taskId": "task-1775293569590-ynts",
+  "taskDescription": "Open Finder and create a new folder called 'BenchmarkTest' on the Desktop",
+  "startTime": 1775293569590,
+  "endTime": 1775293717736,
+  "duration": 148146,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Finder is open! I can see it showing the Downloads folder. Now I need to navigate to Desktop.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "e870f626f26ec1dfd03af2c2e969f2a6",
+      "semanticState": "Finder window open showing Downloads folder with many files listed.",
+      "timestamp": 1775293606349
+    },
+    {
+      "stepNumber": 2,
+      "description": "Desktop is showing! I can see all the files on the Desktop. I also notice there's already a \"BenchmarkTest.zip\" file there, but no folder called 'BenchmarkTest'. Time to create the folder!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "a69516a8c57c462a9505d4e64b880815",
+      "semanticState": "Finder showing Desktop — Local with all desktop files visible in icon view.",
+      "timestamp": 1775293628952
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Finder",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to Desktop",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Create new folder called 'BenchmarkTest'",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775293571254,
+      "relativeTime": 1664,
+      "screenshotPath": "step-0.png",
+      "exactHash": "0af54a1eb3134fe0949d6b747262a02b",
+      "thumbnailHash": "944d8c50bbdaee009e04a0d5249023a6",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Finder window should open.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775293598561,
+      "relativeTime": 28971,
+      "screenshotPath": "step-1.png",
+      "exactHash": "e870f626f26ec1dfd03af2c2e969f2a6",
+      "thumbnailHash": "696ae77ac569055d98d58f601f61a6e5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          52,
+          819
+        ],
+        "raw": "left_click (52,819)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Finder should switch to showing the Desktop directory contents.",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder window should open.",
+        "observed": "success left_click (52,819)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder window open showing Downloads folder with many files listed.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let me knock this out",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775293621124,
+      "relativeTime": 51534,
+      "screenshotPath": "step-2.png",
+      "exactHash": "a69516a8c57c462a9505d4e64b880815",
+      "thumbnailHash": "5be321c7d1c7575a12d27c59bdb85a74",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          116,
+          212
+        ],
+        "raw": "left_click (116,212)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A new folder should appear with the name field editable.",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder should switch to showing the Desktop directory contents.",
+        "observed": "success left_click (116,212)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Desktop — Local with all desktop files visible in icon view.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Finder is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775293634426,
+      "relativeTime": 64836,
+      "screenshotPath": "step-3.png",
+      "exactHash": "0d3e22e2bcfe9178aba9a8681fea4c5d",
+      "thumbnailHash": "3748d11e3180bebe4779ee237e3b9ef5",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+n",
+        "raw": "key: \"shift+cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The folder name should change to 'BenchmarkTest'",
+      "surprise": {
+        "score": 1,
+        "expected": "A new folder should appear with the name field editable.",
+        "observed": "success key: \"shift+cmd+n\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: Desktop is showing",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Desktop is showing",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775293656245,
+      "relativeTime": 86655,
+      "screenshotPath": "step-4.png",
+      "exactHash": "8575322ab6afa9d4fd13f77085f64334",
+      "thumbnailHash": "64785c500cb0d0cee544f9c02818372b",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "A new \"untitled folder\" appeared with the name field editable and selected",
+      "resolvedTarget": null,
+      "assistantIntent": "A new \"untitled folder\" appeared with the name field editable and selected",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775293676809,
+      "relativeTime": 107219,
+      "screenshotPath": "step-5.png",
+      "exactHash": "a080d3634df4a164733ffc68377d60d8",
+      "thumbnailHash": "f1ed21e2b2f303dfc96cf46bc07ee861",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          337
+        ],
+        "raw": "left_click (678,337)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Oh bruh, the name \"BenchmarkTest\" is already taken",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh bruh, the name \"BenchmarkTest\" is already taken",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          52,
+          819
+        ],
+        "raw": "left_click (52,819)"
+      },
+      "timestamp": 1775293598561
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          116,
+          212
+        ],
+        "raw": "left_click (116,212)"
+      },
+      "timestamp": 1775293621124
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+n",
+        "raw": "key: \"shift+cmd+n\""
+      },
+      "timestamp": 1775293634426
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775293656245
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          337
+        ],
+        "raw": "left_click (678,337)"
+      },
+      "timestamp": 1775293676809
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Desktop is showing! I can see all the files on the Desktop. I also notice there's already a \"BenchmarkTest.zip\" file there, but no folder called 'BenchmarkTest'. Time to create the folder!\", tried [left_click (52,819), left_click (116,212), key: \"shift+cmd+n\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

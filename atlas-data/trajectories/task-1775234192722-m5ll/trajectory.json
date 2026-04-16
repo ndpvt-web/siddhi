@@ -1,0 +1,357 @@
+{
+  "taskId": "task-1775234192722-m5ll",
+  "taskDescription": "Open Terminal and list all files in the home directory including hidden files",
+  "startTime": 1775234192722,
+  "endTime": 1775234333591,
+  "duration": 140869,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Menus dismissed! Preview is showing cleanly now.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "16909b44dc1283a1b757aac8cf1e2b74",
+      "semanticState": "Preview app open with a PDF document, no menus visible, desktop is accessible.",
+      "timestamp": 1775234250180
+    },
+    {
+      "stepNumber": 2,
+      "description": "Spotlight search is open and ready for input.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "35664ec14a1911c4ca739eae73d3578e",
+      "semanticState": "Spotlight search bar is visible at the top center of the screen, waiting for input.",
+      "timestamp": 1775234267183
+    },
+    {
+      "stepNumber": 3,
+      "description": "Terminal is open with a shell prompt ready for commands.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "0357d25da67bafdf8fb2279155dc9d48",
+      "semanticState": "Terminal app is in the foreground with a shell session showing the prompt for user nivesh.",
+      "timestamp": 1775234302453
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Dismiss the current menus",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Terminal",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Run `ls -la ~` to list all files including hidden ones",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775234194394,
+      "relativeTime": 1672,
+      "screenshotPath": "step-0.png",
+      "exactHash": "68c1e84fb42e42f73167422a65193b19",
+      "thumbnailHash": "230b47649777de23301e3569cfcd30c9",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Menus should close",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775234215811,
+      "relativeTime": 23089,
+      "screenshotPath": "step-1.png",
+      "exactHash": "68c1e84fb42e42f73167422a65193b19",
+      "thumbnailHash": "230b47649777de23301e3569cfcd30c9",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Menus should close",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 2,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "EXPECT: Menus should close",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Menus should close",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775234241828,
+      "relativeTime": 49106,
+      "screenshotPath": "step-2.png",
+      "exactHash": "16909b44dc1283a1b757aac8cf1e2b74",
+      "thumbnailHash": "6c06d944a97e71b3f1a3beb14b66087b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          700
+        ],
+        "raw": "left_click (700,700)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Spotlight search bar should open in the center of the screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Preview app open with a PDF document, no menus visible, desktop is accessible.",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, this menu is being stubborn lol",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775234259826,
+      "relativeTime": 67104,
+      "screenshotPath": "step-3.png",
+      "exactHash": "35664ec14a1911c4ca739eae73d3578e",
+      "thumbnailHash": "4704b83429fbcc01787694a621bed366",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Spotlight should show Terminal as the top result",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar should open in the center of the screen",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar is visible at the top center of the screen, waiting for input.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Spotlight search bar should open in the center of the screen",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775234275020,
+      "relativeTime": 82298,
+      "screenshotPath": "step-4.png",
+      "exactHash": "e9dbb63c920570e5bdfde6b39a705846",
+      "thumbnailHash": "159e28dbe4e38427869f06282d841e5f",
+      "action": {
+        "type": "type",
+        "text": "Terminal",
+        "raw": "type: \"Terminal\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Terminal app should open with a command prompt",
+      "surprise": {
+        "score": 0.8,
+        "expected": "Spotlight should show Terminal as the top result",
+        "observed": "success type: \"terminal\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "EXPECT: Spotlight should show Terminal as the top result",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Spotlight should show Terminal as the top result",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775234292460,
+      "relativeTime": 99738,
+      "screenshotPath": "step-5.png",
+      "exactHash": "0357d25da67bafdf8fb2279155dc9d48",
+      "thumbnailHash": "a2167ebe80cdb091cb0efdc402f3e4f8",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Should see a full listing of all files in the home directory including hidden files (dotfiles)",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Terminal app is in the foreground with a shell session showing the prompt for user nivesh.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Terminal app should open with a command prompt",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775234324213,
+      "relativeTime": 131491,
+      "screenshotPath": "step-6.png",
+      "exactHash": "4a6a3faa47b6c7b64098e040ade8863e",
+      "thumbnailHash": "2b5d9093d75554b25e644bc81e194136",
+      "action": {
+        "type": "type",
+        "text": "ls -la ~\n",
+        "raw": "type: \"ls -la ~\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "EXPECT: Should see a full listing of all files in the home directory including hidden files (dotfiles)",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Should see a full listing of all files in the home directory including hidden files (dotfiles)",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775234215811
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          700
+        ],
+        "raw": "left_click (700,700)"
+      },
+      "timestamp": 1775234241828
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775234259826
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Terminal",
+        "raw": "type: \"Terminal\""
+      },
+      "timestamp": 1775234275021
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775234292460
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "ls -la ~\n",
+        "raw": "type: \"ls -la ~\n\""
+      },
+      "timestamp": 1775234324213
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Menus dismissed! Preview is showing cleanly now.\", tried [key: \"Escape\", left_click (700,700), key: \"cmd+space\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

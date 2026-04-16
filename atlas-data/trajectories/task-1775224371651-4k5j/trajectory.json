@@ -1,0 +1,339 @@
+{
+  "taskId": "task-1775224371651-4k5j",
+  "taskDescription": "Open TextEdit in plain text mode and type a simple Python script",
+  "startTime": 1775224371651,
+  "endTime": 1775224588302,
+  "duration": 216651,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Successfully switched to plain text mode. Title now shows \"Untitled 2.txt — Edited\" and the rich text formatting toolbar has disappeared.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "3d5f57b36c13eb532099f1aaff7a7cae",
+      "semanticState": "TextEdit with \"Untitled 2.txt — Edited\" in plain text mode, empty document body, Finder window visible behind it.",
+      "timestamp": 1775224445258
+    },
+    {
+      "stepNumber": 2,
+      "description": "Clicked in the document body - cursor is visible and blinking in the TextEdit document area.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "d1a424215de6f084b28be2872ca57e8a",
+      "semanticState": "TextEdit \"Untitled 2.txt — Edited\" in plain text mode with cursor active in the document body. Finder window visible behind.",
+      "timestamp": 1775224470799
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Switch the current document to plain text mode (Format > Make Plain Text)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click in the document body to ensure focus",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type a simple Python script",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775224373312,
+      "relativeTime": 1661,
+      "screenshotPath": "step-0.png",
+      "exactHash": "fb743f36d2b96e194d6d15a9ed6517eb",
+      "thumbnailHash": "e3983999dc45f143381fd4840925e2a2",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Format menu will open showing \"Make Plain Text\" option",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775224396641,
+      "relativeTime": 24990,
+      "screenshotPath": "step-1.png",
+      "exactHash": "0972814a1a056f21bbf75e60f97d2cd7",
+      "thumbnailHash": "7cb2fd18a603da89f5f908c163d38299",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Dialog may appear asking to convert, or document will switch to plain text mode directly",
+      "surprise": {
+        "score": 1,
+        "expected": "Format menu will open showing \"Make Plain Text\" option",
+        "observed": "success left_click (219,13)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "Alright, I can see TextEdit is open but it's in Rich Text mode (RTF) - I can tell from the formatting toolbar and the \"",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775224419140,
+      "relativeTime": 47489,
+      "screenshotPath": "step-2.png",
+      "exactHash": "84f55dcd31d45c885ac60f401987aa18",
+      "thumbnailHash": "7aec7246699d5d710c0fc5c9e39b37a1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Document should switch to plain text mode - formatting toolbar should disappear",
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog may appear asking to convert, or document will switch to plain text mode directly",
+        "observed": "success left_click (267,100)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'typeface' (PopUpButton) in TextEdit",
+      "resolvedTarget": {
+        "label": "typeface",
+        "role": "PopUpButton",
+        "app": "TextEdit",
+        "distance": 45
+      },
+      "assistantIntent": "The Format menu is open and I can see \"Make Plain Text\" right there",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775224435944,
+      "relativeTime": 64293,
+      "screenshotPath": "step-3.png",
+      "exactHash": "3d5f57b36c13eb532099f1aaff7a7cae",
+      "thumbnailHash": "2ec2455eb13d6368201d8ed3389d4e27",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+t",
+        "raw": "key: \"shift+cmd+t\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Cursor should be blinking in the document area",
+      "surprise": {
+        "score": 1,
+        "expected": "Document should switch to plain text mode - formatting toolbar should disappear",
+        "observed": "success key: \"shift+cmd+t\"",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit with \"Untitled 2.txt — Edited\" in plain text mode, empty document body, Finder window visible behind it.",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, the document is still showing \"Untitled 2",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775224461211,
+      "relativeTime": 89560,
+      "screenshotPath": "step-4.png",
+      "exactHash": "d1a424215de6f084b28be2872ca57e8a",
+      "thumbnailHash": "d02640a8b48b2d4906a40646be1bb175",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          400,
+          350
+        ],
+        "raw": "left_click (400,350)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Python script text should appear in the document",
+      "surprise": {
+        "score": 1,
+        "expected": "Cursor should be blinking in the document area",
+        "observed": "success left_click (400,350)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit \"Untitled 2.txt — Edited\" in plain text mode with cursor active in the document body. Finder window visible behind.",
+      "resolvedTarget": null,
+      "assistantIntent": "Look at that - the title changed from \"Untitled 2",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775224512246,
+      "relativeTime": 140595,
+      "screenshotPath": "step-5.png",
+      "exactHash": "4464fbdab83721b44db01c342663c480",
+      "thumbnailHash": "332098813d82676e7e7c642acbac08b0",
+      "action": {
+        "type": "type",
+        "text": "# Simple Python Script\n# A basic calculator program\n\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef multiply(a, b):\n    return a * b\n\ndef divide(a, b):\n    if b == 0:\n        return \"Error: Division by zero\"\n    return a / b\n\nif __name__ == \"__main__\":\n    print(\"Simple Calculator\")\n    print(\"-\" * 20)\n    \n    x = 10\n    y = 5\n    \n    print(f\"{x} + {y} = {add(x, y)}\")\n    print(f\"{x} - {y} = {subtract(x, y)}\")\n    print(f\"{x} * {y} = {multiply(x, y)}\")\n    print(f\"{x} / {y} = {divide(x, y)}\")\n    \n    print(\"\\nDone!\")",
+        "raw": "type: \"# Simple Python Script\n# A basic calculator progra\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Good, cleared any existing content",
+      "resolvedTarget": null,
+      "assistantIntent": "Good, cleared any existing content",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775224396641
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "timestamp": 1775224419140
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+t",
+        "raw": "key: \"shift+cmd+t\""
+      },
+      "timestamp": 1775224435944
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          400,
+          350
+        ],
+        "raw": "left_click (400,350)"
+      },
+      "timestamp": 1775224461211
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "# Simple Python Script\n# A basic calculator program\n\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef multiply(a, b):\n    return a * b\n\ndef divide(a, b):\n    if b == 0:\n        return \"Error: Division by zero\"\n    return a / b\n\nif __name__ == \"__main__\":\n    print(\"Simple Calculator\")\n    print(\"-\" * 20)\n    \n    x = 10\n    y = 5\n    \n    print(f\"{x} + {y} = {add(x, y)}\")\n    print(f\"{x} - {y} = {subtract(x, y)}\")\n    print(f\"{x} * {y} = {multiply(x, y)}\")\n    print(f\"{x} / {y} = {divide(x, y)}\")\n    \n    print(\"\\nDone!\")",
+        "raw": "type: \"# Simple Python Script\n# A basic calculator progra\""
+      },
+      "timestamp": 1775224512246
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully switched to plain text mode. Title now shows \"Untitled 2.txt — Edited\" and the rich text formatting toolbar has disappeared.\", tried [left_click (267,100), key: \"shift+cmd+t\", left_click (400,350)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

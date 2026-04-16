@@ -1,0 +1,112 @@
+{
+  "taskId": "task-1775154055118-j23n",
+  "taskDescription": "Open Finder using Spotlight. Press Cmd+Space, type Finder, press Enter. Then navigate to the Documents folder.",
+  "startTime": 1775154055118,
+  "endTime": 1775154155201,
+  "duration": 100083,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Spotlight with Cmd+Space",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Type \"Finder\" and press Enter",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Navigate to the Documents folder",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775154056916,
+      "relativeTime": 1798,
+      "screenshotPath": "step-0.png",
+      "exactHash": "5f68ee731cb32a34b6d8b028c60dce7b",
+      "thumbnailHash": "7980cb0b85dfc8a5ef7908cca37a8eb3",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight search bar should appear at the center of the screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775154071193,
+      "relativeTime": 16075,
+      "screenshotPath": "step-1.png",
+      "exactHash": "8ed032c13343f92037c9bb84b13b58f2",
+      "thumbnailHash": "9f570c1e168412b9a7b6c9d679d37c1a",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar should appear at the center of the screen",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+Space\" -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775154071193
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

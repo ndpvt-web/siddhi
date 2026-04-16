@@ -1,0 +1,234 @@
+{
+  "taskId": "task-1775244821578-j83e",
+  "taskDescription": "Take a screenshot using Cmd+Shift+3, then open it in Preview and crop it",
+  "startTime": 1775244821578,
+  "endTime": 1775245018983,
+  "duration": 197405,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 2,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Dismissed the overlay - Wikipedia Capybara page is clean and visible.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "9fddc793bcbc15aff0c4726f363562aa",
+      "semanticState": "Safari showing the Capybara Wikipedia page, clean with no overlays.",
+      "timestamp": 1775244871800
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Dismiss the current Spotlight overlay (press Escape)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Take a screenshot using Cmd+Shift+3",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Find the screenshot file (usually saves to Desktop)",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Open it in Preview",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Use Preview's crop tool to crop the image",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775244823276,
+      "relativeTime": 1698,
+      "screenshotPath": "step-0.png",
+      "exactHash": "70d647a0884fc378729cc033158c420c",
+      "thumbnailHash": "dfa76a11f5a84b2c34269ab3c9ab19d1",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight overlay should close, showing just the Safari/Wikipedia page",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775244839072,
+      "relativeTime": 17494,
+      "screenshotPath": "step-1.png",
+      "exactHash": "70d647a0884fc378729cc033158c420c",
+      "thumbnailHash": "dfa76a11f5a84b2c34269ab3c9ab19d1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight overlay should close, showing just the Safari/Wikipedia page",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "EXPECT: Spotlight overlay should close, showing just the Safari/Wikipedia page",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Spotlight overlay should close, showing just the Safari/Wikipedia page",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775244862937,
+      "relativeTime": 41359,
+      "screenshotPath": "step-2.png",
+      "exactHash": "9fddc793bcbc15aff0c4726f363562aa",
+      "thumbnailHash": "cc8aa39e5f136746980ca23b2d21fe76",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          600,
+          650
+        ],
+        "raw": "left_click (600,650)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Should hear a camera shutter sound and see a screenshot thumbnail appear in the bottom-right corner of the screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing the Capybara Wikipedia page, clean with no overlays.",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, this Spotlight thing is stubborn",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775244880526,
+      "relativeTime": 58948,
+      "screenshotPath": "step-3.png",
+      "exactHash": "9fddc793bcbc15aff0c4726f363562aa",
+      "thumbnailHash": "cc8aa39e5f136746980ca23b2d21fe76",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+3",
+        "raw": "key: \"cmd+shift+3\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Should hear a camera shutter sound and see a screenshot thumbnail appear in the bottom-right corner of the screen",
+        "observed": "success key: \"cmd+shift+3\" stagnation no change",
+        "expectedKeywords": 11,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "EXPECT: Should hear a camera shutter sound and see a screenshot thumbnail appear in the bottom-right corner of the scree",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Should hear a camera shutter sound and see a screenshot thumbnail appear in the bottom-right corner of the scree",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775244839072
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          600,
+          650
+        ],
+        "raw": "left_click (600,650)"
+      },
+      "timestamp": 1775244862937
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+3",
+        "raw": "key: \"cmd+shift+3\""
+      },
+      "timestamp": 1775244880526
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "action had no visible effect (stagnation)",
+      "lesson": "After \"Dismissed the overlay - Wikipedia Capybara page is clean and visible.\", tried [key: \"Escape\", left_click (600,650), key: \"cmd+shift+3\"] but action had no visible effect (stagnation)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "retry after: action had no visible effect (stagnation)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

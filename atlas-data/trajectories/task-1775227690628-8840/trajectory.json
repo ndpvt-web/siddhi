@@ -1,0 +1,422 @@
+{
+  "taskId": "task-1775227690628-8840",
+  "taskDescription": "Open Reminders and create a new reminder: 'Buy groceries' due tomorrow",
+  "startTime": 1775227690628,
+  "endTime": 1775227891277,
+  "duration": 200649,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Reminders app is open and showing the Reminders list with 15 items.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "c06d1ff0d8a52032d7a1e63b872858de",
+      "semanticState": "Reminders app open with sidebar showing Today (14), Scheduled (14), All (15), Completed, and \"Reminders\" list is currently selected showing all reminders.",
+      "timestamp": 1775227749504
+    },
+    {
+      "stepNumber": 2,
+      "description": "New empty reminder is created and ready for text input at the bottom of the list.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "3d93031f2637cce2fb1b6d12d4dcefec",
+      "semanticState": "Reminders app showing the list scrolled to the bottom where a new empty reminder field is visible with cursor, and options for Notes, Add Tags, Add Date, Add Location.",
+      "timestamp": 1775227773804
+    },
+    {
+      "stepNumber": 3,
+      "description": "\"Buy groceries\" reminder text has been entered successfully.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "4872fb3000b35205f2096a07f592b4af",
+      "semanticState": "Reminders app with \"Buy groceries\" typed in the new reminder field, with \"Add Date\", \"Add Location\" options visible below.",
+      "timestamp": 1775227790390
+    },
+    {
+      "stepNumber": 4,
+      "description": "\"Buy groceries\" reminder created with tomorrow's date set successfully.",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "3055ffeb3da19530e59acb0cdf0b8c00",
+      "semanticState": "Reminders app showing \"Buy groceries\" at the bottom of the list with \"To...\" (Tomorrow) date tag visible in the bottom bar, along with \"Add Time\" and \"Add Loc...\" options.",
+      "timestamp": 1775227890920
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Reminders app via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new reminder called 'Buy groceries'",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Set the due date to tomorrow (April 4, 2026)",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775227692400,
+      "relativeTime": 1772,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4184657198d335864bbe22695880976f",
+      "thumbnailHash": "a2a6c8bdf2551f7b5ce275f5232605ec",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775227710553,
+      "relativeTime": 19925,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5b7e9bda842f95e7958e9a35dda61457",
+      "thumbnailHash": "f39c9465732ff2c425a2b9a45440b3f5",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see Calendar is open right now",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see Calendar is open right now",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775227727784,
+      "relativeTime": 37156,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ef687d40fbc314328ce668bda4cd505a",
+      "thumbnailHash": "69bb7f82f065edddc796989f4d4c197f",
+      "action": {
+        "type": "type",
+        "text": "Reminders",
+        "raw": "type: \"Reminders\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Reminders app should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775227740809,
+      "relativeTime": 50181,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c06d1ff0d8a52032d7a1e63b872858de",
+      "thumbnailHash": "3637facb11294662ab3967e883f1ca88",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new empty reminder should appear at the bottom of the list ready for text input",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Reminders app open with sidebar showing Today (14), Scheduled (14), All (15), Completed, and \"Reminders\" list is currently selected showing all reminders.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is the top result",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775227764499,
+      "relativeTime": 73871,
+      "screenshotPath": "step-4.png",
+      "exactHash": "3d93031f2637cce2fb1b6d12d4dcefec",
+      "thumbnailHash": "a0c507a1bf95593193d96bdc4fa02677",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          625,
+          187
+        ],
+        "raw": "left_click (625,187)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Text \"Buy groceries\" should appear in the new reminder field",
+      "surprise": {
+        "score": 1,
+        "expected": "A new empty reminder should appear at the bottom of the list ready for text input",
+        "observed": "success left_click (625,187)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Reminders app showing the list scrolled to the bottom where a new empty reminder field is visible with cursor, and options for Notes, Add Tags, Add Date, Add Location.",
+      "resolvedTarget": {
+        "label": "Add Reminder",
+        "role": "Button",
+        "app": "Reminders",
+        "distance": 4
+      },
+      "assistantIntent": "CHECKPOINT [1]: Reminders app is open and showing the Reminders list with 15 items",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775227782249,
+      "relativeTime": 91621,
+      "screenshotPath": "step-5.png",
+      "exactHash": "4872fb3000b35205f2096a07f592b4af",
+      "thumbnailHash": "00696f53b56434f8f7fe5c0d3e3cb943",
+      "action": {
+        "type": "type",
+        "text": "Buy groceries",
+        "raw": "type: \"Buy groceries\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A date picker should appear",
+      "surprise": {
+        "score": 0.7142857142857143,
+        "expected": "Text \"Buy groceries\" should appear in the new reminder field",
+        "observed": "success type: \"buy groceries\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Reminders app with \"Buy groceries\" typed in the new reminder field, with \"Add Date\", \"Add Location\" options visible below.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO it worked",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775227810884,
+      "relativeTime": 120256,
+      "screenshotPath": "step-6.png",
+      "exactHash": "588696bd05f714901cc9c07dd2beefd9",
+      "thumbnailHash": "125c1276dc823b4adf595c94b2c625c0",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          576,
+          719
+        ],
+        "raw": "left_click (576,719)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The date should be set to tomorrow (4/4/2026) and the dropdown should close",
+      "surprise": {
+        "score": 1,
+        "expected": "A date picker should appear",
+        "observed": "success left_click (576,719)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "\"Buy groceries\" typed perfectly",
+      "resolvedTarget": null,
+      "assistantIntent": "\"Buy groceries\" typed perfectly",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775227878574,
+      "relativeTime": 187946,
+      "screenshotPath": "step-7.png",
+      "exactHash": "3055ffeb3da19530e59acb0cdf0b8c00",
+      "thumbnailHash": "72a8d6d4c332d2bf758fdc28cc52284f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          578,
+          566
+        ],
+        "raw": "left_click (578,566)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The date should be set to tomorrow (4/4/2026) and the dropdown should close",
+        "observed": "success left_click (578,566)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Reminders app showing \"Buy groceries\" at the bottom of the list with \"To...\" (Tomorrow) date tag visible in the bottom bar, along with \"Add Time\" and \"Add Loc...\" options.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO a date picker dropdown appeared with suggestions",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775227710553
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Reminders",
+        "raw": "type: \"Reminders\""
+      },
+      "timestamp": 1775227727784
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775227740809
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          625,
+          187
+        ],
+        "raw": "left_click (625,187)"
+      },
+      "timestamp": 1775227764499
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "Buy groceries",
+        "raw": "type: \"Buy groceries\""
+      },
+      "timestamp": 1775227782249
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          576,
+          719
+        ],
+        "raw": "left_click (576,719)"
+      },
+      "timestamp": 1775227810884
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          578,
+          566
+        ],
+        "raw": "left_click (578,566)"
+      },
+      "timestamp": 1775227878574
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Reminders app is open and showing the Reminders list with 15 items.\", tried [type: \"Reminders\", key: \"Return\", left_click (625,187)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,468 @@
+{
+  "taskId": "task-1775296766085-jt3o",
+  "taskDescription": "Open Finder and create a new Smart Folder that searches for all PDF files",
+  "startTime": 1775296766085,
+  "endTime": 1775296930021,
+  "duration": 163936,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 7,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "File menu is open with \"New Smart Folder\" option visible",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "cd4a35726b1a62a9a68e23295dacceb8",
+      "semanticState": "Finder File menu is open showing all options including \"New Smart Folder\"",
+      "timestamp": 1775296796798
+    },
+    {
+      "stepNumber": 2,
+      "description": "New Smart Folder window is open with \"This Mac\" selected as search scope, Save button visible, and search bar ready.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "6c5efeb3049cb9b1ded5230921d18472",
+      "semanticState": "Finder showing \"New Smart Folder\" window with search scope options (This Mac, \"Applications\", Network), Save button in top right, and empty search results area.",
+      "timestamp": 1775296863190
+    },
+    {
+      "stepNumber": 3,
+      "description": "Criteria row appeared showing \"Kind is Any\" with +/- buttons on the right.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "5b1858ed9a041dc9a93f7d1c895a9f15",
+      "semanticState": "Finder Smart Folder window with a criteria row showing \"Kind\" dropdown set to \"is\" and \"Any\", with This Mac search scope selected.",
+      "timestamp": 1775296883718
+    },
+    {
+      "stepNumber": 4,
+      "description": "Kind is set to PDF, Smart Folder is showing all PDF files from This Mac.",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "3749ec304554e147f5804a4d4d4e25ef",
+      "semanticState": "Finder showing \"New Smart Folder\" window with criteria \"Kind is PDF\" active, displaying dozens of PDF files in icon view, with a \"Save\" button visible in the upper right.",
+      "timestamp": 1775296924511
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open a New Smart Folder via File menu",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Set search scope to \"This Mac\"",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Add criteria: Kind = PDF",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Save the Smart Folder",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775296767821,
+      "relativeTime": 1736,
+      "screenshotPath": "step-0.png",
+      "exactHash": "15b23b6886b1c76d4b6dcc9c835f0db5",
+      "thumbnailHash": "fd4b3a6e19e40158ce85e00bec7d6f0a",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "File menu drops down with \"New Smart Folder\" option visible",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder is open showing the Applications folder. There's already a \"New Smart Folder\" item visible in the sidebar under Favourites.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775296790526,
+      "relativeTime": 24441,
+      "screenshotPath": "step-1.png",
+      "exactHash": "cd4a35726b1a62a9a68e23295dacceb8",
+      "thumbnailHash": "fe48ebe0cc3f84d779190ce526557a9c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A new Smart Folder search window opens with search bar and scope options",
+      "surprise": {
+        "score": 1,
+        "expected": "File menu drops down with \"New Smart Folder\" option visible",
+        "observed": "success left_click (119,13)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder File menu is open showing all options including \"New Smart Folder\"",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Finder's already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775296808235,
+      "relativeTime": 42150,
+      "screenshotPath": "step-2.png",
+      "exactHash": "7da68729d075d2f04d152c95d242cb3c",
+      "thumbnailHash": "88ed5d4ebbbe6be110cec190b5df58fd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          183,
+          112
+        ],
+        "raw": "left_click (183,112)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "File menu opens with New Smart Folder option",
+      "surprise": {
+        "score": 1,
+        "expected": "A new Smart Folder search window opens with search bar and scope options",
+        "observed": "success left_click (183,112)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "File menu is open and I can see \"New Smart Folder\" right there",
+      "resolvedTarget": null,
+      "assistantIntent": "File menu is open and I can see \"New Smart Folder\" right there",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775296835018,
+      "relativeTime": 68933,
+      "screenshotPath": "step-3.png",
+      "exactHash": "8d72dd2d0f0dbf486616c0f20009fba8",
+      "thumbnailHash": "c6980312ea6228c3cbd737a947f5d744",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A new Smart Folder search window opens with search bar and scope options (This Mac, etc.)",
+      "surprise": {
+        "score": 1,
+        "expected": "File menu opens with New Smart Folder option",
+        "observed": "success left_click (119,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, looks like the menu closed but a new small Finder sidebar panel opened instead of the Smart Folder search window",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, looks like the menu closed but a new small Finder sidebar panel opened instead of the Smart Folder search window",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775296854001,
+      "relativeTime": 87916,
+      "screenshotPath": "step-4.png",
+      "exactHash": "6c5efeb3049cb9b1ded5230921d18472",
+      "thumbnailHash": "55835bad785f894a5bc12727cd8ea4df",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          181,
+          112
+        ],
+        "raw": "left_click (181,112)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A criteria row appears with dropdowns to set Kind and file type",
+      "surprise": {
+        "score": 1,
+        "expected": "A new Smart Folder search window opens with search bar and scope options (This Mac, etc.)",
+        "observed": "success left_click (181,112)",
+        "expectedKeywords": 12,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Finder showing \"New Smart Folder\" window with search scope options (This Mac, \"Applications\", Network), Save button in top right, and empty search results area.",
+      "resolvedTarget": null,
+      "assistantIntent": "There we go",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775296875946,
+      "relativeTime": 109861,
+      "screenshotPath": "step-5.png",
+      "exactHash": "5b1858ed9a041dc9a93f7d1c895a9f15",
+      "thumbnailHash": "c56b9d7c4263974a1a2c5d37c09080e5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1261,
+          118
+        ],
+        "raw": "left_click (1261,118)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown menu appears with file type options including PDF",
+      "surprise": {
+        "score": 1,
+        "expected": "A criteria row appears with dropdowns to set Kind and file type",
+        "observed": "success left_click (1261,118)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Finder Smart Folder window with a criteria row showing \"Kind\" dropdown set to \"is\" and \"Any\", with This Mac search scope selected.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO that worked",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775296895553,
+      "relativeTime": 129468,
+      "screenshotPath": "step-6.png",
+      "exactHash": "a5a1a47b8dc2e459bdae55e7cf1cb97d",
+      "thumbnailHash": "5a6cc2004cadfb84ae27dae7f9517f16",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          468,
+          149
+        ],
+        "raw": "left_click (468,149)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "PDF is selected, and the Smart Folder starts showing all PDF files on This Mac",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu appears with file type options including PDF",
+        "observed": "success left_click (468,149)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "The criteria row appeared with \"Kind is Any\" already set up",
+      "resolvedTarget": null,
+      "assistantIntent": "The criteria row appeared with \"Kind is Any\" already set up",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775296915247,
+      "relativeTime": 149162,
+      "screenshotPath": "step-7.png",
+      "exactHash": "3749ec304554e147f5804a4d4d4e25ef",
+      "thumbnailHash": "ecaa8e4debfb347c61f951d601ae789b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          440,
+          336
+        ],
+        "raw": "left_click (440,336)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A save dialog appears asking for name and location",
+      "surprise": {
+        "score": 1,
+        "expected": "PDF is selected, and the Smart Folder starts showing all PDF files on This Mac",
+        "observed": "success left_click (440,336)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Finder showing \"New Smart Folder\" window with criteria \"Kind is PDF\" active, displaying dozens of PDF files in icon view, with a \"Save\" button visible in the upper right.",
+      "resolvedTarget": null,
+      "assistantIntent": "The dropdown is open and I can see all the file type options including **PDF** right there",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "timestamp": 1775296790526
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          183,
+          112
+        ],
+        "raw": "left_click (183,112)"
+      },
+      "timestamp": 1775296808235
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "timestamp": 1775296835018
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          181,
+          112
+        ],
+        "raw": "left_click (181,112)"
+      },
+      "timestamp": 1775296854001
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1261,
+          118
+        ],
+        "raw": "left_click (1261,118)"
+      },
+      "timestamp": 1775296875946
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          468,
+          149
+        ],
+        "raw": "left_click (468,149)"
+      },
+      "timestamp": 1775296895553
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          440,
+          336
+        ],
+        "raw": "left_click (440,336)"
+      },
+      "timestamp": 1775296915247
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"File menu is open with \"New Smart Folder\" option visible\", tried [left_click (119,13), left_click (183,112), left_click (119,13)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 1,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

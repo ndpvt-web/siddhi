@@ -1,0 +1,419 @@
+{
+  "taskId": "task-1775303483035-vcg9",
+  "taskDescription": "Open Safari, navigate to github.com, inspect an element using the Web Inspector",
+  "startTime": 1775303483035,
+  "endTime": 1775303624720,
+  "duration": 141685,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "History menu dismissed - Safari is now showing example.com cleanly with no menus open.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "ea26e8e577cbabc849c9118b8834fbfd",
+      "semanticState": "Safari browser showing example.com page with \"Example Domain\" heading, menu bar is clean.",
+      "timestamp": 1775303520139
+    },
+    {
+      "stepNumber": 2,
+      "description": "Successfully navigated to github.com!",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "1ac4f25b74d9c4cbae6199426f414624",
+      "semanticState": "Safari showing GitHub homepage with \"The future of building happens together\" hero text, dark navy theme, navigation bar with Platform, Solutions, etc.",
+      "timestamp": 1775303537172
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Press Escape to dismiss the History menu",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to github.com via address bar",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Inspect an element using Web Inspector (via Develop menu)",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775303484717,
+      "relativeTime": 1682,
+      "screenshotPath": "step-0.png",
+      "exactHash": "f89550a82d45d62c095d4b1f90efb7ca",
+      "thumbnailHash": "40bfde22d927ff07038c1b1bb8c3eaf0",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The History menu should close and we'll see the clean Safari window",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775303497218,
+      "relativeTime": 14183,
+      "screenshotPath": "step-1.png",
+      "exactHash": "f89550a82d45d62c095d4b1f90efb7ca",
+      "thumbnailHash": "40bfde22d927ff07038c1b1bb8c3eaf0",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The History menu should close and we'll see the clean Safari window",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Aight, Safari's already open but there's a History menu hanging open",
+      "resolvedTarget": null,
+      "assistantIntent": "Aight, Safari's already open but there's a History menu hanging open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775303512720,
+      "relativeTime": 29685,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ea26e8e577cbabc849c9118b8834fbfd",
+      "thumbnailHash": "8b7f0faa150232de94c76289a0e9be03",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          500
+        ],
+        "raw": "left_click (700,500)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Address bar will be focused and I can type github.com",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing example.com page with \"Example Domain\" heading, menu bar is clean.",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, the menu is being stubborn",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775303529488,
+      "relativeTime": 46453,
+      "screenshotPath": "step-3.png",
+      "exactHash": "1ac4f25b74d9c4cbae6199426f414624",
+      "thumbnailHash": "ceffe1a32531d0ffb799d2bb7b733112",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A context menu will appear with \"Inspect Element\" option",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing GitHub homepage with \"The future of building happens together\" hero text, dark navy theme, navigation bar with Platform, Solutions, etc.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: History menu dismissed - Safari is now showing example",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775303547504,
+      "relativeTime": 64469,
+      "screenshotPath": "step-4.png",
+      "exactHash": "d3df059e1d176feb075f0f8bf45cd7b5",
+      "thumbnailHash": "6dcfeef3e140ece762c81cf4e1c5b5f4",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          604,
+          332
+        ],
+        "raw": "right_click (604,332)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Web Inspector panel will open at the bottom of the browser, showing the DOM with the hero heading element highlighted",
+      "surprise": {
+        "score": 1,
+        "expected": "A context menu will appear with \"Inspect Element\" option",
+        "observed": "success right_click (604,332)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: Successfully navigated to github",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Successfully navigated to github",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775303585811,
+      "relativeTime": 102776,
+      "screenshotPath": "step-5.png",
+      "exactHash": "23454670dd48ffade2a93692ed68395e",
+      "thumbnailHash": "9735fd35f8e5a375221dc3430b292f08",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          684,
+          462
+        ],
+        "raw": "left_click (684,462)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Clicking \"Develop\" in the menu bar will show a dropdown with \"Show Web Inspector\" option",
+      "surprise": {
+        "score": 1,
+        "expected": "Web Inspector panel will open at the bottom of the browser, showing the DOM with the hero heading element highlighted",
+        "observed": "success left_click (684,462)",
+        "expectedKeywords": 12,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-right-click",
+      "semanticState": "Oh NICE - context menu appeared and I can see \"Inspect Element\" right there at the bottom",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh NICE - context menu appeared and I can see \"Inspect Element\" right there at the bottom",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775303606393,
+      "relativeTime": 123358,
+      "screenshotPath": "step-6.png",
+      "exactHash": "1f3fa09cfe863f7e43021025ecda0b31",
+      "thumbnailHash": "0a332dc2aa436abf67eace1d3ee86fb3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          399,
+          13
+        ],
+        "raw": "left_click (399,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Web Inspector panel will open at the bottom of Safari showing the DOM tree, styles, etc.",
+      "surprise": {
+        "score": 0.95,
+        "expected": "Clicking \"Develop\" in the menu bar will show a dropdown with \"Show Web Inspector\" option",
+        "observed": "success left_click (399,13)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-1-attempt-1-right-click",
+      "semanticState": "Ugh, looks like my click didn't land on \"Inspect Element\" - it hit \"Copy\" instead or something",
+      "resolvedTarget": null,
+      "assistantIntent": "Ugh, looks like my click didn't land on \"Inspect Element\" - it hit \"Copy\" instead or something",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775303624720,
+      "relativeTime": 141685,
+      "screenshotPath": "step-7.png",
+      "exactHash": "1b5a5e2827ce2731ad956ee604496c4c",
+      "thumbnailHash": "6768f63e3a51fdbe2b335b6d61ca90d5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          437,
+          268
+        ],
+        "raw": "left_click (437,268)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Web Inspector panel will open at the bottom of Safari showing the DOM tree, styles, etc.",
+        "observed": "success left_click (437,268)",
+        "expectedKeywords": 11,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-right-click",
+      "semanticState": "YOOO there it is",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO there it is",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775303497218
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          500
+        ],
+        "raw": "left_click (700,500)"
+      },
+      "timestamp": 1775303512720
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "timestamp": 1775303529488
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          604,
+          332
+        ],
+        "raw": "right_click (604,332)"
+      },
+      "timestamp": 1775303547504
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          684,
+          462
+        ],
+        "raw": "left_click (684,462)"
+      },
+      "timestamp": 1775303585811
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          399,
+          13
+        ],
+        "raw": "left_click (399,13)"
+      },
+      "timestamp": 1775303606393
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          437,
+          268
+        ],
+        "raw": "left_click (437,268)"
+      },
+      "timestamp": 1775303624720
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully navigated to github.com!\", tried [left_click (700,500), type: \"github.com\n\", right_click (604,332)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-right-click",
+      "name": "attempt-1-right_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

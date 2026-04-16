@@ -1,0 +1,390 @@
+{
+  "taskId": "task-1773603150148-hfh6",
+  "taskDescription": "Do ALL of these steps in order:\n1. Click the Safari address bar at the top\n2. Type google.com and press Enter\n3. Wait for Google to load, then click the search box in the web page\n4. Type capybara ani",
+  "startTime": 1773603150148,
+  "endTime": 1773603302356,
+  "duration": 152208,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Address bar is focused - showing the full URL highlighted in blue in the Safari toolbar",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "298a75a4c59795c4bf9eb98a4fdc1db5",
+      "semanticState": "Safari address bar is focused with \"https://happycapy.ai/s/3f19696f-71b8-453c-8a21-aa088566484f\" highlighted, and the favorites/suggestions dropdown is visible below.",
+      "timestamp": 1773603201878
+    },
+    {
+      "stepNumber": 2,
+      "description": "Navigated to google.com - Google homepage is fully loaded with the search box visible!",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "8bcccb68382b38df2bbfa72c918448fc",
+      "semanticState": "Google homepage loaded in Safari, showing the Google logo, search bar with cursor, \"Google Search\" and \"I'm Feeling Lucky\" buttons, and the address bar shows \"google.com\".",
+      "timestamp": 1773603245084
+    },
+    {
+      "stepNumber": 3,
+      "description": "Google search box is focused and ready for typing - dropdown with suggestions is showing",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "3c3ddea4a28eef1fc2af089ee76941dc",
+      "semanticState": "Google homepage with search box focused, showing a dropdown of recent search history including \"ha\\\", \"netflix\", \"computer use hugging face dataset\" etc.",
+      "timestamp": 1773603290854
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click the Safari address bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Type google.com and press Enter",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Wait for Google to load, then click the search box",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Type \"capybara animal\" and press Enter",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Wait for results, click the Wikipedia link",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Scroll down on Wikipedia and click a link in the article body",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773603151632,
+      "relativeTime": 1484,
+      "screenshotPath": "step-0.png",
+      "exactHash": "0c984c2dbd0bdbdc490c5bc498b61e0c",
+      "thumbnailHash": "37ebf4b4c3f30f4492f3818ae688d365",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773603166144,
+      "relativeTime": 15996,
+      "screenshotPath": "step-1.png",
+      "exactHash": "b37cde9e28a754e011d9723143b8605d",
+      "thumbnailHash": "e4b2dff198e439a0ff04dbdca843e84f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (678,24) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773603178413,
+      "relativeTime": 28265,
+      "screenshotPath": "step-2.png",
+      "exactHash": "42eb359dc0c4271df90b093fe2209469",
+      "thumbnailHash": "2242efa2bbaf55b68f393ce3ee321391",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (678,24) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773603193278,
+      "relativeTime": 43130,
+      "screenshotPath": "step-3.png",
+      "exactHash": "298a75a4c59795c4bf9eb98a4fdc1db5",
+      "thumbnailHash": "6cc75cc842ebac394053cbe5f5077955",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "The address bar will show \"google.com\" and pressing Enter will navigate there",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari address bar is focused with \"https://happycapy.ai/s/3f19696f-71b8-453c-8a21-aa088566484f\" highlighted, and the favorites/suggestions dropdown is visible below.",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1773603208208,
+      "relativeTime": 58060,
+      "screenshotPath": "step-4.png",
+      "exactHash": "74507c68a68bb446a6130ce731c18cab",
+      "thumbnailHash": "11e5bd518785419f03bbdf3ecc0a8b87",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.75,
+        "expected": "The address bar will show \"google.com\" and pressing Enter will navigate there",
+        "observed": "success type: \"google.com\n\"",
+        "expectedKeywords": 8,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-0-main",
+      "semanticState": "type: \"google.com\n\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1773603221526,
+      "relativeTime": 71378,
+      "screenshotPath": "step-5.png",
+      "exactHash": "a74d2da51740a1a553dfb90a57c180fe",
+      "thumbnailHash": "d23cc93bb3ab1bcb49ced914fa0c42fb",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "type: \"google.com\n\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1773603235526,
+      "relativeTime": 85378,
+      "screenshotPath": "step-6.png",
+      "exactHash": "8bcccb68382b38df2bbfa72c918448fc",
+      "thumbnailHash": "43598b9e8f82b7909f4c1f7db495a3f7",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "The search box will be focused and ready for typing",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Google homepage loaded in Safari, showing the Google logo, search bar with cursor, \"Google Search\" and \"I'm Feeling Lucky\" buttons, and the address bar shows \"google.com\".",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1773603253533,
+      "relativeTime": 103385,
+      "screenshotPath": "step-7.png",
+      "exactHash": "3c3ddea4a28eef1fc2af089ee76941dc",
+      "thumbnailHash": "d45a22e6cafa663c39342434b455d25a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          617,
+          424
+        ],
+        "raw": "left_click (617,424)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The text \"capybara animal\" will appear in the search box and pressing Enter will trigger a Google search",
+      "surprise": {
+        "score": 1,
+        "expected": "The search box will be focused and ready for typing",
+        "observed": "success left_click (617,424)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Google homepage with search box focused, showing a dropdown of recent search history including \"ha\\\", \"netflix\", \"computer use hugging face dataset\" etc.",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "timestamp": 1773603166144
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "timestamp": 1773603178413
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "timestamp": 1773603193278
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "timestamp": 1773603208208
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "timestamp": 1773603221526
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1773603235527
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          617,
+          424
+        ],
+        "raw": "left_click (617,424)"
+      },
+      "timestamp": 1773603253533
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 0.75)",
+      "lesson": "After \"Address bar is focused - showing the full URL highlighted in blue in the Safari toolbar\", tried [left_click (678,24), key: \"cmd+l\", type: \"google.com\n\"] but unexpected result (surprise score: 0.75)"
+    },
+    {
+      "id": "branch-1-attempt-1-type",
+      "name": "attempt-1-type",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 0.75)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

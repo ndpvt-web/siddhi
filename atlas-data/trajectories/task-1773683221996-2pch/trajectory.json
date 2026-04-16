@@ -1,0 +1,251 @@
+{
+  "taskId": "task-1773683221996-2pch",
+  "taskDescription": "Open Safari browser. Use keyboard shortcut Cmd+L to focus the address bar. Type google.com and press Enter. Wait for Google to load. Search for \"capybara Wikipedia\" by typing it in the search box and ",
+  "startTime": 1773683221997,
+  "endTime": 1773683359529,
+  "duration": 137532,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Safari is open and Google.com is loaded - the search bar is visible and appears to be focused.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "f4dbaeb5b529c1b61365d50169aca955",
+      "semanticState": "Safari browser showing Google.com dark mode homepage with search bar visible and cursor blinking in it.",
+      "timestamp": 1773683333452
+    },
+    {
+      "stepNumber": 2,
+      "description": "Google search results for \"capybara Wikipedia\" are loaded. I can see the first result is the Wikipedia article for \"Capybara\" from en.wikipedia.org.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "cc02b3e60461173b5cb7f0166757a51e",
+      "semanticState": "Google search results showing the Wikipedia \"Capybara\" article as the first result, with a preview snippet and images of capybaras.",
+      "timestamp": 1773683350407
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Safari browser",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to google.com using Cmd+L",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Search for \"capybara Wikipedia\"",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Click the first Wikipedia result",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Find and read the first sentence of the article",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773683225895,
+      "relativeTime": 3898,
+      "screenshotPath": "step-0.png",
+      "exactHash": "5916a0a9a0bf54c7b91bf9a7348d88e9",
+      "thumbnailHash": "5ffd75d9161023d8cb933ddc628d97d7",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773683240924,
+      "relativeTime": 18927,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5b8dd3667db079d2fe7ce7aea1536fa0",
+      "thumbnailHash": "1dbd4e98a707c04851cdc6d5133be7eb",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "HappyCapy app is open with some session notes on the left and a Decisions Lab Clone preview on the right. Safari is already running (I can see tabs at the top). I need to open Safari properly and navigate to Google.",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773683256212,
+      "relativeTime": 34215,
+      "screenshotPath": "step-2.png",
+      "exactHash": "066b7f3aafb13de4cda434351cf67329",
+      "thumbnailHash": "6297c6ddbc11ebef4fe9283e5ed3bbec",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "toolResult": "error",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+l\" -> error",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773683296446,
+      "relativeTime": 74449,
+      "screenshotPath": "step-3.png",
+      "exactHash": "8584131fbb4ca6822bfaf613ed5ea582",
+      "thumbnailHash": "351dacf6d0ab6198160e22d0b7c4d40c",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e '\ntell application \"Safari\"\n    activate\n    open location \"https://www.google.com\"\nend",
+        "raw": "bash: osascript -e '\ntell application \"Safari\"\n    activate\n    open location \"https:/"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "bash: osascript -e '\ntell application \"Safari\"\n    activate\n    open location \"https:/ -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1773683322692,
+      "relativeTime": 100695,
+      "screenshotPath": "step-4.png",
+      "exactHash": "f4dbaeb5b529c1b61365d50169aca955",
+      "thumbnailHash": "00eb93efa51db6f522763a93efb074e3",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e '\ntell application \"Safari\"\n    activate\nend tell\n'",
+        "raw": "bash: osascript -e '\ntell application \"Safari\"\n    activate\nend tell\n'"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing Google.com dark mode homepage with search bar visible and cursor blinking in it.",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1773683340991,
+      "relativeTime": 118994,
+      "screenshotPath": "step-5.png",
+      "exactHash": "cc02b3e60461173b5cb7f0166757a51e",
+      "thumbnailHash": "72ba810f56d3624777b0926b92933753",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e '\ntell application \"Safari\"\n    activate\n    tell front window\n        tell current tab",
+        "raw": "bash: osascript -e '\ntell application \"Safari\"\n    activate\n    tell front window\n    "
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Google search results showing the Wikipedia \"Capybara\" article as the first result, with a preview snippet and images of capybaras.",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "timestamp": 1773683256212
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e '\ntell application \"Safari\"\n    activate\n    open location \"https://www.google.com\"\nend",
+        "raw": "bash: osascript -e '\ntell application \"Safari\"\n    activate\n    open location \"https:/"
+      },
+      "timestamp": 1773683296446
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e '\ntell application \"Safari\"\n    activate\nend tell\n'",
+        "raw": "bash: osascript -e '\ntell application \"Safari\"\n    activate\nend tell\n'"
+      },
+      "timestamp": 1773683322692
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e '\ntell application \"Safari\"\n    activate\n    tell front window\n        tell current tab",
+        "raw": "bash: osascript -e '\ntell application \"Safari\"\n    activate\n    tell front window\n    "
+      },
+      "timestamp": 1773683340991
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

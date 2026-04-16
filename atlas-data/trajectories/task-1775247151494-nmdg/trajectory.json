@@ -1,0 +1,343 @@
+{
+  "taskId": "task-1775247151494-nmdg",
+  "taskDescription": "Open TextEdit, write a 3-line poem, make the title bold, and save as RTF",
+  "startTime": 1775247151494,
+  "endTime": 1775247330716,
+  "duration": 179222,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 2,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close/dismiss the current save dialog",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Create a new RTF document in TextEdit",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Write a 3-line poem with a title",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Make the title bold",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Save as RTF",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775247153110,
+      "relativeTime": 1616,
+      "screenshotPath": "step-0.png",
+      "exactHash": "d7457fc2d08b2d17f648aad12f91ff22",
+      "thumbnailHash": "8a50311b8884fae8f030ce355c613573",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775247167344,
+      "relativeTime": 15850,
+      "screenshotPath": "step-1.png",
+      "exactHash": "d7457fc2d08b2d17f648aad12f91ff22",
+      "thumbnailHash": "8a50311b8884fae8f030ce355c613573",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (PopUpButton) in TextEdit",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "PopUpButton",
+        "app": "TextEdit",
+        "distance": 9
+      },
+      "assistantIntent": "Alright, I can see TextEdit is already open with what looks like a save dialog for a file called \"hello",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775247183311,
+      "relativeTime": 31817,
+      "screenshotPath": "step-2.png",
+      "exactHash": "a6badae9a5d73aeeaff345e13ff17f13",
+      "thumbnailHash": "cc68fac50e84f9d09b5302112a391fab",
+      "action": {
+        "type": "key",
+        "text": "cmd+period",
+        "raw": "key: \"cmd+period\""
+      },
+      "toolResult": "error",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Dialog is still there",
+      "resolvedTarget": null,
+      "assistantIntent": "Dialog is still there",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775247200576,
+      "relativeTime": 49082,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c37ab549c0dafddde2b0178364e88989",
+      "thumbnailHash": "cc68fac50e84f9d09b5302112a391fab",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "OK so the save dialog is still open",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so the save dialog is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775247216439,
+      "relativeTime": 64945,
+      "screenshotPath": "step-4.png",
+      "exactHash": "d54e7b00c1cb4638326429ee0a7f8a86",
+      "thumbnailHash": "f5aaa3270e7252492e9639464a347e03",
+      "action": {
+        "type": "key",
+        "text": "tab",
+        "raw": "key: \"tab\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "This dialog is stubbornly refusing to close with Escape",
+      "resolvedTarget": null,
+      "assistantIntent": "This dialog is stubbornly refusing to close with Escape",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775247239106,
+      "relativeTime": 87612,
+      "screenshotPath": "step-5.png",
+      "exactHash": "d54e7b00c1cb4638326429ee0a7f8a86",
+      "thumbnailHash": "f5aaa3270e7252492e9639464a347e03",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "OK so I can see the title changed to \"hello",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so I can see the title changed to \"hello",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775247262682,
+      "relativeTime": 111188,
+      "screenshotPath": "step-6.png",
+      "exactHash": "55127ae96437580e7237a5c07f8bad45",
+      "thumbnailHash": "518018dda6b86693b1387d0d5e8fca06",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          335,
+          400
+        ],
+        "raw": "scroll (335,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Bruh this dialog is NOT cooperating",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh this dialog is NOT cooperating",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775247330715,
+      "relativeTime": 179221,
+      "screenshotPath": "step-7.png",
+      "exactHash": "856fc2e54947df76775bc8d1ac1d43ad",
+      "thumbnailHash": "3cd0c0a2a3961d970ed519283a17fb67",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e 'tell application \"TextEdit\" to close every document saving no'",
+        "raw": "bash: osascript -e 'tell application \"TextEdit\" to close every document saving no'"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (CheckBox) in TextEdit",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "CheckBox",
+        "app": "TextEdit",
+        "distance": 34
+      },
+      "assistantIntent": "Hmm that clicked somewhere weird",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775247167344
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+period",
+        "raw": "key: \"cmd+period\""
+      },
+      "timestamp": 1775247183311
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775247200576
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "tab",
+        "raw": "key: \"tab\""
+      },
+      "timestamp": 1775247216439
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775247239106
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          335,
+          400
+        ],
+        "raw": "scroll (335,400)"
+      },
+      "timestamp": 1775247262682
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "bash",
+        "command": "osascript -e 'tell application \"TextEdit\" to close every document saving no'",
+        "raw": "bash: osascript -e 'tell application \"TextEdit\" to close every document saving no'"
+      },
+      "timestamp": 1775247330715
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

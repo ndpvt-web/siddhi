@@ -1,0 +1,351 @@
+{
+  "taskId": "task-1775241185925-qqlc",
+  "taskDescription": "Open VS Code, create a multi-file project with index.html, style.css, and script.js",
+  "startTime": 1775241185925,
+  "endTime": 1775241408938,
+  "duration": 223013,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Files created successfully in ~/Documents/my-web-project/ (index.html, style.css, script.js all confirmed via bash). VS Code is open with Welcome tab and Extensions sidebar.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "dee46f43e6eb8a10a2f7d1e8b09e72b9",
+      "semanticState": "VS Code is open with a \"Select the link to open\" dropdown visible. Need to dismiss and open folder.",
+      "timestamp": 1775241408583
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a project folder via the terminal (e.g., `~/Documents/my-web-project`)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open that folder in VS Code",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Create `index.html` with proper HTML boilerplate",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Create `style.css` with some basic styles",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Create `script.js` with some starter JS code",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Verify all 3 files show up in the Explorer",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775241187609,
+      "relativeTime": 1684,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4af284a6af66872a9cae7d51cb188c02",
+      "thumbnailHash": "32320137e4c25d4470512e9adce13b3d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775241223007,
+      "relativeTime": 37082,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a88a79a3d88cbe1b748af8687fc577ed",
+      "thumbnailHash": "271b3ae078a2c3db55dfea159e502ced",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          591
+        ],
+        "raw": "left_click (700,591)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, VS Code is already open",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, VS Code is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775241302894,
+      "relativeTime": 116969,
+      "screenshotPath": "step-2.png",
+      "exactHash": "37caf78725091969206ff9d7bcb665aa",
+      "thumbnailHash": "214db994df63f946614ad8bb3ed10c84",
+      "action": {
+        "type": "type",
+        "text": "code ~/Documents/my-web-project\n",
+        "raw": "type: \"code ~/Documents/my-web-project\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "LETSSS GOOO",
+      "resolvedTarget": null,
+      "assistantIntent": "LETSSS GOOO",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775241331085,
+      "relativeTime": 145160,
+      "screenshotPath": "step-3.png",
+      "exactHash": "4a1da5a8ec9fade0183559294c1fe1a4",
+      "thumbnailHash": "4421438c1909b5200c59fe890e786b97",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          733,
+          309
+        ],
+        "raw": "left_click (733,309)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "A file picker dialog should open.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "VS Code wants access to the Documents folder",
+      "resolvedTarget": null,
+      "assistantIntent": "VS Code wants access to the Documents folder",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775241353208,
+      "relativeTime": 167283,
+      "screenshotPath": "step-4.png",
+      "exactHash": "e0c8af52acdf086216ec56bbc738879c",
+      "thumbnailHash": "6b510b3c84ea0546c9f1d703a21afdac",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          110,
+          13
+        ],
+        "raw": "left_click (110,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A file picker dialog should open.",
+        "observed": "success left_click (110,13)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Code",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Code",
+        "distance": 48
+      },
+      "assistantIntent": "Good, the dialog is dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775241374911,
+      "relativeTime": 188986,
+      "screenshotPath": "step-5.png",
+      "exactHash": "314a1c9a0b66221d4acbc7979bf980c7",
+      "thumbnailHash": "aecad069af70c5121b6da87bf0845bac",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          143,
+          168
+        ],
+        "raw": "left_click (143,168)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "A file picker dialog should appear.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "File menu is open",
+      "resolvedTarget": null,
+      "assistantIntent": "File menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775241393740,
+      "relativeTime": 207815,
+      "screenshotPath": "step-6.png",
+      "exactHash": "dee46f43e6eb8a10a2f7d1e8b09e72b9",
+      "thumbnailHash": "b14bac9a854fa31e26953ed54ff2005e",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+o",
+        "raw": "key: \"cmd+shift+o\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A file picker dialog should appear.",
+        "observed": "success key: \"cmd+shift+o\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "VS Code is open with a \"Select the link to open\" dropdown visible. Need to dismiss and open folder.",
+      "resolvedTarget": null,
+      "assistantIntent": "The file dialog didn't open - the menu closed but we're back to extensions view",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          591
+        ],
+        "raw": "left_click (700,591)"
+      },
+      "timestamp": 1775241223007
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "code ~/Documents/my-web-project\n",
+        "raw": "type: \"code ~/Documents/my-web-project\n\""
+      },
+      "timestamp": 1775241302894
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          733,
+          309
+        ],
+        "raw": "left_click (733,309)"
+      },
+      "timestamp": 1775241331085
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          110,
+          13
+        ],
+        "raw": "left_click (110,13)"
+      },
+      "timestamp": 1775241353208
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          143,
+          168
+        ],
+        "raw": "left_click (143,168)"
+      },
+      "timestamp": 1775241374911
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+o",
+        "raw": "key: \"cmd+shift+o\""
+      },
+      "timestamp": 1775241393740
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

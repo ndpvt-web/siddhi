@@ -1,0 +1,402 @@
+{
+  "taskId": "task-1775302992850-pr93",
+  "taskDescription": "Open Safari with 3 tabs: apple.com, google.com, and github.com, then close the middle tab",
+  "startTime": 1775302992850,
+  "endTime": 1775303128997,
+  "duration": 136147,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 9,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 0,
+      "description": "Safari is open with 2 tabs visible - Apple and Hacker News. Menu dismissed.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "7a25565c46575b7a40e9f551cef825e2",
+      "semanticState": "Safari showing Hacker News page with 2 tabs in the tab bar - Apple (left) and Hacker News (right, active).",
+      "timestamp": 1775303095730
+    },
+    {
+      "stepNumber": 1,
+      "description": "Apple tab is active and showing apple.com homepage with iPhone content. Tab 1 = Apple ✓",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "1b83d005a49e5d374eca1be45d251581",
+      "semanticState": "Safari showing apple.com with iPhone lineup page, 2 tabs visible - Apple (active) and Hacker News.",
+      "timestamp": 1775303117614
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Check current tab state carefully",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate existing tabs and open new ones to get apple.com, google.com, and github.com",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Close the middle tab (google.com)",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775302994499,
+      "relativeTime": 1649,
+      "screenshotPath": "step-0.png",
+      "exactHash": "0c01ca0529714781eead9c85e2268747",
+      "thumbnailHash": "82eb5402acc2b7bf8427422b2511024d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775303002604,
+      "relativeTime": 9754,
+      "screenshotPath": "step-1.png",
+      "exactHash": "0c01ca0529714781eead9c85e2268747",
+      "thumbnailHash": "82eb5402acc2b7bf8427422b2511024d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari is open with 2 tabs visible - \"Apple\" (tab 1) and \"Hacker News\" at news.ycombinator.com (tab 2, currently active).",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see Safari is already open with what looks like 2 tabs (Apple and Hacker News)",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775303023587,
+      "relativeTime": 30737,
+      "screenshotPath": "step-2.png",
+      "exactHash": "3ed204bc673e0b42e6ae62fbcfc1ed25",
+      "thumbnailHash": "dd41ef07563da0f6a2eeb661facabeb4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          313,
+          91
+        ],
+        "raw": "left_click (313,91)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "SCENE: Safari is open with 2 tabs visible - \"Apple\" (tab 1) and \"Hacker News\" at news",
+      "resolvedTarget": null,
+      "assistantIntent": "SCENE: Safari is open with 2 tabs visible - \"Apple\" (tab 1) and \"Hacker News\" at news",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775303036717,
+      "relativeTime": 43867,
+      "screenshotPath": "step-3.png",
+      "exactHash": "aa7c757a11e8c0b7f56180e496740305",
+      "thumbnailHash": "e51e4da3c22feabe405b1ebab0c9c9ea",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Oops, I accidentally opened the View menu",
+      "resolvedTarget": null,
+      "assistantIntent": "Oops, I accidentally opened the View menu",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775303058198,
+      "relativeTime": 65348,
+      "screenshotPath": "step-4.png",
+      "exactHash": "812ecea581692d02c3de21a2ca1d6cf1",
+      "thumbnailHash": "0f4dd271abeaeb0f32219a04570f9a12",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          270,
+          123
+        ],
+        "raw": "left_click (270,123)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The View menu is still open",
+      "resolvedTarget": null,
+      "assistantIntent": "The View menu is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775303068833,
+      "relativeTime": 75983,
+      "screenshotPath": "step-5.png",
+      "exactHash": "812ecea581692d02c3de21a2ca1d6cf1",
+      "thumbnailHash": "0f4dd271abeaeb0f32219a04570f9a12",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Menu is still open",
+      "resolvedTarget": null,
+      "assistantIntent": "Menu is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775303086134,
+      "relativeTime": 93284,
+      "screenshotPath": "step-6.png",
+      "exactHash": "7a25565c46575b7a40e9f551cef825e2",
+      "thumbnailHash": "aee198a152f40e7473da05fca7b0829c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          400
+        ],
+        "raw": "left_click (700,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Apple.com homepage should load.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing Hacker News page with 2 tabs in the tab bar - Apple (left) and Hacker News (right, active).",
+      "resolvedTarget": null,
+      "assistantIntent": "The View menu is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775303108279,
+      "relativeTime": 115429,
+      "screenshotPath": "step-7.png",
+      "exactHash": "1b83d005a49e5d374eca1be45d251581",
+      "thumbnailHash": "57f8c4497951b42ed410b1e8f9662f29",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          311,
+          92
+        ],
+        "raw": "left_click (311,92)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Hacker News tab becomes active, then I'll navigate to google.com.",
+      "surprise": {
+        "score": 1,
+        "expected": "Apple.com homepage should load.",
+        "observed": "success left_click (311,92)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com with iPhone lineup page, 2 tabs visible - Apple (active) and Hacker News.",
+      "resolvedTarget": null,
+      "assistantIntent": "Good, menu is dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-8",
+      "index": 8,
+      "parentId": "step-7",
+      "timestamp": 1775303128996,
+      "relativeTime": 136146,
+      "screenshotPath": "step-8.png",
+      "exactHash": "a198272129f4e4562b7935459ecbaffc",
+      "thumbnailHash": "f9654f6a6695ef44c29eab7ea5a0ed72",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          897,
+          92
+        ],
+        "raw": "left_click (897,92)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Hacker News tab becomes active, then I'll navigate to google.com.",
+        "observed": "success left_click (897,92)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Apple tab is active and showing apple",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Apple tab is active and showing apple",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          313,
+          91
+        ],
+        "raw": "left_click (313,91)"
+      },
+      "timestamp": 1775303023587
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775303036717
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          270,
+          123
+        ],
+        "raw": "left_click (270,123)"
+      },
+      "timestamp": 1775303058198
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775303068833
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          700,
+          400
+        ],
+        "raw": "left_click (700,400)"
+      },
+      "timestamp": 1775303086134
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          311,
+          92
+        ],
+        "raw": "left_click (311,92)"
+      },
+      "timestamp": 1775303108279
+    },
+    {
+      "from": "step-7",
+      "to": "step-8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          897,
+          92
+        ],
+        "raw": "left_click (897,92)"
+      },
+      "timestamp": 1775303128996
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 8,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

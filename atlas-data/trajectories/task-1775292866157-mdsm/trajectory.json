@@ -1,0 +1,341 @@
+{
+  "taskId": "task-1775292866157-mdsm",
+  "taskDescription": "Open Safari with 3 tabs: apple.com, google.com, and github.com, then close the middle tab",
+  "startTime": 1775292866157,
+  "endTime": 1775292980624,
+  "duration": 114467,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Navigated to apple.com - Apple homepage is loaded showing iPhone lineup.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "59c877d5af1dd0542f8fd16917d4e0f4",
+      "semanticState": "Safari showing apple.com with iPhone advertisement. One tab open.",
+      "timestamp": 1775292902468
+    },
+    {
+      "stepNumber": 2,
+      "description": "google.com loaded in the second tab. Can see both Apple and Google tabs in the tab bar.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "5abba6d885cb8e08dcd9c0ca5cf4bc6e",
+      "semanticState": "Safari showing google.com homepage. Two tabs visible: \"Apple\" and \"Google\".",
+      "timestamp": 1775292918755
+    },
+    {
+      "stepNumber": 3,
+      "description": "All 3 tabs open - Apple, Google, GitHub. GitHub homepage showing \"The future of building happens together\".",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "b14e62000dd73844a1fc424432dc3b6e",
+      "semanticState": "Safari with 3 tabs visible: Apple, Google, GitHub. GitHub page loaded with dark blue hero section.",
+      "timestamp": 1775292945968
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate current tab to apple.com",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open new tab and navigate to google.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open new tab and navigate to github.com",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Close the middle tab (google.com)",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775292867823,
+      "relativeTime": 1666,
+      "screenshotPath": "step-0.png",
+      "exactHash": "21ee4aca39e27b6d22ebee6e3225312a",
+      "thumbnailHash": "ed9a5ee8365beb08dc9935ea10480ec9",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Address bar should be focused and ready for input.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari is open showing Hacker News (news.ycombinator.com). One tab currently open.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775292890776,
+      "relativeTime": 24619,
+      "screenshotPath": "step-1.png",
+      "exactHash": "59c877d5af1dd0542f8fd16917d4e0f4",
+      "thumbnailHash": "7ed0447ec961a6344648523db0161cfa",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "New tab opens and I can type google.com in the address bar.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com with iPhone advertisement. One tab open.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari's already open showing Hacker News",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775292913826,
+      "relativeTime": 47669,
+      "screenshotPath": "step-2.png",
+      "exactHash": "5abba6d885cb8e08dcd9c0ca5cf4bc6e",
+      "thumbnailHash": "141ea37799c9ecc56d04cc79b360692d",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Third tab opens and github.com loads.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing google.com homepage. Two tabs visible: \"Apple\" and \"Google\".",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Navigated to apple",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775292930116,
+      "relativeTime": 63959,
+      "screenshotPath": "step-3.png",
+      "exactHash": "1d9918fe77710c057488ac20a6ffe6f1",
+      "thumbnailHash": "72027c7b50e3611a7794606ec06b59cc",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: google",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: google",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775292936714,
+      "relativeTime": 70557,
+      "screenshotPath": "step-4.png",
+      "exactHash": "b14e62000dd73844a1fc424432dc3b6e",
+      "thumbnailHash": "344ef0e2a26d7b9656a2584344a680bf",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "The Google tab close button (X) appears on hover, then clicking it closes that tab.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari with 3 tabs visible: Apple, Google, GitHub. GitHub page loaded with dark blue hero section.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the address bar shows github",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775292952094,
+      "relativeTime": 85937,
+      "screenshotPath": "step-5.png",
+      "exactHash": "47d0ca2798ff6e1aac242f584c2b3ea2",
+      "thumbnailHash": "a39235aeb8c2e111f90a53c461f08dbe",
+      "action": {
+        "type": "mouse_move",
+        "coordinates": [
+          604,
+          91
+        ],
+        "raw": "mouse_move (604,91)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The Google tab close button (X) appears on hover, then clicking it closes that tab.",
+        "observed": "success mouse_move (604,91)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "LETSSS GOOO",
+      "resolvedTarget": null,
+      "assistantIntent": "LETSSS GOOO",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775292972496,
+      "relativeTime": 106339,
+      "screenshotPath": "step-6.png",
+      "exactHash": "9e6dbff7578416a51da283f0005383f0",
+      "thumbnailHash": "96b9a5ff95752093ce3449bec619028c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          604,
+          91
+        ],
+        "raw": "left_click (604,91)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Google tab closes, leaving only Apple and GitHub tabs.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "I can see the close button (X) appeared on the Apple tab on hover",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the close button (X) appeared on the Apple tab on hover",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "timestamp": 1775292890776
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "timestamp": 1775292913826
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "timestamp": 1775292930116
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "timestamp": 1775292936714
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "mouse_move",
+        "coordinates": [
+          604,
+          91
+        ],
+        "raw": "mouse_move (604,91)"
+      },
+      "timestamp": 1775292952094
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          604,
+          91
+        ],
+        "raw": "left_click (604,91)"
+      },
+      "timestamp": 1775292972496
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

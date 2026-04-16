@@ -1,0 +1,296 @@
+{
+  "taskId": "task-1775242393047-nfg5",
+  "taskDescription": "Open Numbers and create a new spreadsheet with a table of 5 rows: Name, Age, City",
+  "startTime": 1775242393047,
+  "endTime": 1775242560960,
+  "duration": 167913,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Numbers via Spotlight",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Create a new blank spreadsheet",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Fill in the header row (Name, Age, City)",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Fill in 4 more rows of data (5 rows total including header)",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Save the file",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775242394773,
+      "relativeTime": 1726,
+      "screenshotPath": "step-0.png",
+      "exactHash": "8d67162a0f616850e88c8d354f06d1eb",
+      "thumbnailHash": "b30bd80bf83ab9b640f94ba1ffcb8306",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775242410020,
+      "relativeTime": 16973,
+      "screenshotPath": "step-1.png",
+      "exactHash": "98fb7fdb0b3041e27516a03ce80ca8f9",
+      "thumbnailHash": "11f54eaf743039d764dec179919a4c68",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, let me open Numbers and create that spreadsheet for you",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let me open Numbers and create that spreadsheet for you",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775242426840,
+      "relativeTime": 33793,
+      "screenshotPath": "step-2.png",
+      "exactHash": "57a5b526c2caaff463121298dd1fe4bb",
+      "thumbnailHash": "1d60365ee75f422443a12f6cd75a93f9",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775242441852,
+      "relativeTime": 48805,
+      "screenshotPath": "step-3.png",
+      "exactHash": "e2231b83c6243f085e0efd2aad9d13e7",
+      "thumbnailHash": "bfc9bb1e10b68cd7400ea1c180797583",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, it's showing files but not the Numbers app directly",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, it's showing files but not the Numbers app directly",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775242463815,
+      "relativeTime": 70768,
+      "screenshotPath": "step-4.png",
+      "exactHash": "4d06471cae5d362da470063692bbb661",
+      "thumbnailHash": "d794af8c5224cafd19a87a0a6834eb8d",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          722,
+          514
+        ],
+        "raw": "left_click (722,514)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "lol it opened a file in VS Code instead of Numbers 😂 That \"large-numbers",
+      "resolvedTarget": null,
+      "assistantIntent": "lol it opened a file in VS Code instead of Numbers 😂 That \"large-numbers",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775242477473,
+      "relativeTime": 84426,
+      "screenshotPath": "step-5.png",
+      "exactHash": "7ec23e898ba20785e0dbda022cf070b0",
+      "thumbnailHash": "b82f492914d3e167f1d23ee8f6890f49",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Good, dialog dismissed",
+      "resolvedTarget": null,
+      "assistantIntent": "Good, dialog dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775242499437,
+      "relativeTime": 106390,
+      "screenshotPath": "step-6.png",
+      "exactHash": "5dfd08061fda37ed3e0627c27ba9f244",
+      "thumbnailHash": "239c31d87b5072bca0df3c21c1f839db",
+      "action": {
+        "type": "type",
+        "text": "Numbers.app",
+        "raw": "type: \"Numbers.app\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open with \"Numbers\" pre-filled from before",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open with \"Numbers\" pre-filled from before",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775242410020
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "timestamp": 1775242426841
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775242441852
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          722,
+          514
+        ],
+        "raw": "left_click (722,514)"
+      },
+      "timestamp": 1775242463815
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775242477473
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Numbers.app",
+        "raw": "type: \"Numbers.app\""
+      },
+      "timestamp": 1775242499437
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,109 @@
+{
+  "taskId": "task-1773602736756-92n8",
+  "taskDescription": "Take a screenshot. Then click on the first link or button visible on the web page content area (not the toolbar).",
+  "startTime": 1773602736756,
+  "endTime": 1773602759878,
+  "duration": 23122,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773602738175,
+      "relativeTime": 1419,
+      "screenshotPath": "step-0.png",
+      "exactHash": "89fdeb638fe6cbe295a8fe8b50fb0e1c",
+      "thumbnailHash": "178484cf69913d5530f371ea8578e7d5",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773602745262,
+      "relativeTime": 8506,
+      "screenshotPath": "step-1.png",
+      "exactHash": "a7e28f45207ade0e9ff4c61a97c360e0",
+      "thumbnailHash": "5f65cbcd6ec210d21bc6641a203ee45c",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Happycapy AI interface showing a chat/session page with some processing output visible. The content area shows a message about grounding pipeline working correctly. I need to scroll up to find the first link or button in the web page content area.",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773602759878,
+      "relativeTime": 23122,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f1b043f94818cd3cee7ea722cc45032d",
+      "thumbnailHash": "738a3846bfa4fa4dac771ca3cc3c99c0",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          789,
+          400
+        ],
+        "raw": "scroll (789,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "scroll (789,400) -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          789,
+          400
+        ],
+        "raw": "scroll (789,400)"
+      },
+      "timestamp": 1773602759878
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

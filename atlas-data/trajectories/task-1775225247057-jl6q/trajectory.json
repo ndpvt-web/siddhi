@@ -1,0 +1,420 @@
+{
+  "taskId": "task-1775225247057-jl6q",
+  "taskDescription": "Open Notes, create a note with a checklist of 5 items, and check off the first 2",
+  "startTime": 1775225247057,
+  "endTime": 1775225427950,
+  "duration": 180893,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Context menu dismissed successfully. Notes app is visible with \"Meeting Agenda\" note in the editor area.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "8c6efd2883be5913a01ba2840aed896e",
+      "semanticState": "Notes app open showing sidebar with folders and a \"Meeting Agenda\" note currently selected in the editor.",
+      "timestamp": 1775225292162
+    },
+    {
+      "stepNumber": 2,
+      "description": "New note created. Empty note editor is visible with cursor ready for input.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "84944a1b39edc0499f0878b986b0bfa2",
+      "semanticState": "Notes app showing new blank note \"New Note\" in editor area at 10:08 PM.",
+      "timestamp": 1775225326969
+    },
+    {
+      "stepNumber": 3,
+      "description": "Title \"My Checklist\" typed successfully. Cursor is on the new line ready for checklist items.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "f7dac8c708169f2efd76f9e588409245",
+      "semanticState": "Notes app with \"My Checklist\" as the bold title, cursor on second line, toolbar visible with Checklist button.",
+      "timestamp": 1775225350736
+    },
+    {
+      "stepNumber": 4,
+      "description": "Checklist button clicked successfully! A checkbox circle is visible on line 2 of the note, ready for the first checklist item.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "c999a00eca2a39469b3a666988062c8a",
+      "semanticState": "Notes app with \"My Checklist\" title and an empty checkbox on the second line, cursor ready to type.",
+      "timestamp": 1775225378240
+    },
+    {
+      "stepNumber": 5,
+      "description": "All 5 checklist items typed successfully with checkboxes visible.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "3f41040c3afd327ceff15d059824ac1e",
+      "semanticState": "Notes app with \"My Checklist\" title and 5 unchecked checklist items listed below.",
+      "timestamp": 1775225407982
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Dismiss the context menu and create a new note",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Add a title for the note",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Add a checklist with 5 items using the Checklist button",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Check off the first 2 items",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775225248745,
+      "relativeTime": 1688,
+      "screenshotPath": "step-0.png",
+      "exactHash": "79602af280492635176fd818bf7a4226",
+      "thumbnailHash": "6b4e71739cc3d9ed85f75c600337acb5",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775225262562,
+      "relativeTime": 15505,
+      "screenshotPath": "step-1.png",
+      "exactHash": "79602af280492635176fd818bf7a4226",
+      "thumbnailHash": "6b4e71739cc3d9ed85f75c600337acb5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Notes is already open and I can see a context menu",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Notes is already open and I can see a context menu",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775225283900,
+      "relativeTime": 36843,
+      "screenshotPath": "step-2.png",
+      "exactHash": "8c6efd2883be5913a01ba2840aed896e",
+      "thumbnailHash": "a4031934257f2c31fa3ed642412b9ace",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          900,
+          400
+        ],
+        "raw": "left_click (900,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app open showing sidebar with folders and a \"Meeting Agenda\" note currently selected in the editor.",
+      "resolvedTarget": null,
+      "assistantIntent": "Menu is still there",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775225305951,
+      "relativeTime": 58894,
+      "screenshotPath": "step-3.png",
+      "exactHash": "84944a1b39edc0499f0878b986b0bfa2",
+      "thumbnailHash": "f1b5199a0eb2dc554d47499852436f9c",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "The text \"My Checklist\" will appear as the bold title of the new note.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app showing new blank note \"New Note\" in editor area at 10:08 PM.",
+      "resolvedTarget": null,
+      "assistantIntent": "Context menu is dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775225341174,
+      "relativeTime": 94117,
+      "screenshotPath": "step-4.png",
+      "exactHash": "f7dac8c708169f2efd76f9e588409245",
+      "thumbnailHash": "7b243cebde4044d2981f8ab7e575151b",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A checkbox will appear at the beginning of the current line.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with \"My Checklist\" as the bold title, cursor on second line, toolbar visible with Checklist button.",
+      "resolvedTarget": null,
+      "assistantIntent": "New note is created and the cursor is in the editor (I can see a blinking cursor in the note area)",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775225366974,
+      "relativeTime": 119917,
+      "screenshotPath": "step-5.png",
+      "exactHash": "c999a00eca2a39469b3a666988062c8a",
+      "thumbnailHash": "195b483d3efeec612626037a7722da95",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          857,
+          123
+        ],
+        "raw": "left_click (857,123)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "5 items with checkboxes will appear in the note.",
+      "surprise": {
+        "score": 1,
+        "expected": "A checkbox will appear at the beginning of the current line.",
+        "observed": "success left_click (857,123)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with \"My Checklist\" title and an empty checkbox on the second line, cursor ready to type.",
+      "resolvedTarget": {
+        "label": "Checklist",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 2
+      },
+      "assistantIntent": "Title \"My Checklist\" is typed and I can see it's bold in the note editor",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775225398412,
+      "relativeTime": 151355,
+      "screenshotPath": "step-6.png",
+      "exactHash": "3f41040c3afd327ceff15d059824ac1e",
+      "thumbnailHash": "e319d91631457e0669cc804c7fd33111",
+      "action": {
+        "type": "type",
+        "text": "Buy groceries\nDo laundry\nCall the dentist\nRead a book\nGo for a walk",
+        "raw": "type: \"Buy groceries\nDo laundry\nCall the dentist\nRead a b\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "The circle next to \"Buy groceries\" will fill in/get checked.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with \"My Checklist\" title and 5 unchecked checklist items listed below.",
+      "resolvedTarget": null,
+      "assistantIntent": "A checkbox circle appeared on the second line",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775225427950,
+      "relativeTime": 180893,
+      "screenshotPath": "step-7.png",
+      "exactHash": "7b1c3a66fb4405447a1e64166c586635",
+      "thumbnailHash": "12fe72387ec35a64e3f92ec27751fe36",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          716,
+          210
+        ],
+        "raw": "left_click (716,210)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The circle next to \"Buy groceries\" will fill in/get checked.",
+        "observed": "success left_click (716,210)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Toolbar) in Notes",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Toolbar",
+        "app": "Notes",
+        "distance": 79
+      },
+      "assistantIntent": "All 5 checklist items are there with empty circles (unchecked checkboxes):",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775225262562
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          900,
+          400
+        ],
+        "raw": "left_click (900,400)"
+      },
+      "timestamp": 1775225283900
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775225305951
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775225341174
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          857,
+          123
+        ],
+        "raw": "left_click (857,123)"
+      },
+      "timestamp": 1775225366974
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Buy groceries\nDo laundry\nCall the dentist\nRead a book\nGo for a walk",
+        "raw": "type: \"Buy groceries\nDo laundry\nCall the dentist\nRead a b\""
+      },
+      "timestamp": 1775225398412
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          716,
+          210
+        ],
+        "raw": "left_click (716,210)"
+      },
+      "timestamp": 1775225427950
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

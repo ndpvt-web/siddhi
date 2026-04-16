@@ -1,0 +1,342 @@
+{
+  "taskId": "task-1775245176195-4cqs",
+  "taskDescription": "Create a note in Notes, then create a calendar event referencing that note",
+  "startTime": 1775245176195,
+  "endTime": 1775245326919,
+  "duration": 150724,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Notes app is open showing 368 notes in \"All iCloud\" view.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "b695da3d01b0be6d3d845d8dbb7f22b8",
+      "semanticState": "Notes app open with sidebar showing folders, note list showing \"Sample Data Table\" pinned at top.",
+      "timestamp": 1775245271255
+    },
+    {
+      "stepNumber": 2,
+      "description": "New blank note created, editor is open and ready for typing.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "cf131519434f22d223686cc63f14df50",
+      "semanticState": "Notes app with a new blank note on the right showing \"4 April 2026 at 3:41 AM\" timestamp, cursor blinking in editor.",
+      "timestamp": 1775245292006
+    },
+    {
+      "stepNumber": 3,
+      "description": "Note \"Project Planning Notes\" created successfully with 4 key tasks listed.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "bb881056871d80e270289ba5957712e4",
+      "semanticState": "Notes app showing the new note \"Project Planning Notes\" with content visible in the editor. The note appears in the Today section of the note list.",
+      "timestamp": 1775245326587
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Notes app via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new note with some content",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open Calendar app via Spotlight",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Create a new calendar event that references the note",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775245177785,
+      "relativeTime": 1590,
+      "screenshotPath": "step-0.png",
+      "exactHash": "8d3cc21e737f2e4867054d4688f1f7e5",
+      "thumbnailHash": "c5d9d60153a355fe82bb3e8e31315a8d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775245192473,
+      "relativeTime": 16278,
+      "screenshotPath": "step-1.png",
+      "exactHash": "9ac680090f0a377a2a2844d88705fbda",
+      "thumbnailHash": "490fcad3185853c7efd09e9b803b5be0",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, let's get this done",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let's get this done",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775245218754,
+      "relativeTime": 42559,
+      "screenshotPath": "step-2.png",
+      "exactHash": "6deda8567af9de6aea9f7b649cf38f2c",
+      "thumbnailHash": "902813cd610f3a6cc59f1f0b61e8abce",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          357,
+          187
+        ],
+        "raw": "left_click (357,187)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open, I can see \"Notes\" in the quick suggestions at the top",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open, I can see \"Notes\" in the quick suggestions at the top",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775245245753,
+      "relativeTime": 69558,
+      "screenshotPath": "step-3.png",
+      "exactHash": "9d9509da118eb177388016455c20de74",
+      "thumbnailHash": "6365594752f05a747a7ceefa5a03a2da",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Notes app will open with the main window",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with 'this button also has an action to zoom the window' (Button) in Terminal",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "Terminal",
+        "distance": 40
+      },
+      "assistantIntent": "I can see it's showing Notes search results - I need to open the Notes app itself, not just a note",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775245261093,
+      "relativeTime": 84898,
+      "screenshotPath": "step-4.png",
+      "exactHash": "b695da3d01b0be6d3d845d8dbb7f22b8",
+      "thumbnailHash": "93ddce9baede3f264867063e6af56ed3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A blank note editor will open on the right side",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app open with sidebar showing folders, note list showing \"Sample Data Table\" pinned at top.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see Notes",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775245279355,
+      "relativeTime": 103160,
+      "screenshotPath": "step-5.png",
+      "exactHash": "cf131519434f22d223686cc63f14df50",
+      "thumbnailHash": "aa463193c1f6a59b19ebe75948950319",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A blank note editor will open on the right side",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with a new blank note on the right showing \"4 April 2026 at 3:41 AM\" timestamp, cursor blinking in editor.",
+      "resolvedTarget": null,
+      "assistantIntent": "Notes is open",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775245316846,
+      "relativeTime": 140651,
+      "screenshotPath": "step-6.png",
+      "exactHash": "bb881056871d80e270289ba5957712e4",
+      "thumbnailHash": "4619eae407334f306d42d076bbf2f524",
+      "action": {
+        "type": "type",
+        "text": "Project Planning Notes\nKey tasks for the week:\n1. Review project requirements\n2. Set up development environment\n3. Schedule team meeting\n4. Prepare status report",
+        "raw": "type: \"Project Planning Notes\nKey tasks for the week:\n1. \""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Spotlight search will open, I'll type Calendar and open it",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app showing the new note \"Project Planning Notes\" with content visible in the editor. The note appears in the Today section of the note list.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "Notes",
+        "distance": 72
+      },
+      "assistantIntent": "Now let me type the note title and content:",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775245192473
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          357,
+          187
+        ],
+        "raw": "left_click (357,187)"
+      },
+      "timestamp": 1775245218754
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "Notes",
+        "raw": "type: \"Notes\""
+      },
+      "timestamp": 1775245245753
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775245261093
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775245279355
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Project Planning Notes\nKey tasks for the week:\n1. Review project requirements\n2. Set up development environment\n3. Schedule team meeting\n4. Prepare status report",
+        "raw": "type: \"Project Planning Notes\nKey tasks for the week:\n1. \""
+      },
+      "timestamp": 1775245316846
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,4891 @@
+{
+  "benchmark": "Atlas macOS Benchmark v1 - Phase 2",
+  "phase": 2,
+  "lastUpdated": "2026-04-03T21:12:10.495Z",
+  "selectedTaskIds": [
+    3,
+    7,
+    8,
+    9,
+    16,
+    18,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    32,
+    34,
+    35,
+    36,
+    39,
+    40,
+    42,
+    47,
+    52,
+    54,
+    55,
+    58,
+    60,
+    63,
+    65,
+    66,
+    67,
+    70
+  ],
+  "results": [
+    {
+      "taskId": 3,
+      "app": "Safari",
+      "complexity": "easy",
+      "instruction": "Open Safari preferences and change the default search engine to DuckDuckGo",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T19:50:28.069Z",
+      "elapsedMs": 201361,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              116,
+              819
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+comma"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+,"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              657,
+              225
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              779,
+              287
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              773,
+              419
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              827,
+              305
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              780,
+              287
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775245828082-870m",
+      "finalText": "Hit max iterations (15). Completed 3/5 steps.",
+      "error": null
+    },
+    {
+      "taskId": 7,
+      "app": "Safari",
+      "complexity": "medium",
+      "instruction": "Open Safari, navigate to example.com, and use Reader Mode to view the page content",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T19:53:51.440Z",
+      "elapsedMs": 143596,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 14,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              411,
+              188
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+l"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "example.com\n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+shift+r"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              200,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              249,
+              302
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        }
+      ],
+      "trajectoryId": "task-1775246031442-5eki",
+      "finalText": "LETS GOOO! 🎉\n\nCHECKPOINT [3]: Reader Mode is now ACTIVE on example.com!\nSCENE: Safari showing example.com in Reader Mode - the page has a clean, gray background with the \"Example Domain\" heading, the description text, and the \"Learn more\" link displayed in a simplified, reader-friendly format. The Reader Mode icon (book/page icon) is visible in the address bar area, confirming Reader Mode is engaged.\n\nAll three steps are DONE:\n1. ✅ Closed the settings dialog\n2. ✅ Navigated to example.com\n3. ✅ Activated Reader Mode\n\nNgl, I'm surprised that actually worked! Example.com is about as minimal as a webpage gets, so I wasn't expecting Reader Mode to be available, but Safari said \"yeah I can work with this\" lol. \n\nThe page is now displayed in Reader Mode with a clean layout showing:\n- **Example Domain** (heading)\n- \"This domain is for use in documentation examples without needing permission. Avoid use in operations.\"\n- A \"Learn more\" link\n\nEz clap! 🎯",
+      "error": null
+    },
+    {
+      "taskId": 8,
+      "app": "Safari",
+      "complexity": "hard",
+      "instruction": "Open Safari, navigate to a webpage, and save the page as a PDF to the Desktop",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T19:56:17.038Z",
+      "elapsedMs": 138081,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 12,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+p"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              570,
+              652
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              619,
+              308
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              587,
+              552
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              725,
+              565
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls -la ~/Desktop/*.pdf 2>/dev/null"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775246177039-czzt",
+      "finalText": "Ez clap! 🔥 **\"Example Domain.pdf\"** (17.9 KB) is sitting right there on the Desktop, freshly saved at 3:58 AM.\n\nHere's the recap of what we did:\n1. ✅ Safari was already open and on **example.com**\n2. ✅ Opened the Print dialog with **Cmd+P**\n3. ✅ Clicked the **PDF dropdown** → **Save as PDF...**\n4. ✅ Changed the save location from Downloads to **Desktop**\n5. ✅ Hit **Save** — and the PDF is confirmed on the Desktop!\n\nNailed it! The page has been saved as a PDF to your Desktop. 🎯",
+      "error": null
+    },
+    {
+      "taskId": 9,
+      "app": "Safari",
+      "complexity": "medium",
+      "instruction": "Open Safari and clear all browsing history",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T19:58:37.121Z",
+      "elapsedMs": 148422,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              253,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "scroll",
+          "input": {
+            "action": "scroll",
+            "coordinate": [
+              463,
+              500
+            ],
+            "scroll_direction": "down",
+            "scroll_amount": 5
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "scroll",
+          "input": {
+            "action": "scroll",
+            "coordinate": [
+              463,
+              500
+            ],
+            "scroll_direction": "down",
+            "scroll_amount": 10
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              299,
+              771
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              611,
+              423
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              253,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              297,
+              775
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              612,
+              423
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775246317124-81sw",
+      "finalText": "Hit max iterations (15). Completed 2/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 16,
+      "app": "Finder",
+      "complexity": "medium",
+      "instruction": "Open Finder, navigate to Downloads, and move a file to the Documents folder",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:01:07.545Z",
+      "elapsedMs": 199270,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "stagnationDetected": true,
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              437,
+              457
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              636,
+              457
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              48,
+              819
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              124,
+              273
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "left_click_drag",
+          "input": {
+            "action": "left_click_drag",
+            "start_coordinate": [
+              407,
+              118
+            ],
+            "coordinate": [
+              126,
+              243
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 13,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "mv ~/Downloads/\"Peer Review Document.docx\" ~/Documents/"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls -la ~/Documents/\"Peer Review Document.docx\""
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Downloads/\"Peer Review Document.docx\" 2>&1"
+          },
+          "result": "error"
+        }
+      ],
+      "trajectoryId": "task-1775246467546-57eo",
+      "finalText": "Hit max iterations (15). Completed 3/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 18,
+      "app": "Finder",
+      "complexity": "easy",
+      "instruction": "Open Finder and show hidden files using Cmd+Shift+.",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:04:28.817Z",
+      "elapsedMs": 169661,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              780,
+              400
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+shift+period"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+shift+."
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "scroll",
+          "input": {
+            "action": "scroll",
+            "coordinate": [
+              780,
+              400
+            ],
+            "scroll_direction": "up",
+            "scroll_amount": 10
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "stagnationDetected": true
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              780,
+              300
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+shift+."
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "echo $XDG_CURRENT_DESKTOP; echo $DESKTOP_SESSION; which nautilus; which thunar; which nemo; ps aux | grep -i finder | head -5"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "xdotool key --clearmodifiers super+shift+period 2>&1 || echo \"xdotool not found\""
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "defaults read com.apple.finder AppleShowAllFiles 2>/dev/null; echo \"---\"; defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "wait",
+          "input": {
+            "action": "wait",
+            "duration": 3
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              49,
+              819
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775246668819-lemg",
+      "finalText": "Hit max iterations (15). Completed 1/0 steps.",
+      "error": null
+    },
+    {
+      "taskId": 23,
+      "app": "Finder",
+      "complexity": "hard",
+      "instruction": "Open Finder, create a new folder, then create 3 text files inside it using TextEdit",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:07:20.481Z",
+      "elapsedMs": 137188,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "shift+cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "MyTextFiles"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              621,
+              310
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+space"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "TextEdit"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        }
+      ],
+      "trajectoryId": "task-1775246840482-z2pl",
+      "finalText": "Hit max iterations (15). Completed 2/6 steps.",
+      "error": null
+    },
+    {
+      "taskId": 25,
+      "app": "TextEdit",
+      "complexity": "easy",
+      "instruction": "Open TextEdit, create a new document, type 'Hello World', and save it to the Desktop as 'hello.txt'",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:09:39.671Z",
+      "elapsedMs": 169820,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              430,
+              350
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              219,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              267,
+              100
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              420,
+              350
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Hello World"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 0.6
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+shift+s"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+a"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "hello.txt"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              330,
+              240
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775246979672-1bri",
+      "finalText": "Done! Took a lot of steps but got there.",
+      "error": null
+    },
+    {
+      "taskId": 26,
+      "app": "TextEdit",
+      "complexity": "medium",
+      "instruction": "Open TextEdit, write a 3-line poem, make the title bold, and save as RTF",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:12:31.493Z",
+      "elapsedMs": 179518,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "stagnationDetected": true
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+period"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "tab"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "stagnationDetected": true
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "scroll",
+          "input": {
+            "action": "scroll",
+            "coordinate": [
+              335,
+              400
+            ],
+            "scroll_direction": "down",
+            "scroll_amount": 3
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              420,
+              270
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "osascript -e 'tell application \"TextEdit\" to close every document saving no'"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775247151494-nmdg",
+      "finalText": "Hit max iterations (15). Completed 0/5 steps.",
+      "error": null
+    },
+    {
+      "taskId": 27,
+      "app": "TextEdit",
+      "complexity": "medium",
+      "instruction": "Open TextEdit, paste a paragraph of text, then use Find & Replace to change 'the' to 'THE'",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:15:33.012Z",
+      "elapsedMs": 241684,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              412,
+              330
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "The quick brown fox jumps over the lazy dog. The dog was sleeping near the river, unaware of the fox watching from the shadows. By the end of the day, the fox had crossed the bridge and disappeared into the forest."
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+alt+f"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "THE"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              601,
+              192
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              601,
+              192
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              602,
+              193
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775247333014-pdxr",
+      "finalText": "Done! Took a lot of steps but got there.",
+      "error": null
+    },
+    {
+      "taskId": 28,
+      "app": "TextEdit",
+      "complexity": "hard",
+      "instruction": "Open TextEdit, create a document with a bulleted list of 5 items, change font to Helvetica 14pt",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:19:36.698Z",
+      "elapsedMs": 185218,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "stagnationDetected": true
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              591,
+              168
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "osascript << 'EOF'\n-- First, let's close the find bar and create a new document with bullets and Helvetica 14pt\ntell application \"TextEdit\"\n    activate\n    -- Create a new document\n    set newDoc to make new document\n    \n    -- Set the content with bullet points using unicode bullet character\n    set theText to \"• Item One\n• Item Two\n• Item Three\n• Item Four\n• Item Five\"\n    \n    set text of newDoc to theText\nend tell\nEOF"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "osascript << 'EOF'\ntell application \"TextEdit\"\n    activate\n    tell front document\n        tell text\n            set font to \"Helvetica\"\n            set size to 14\n        end tell\n    end tell\nend tell\nEOF"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 8,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "osascript << 'EOF'\ntell application \"TextEdit\"\n    activate\n    set theDoc to front document\n    set theText to text of theDoc\n    \n    -- Use System Events to select all and change font via UI\nend tell\n\n-- Now use System Events to select all and change font\ntell application \"System Events\"\n    tell process \"TextEdit\"\n        -- Select all text\n        keystroke \"a\" using command down\n    end tell\nend tell\nEOF"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "triple_click",
+          "input": {
+            "action": "triple_click",
+            "coordinate": [
+              476,
+              134
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "14\n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              400,
+              350
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775247576699-ifon",
+      "finalText": "Hit max iterations (15). Completed 2/5 steps.",
+      "error": null
+    },
+    {
+      "taskId": 29,
+      "app": "TextEdit",
+      "complexity": "easy",
+      "instruction": "Open TextEdit in plain text mode and type a simple Python script",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:22:43.917Z",
+      "elapsedMs": 196287,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              220,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              266,
+              100
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              460,
+              350
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              460,
+              155
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "# Simple Python Script\n# A fun little program that does some basic stuff\n\ndef greet(name):\n    \"\"\"Returns a greeting message.\"\"\"\n    return f\"Hello, {name}! Welcome to Python!\"\n\ndef add_numbers(a, b):\n    \"\"\"Adds two numbers and returns the result.\"\"\"\n    return a + b\n\ndef is_even(number):\n    \"\"\"Checks if a number is even.\"\"\"\n    return number % 2 == 0\n\n# Main program\nif __name__ == \"__main__\":\n    # Greet the user\n    print(greet(\"World\"))\n\n    # Do some math\n    result = add_numbers(42, 58)\n    print(f\"42 + 58 = {result}\")\n\n    # Check some numbers\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    for num in numbers:\n        status = \"even\" if is_even(num) else \"odd\"\n        print(f\"{num} is {status}\")\n\n    print(\"Script complete! 🐍\")"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+a"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Delete"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "cat << 'PYEOF' | pbcopy\n# Simple Python Script\n# A fun little program that does some basic stuff\n\ndef greet(name):\n    \"\"\"Returns a greeting message.\"\"\"\n    return f\"Hello, {name}! Welcome to Python!\"\n\ndef add_numbers(a, b):\n    \"\"\"Adds two numbers and returns the result.\"\"\"\n    return a + b\n\ndef is_even(number):\n    \"\"\"Checks if a number is even.\"\"\"\n    return number % 2 == 0\n\n# Main program\nif __name__ == \"__main__\":\n    # Greet the user\n    print(greet(\"World\"))\n\n    # Do some math\n    result = add_numbers(42, 58)\n    print(f\"42 + 58 = {result}\")\n\n    # Check some numbers\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    for num in numbers:\n        status = \"even\" if is_even(num) else \"odd\"\n        print(f\"{num} is {status}\")\n\n    print(\"Script complete!\")\nPYEOF"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775247763918-orev",
+      "finalText": "Done! Took a lot of steps but got there.",
+      "error": null
+    },
+    {
+      "taskId": 32,
+      "app": "Notes",
+      "complexity": "medium",
+      "instruction": "Open Notes and create a new folder called 'Work' and move an existing note into it",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:26:02.207Z",
+      "elapsedMs": 136463,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 13,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+space"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Notes"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 0.8
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "right_click",
+          "input": {
+            "action": "right_click",
+            "coordinate": [
+              554,
+              686
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              612,
+              738
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              812,
+              568
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        }
+      ],
+      "trajectoryId": "task-1775247962208-nuwy",
+      "finalText": "LETS GOOOOO! 🎉 Nailed it! \n\nLook at that - the \"Project Planning Notes\" note at the bottom now shows **\"Work\"** as its folder label instead of \"Notes\"! And in the sidebar, the **Work** folder now shows **1** note (it was 0 before). The note count for \"Notes\" went from 270 to 269 too. Everything checks out!\n\nCHECKPOINT [2]: Successfully moved \"Project Planning Notes\" into the Work folder! The Work folder in the sidebar now shows 1 note, and the note itself displays \"Work\" as its folder label.\n\nSCENE: Notes app open with \"All iCloud\" view showing 369 notes. The \"Project Planning Notes\" note is now under the Work folder (visible at bottom of note list with \"Work\" label). Sidebar shows Work folder with 1 note.\n\n**Task complete!** Here's what was done:\n1. ✅ Opened Notes app\n2. ✅ The 'Work' folder already existed (with 0 notes) — so no need to create a duplicate\n3. ✅ Moved \"Project Planning Notes\" into the Work folder using right-click → Move to → Work\n\nThe Work folder now has 1 note in it. Ez clap! 🔥",
+      "error": null
+    },
+    {
+      "taskId": 34,
+      "app": "Notes",
+      "complexity": "easy",
+      "instruction": "Open Notes and use the search function to find a note containing 'meeting'",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:28:20.673Z",
+      "elapsedMs": 52004,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 5,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              1122,
+              122
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "meeting"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775248100677-vey0",
+      "finalText": "LETS GOOO! That worked perfectly! 🎉\n\nCHECKPOINT [2]: Typed 'meeting' in search bar - found 3 notes with results displayed!\nSCENE: Notes search showing \"Found 3 notes\" with the search results list visible — \"Meeting Agenda\" highlighted as top hit, plus \"Project Planning Notes\" and \"@aron Changed the plan a bit,...\".\n\nThe search is working flawlessly! Here's what we got:\n\n**Search Results for \"meeting\" — Found 3 notes:**\n\n1. 🏆 **Top Hit: \"Meeting Agenda\"** (Yesterday) - this is the main one, it's showing the note content on the right with \"Meeting Agenda\" as the title with 'Meeting' highlighted in yellow\n2. 📝 **Project Planning Notes** (3:41 AM) - contains \"...team **meeting** 4. Prepare...\"\n3. 💬 **@aron Changed the plan a bit,...** (16/10/2025) - contains \"...we're **meeting** for a pr...\"\n\nEz clap! Notes found all 3 notes containing the word 'meeting' and even highlighted the matching keyword in each result. The top hit \"Meeting Agenda\" is already opened in the preview pane on the right. Task done! 🙌",
+      "error": null
+    },
+    {
+      "taskId": 35,
+      "app": "Notes",
+      "complexity": "hard",
+      "instruction": "Open Notes, create a note, add a table with 3 columns and 4 rows, fill in sample data",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:29:14.678Z",
+      "elapsedMs": 168762,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              916,
+              188
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Sample Data Table"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              889,
+              122
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              875,
+              225
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              790,
+              400
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              790,
+              218
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775248154679-9lwa",
+      "finalText": "Hit max iterations (15). Completed 3/5 steps.",
+      "error": null
+    },
+    {
+      "taskId": 36,
+      "app": "Notes",
+      "complexity": "medium",
+      "instruction": "Open Notes, create a note with mixed formatting: heading, body text, and a link",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:32:05.443Z",
+      "elapsedMs": 204777,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              206,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              209,
+              67
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              918,
+              190
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              206,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              209,
+              67
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              900,
+              190
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              209,
+              13
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775248325445-2ce1",
+      "finalText": "Hit max iterations (15). Completed 2/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 39,
+      "app": "Calendar",
+      "complexity": "easy",
+      "instruction": "Open Calendar and create a new event called 'Team Standup' for tomorrow at 10 AM",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:35:32.222Z",
+      "elapsedMs": 144771,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "super+space"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Calendar"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 0.8333333333333334
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              1044,
+              156
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Team Standup tomorrow at 10 AM"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775248532223-cim0",
+      "finalText": "Hit max iterations (15). Completed 3/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 40,
+      "app": "Calendar",
+      "complexity": "medium",
+      "instruction": "Open Calendar and create a recurring weekly event every Monday at 9 AM",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:37:58.997Z",
+      "elapsedMs": 175275,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "triple_click",
+          "input": {
+            "action": "triple_click",
+            "coordinate": [
+              628,
+              288
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Weekly Monday Meeting"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              697,
+              289
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              697,
+              479
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              697,
+              346
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              700,
+              341
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              696,
+              412
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        }
+      ],
+      "trajectoryId": "task-1775248679000-8x1g",
+      "finalText": "Hit max iterations (15). Completed 2/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 42,
+      "app": "Calendar",
+      "complexity": "hard",
+      "instruction": "Open Calendar, create an event with a 15-minute reminder alert and a specific location",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:40:56.274Z",
+      "elapsedMs": 225791,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "stagnationDetected": true,
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              666,
+              235
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              649,
+              439
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              650,
+              439
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Conference Room B, Building 5"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              619,
+              367
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              669,
+              508
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        }
+      ],
+      "trajectoryId": "task-1775248856275-dyri",
+      "finalText": "Hit max iterations (15). Completed 2/3 steps.",
+      "error": null
+    },
+    {
+      "taskId": 47,
+      "app": "Reminders",
+      "complexity": "medium",
+      "instruction": "Open Reminders, create a new list called 'Shopping', and add 3 items to it",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:44:44.068Z",
+      "elapsedMs": 152984,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+space"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Reminders"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              236,
+              611
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              627,
+              187
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Milk"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Eggs"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775249084069-9zig",
+      "finalText": "Hit max iterations (15). Completed 2/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 52,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open Preview, open an image, and use the markup tools to add a text annotation",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:47:19.056Z",
+      "elapsedMs": 170256,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "find ~/Desktop ~/Downloads ~/Pictures -name \"*.jpg\" -o -name \"*.png\" -o -name \"*.jpeg\" -o -name \"*.gif\" -o -name \"*.tiff\" 2>/dev/null | head -20"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a \"Preview\" \"/Users/nivesh/Desktop/Screenshot 2026-03-28 at 10.14.50 PM.png\""
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 3,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Desktop/*.png 2>/dev/null | head -5"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a \"Preview\" ~/Desktop/Screenshot\\ 2026-03-21\\ at\\ 12.44.29\\ AM.png"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 5,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Desktop/ | head -10"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "FILE=$(ls ~/Desktop/*.png | head -1) && echo \"Opening: $FILE\" && open -a \"Preview\" \"$FILE\""
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 0.7
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              297,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              307,
+              257
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              521,
+              481
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              340,
+              450
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775249239058-g4ix",
+      "finalText": "Hit max iterations (15). Completed 1/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 54,
+      "app": "Preview",
+      "complexity": "hard",
+      "instruction": "Open Preview, combine two PDF files into one using the sidebar thumbnails",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:50:11.314Z",
+      "elapsedMs": 171321,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "find ~/Desktop ~/Documents ~/Downloads -name \"*.pdf\" 2>/dev/null | head -20"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a Preview ~/Downloads/dead-mens-path_achebe.pdf"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a Preview ~/Downloads/paper.pdf"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              354,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Escape"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click_drag",
+          "input": {
+            "action": "left_click_drag",
+            "start_coordinate": [
+              330,
+              79
+            ],
+            "coordinate": [
+              1000,
+              300
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              476,
+              368
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              354,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              421,
+              412
+            ]
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775249411315-t6t1",
+      "finalText": "Hit max iterations (15). Completed 3/7 steps.",
+      "error": null
+    },
+    {
+      "taskId": 55,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open an image in Preview and crop it to a specific region",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:53:04.638Z",
+      "elapsedMs": 107522,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "find ~/Desktop ~/Pictures ~/Downloads -type f \\( -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" -o -name \"*.gif\" -o -name \"*.tiff\" \\) 2>/dev/null | head -20"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a Preview \"/Users/nivesh/Desktop/Screenshot 2026-03-28 at 10.14.50 PM.png\""
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 3,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Desktop/*.png 2>/dev/null | head -5\nls ~/Desktop/Screenshots/*.png 2>/dev/null | head -5"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a Preview \"/Users/nivesh/Desktop/Screenshot 2026-03-21 at 12.44.29 AM.png\""
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 5,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Desktop/ | cat"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "python3 -c \"\nimport subprocess\nimport os\npath = os.path.expanduser('~/Desktop/Screenshot 2026-03-21 at 12.44.29 AM.png')\nprint('File exists:', os.path.exists(path))\nprint('Path:', repr(path))\n\""
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls -la /Users/nivesh/Desktop/ | head -20"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "cd /Users/nivesh/Desktop && open -a Preview \"Screenshot 2026-03-25 at 4.03.27 PM.png\""
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 9,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "# Maybe it's a locale/encoding issue. Try using printf with the actual bytes\nfile /Users/nivesh/Desktop/Screenshot\\ 2026-03-25\\ at\\ 4.03.27\\ PM.png 2>&1"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "# Let's check the actual bytes/encoding of the filename\nls -la /Users/nivesh/Desktop/ | grep \"Screenshot 2026-03-25 at 4.03.27\" | xxd | head -5"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls -la /Users/nivesh/Desktop/ | grep \"Screenshot 2026-03-25 at 4.03.27\" | xxd | grep -A2 \"2e30 3327\""
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 12,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls -la /Users/nivesh/Desktop/ | grep \"Screenshot 2026-03-25 at 4.03.27\" | cat -v"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "# Create a simple test image using Python\npython3 -c \"\nimport struct, zlib\n\ndef create_png(width, height, filename):\n    def write_chunk(chunk_type, data):\n        chunk_len = len(data)\n        chunk = chunk_type + data\n        crc = zlib.crc32(chunk) & 0xffffffff\n        return struct.pack('>I', chunk_len) + chunk + struct.pack('>I', crc)\n    \n    # PNG signature\n    sig = b'\\x89PNG\\r\\n\\x1a\\n'\n    \n    # IHDR chunk\n    ihdr_data = struct.pack('>IIBBBBB', width, height, 8, 2, 0, 0, 0)\n    ihdr = write_chunk(b'IHDR', ihdr_data)\n    \n    # IDAT chunk - simple gradient image\n    raw_data = b''\n    for y in range(height):\n        raw_data += b'\\x00'  # filter type None\n        for x in range(width):\n            r = int(255 * x / width)\n            g = int(255 * y / height)\n            b = 128\n            raw_data += bytes([r, g, b])\n    \n    compressed = zlib.compress(raw_data)\n    idat = write_chunk(b'IDAT', compressed)\n    \n    # IEND chunk\n    iend = write_chunk(b'IEND', b'')\n    \n    with open(filename, 'wb') as f:\n        f.write(sig + ihdr + idat + iend)\n\ncreate_png(400, 300, '/Users/nivesh/Desktop/test_image.png')\nprint('Created test_image.png')\n\""
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a Preview /Users/nivesh/Desktop/test_image.png"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775249584640-3jq3",
+      "finalText": "Hit max iterations (15). Completed 0/7 steps.",
+      "error": null
+    },
+    {
+      "taskId": 58,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open an image in Preview and export it as JPEG with 80% quality",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:54:54.163Z",
+      "elapsedMs": 212328,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              338,
+              255
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              128,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              163,
+              447
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              363,
+              272
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 9,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Documents/test_image* 2>/dev/null; ls ~/Desktop/test_image* 2>/dev/null; find ~ -name \"test_image*\" -maxdepth 3 2>/dev/null"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 10,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "find / -name \"test_image*\" 2>/dev/null | head -20"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 11,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "find /Users -name \"test_image*\" 2>/dev/null"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 12,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "mdfind \"test_image\" 2>/dev/null | head -10"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "sips -s format jpeg -s formatOptions 80 /Users/nivesh/Desktop/test_image.png --out /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "file /Users/nivesh/Documents/test_image.jpg && ls -la /Users/nivesh/Documents/test_image.jpg && sips -g format -g formatOptions /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "open -a Preview /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775249694164-w8po",
+      "finalText": "Hit max iterations (15). Completed 2/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 60,
+      "app": "Preview",
+      "complexity": "medium",
+      "instruction": "Open an image in Preview and resize it to 800x600 pixels",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T20:58:28.496Z",
+      "elapsedMs": 194436,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              338,
+              255
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              296,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              338,
+              122
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              296,
+              13
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              338,
+              123
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 11,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "ls ~/Desktop/test_image.jpg 2>/dev/null || find / -name \"test_image.jpg\" -maxdepth 4 2>/dev/null | head -5"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "sips -g pixelWidth -g pixelHeight /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "sips --resampleWidth 800 --resampleHeight 600 /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 14,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "sips -g pixelWidth -g pixelHeight /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "sips -z 600 800 /Users/nivesh/Documents/test_image.jpg"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775249908498-mvai",
+      "finalText": "Hit max iterations (15). Completed 1/4 steps.",
+      "error": null
+    },
+    {
+      "taskId": 63,
+      "app": "Terminal",
+      "complexity": "medium",
+      "instruction": "Open Terminal and write a bash script that prints numbers 1-10, save it, and run it",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T21:01:44.934Z",
+      "elapsedMs": 138361,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 13,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "cmd+space"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "Terminal"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              604
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "cat > ~/Desktop/print_numbers.sh << 'EOF'\n#!/bin/bash\n# Script to print numbers 1-10\necho \"Printing numbers 1 to 10:\"\nfor i in $(seq 1 10); do\n    echo $i\ndone\necho \"Done!\"\nEOF"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "chmod +x ~/Desktop/print_numbers.sh && bash ~/Desktop/print_numbers.sh"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775250104936-gpe5",
+      "finalText": "LETS GOOO! 🎉 Nailed it! Ez clap!\n\nCHECKPOINT [3]: Script ran successfully, printing numbers 1 through 10 ✅\nSCENE: Terminal showing the output of the script - \"Printing numbers 1 to 10:\", followed by numbers 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and \"Done!\" - back at the shell prompt.\n\nHere's what I did:\n\n1. **Opened Terminal** via Spotlight\n2. **Wrote the bash script** (`print_numbers.sh`) using a heredoc to save it to `~/Desktop/print_numbers.sh`. The script uses a `for` loop with `seq 1 10` to print each number.\n3. **Made it executable** with `chmod +x` and **ran it** with `bash`\n\nThe script printed all numbers 1 through 10 perfectly. The file is saved at `~/Desktop/print_numbers.sh` if you ever want to run it again! 💪",
+      "error": null
+    },
+    {
+      "taskId": 65,
+      "app": "Terminal",
+      "complexity": "hard",
+      "instruction": "Open Terminal and set up a cron job that runs every hour to log the date to a file",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T21:04:05.299Z",
+      "elapsedMs": 224523,
+      "httpStatus": 200,
+      "success": false,
+      "iterations": 15,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              400
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "(crontab -l 2>/dev/null; echo '0 * * * * date >> ~/date_log.txt') | crontab -"
+          },
+          "result": "error"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              603
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "(crontab -l 2>/dev/null; echo '0 * * * * date >> ~/date_log.txt') | crontab -"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              619,
+              339
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              603
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 11,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 12,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              733,
+              339
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 13,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 0.9166666666666666
+        },
+        {
+          "iteration": 14,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "crontab -l\n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 15,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775250245305-fp05",
+      "finalText": "Hit max iterations (15). Completed 2/3 steps.",
+      "error": null
+    },
+    {
+      "taskId": 66,
+      "app": "Terminal",
+      "complexity": "medium",
+      "instruction": "Open Terminal and check disk usage of the home directory with du -sh",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T21:07:51.824Z",
+      "elapsedMs": 76535,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 7,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              603
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "du -sh ~\n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "wait",
+          "input": {
+            "action": "wait",
+            "duration": 5
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775250471826-il8d",
+      "finalText": "LETS GOOO! The command finished! I can see the result right there at the bottom! 🎉\n\nCHECKPOINT [1]: Command `du -sh ~` completed successfully. The terminal shows the final result at the bottom of all the output.\n\nSCENE: Terminal window showing the completed `du -sh ~` command output. Tons of \"Operation not permitted\" warnings from macOS SIP (totally normal), and at the very bottom the result line reads: **`89G    /Users/nivesh`** followed by the zsh prompt, confirming the command is done.\n\n---\n\n**The result is in! Here's the rundown:**\n\n> **`89G    /Users/nivesh`**\n\nYour home directory is using **89 gigabytes** of disk space. Those \"Operation not permitted\" warnings are completely normal on macOS — that's just Apple's System Integrity Protection blocking `du` from peeking into certain protected Library folders, but the final total still accounts for everything it *could* access.\n\n89 gigs is a solid chunk of space — might be worth doing a little spring cleaning if you're running low on storage! 🧹",
+      "error": null
+    },
+    {
+      "taskId": 67,
+      "app": "Terminal",
+      "complexity": "easy",
+      "instruction": "Open Terminal and display the current date and system uptime",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T21:09:10.361Z",
+      "elapsedMs": 63634,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 5,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              600
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 3,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "date && uptime\n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775250550363-9cae",
+      "finalText": "LETS GOOO! 🎉 Both commands ran perfectly!\n\nCHECKPOINT [1]: `date && uptime` executed successfully - both outputs are visible in the Terminal.\n\nSCENE: Terminal window showing the output of `date && uptime` - date and uptime info clearly visible at the bottom of the terminal.\n\nHere's what we got:\n\n📅 **Current Date:**\n`Sat 4 Apr 2026 05:09:54 HKT`\n\n⏱️ **System Uptime:**\n`5:09 up 12:59, 6 users, load averages: 2.77 2.98 3.37`\n\nSo basically:\n- It's **Saturday, April 4th, 2026** at **5:09 AM (Hong Kong Time)**\n- The machine has been **up for ~13 hours** (12 hours 59 minutes)\n- There are **6 active user sessions** \n- Load averages are **2.77 / 2.98 / 3.37** (1, 5, and 15-minute averages) — that's a bit elevated, bruh, something's keeping those cores busy lol\n\nEz clap! ✅",
+      "error": null
+    },
+    {
+      "taskId": 70,
+      "app": "Terminal",
+      "complexity": "hard",
+      "instruction": "Open Terminal and write a Python script that reads a CSV file and prints the first 5 rows",
+      "phase": 2,
+      "attempt": 1,
+      "startTime": "2026-04-03T21:10:15.997Z",
+      "elapsedMs": 114498,
+      "httpStatus": 200,
+      "success": true,
+      "iterations": 11,
+      "checkpoints": 0,
+      "steps": [
+        {
+          "iteration": 1,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              600
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 2,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success",
+          "surpriseDetected": true,
+          "surpriseScore": 1
+        },
+        {
+          "iteration": 3,
+          "tool": "bash",
+          "action": "bash",
+          "input": {
+            "command": "\n# Create sample CSV file\ncat > /Users/nivesh/sample_data.csv << 'EOF'\nName,Age,City,Occupation,Salary\nAlice Johnson,28,New York,Engineer,85000\nBob Smith,34,Los Angeles,Designer,72000\nCarol White,25,Chicago,Developer,78000\nDavid Brown,31,Houston,Manager,95000\nEve Davis,29,Phoenix,Analyst,68000\nFrank Miller,38,Philadelphia,Director,110000\nGrace Wilson,26,San Antonio,Developer,75000\nHenry Moore,42,San Diego,VP,125000\nIris Taylor,33,Dallas,Designer,71000\nJack Anderson,27,San Jose,Engineer,88000\nEOF\necho \"CSV created!\"\n\n# Create Python script\ncat > /Users/nivesh/read_csv.py << 'EOF'\nimport csv\n\ndef read_first_5_rows(filename):\n    \"\"\"Reads a CSV file and prints the first 5 rows.\"\"\"\n    try:\n        with open(filename, 'r') as csvfile:\n            reader = csv.DictReader(csvfile)\n            print(f\"Reading CSV file: {filename}\")\n            print(\"-\" * 60)\n            \n            for i, row in enumerate(reader):\n                if i >= 5:\n                    break\n                print(f\"Row {i + 1}: {dict(row)}\")\n            \n            print(\"-\" * 60)\n            print(\"Done! Printed first 5 rows.\")\n    except FileNotFoundError:\n        print(f\"Error: File '{filename}' not found.\")\n    except Exception as e:\n        print(f\"Error reading file: {e}\")\n\nif __name__ == \"__main__\":\n    read_first_5_rows(\"sample_data.csv\")\nEOF\necho \"Python script created!\"\n"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 4,
+          "tool": "computer",
+          "action": "left_click",
+          "input": {
+            "action": "left_click",
+            "coordinate": [
+              930,
+              600
+            ]
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 5,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "cd ~ && cat read_csv.py"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 6,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 7,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 8,
+          "tool": "computer",
+          "action": "type",
+          "input": {
+            "action": "type",
+            "text": "python3 read_csv.py"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 9,
+          "tool": "computer",
+          "action": "key",
+          "input": {
+            "action": "key",
+            "text": "Return"
+          },
+          "result": "success"
+        },
+        {
+          "iteration": 10,
+          "tool": "computer",
+          "action": "screenshot",
+          "input": {
+            "action": "screenshot"
+          },
+          "result": "success"
+        }
+      ],
+      "trajectoryId": "task-1775250615998-bqix",
+      "finalText": "**LETS GOOO!!! 🎉** That's a straight-up W right there!\n\nCHECKPOINT [3]: Script ran successfully — Terminal shows the output with all 5 rows printed perfectly!\n\nSCENE: Terminal showing the successful output of `read_csv.py` — 5 rows of CSV data printed with names, ages, cities, occupations, and salaries, followed by \"Done! Printed first 5 rows.\"\n\n---\n\n**EZ CLAP!** Here's what we built and what happened:\n\n### 📁 Files Created:\n- **`~/sample_data.csv`** — A 10-row CSV with columns: Name, Age, City, Occupation, Salary\n- **`~/read_csv.py`** — The Python script\n\n### 🐍 Script Output:\n```\nReading CSV file: sample_data.csv\n------------------------------------------------------------\nRow 1: {'Name': 'Alice Johnson', 'Age': '28', 'City': 'New York', ...}\nRow 2: {'Name': 'Bob Smith', 'Age': '34', 'City': 'Los Angeles', ...}\nRow 3: {'Name': 'Carol White', 'Age': '25', 'City': 'Chicago', ...}\nRow 4: {'Name': 'David Brown', 'Age': '31', 'City': 'Houston', ...}\nRow 5: {'Name': 'Eve Davis', 'Age': '29', 'City': 'Phoenix', ...}\n------------------------------------------------------------\nDone! Printed first 5 rows.\n```\n\n### 🔑 Key things the script does:\n- Uses Python's built-in `csv.DictReader` to parse the CSV (reads headers automatically)\n- Loops through rows and **breaks at 5** — clean and simple\n- Has proper **error handling** for missing files\n- Prints a nice formatted output with separators\n\nYou can swap `\"sample_data.csv\"` for any CSV file path and it'll work like a charm! 🔥",
+      "error": null
+    }
+  ]
+}

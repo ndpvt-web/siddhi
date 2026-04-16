@@ -1,0 +1,346 @@
+{
+  "taskId": "task-1775249908498-mvai",
+  "taskDescription": "Open an image in Preview and resize it to 800x600 pixels",
+  "startTime": 1775249908498,
+  "endTime": 1775250102700,
+  "duration": 194202,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Preview is focused with test_image.jpg active, Tools menu is open showing \"Adjust Size...\" option.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "c3c9ff05fa2818ccb21b4ae2d2400017",
+      "semanticState": "Tools menu is dropped down with \"Adjust Size...\" visible in the menu.",
+      "timestamp": 1775249959046
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Make sure `test_image.jpg` is the focused/active window in Preview",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Go to Tools > Adjust Size",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Set width to 800 and height to 600 pixels",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save the file",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775249910063,
+      "relativeTime": 1565,
+      "screenshotPath": "step-0.png",
+      "exactHash": "c94fb3a4b391eaf7d2f1308fd8de0002",
+      "thumbnailHash": "04dc3c50ba815fd55972831510de35f8",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775249932556,
+      "relativeTime": 24058,
+      "screenshotPath": "step-1.png",
+      "exactHash": "59c142763d1b5d4cff79cd33e994ff0d",
+      "thumbnailHash": "1114e86c0a59143264d522d551036ded",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          338,
+          255
+        ],
+        "raw": "left_click (338,255)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Tools menu drops down showing options including \"Adjust Size...\"",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see Preview is already open with `test_image",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see Preview is already open with `test_image",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775249950873,
+      "relativeTime": 42375,
+      "screenshotPath": "step-2.png",
+      "exactHash": "c3c9ff05fa2818ccb21b4ae2d2400017",
+      "thumbnailHash": "6fe69ff755897f00c2b94db5c9fa71b9",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          296,
+          13
+        ],
+        "raw": "left_click (296,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dialog box opens with width/height fields for resizing.",
+      "surprise": {
+        "score": 1,
+        "expected": "Tools menu drops down showing options including \"Adjust Size...\"",
+        "observed": "success left_click (296,13)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Tools menu is dropped down with \"Adjust Size...\" visible in the menu.",
+      "resolvedTarget": {
+        "label": "zoom out",
+        "role": "Button",
+        "app": "Preview",
+        "distance": 55
+      },
+      "assistantIntent": "The image window is active with `test_image",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775249978971,
+      "relativeTime": 70473,
+      "screenshotPath": "step-3.png",
+      "exactHash": "06600dbd5254d04b92ace80efda08679",
+      "thumbnailHash": "b7e09c206c6b1365bcdb03c985b77100",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          338,
+          122
+        ],
+        "raw": "left_click (338,122)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A dialog box opens with width/height fields for resizing.",
+        "observed": "success left_click (338,122)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Toolbar) in Preview",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Toolbar",
+        "app": "Preview",
+        "distance": 26
+      },
+      "assistantIntent": "YOOO the Tools menu is open and I can see \"Adjust Size",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775250002459,
+      "relativeTime": 93961,
+      "screenshotPath": "step-4.png",
+      "exactHash": "df89762a1fe1b5764387e26ac407e884",
+      "thumbnailHash": "92f21f3313e796e131976953d839d96f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          296,
+          13
+        ],
+        "raw": "left_click (296,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Adjust Size dialog opens with width/height input fields.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked 'zoom out' (Button) in Preview",
+      "resolvedTarget": {
+        "label": "zoom out",
+        "role": "Button",
+        "app": "Preview",
+        "distance": 55
+      },
+      "assistantIntent": "Ugh, the click landed on the wrong item (looks like it selected Rectangular Selection instead of Adjust Size)",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775250026562,
+      "relativeTime": 118064,
+      "screenshotPath": "step-5.png",
+      "exactHash": "b02e717e2cbcd22d63cce3351f8c0f2e",
+      "thumbnailHash": "619f91c07c3b322b67c51c3061799f80",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          338,
+          123
+        ],
+        "raw": "left_click (338,123)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Adjust Size dialog opens with width/height input fields.",
+        "observed": "success left_click (338,123)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked '(unlabeled)' (Toolbar) in Preview",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Toolbar",
+        "app": "Preview",
+        "distance": 27
+      },
+      "assistantIntent": "Now I can see the Tools menu is open and I can clearly see \"Adjust Size",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          338,
+          255
+        ],
+        "raw": "left_click (338,255)"
+      },
+      "timestamp": 1775249932556
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          296,
+          13
+        ],
+        "raw": "left_click (296,13)"
+      },
+      "timestamp": 1775249950873
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          338,
+          122
+        ],
+        "raw": "left_click (338,122)"
+      },
+      "timestamp": 1775249978971
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          296,
+          13
+        ],
+        "raw": "left_click (296,13)"
+      },
+      "timestamp": 1775250002459
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          338,
+          123
+        ],
+        "raw": "left_click (338,123)"
+      },
+      "timestamp": 1775250026562
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Preview is focused with test_image.jpg active, Tools menu is open showing \"Adjust Size...\" option.\", tried [left_click (338,255), left_click (296,13), left_click (338,122)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

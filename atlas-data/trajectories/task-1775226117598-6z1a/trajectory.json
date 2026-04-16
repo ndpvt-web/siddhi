@@ -1,0 +1,360 @@
+{
+  "taskId": "task-1775226117598-6z1a",
+  "taskDescription": "Open Notes and share a note by generating a collaboration link",
+  "startTime": 1775226117598,
+  "endTime": 1775226379364,
+  "duration": 261766,
+  "success": true,
+  "finalText": "LETS GOOO! 🎉 It worked! The collaboration link has been generated and copied to the clipboard! I can see:\n\n1. The \"Create Link\" dialog has closed\n2. The note now shows **\"3 April 2026 at 10:15 PM — Shared\"** at the top (it says \"Shared\" now!)\n3. The \"Sample Data Table\" note in the list now has a **collaboration icon** (the little circle with a person) next to it\n4. The \"Shared\" folder in the sidebar now shows **2** items (it was there before but now this note is shared)\n\nCHECKPOINT [3]: Collaboration link generated and copied to clipboard. The note is now shared, as indicated by \"Shared\" label in the timestamp and the collaboration icon on the note.\nSCENE: Notes app showing \"Sample Data Table\" note with \"Shared\" status, collaboration link copied to clipboard.\n\nThe collaboration link has been successfully generated and is now in your clipboard! You can paste it (Cmd+V) anywhere to share it with others. The note \"Sample Data Table\" is now set up for collaboration with test@example.com. Ez clap! 🔥",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Share menu is open with \"Collaborate\" mode selected, showing options including \"Invite with Link\"",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "1829c8dfdf80c55615badf4992d57737",
+      "semanticState": "Notes sharing popover showing \"Sample Data Table\" with Collaborate option selected and various sharing methods including \"Invite with Link\"",
+      "timestamp": 1775226157869
+    },
+    {
+      "stepNumber": 2,
+      "description": "\"Create Link\" dialog is open with a \"Copy Link\" button visible",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "b684c824ff3bd57c5048c85d24dad823",
+      "semanticState": "Modal dialog titled \"Create Link\" with a To: field, description text, and \"Copy Link\" button at the bottom",
+      "timestamp": 1775226182466
+    },
+    {
+      "stepNumber": 3,
+      "description": "Collaboration link generated and copied to clipboard. The note is now shared, as indicated by \"Shared\" label in the timestamp and the collaboration icon on the note.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "4914bccadff28503c6ffc407a3a82582",
+      "semanticState": "Notes app showing \"Sample Data Table\" note with \"Shared\" status, collaboration link copied to clipboard.",
+      "timestamp": 1775226379364
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Make sure the note is selected/open (it already is - \"Sample Data Table\")",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click the Share/Collaborate button (the upload-looking icon in the note toolbar)",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Select \"Collaborate\" or \"Copy Link\" option to generate a collaboration link",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775226119425,
+      "relativeTime": 1827,
+      "screenshotPath": "step-0.png",
+      "exactHash": "9e77c901c4f15a725d8cf6170ea521b7",
+      "thumbnailHash": "8d6a48ff89bcef4a0778e13ddd00fb88",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Clicking the share button should open a sharing/collaboration menu",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775226148648,
+      "relativeTime": 31050,
+      "screenshotPath": "step-1.png",
+      "exactHash": "1829c8dfdf80c55615badf4992d57737",
+      "thumbnailHash": "f147aed6092f2ef5a9dfbcced7005424",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1031,
+          122
+        ],
+        "raw": "left_click (1031,122)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Should open a dialog or generate a link that can be copied/shared",
+      "surprise": {
+        "score": 0.9285714285714286,
+        "expected": "Clicking the share button should open a sharing/collaboration menu",
+        "observed": "success left_click (1031,122)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes sharing popover showing \"Sample Data Table\" with Collaborate option selected and various sharing methods including \"Invite with Link\"",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 3
+      },
+      "assistantIntent": "Alright, Notes is already open and I can see the \"Sample Data Table\" note is currently selected",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775226171065,
+      "relativeTime": 53467,
+      "screenshotPath": "step-2.png",
+      "exactHash": "b684c824ff3bd57c5048c85d24dad823",
+      "thumbnailHash": "dc2d8d0f9a9e95ce3d009729c423f119",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          995,
+          358
+        ],
+        "raw": "left_click (995,358)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The link will be generated and copied to clipboard, dialog will close",
+      "surprise": {
+        "score": 1,
+        "expected": "Should open a dialog or generate a link that can be copied/shared",
+        "observed": "success left_click (995,358)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Modal dialog titled \"Create Link\" with a To: field, description text, and \"Copy Link\" button at the bottom",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh nice, the sharing menu popped up",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775226195316,
+      "relativeTime": 77718,
+      "screenshotPath": "step-3.png",
+      "exactHash": "6f10126ac13912bba7e5d13ab2654126",
+      "thumbnailHash": "bd5e5172966c785b95f80d61cd1d2aeb",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          822,
+          507
+        ],
+        "raw": "left_click (822,507)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "After adding an email, the Copy Link button should work and generate the link",
+      "surprise": {
+        "score": 1,
+        "expected": "The link will be generated and copied to clipboard, dialog will close",
+        "observed": "success left_click (822,507)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Copy Link' (Button) in Notes",
+      "resolvedTarget": {
+        "label": "Copy Link",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 1
+      },
+      "assistantIntent": "🎉 A \"Create Link\" dialog has appeared",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775226241780,
+      "relativeTime": 124182,
+      "screenshotPath": "step-4.png",
+      "exactHash": "9c60fa35d371ea436aba8a53ad38cee6",
+      "thumbnailHash": "c73f57088b86a3350cda46dfcb053d83",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": "The collaboration link will be generated and copied to clipboard, dialog should close",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Hmm, the dialog is still open",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, the dialog is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775226288215,
+      "relativeTime": 170617,
+      "screenshotPath": "step-5.png",
+      "exactHash": "4914bccadff28503c6ffc407a3a82582",
+      "thumbnailHash": "8e219a9dd83b3e9a25d7a9409dbf2c0e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          822,
+          507
+        ],
+        "raw": "left_click (822,507)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The collaboration link will be generated and copied to clipboard, dialog should close",
+        "observed": "success left_click (822,507)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Notes app showing \"Sample Data Table\" note with \"Shared\" status, collaboration link copied to clipboard.",
+      "resolvedTarget": {
+        "label": "Copy Link",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 1
+      },
+      "assistantIntent": "I can see \"test@example",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1031,
+          122
+        ],
+        "raw": "left_click (1031,122)"
+      },
+      "timestamp": 1775226148648
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          995,
+          358
+        ],
+        "raw": "left_click (995,358)"
+      },
+      "timestamp": 1775226171065
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          822,
+          507
+        ],
+        "raw": "left_click (822,507)"
+      },
+      "timestamp": 1775226195316
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775226241780
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          822,
+          507
+        ],
+        "raw": "left_click (822,507)"
+      },
+      "timestamp": 1775226288215
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"\"Create Link\" dialog is open with a \"Copy Link\" button visible\", tried [left_click (1031,122), left_click (995,358), left_click (822,507)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 5,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

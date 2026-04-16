@@ -1,0 +1,397 @@
+{
+  "taskId": "task-1775246979672-1bri",
+  "taskDescription": "Open TextEdit, create a new document, type 'Hello World', and save it to the Desktop as 'hello.txt'",
+  "startTime": 1775246979672,
+  "endTime": 1775247149186,
+  "duration": 169514,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 2,
+      "description": "Format menu is open showing \"Make Plain Text\" option.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "92da64c5a47b98a3775651ef5551761e",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "timestamp": 1775247027248
+    },
+    {
+      "stepNumber": 2,
+      "description": "Successfully switched to Plain Text mode - title bar shows \"Untitled 3.txt\"",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "2a31f361f8061ce9a8332ce1408bf42f",
+      "semanticState": "TextEdit showing \"Untitled 3.txt\" in plain text mode, document body is empty and ready for input.",
+      "timestamp": 1775247051299
+    },
+    {
+      "stepNumber": 3,
+      "description": "Document body is focused - cursor is visible in the text area.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "4b9affbbf772884451f73223973390b1",
+      "semanticState": "TextEdit \"Untitled 3.txt\" with cursor blinking at the top of the document body, ready for input.",
+      "timestamp": 1775247074968
+    },
+    {
+      "stepNumber": 4,
+      "description": "'Hello World' text is successfully typed in the document.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "f827e67c8e0b57ae586579154de16399",
+      "semanticState": "TextEdit \"Untitled 3.txt — Edited\" with \"Hello World\" typed in the document body.",
+      "timestamp": 1775247095142
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the document body to ensure focus",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Switch to Plain Text mode (Format > Make Plain Text)",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type 'Hello World'",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Save as 'hello.txt' to the Desktop",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775246981342,
+      "relativeTime": 1670,
+      "screenshotPath": "step-0.png",
+      "exactHash": "68cdff994f61814541f2cc38c6af78f7",
+      "thumbnailHash": "5932f43ee927adc39972e622f599b768",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Format menu will open showing text format options",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit is open with \"Untitled 3\" document visible. There's also \"Untitled 2.rtf\" in the background. The document appears to be in Rich Text format (RTF). I need to switch to plain text mode before saving as .txt.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775247019476,
+      "relativeTime": 39804,
+      "screenshotPath": "step-1.png",
+      "exactHash": "92da64c5a47b98a3775651ef5551761e",
+      "thumbnailHash": "cce3a4b47fa986a226dcdbbdb65948ee",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Format menu will open showing text format options",
+        "observed": "success left_click (219,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "STEP [2]: Switch to Plain Text mode via Format menu",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775247040892,
+      "relativeTime": 61220,
+      "screenshotPath": "step-2.png",
+      "exactHash": "2a31f361f8061ce9a8332ce1408bf42f",
+      "thumbnailHash": "db7204c03142c2519f09ca526b0c7834",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Cursor will appear in the document body, ready for typing",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit showing \"Untitled 3.txt\" in plain text mode, document body is empty and ready for input.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "TextEdit",
+        "distance": 42
+      },
+      "assistantIntent": "Format menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775247067360,
+      "relativeTime": 87688,
+      "screenshotPath": "step-3.png",
+      "exactHash": "4b9affbbf772884451f73223973390b1",
+      "thumbnailHash": "99c4916af2683c872ba569cd1f30e3cd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          420,
+          350
+        ],
+        "raw": "left_click (420,350)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "'Hello World' text will appear in the document",
+      "surprise": {
+        "score": 1,
+        "expected": "Cursor will appear in the document body, ready for typing",
+        "observed": "success left_click (420,350)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit \"Untitled 3.txt\" with cursor blinking at the top of the document body, ready for input.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO, it worked",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775247082443,
+      "relativeTime": 102771,
+      "screenshotPath": "step-4.png",
+      "exactHash": "f827e67c8e0b57ae586579154de16399",
+      "thumbnailHash": "fdf133997e81347bff70659d9804352f",
+      "action": {
+        "type": "type",
+        "text": "Hello World",
+        "raw": "type: \"Hello World\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Save dialog will open, allowing me to choose the filename and location",
+      "surprise": {
+        "score": 0.6,
+        "expected": "'Hello World' text will appear in the document",
+        "observed": "success type: \"hello world\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "TextEdit \"Untitled 3.txt — Edited\" with \"Hello World\" typed in the document body.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the cursor blinking in the document (top left of the text area)",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775247104190,
+      "relativeTime": 124518,
+      "screenshotPath": "step-5.png",
+      "exactHash": "15d493a5bbb3570a4b293c7f0e876027",
+      "thumbnailHash": "ed58f17e68eba469e681e0236998ec88",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+s",
+        "raw": "key: \"cmd+shift+s\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Save dialog will open, allowing me to choose the filename and location",
+        "observed": "success key: \"cmd+shift+s\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "🎉 \"Hello World\" is typed in the document",
+      "resolvedTarget": null,
+      "assistantIntent": "🎉 \"Hello World\" is typed in the document",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775247132574,
+      "relativeTime": 152902,
+      "screenshotPath": "step-6.png",
+      "exactHash": "a8d0e3a62af91fdd6f75c3ca5de01c76",
+      "thumbnailHash": "3923e50489bdd2291c5cf69590bb8edf",
+      "action": {
+        "type": "type",
+        "text": "hello.txt",
+        "raw": "type: \"hello.txt\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Save dialog is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Save dialog is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775247019477
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "timestamp": 1775247040892
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          420,
+          350
+        ],
+        "raw": "left_click (420,350)"
+      },
+      "timestamp": 1775247067360
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Hello World",
+        "raw": "type: \"Hello World\""
+      },
+      "timestamp": 1775247082443
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+shift+s",
+        "raw": "key: \"cmd+shift+s\""
+      },
+      "timestamp": 1775247104190
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "hello.txt",
+        "raw": "type: \"hello.txt\""
+      },
+      "timestamp": 1775247132574
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully switched to Plain Text mode - title bar shows \"Untitled 3.txt\"\", tried [left_click (219,13), left_click (267,100), left_click (420,350)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

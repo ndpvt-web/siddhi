@@ -1,0 +1,334 @@
+{
+  "taskId": "task-1775236788722-prn3",
+  "taskDescription": "Open System Settings and configure the screen saver to start after 5 minutes",
+  "startTime": 1775236788722,
+  "endTime": 1775236973009,
+  "duration": 184287,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Searched for \"Screen Saver\" - dropdown showing Lock Screen and related options",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "7a37dbbd73d37c48a06569ce23eaebde",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "timestamp": 1775236831513
+    },
+    {
+      "stepNumber": 2,
+      "description": "Lock Screen settings pane is open - but screen saver timing isn't visible, need to scroll up",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "f11d8be237e32ff1f8922ae74e5c1627",
+      "semanticState": "Clicked '(unlabeled)' (Button) in System Settings",
+      "timestamp": 1775236852823
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Search for \"Screen Saver\" in the System Settings search bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to the Screen Saver settings",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Set the start time to 5 minutes",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775236790332,
+      "relativeTime": 1610,
+      "screenshotPath": "step-0.png",
+      "exactHash": "77bfb9e41d9be726a5a635ec7480a79d",
+      "thumbnailHash": "409dc685df127e3d30ef715ed86c777d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The search bar will get focused and I can type \"Screen Saver\"",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775236823015,
+      "relativeTime": 34293,
+      "screenshotPath": "step-1.png",
+      "exactHash": "7a37dbbd73d37c48a06569ce23eaebde",
+      "thumbnailHash": "8904b5d0ff11b5606b43dbfe5765e1f4",
+      "action": {
+        "type": "type",
+        "text": "Screen Saver",
+        "raw": "type: \"Screen Saver\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Lock Screen settings pane will open with screen saver timing options",
+      "surprise": {
+        "score": 0.5,
+        "expected": "The search bar will get focused and I can type \"Screen Saver\"",
+        "observed": "success type: \"screen saver\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 3
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 68
+      },
+      "assistantIntent": "Alright, System Settings is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775236843894,
+      "relativeTime": 55172,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f11d8be237e32ff1f8922ae74e5c1627",
+      "thumbnailHash": "363ca44507043932c6d8543d9667b0a8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          278,
+          135
+        ],
+        "raw": "left_click (278,135)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Lock Screen settings pane will open with screen saver timing options",
+        "observed": "success left_click (278,135)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 64
+      },
+      "assistantIntent": "Search results are showing",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775236860832,
+      "relativeTime": 72110,
+      "screenshotPath": "step-3.png",
+      "exactHash": "d36a2821cbd09cf1080c88cf23376623",
+      "thumbnailHash": "e1e6a7f105435a839b0b9efeb3577562",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          640,
+          300
+        ],
+        "raw": "scroll (640,300)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Will navigate to the screen saver timing setting",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Lock Screen settings are open but I don't see the \"Start Screen Saver when inactive\" option here",
+      "resolvedTarget": null,
+      "assistantIntent": "Lock Screen settings are open but I don't see the \"Start Screen Saver when inactive\" option here",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775236891135,
+      "relativeTime": 102413,
+      "screenshotPath": "step-4.png",
+      "exactHash": "8bdd825d44c525fb9ab882a710faa2fe",
+      "thumbnailHash": "d1d7088faf1b2c177137dedd8dcaee22",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          297,
+          169
+        ],
+        "raw": "left_click (297,169)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Will navigate to the screen saver timing setting",
+        "observed": "success left_click (297,169)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, this is already at the top of the Lock Screen pane and I can see the first option is \"Turn display off on battery w",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, this is already at the top of the Lock Screen pane and I can see the first option is \"Turn display off on battery w",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775236913838,
+      "relativeTime": 125116,
+      "screenshotPath": "step-5.png",
+      "exactHash": "a6a3a184968c12bf651f1ddcb6370774",
+      "thumbnailHash": "ef409985d124931d8a10284e8e9b5931",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          640,
+          200
+        ],
+        "raw": "scroll (640,200)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "OK so \"Start Screen Saver when inactive\" is now selected/highlighted in the sidebar, but the right pane still shows the ",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so \"Start Screen Saver when inactive\" is now selected/highlighted in the sidebar, but the right pane still shows the ",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "Screen Saver",
+        "raw": "type: \"Screen Saver\""
+      },
+      "timestamp": 1775236823015
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          278,
+          135
+        ],
+        "raw": "left_click (278,135)"
+      },
+      "timestamp": 1775236843894
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          640,
+          300
+        ],
+        "raw": "scroll (640,300)"
+      },
+      "timestamp": 1775236860832
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          297,
+          169
+        ],
+        "raw": "left_click (297,169)"
+      },
+      "timestamp": 1775236891135
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "scroll",
+        "coordinates": [
+          640,
+          200
+        ],
+        "raw": "scroll (640,200)"
+      },
+      "timestamp": 1775236913838
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Lock Screen settings pane is open - but screen saver timing isn't visible, need to scroll up\", tried [left_click (278,135), scroll (640,300), left_click (297,169)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

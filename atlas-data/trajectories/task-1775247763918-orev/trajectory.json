@@ -1,0 +1,383 @@
+{
+  "taskId": "task-1775247763918-orev",
+  "taskDescription": "Open TextEdit in plain text mode and type a simple Python script",
+  "startTime": 1775247763918,
+  "endTime": 1775247959903,
+  "duration": 195985,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "New TextEdit document \"Untitled 5\" is open and visible.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "20e544a4e6238f5fd8e009548f83c61b",
+      "semanticState": "TextEdit showing a new blank document \"Untitled 5\" with rich text toolbar visible - needs to be converted to plain text.",
+      "timestamp": 1775247790667
+    },
+    {
+      "stepNumber": 2,
+      "description": "Document \"Untitled 5.txt\" is now in Plain Text mode - no rich text toolbar visible!",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "632482f4d818e2ee714e5a4d6259d950",
+      "semanticState": "TextEdit showing \"Untitled 5.txt\" - a blank plain text document with no formatting toolbar, cursor is at the top.",
+      "timestamp": 1775247841078
+    },
+    {
+      "stepNumber": 3,
+      "description": "Cursor is focused in the plain text document body.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "ace9ccfd89c413010bd48dc045c1e0e6",
+      "semanticState": "TextEdit showing \"Untitled 5.txt\" with the text cursor blinking at the top of the blank document area.",
+      "timestamp": 1775247894076
+    },
+    {
+      "stepNumber": 4,
+      "description": "Python script is typed but has autocorrect issues - several Python keywords got capitalized by macOS.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "634ce27e77c549f7fb05377e68ea7d62",
+      "semanticState": "TextEdit showing \"Untitled 5.txt\" with the full Python script visible, but with autocorrected capitalizations on keywords.",
+      "timestamp": 1775247934693
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a new TextEdit document (Cmd+N)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Switch it to Plain Text mode (Format > Make Plain Text or Shift+Cmd+T)",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type a simple Python script",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Verify everything looks good",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775247765525,
+      "relativeTime": 1607,
+      "screenshotPath": "step-0.png",
+      "exactHash": "9913e9a3f5b82bce618fffebd15b50d5",
+      "thumbnailHash": "b332e8860a463d3eb51ad8f88c54ac5b",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "A new blank TextEdit document should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775247781894,
+      "relativeTime": 17976,
+      "screenshotPath": "step-1.png",
+      "exactHash": "20e544a4e6238f5fd8e009548f83c61b",
+      "thumbnailHash": "94a76bca74b0ac5236768f4422273a5d",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Format menu should drop down with \"Make Plain Text\" option visible",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank TextEdit document should open",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit showing a new blank document \"Untitled 5\" with rich text toolbar visible - needs to be converted to plain text.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: A new blank TextEdit document should open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775247808310,
+      "relativeTime": 44392,
+      "screenshotPath": "step-2.png",
+      "exactHash": "2d1f14fa3706b56c9e111d0b684363cc",
+      "thumbnailHash": "869ecfadf2db20d139b9c85602d63c61",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          220,
+          13
+        ],
+        "raw": "left_click (220,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Format menu should drop down with \"Make Plain Text\" option visible",
+        "observed": "success left_click (220,13)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 73
+      },
+      "assistantIntent": "EXPECT: Format menu should drop down with \"Make Plain Text\" option visible",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775247830879,
+      "relativeTime": 66961,
+      "screenshotPath": "step-3.png",
+      "exactHash": "632482f4d818e2ee714e5a4d6259d950",
+      "thumbnailHash": "64cf06ae1d5d2685e3b3769dbae65198",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          266,
+          100
+        ],
+        "raw": "left_click (266,100)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit showing \"Untitled 5.txt\" - a blank plain text document with no formatting toolbar, cursor is at the top.",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 38
+      },
+      "assistantIntent": "Hmm, that clicked on something weird - let me take a screenshot to see what happened",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775247853994,
+      "relativeTime": 90076,
+      "screenshotPath": "step-4.png",
+      "exactHash": "c9c9fc4a71ae18a9a963f4e7cdd9407c",
+      "thumbnailHash": "e382e51e3dcf142fa279d1b7c17811b9",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          460,
+          350
+        ],
+        "raw": "left_click (460,350)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "It actually worked",
+      "resolvedTarget": null,
+      "assistantIntent": "It actually worked",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775247880464,
+      "relativeTime": 116546,
+      "screenshotPath": "step-5.png",
+      "exactHash": "ace9ccfd89c413010bd48dc045c1e0e6",
+      "thumbnailHash": "72b6f7a43c046fad110ba60a381f6aa3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          460,
+          155
+        ],
+        "raw": "left_click (460,155)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit showing \"Untitled 5.txt\" with the text cursor blinking at the top of the blank document area.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 42
+      },
+      "assistantIntent": "The document looks focused and ready",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775247920645,
+      "relativeTime": 156727,
+      "screenshotPath": "step-6.png",
+      "exactHash": "634ce27e77c549f7fb05377e68ea7d62",
+      "thumbnailHash": "2cb9ab8a498b1617d6d4a72ad09ff452",
+      "action": {
+        "type": "type",
+        "text": "# Simple Python Script\n# A fun little program that does some basic stuff\n\ndef greet(name):\n    \"\"\"Returns a greeting message.\"\"\"\n    return f\"Hello, {name}! Welcome to Python!\"\n\ndef add_numbers(a, b):\n    \"\"\"Adds two numbers and returns the result.\"\"\"\n    return a + b\n\ndef is_even(number):\n    \"\"\"Checks if a number is even.\"\"\"\n    return number % 2 == 0\n\n# Main program\nif __name__ == \"__main__\":\n    # Greet the user\n    print(greet(\"World\"))\n\n    # Do some math\n    result = add_numbers(42, 58)\n    print(f\"42 + 58 = {result}\")\n\n    # Check some numbers\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    for num in numbers:\n        status = \"even\" if is_even(num) else \"odd\"\n        print(f\"{num} is {status}\")\n\n    print(\"Script complete! 🐍\")",
+        "raw": "type: \"# Simple Python Script\n# A fun little program that\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit showing \"Untitled 5.txt\" with the full Python script visible, but with autocorrected capitalizations on keywords.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the cursor is now blinking in the \"Untitled 5",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775247781894
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          220,
+          13
+        ],
+        "raw": "left_click (220,13)"
+      },
+      "timestamp": 1775247808310
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          266,
+          100
+        ],
+        "raw": "left_click (266,100)"
+      },
+      "timestamp": 1775247830879
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          460,
+          350
+        ],
+        "raw": "left_click (460,350)"
+      },
+      "timestamp": 1775247853994
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          460,
+          155
+        ],
+        "raw": "left_click (460,155)"
+      },
+      "timestamp": 1775247880464
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "# Simple Python Script\n# A fun little program that does some basic stuff\n\ndef greet(name):\n    \"\"\"Returns a greeting message.\"\"\"\n    return f\"Hello, {name}! Welcome to Python!\"\n\ndef add_numbers(a, b):\n    \"\"\"Adds two numbers and returns the result.\"\"\"\n    return a + b\n\ndef is_even(number):\n    \"\"\"Checks if a number is even.\"\"\"\n    return number % 2 == 0\n\n# Main program\nif __name__ == \"__main__\":\n    # Greet the user\n    print(greet(\"World\"))\n\n    # Do some math\n    result = add_numbers(42, 58)\n    print(f\"42 + 58 = {result}\")\n\n    # Check some numbers\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    for num in numbers:\n        status = \"even\" if is_even(num) else \"odd\"\n        print(f\"{num} is {status}\")\n\n    print(\"Script complete! 🐍\")",
+        "raw": "type: \"# Simple Python Script\n# A fun little program that\""
+      },
+      "timestamp": 1775247920645
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

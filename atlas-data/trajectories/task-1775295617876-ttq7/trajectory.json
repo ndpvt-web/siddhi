@@ -1,0 +1,377 @@
+{
+  "taskId": "task-1775295617876-ttq7",
+  "taskDescription": "Open Safari, navigate to wikipedia.org, search for 'Alan Turing', and take a screenshot of the article page",
+  "startTime": 1775295617876,
+  "endTime": 1775295732665,
+  "duration": 114789,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "The color picker popup is closed! Clean Finder desktop view now.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "b75413650eae508ae596cf7cad5257af",
+      "semanticState": "Finder window showing Desktop contents with files and folders, no popup overlays.",
+      "timestamp": 1775295658536
+    },
+    {
+      "stepNumber": 2,
+      "description": "Spotlight is open! The search bar is visible at the top center of the screen.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "a8fe544cac563b6ef9eb2a94686f09a5",
+      "semanticState": "Spotlight search bar is open and focused, ready for input.",
+      "timestamp": 1775295671641
+    },
+    {
+      "stepNumber": 3,
+      "description": "Safari is open but with developer tools panel showing and github.com loaded.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "094078e7e50d50c82ab6dcc08752f0ca",
+      "semanticState": "Safari browser with github.com loaded, developer tools panel open at bottom half of window.",
+      "timestamp": 1775295705549
+    },
+    {
+      "stepNumber": 4,
+      "description": "Developer tools closed successfully. Clean Safari window showing github.com.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "b984a34e070c58b924e7911f69d42757",
+      "semanticState": "Safari browser with github.com homepage, no developer tools, clean view.",
+      "timestamp": 1775295719432
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the color picker/image preview popup",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Safari using Spotlight or Dock",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Navigate directly to en.wikipedia.org/wiki/Alan_Turing",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Take a screenshot of the article",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775295619569,
+      "relativeTime": 1693,
+      "screenshotPath": "step-0.png",
+      "exactHash": "41a7e568077ead8d2b829899a010598b",
+      "thumbnailHash": "111d043bcdbbd8d0419f6a072b0dcfb1",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The color picker popup should close.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775295634666,
+      "relativeTime": 16790,
+      "screenshotPath": "step-1.png",
+      "exactHash": "dd1406bb5b5f21c5964bf8cd59451fc0",
+      "thumbnailHash": "3973da71d49ca5e65fe94395490a9d3c",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The color picker popup should close.",
+        "observed": "success key: \"escape\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see the desktop with Finder open and some image preview in the way",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see the desktop with Finder open and some image preview in the way",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775295650830,
+      "relativeTime": 32954,
+      "screenshotPath": "step-2.png",
+      "exactHash": "b75413650eae508ae596cf7cad5257af",
+      "thumbnailHash": "e0b5c8626d6e947cd4d515f232b10d63",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          501,
+          266
+        ],
+        "raw": "left_click (501,266)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Spotlight search bar appears at center of screen.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder window showing Desktop contents with files and folders, no popup overlays.",
+      "resolvedTarget": null,
+      "assistantIntent": "That popup is stubborn lol",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775295664163,
+      "relativeTime": 46287,
+      "screenshotPath": "step-3.png",
+      "exactHash": "a8fe544cac563b6ef9eb2a94686f09a5",
+      "thumbnailHash": "90abbba40aaf4996f95019b2ebb740ad",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Spotlight shows Safari as top result.",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar appears at center of screen.",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar is open and focused, ready for input.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: The color picker popup is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775295676717,
+      "relativeTime": 58841,
+      "screenshotPath": "step-4.png",
+      "exactHash": "7c8108cdb3f10dbff8308aa90df73214",
+      "thumbnailHash": "b6fbcea7938a4637e9e6ec679786462c",
+      "action": {
+        "type": "type",
+        "text": "Safari",
+        "raw": "type: \"Safari\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Safari opens up with a browser window.",
+      "surprise": {
+        "score": 0.8,
+        "expected": "Spotlight shows Safari as top result.",
+        "observed": "success type: \"safari\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "CHECKPOINT [2]: Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775295696852,
+      "relativeTime": 78976,
+      "screenshotPath": "step-5.png",
+      "exactHash": "094078e7e50d50c82ab6dcc08752f0ca",
+      "thumbnailHash": "006765e8df880f9de4902bf6390e1e82",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Developer tools close, giving us a clean browser window.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Safari browser with github.com loaded, developer tools panel open at bottom half of window.",
+      "resolvedTarget": null,
+      "assistantIntent": "app is the top result",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775295712080,
+      "relativeTime": 94204,
+      "screenshotPath": "step-6.png",
+      "exactHash": "b984a34e070c58b924e7911f69d42757",
+      "thumbnailHash": "68c67624e17974634c154da98148a063",
+      "action": {
+        "type": "key",
+        "text": "cmd+alt+i",
+        "raw": "key: \"cmd+alt+i\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Address bar gets focused, I can type the URL.",
+      "surprise": {
+        "score": 1,
+        "expected": "Developer tools close, giving us a clean browser window.",
+        "observed": "success key: \"cmd+alt+i\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Safari browser with github.com homepage, no developer tools, clean view.",
+      "resolvedTarget": null,
+      "assistantIntent": "Safari is open but oh man, there's developer tools open at the bottom taking up half the screen",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775295634666
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          501,
+          266
+        ],
+        "raw": "left_click (501,266)"
+      },
+      "timestamp": 1775295650830
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775295664163
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Safari",
+        "raw": "type: \"Safari\""
+      },
+      "timestamp": 1775295676717
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775295696852
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "cmd+alt+i",
+        "raw": "key: \"cmd+alt+i\""
+      },
+      "timestamp": 1775295712080
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"The color picker popup is closed! Clean Finder desktop view now.\", tried [key: \"Escape\", left_click (501,266), key: \"cmd+space\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

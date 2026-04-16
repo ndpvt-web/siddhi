@@ -1,0 +1,250 @@
+{
+  "taskId": "task-1773603366507-b46y",
+  "taskDescription": "In Safari, you should see Google with search results or the search page. Do these steps:\n1. Take a screenshot first to see the current state\n2. If search results are visible, click the Wikipedia link ",
+  "startTime": 1773603366507,
+  "endTime": 1773603476616,
+  "duration": 110109,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Initial state confirmed - Google search page with \"capybara animal\" typed, autocomplete showing, no results yet.",
+      "nodeId": "step-0",
+      "nodeIndex": 0,
+      "screenshotHash": "d98f50b0089c73b8cee0c256a5eb2b65",
+      "semanticState": "Google homepage with search box containing \"capybara animal\" and autocomplete dropdown visible.",
+      "timestamp": 1773603379332
+    },
+    {
+      "stepNumber": 2,
+      "description": "Google search results loaded successfully for \"capybara animal\" - showing knowledge panel with images, mass (35-66 kg), gestation period, videos, People also ask section, and About section with Wikipedia link.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "707ea095a1505aed351a8a67ccb5ab02",
+      "semanticState": "Google search results page for \"capybara animal\" with rich knowledge panel showing capybara images, facts, YouTube videos, and About section mentioning Wikipedia.",
+      "timestamp": 1773603463708
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Press Enter to submit the search",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Wait for results to load, then click the Wikipedia link about capybara",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Once on Wikipedia, scroll down past the first section",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Click on any blue hyperlink in the article body",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Take final screenshot to verify",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773603367935,
+      "relativeTime": 1428,
+      "screenshotPath": "step-0.png",
+      "exactHash": "d98f50b0089c73b8cee0c256a5eb2b65",
+      "thumbnailHash": "5a16dfccff3e15049f36370c350069b0",
+      "action": null,
+      "toolResult": null,
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Google search results page should load with various links about capybara including a Wikipedia result.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Google homepage with search box containing \"capybara animal\" and autocomplete dropdown visible.",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773603383927,
+      "relativeTime": 17420,
+      "screenshotPath": "step-1.png",
+      "exactHash": "84f187c83286c7e7345f2718561fd62f",
+      "thumbnailHash": "3cf71e0186fc94276bba743e1533030e",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Google search results page should load with various links about capybara including a Wikipedia result.",
+        "observed": "success key: \"return\"",
+        "expectedKeywords": 12,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "key: \"Return\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773603399515,
+      "relativeTime": 33008,
+      "screenshotPath": "step-2.png",
+      "exactHash": "29a9c4e7b7d6aca0e0f11a9982fcc745",
+      "thumbnailHash": "aed42259eb0bd8ed09b4323fc5950a34",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          630,
+          424
+        ],
+        "raw": "left_click (630,424)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (630,424) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773603420387,
+      "relativeTime": 53880,
+      "screenshotPath": "step-3.png",
+      "exactHash": "f78ed8c5c8b9370359428b7fb9a975ff",
+      "thumbnailHash": "cefc54dbe7cae0116be525ff01b7bd74",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Search results should load after clicking the Google Search button.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "wait -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1773603452096,
+      "relativeTime": 85589,
+      "screenshotPath": "step-4.png",
+      "exactHash": "707ea095a1505aed351a8a67ccb5ab02",
+      "thumbnailHash": "0960902dde8b74df44daa15ae67b51ae",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Should navigate to the Wikipedia article about Capybara.",
+      "surprise": {
+        "score": 1,
+        "expected": "Search results should load after clicking the Google Search button.",
+        "observed": "success wait",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Google search results page for \"capybara animal\" with rich knowledge panel showing capybara images, facts, YouTube videos, and About section mentioning Wikipedia.",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1773603383928
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          630,
+          424
+        ],
+        "raw": "left_click (630,424)"
+      },
+      "timestamp": 1773603399515
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1773603420387
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1773603452096
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,383 @@
+{
+  "taskId": "task-1775248154679-9lwa",
+  "taskDescription": "Open Notes, create a note, add a table with 3 columns and 4 rows, fill in sample data",
+  "startTime": 1775248154679,
+  "endTime": 1775248323127,
+  "duration": 168448,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "New note created! I can see a blank note editor on the right side with the cursor ready. The new note shows \"4 April 2026 at 4:29 AM\" and is listed as \"New Note\" in the sidebar.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "18fe41b1e14411b61389650a18c742f9",
+      "semanticState": "Notes app with a fresh empty note open, cursor blinking in the editor area.",
+      "timestamp": 1775248183365
+    },
+    {
+      "stepNumber": 2,
+      "description": "Title \"Sample Data Table\" typed and cursor is on the next line. Note is visible in the sidebar too.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "ba56932d62d4417fd0a3fafda9b9de27",
+      "semanticState": "Notes editor showing \"Sample Data Table\" as title, cursor on next line ready for table insertion.",
+      "timestamp": 1775248220138
+    },
+    {
+      "stepNumber": 3,
+      "description": "Table inserted! It's a 2x2 default table. Now need to expand to 3 columns × 4 rows.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "aaf3845b8899e0d9624d73ca570818a3",
+      "semanticState": "Notes editor showing \"Sample Data Table\" title with a 2x2 table below it.",
+      "timestamp": 1775248244396
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a new note (Cmd+N)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Type a title for the note",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Insert a table using the Table button in toolbar",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Adjust table to 3 columns × 4 rows",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Fill in sample data",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775248156407,
+      "relativeTime": 1728,
+      "screenshotPath": "step-0.png",
+      "exactHash": "ca4b1f3b83e345006c0de0ffcad935af",
+      "thumbnailHash": "b5a1f7709af206cdd2914e4e823fbd27",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775248173833,
+      "relativeTime": 19154,
+      "screenshotPath": "step-1.png",
+      "exactHash": "18fe41b1e14411b61389650a18c742f9",
+      "thumbnailHash": "bfd1f0497087beeb917f342adcba2a13",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Title text will appear in the note editor",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with a fresh empty note open, cursor blinking in the editor area.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Notes is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775248211531,
+      "relativeTime": 56852,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ba56932d62d4417fd0a3fafda9b9de27",
+      "thumbnailHash": "71d06f62dccdabf10900059b705a250a",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A default table (probably 2x2) will appear in the note",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes editor showing \"Sample Data Table\" as title, cursor on next line ready for table insertion.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "Notes",
+        "distance": 70
+      },
+      "assistantIntent": "CHECKPOINT [1]: New note created",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775248233968,
+      "relativeTime": 79289,
+      "screenshotPath": "step-3.png",
+      "exactHash": "aaf3845b8899e0d9624d73ca570818a3",
+      "thumbnailHash": "35856cd78bab5658d2f59fae6f37c1dd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          889,
+          122
+        ],
+        "raw": "left_click (889,122)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Context menu with options to add rows/columns",
+      "surprise": {
+        "score": 1,
+        "expected": "A default table (probably 2x2) will appear in the note",
+        "observed": "success left_click (889,122)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Notes editor showing \"Sample Data Table\" title with a 2x2 table below it.",
+      "resolvedTarget": {
+        "label": "Table",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 4
+      },
+      "assistantIntent": "CHECKPOINT [2]: Title \"Sample Data Table\" typed and cursor is on the next line",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775248259303,
+      "relativeTime": 104624,
+      "screenshotPath": "step-4.png",
+      "exactHash": "6116c988e7b029818f7782523164aa71",
+      "thumbnailHash": "6f5c0f46ce398463d850b9ea50a908da",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          875,
+          225
+        ],
+        "raw": "left_click (875,225)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Context menu with options to add rows/columns",
+        "observed": "success left_click (875,225)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked 'table' (Link) in Notes",
+      "resolvedTarget": {
+        "label": "table",
+        "role": "Link",
+        "app": "Notes",
+        "distance": 7
+      },
+      "assistantIntent": "Hmm, that might've clicked the wrong thing",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775248273168,
+      "relativeTime": 118489,
+      "screenshotPath": "step-5.png",
+      "exactHash": "6d0d009450ea3f1a95221e385b51216a",
+      "thumbnailHash": "267df3b83c6ffa66d52eb3ff3d18c760",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Ugh, that opened the media dropdown instead",
+      "resolvedTarget": null,
+      "assistantIntent": "Ugh, that opened the media dropdown instead",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775248296416,
+      "relativeTime": 141737,
+      "screenshotPath": "step-6.png",
+      "exactHash": "f24ab175b00ac9dbc49f690a5f50bf18",
+      "thumbnailHash": "120add931bb4a9679d727b46194046f3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          790,
+          400
+        ],
+        "raw": "left_click (790,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Clicking on a cell will focus the table, then right-clicking will show context menu with add row/column options",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Still showing the media dropdown",
+      "resolvedTarget": null,
+      "assistantIntent": "Still showing the media dropdown",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775248173833
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775248211531
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          889,
+          122
+        ],
+        "raw": "left_click (889,122)"
+      },
+      "timestamp": 1775248233968
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          875,
+          225
+        ],
+        "raw": "left_click (875,225)"
+      },
+      "timestamp": 1775248259303
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775248273168
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          790,
+          400
+        ],
+        "raw": "left_click (790,400)"
+      },
+      "timestamp": 1775248296416
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Title \"Sample Data Table\" typed and cursor is on the next line. Note is visible in the sidebar too.\", tried [key: \"cmd+n\", key: \"Return\", left_click (889,122)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

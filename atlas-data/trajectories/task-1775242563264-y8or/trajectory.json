@@ -1,0 +1,310 @@
+{
+  "taskId": "task-1775242563264-y8or",
+  "taskDescription": "Open Numbers, enter data in cells, and create a SUM formula for a column",
+  "startTime": 1775242563264,
+  "endTime": 1775242708897,
+  "duration": 145633,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Numbers app via Spotlight",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Create a new spreadsheet",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Enter data in a column (say, A1:A5 with some numbers)",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Create a SUM formula in A6",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Verify everything looks good",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775242565015,
+      "relativeTime": 1751,
+      "screenshotPath": "step-0.png",
+      "exactHash": "cadaaddc4249da200d9fd759dc534443",
+      "thumbnailHash": "dfd13f9ee47d3357de4edea25df449b1",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775242580885,
+      "relativeTime": 17621,
+      "screenshotPath": "step-1.png",
+      "exactHash": "cadaaddc4249da200d9fd759dc534443",
+      "thumbnailHash": "dfd13f9ee47d3357de4edea25df449b1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see there's already a search happening with \"Numbers",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see there's already a search happening with \"Numbers",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775242605183,
+      "relativeTime": 41919,
+      "screenshotPath": "step-2.png",
+      "exactHash": "def7c79dcecc710fe8adc3547d44b260",
+      "thumbnailHash": "ad4188ea5ef20ca2a69f830dd3f4f7b1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          938,
+          535
+        ],
+        "raw": "left_click (938,535)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Spotlight search bar to appear centered on screen",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Looks like this is VS Code's search panel, not Spotlight",
+      "resolvedTarget": null,
+      "assistantIntent": "Looks like this is VS Code's search panel, not Spotlight",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775242623641,
+      "relativeTime": 60377,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c5c093178ef49b08cd87f412db322c96",
+      "thumbnailHash": "b5b0374fa7b668a0165a9f53750237d6",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar to appear centered on screen",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "The search panel is closed",
+      "resolvedTarget": null,
+      "assistantIntent": "The search panel is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775242644669,
+      "relativeTime": 81405,
+      "screenshotPath": "step-4.png",
+      "exactHash": "14156ae4e30e2db51ebc0391280de4c7",
+      "thumbnailHash": "1b60401f75bacd65be9b27cfaf4d2ae9",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open and it still has \"Numbers",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open and it still has \"Numbers",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775242670408,
+      "relativeTime": 107144,
+      "screenshotPath": "step-5.png",
+      "exactHash": "28749455e46ac8a239b7579ad7765ed6",
+      "thumbnailHash": "1bc156210a71ef096dbd4d351a1249ca",
+      "action": {
+        "type": "key",
+        "text": "cmd+h",
+        "raw": "key: \"cmd+h\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, this looks like VS Code's search panel, not macOS Spotlight",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, this looks like VS Code's search panel, not macOS Spotlight",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775242692119,
+      "relativeTime": 128855,
+      "screenshotPath": "step-6.png",
+      "exactHash": "d9e38d48cd92dd6226c5e3294e16bbae",
+      "thumbnailHash": "b431994af434089f8e268bbdd556b2e5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1295,
+          400
+        ],
+        "raw": "left_click (1295,400)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "LOL a Mac User Guide about Spotlight popped up - the universe is being ironic right now 😂",
+      "resolvedTarget": null,
+      "assistantIntent": "LOL a Mac User Guide about Spotlight popped up - the universe is being ironic right now 😂",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775242580885
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          938,
+          535
+        ],
+        "raw": "left_click (938,535)"
+      },
+      "timestamp": 1775242605183
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775242623641
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Numbers",
+        "raw": "type: \"Numbers\""
+      },
+      "timestamp": 1775242644669
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+h",
+        "raw": "key: \"cmd+h\""
+      },
+      "timestamp": 1775242670408
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1295,
+          400
+        ],
+        "raw": "left_click (1295,400)"
+      },
+      "timestamp": 1775242692119
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

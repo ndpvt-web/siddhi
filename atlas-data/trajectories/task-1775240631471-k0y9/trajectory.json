@@ -1,0 +1,147 @@
+{
+  "taskId": "task-1775240631471-k0y9",
+  "taskDescription": "Open VS Code and create a new file called 'hello.py' with a print statement",
+  "startTime": 1775240631471,
+  "endTime": 1775240895120,
+  "duration": 263649,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open VS Code using Spotlight",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Create a new file called 'hello.py'",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Type a print statement",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save the file",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775240633124,
+      "relativeTime": 1653,
+      "screenshotPath": "step-0.png",
+      "exactHash": "6e8b543d57a76dba1135a41c258a8518",
+      "thumbnailHash": "8e17d818f6d666083e3b070d3018023d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775240650573,
+      "relativeTime": 19102,
+      "screenshotPath": "step-1.png",
+      "exactHash": "759091151caa4dea331771a10d312242",
+      "thumbnailHash": "4a189fe29c87ab0bf060e8fd2610904c",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Aight, let me get VS Code fired up and create that Python file for you",
+      "resolvedTarget": null,
+      "assistantIntent": "Aight, let me get VS Code fired up and create that Python file for you",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775240683557,
+      "relativeTime": 52086,
+      "screenshotPath": "step-2.png",
+      "exactHash": "1c2b9ad277887b1e60359082e1369ad5",
+      "thumbnailHash": "b2595cd138d1e8e45a56a1d7c0a06d63",
+      "action": {
+        "type": "type",
+        "text": "Visual Studio Code",
+        "raw": "type: \"Visual Studio Code\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775240650573
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Visual Studio Code",
+        "raw": "type: \"Visual Studio Code\""
+      },
+      "timestamp": 1775240683557
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

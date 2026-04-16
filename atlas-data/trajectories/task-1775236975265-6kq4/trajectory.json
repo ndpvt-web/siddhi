@@ -1,0 +1,468 @@
+{
+  "taskId": "task-1775236975265-6kq4",
+  "taskDescription": "Open System Settings and add a new network location with custom DNS servers",
+  "startTime": 1775236975265,
+  "endTime": 1775237174440,
+  "duration": 199175,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 6,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Network settings pane is open! I can see Wi-Fi (Connected), VPN & Filters, Firewall, and other services.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "f368c66e604ed095e4d926a811d7e370",
+      "semanticState": "System Settings showing the Network pane with Wi-Fi connected, VPN & Filters inactive, Firewall inactive, and other services listed.",
+      "timestamp": 1775237025302
+    },
+    {
+      "stepNumber": 2,
+      "description": "The \"...\" dropdown menu is open showing: Add Service, Add VPN Configuration, Manage Virtual Interfaces, Set Service Order, and **Locations**!",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "a856f1db8fcd005fc4c292da2147cc2b",
+      "semanticState": "Network settings with a dropdown menu showing service management options including a \"Locations\" option with a submenu arrow.",
+      "timestamp": 1775237049746
+    },
+    {
+      "stepNumber": 3,
+      "description": "Locations submenu is visible showing \"Automatic\" (checked) and \"Edit Locations...\" option.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "176f211bfa34be8a5271b9c23e09cdb3",
+      "semanticState": "Network settings with Locations submenu expanded showing current location \"Automatic\" and \"Edit Locations...\" option.",
+      "timestamp": 1775237083847
+    },
+    {
+      "stepNumber": 4,
+      "description": "New location \"Untitled\" has been created and is editable. I can see both \"Automatic\" and the new \"Untitled\" location in the list.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "c704ba9877442eecbfde88a443cdd7cb",
+      "semanticState": "Edit Locations dialog showing \"Automatic\" and new \"Untitled\" location (highlighted, editable), with +/- buttons and Done button.",
+      "timestamp": 1775237149998
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate to Network settings in System Settings",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open the Location dropdown/menu",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Add a new network location",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Configure custom DNS servers for the new location",
+        "done": true
+      },
+      {
+        "n": 5,
+        "desc": "Apply/save the settings",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775236976965,
+      "relativeTime": 1700,
+      "screenshotPath": "step-0.png",
+      "exactHash": "7fc30e1f44afab3876ac1479ece77df9",
+      "thumbnailHash": "44f72751d5e60d2de091c462928b7ae7",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775236993966,
+      "relativeTime": 18701,
+      "screenshotPath": "step-1.png",
+      "exactHash": "044885178e8736d94ed6f58bb2fca532",
+      "thumbnailHash": "8a436b79c93e8fd187c787bd326ff3bf",
+      "action": {
+        "type": "type",
+        "text": "Network",
+        "raw": "type: \"Network\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Network settings pane should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interacted with '(unlabeled)' (Button) in System Settings",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 1
+      },
+      "assistantIntent": "Alright, System Settings is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775237015821,
+      "relativeTime": 40556,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f368c66e604ed095e4d926a811d7e370",
+      "thumbnailHash": "bfae5a142cb9f67457954700d7396184",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          266,
+          135
+        ],
+        "raw": "left_click (266,135)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown menu should appear with options including managing locations.",
+      "surprise": {
+        "score": 1,
+        "expected": "Network settings pane should open",
+        "observed": "success left_click (266,135)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "System Settings showing the Network pane with Wi-Fi connected, VPN & Filters inactive, Firewall inactive, and other services listed.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 54
+      },
+      "assistantIntent": "Network shows up in the suggestions",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775237039681,
+      "relativeTime": 64416,
+      "screenshotPath": "step-3.png",
+      "exactHash": "a856f1db8fcd005fc4c292da2147cc2b",
+      "thumbnailHash": "bc7dd501f1e362f07b8c36ef105bc57e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          786,
+          416
+        ],
+        "raw": "left_click (786,416)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A submenu should appear with options like \"Add Location...\" or \"Edit Locations...\"",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu should appear with options including managing locations.",
+        "observed": "success left_click (786,416)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Network settings with a dropdown menu showing service management options including a \"Locations\" option with a submenu arrow.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Network settings pane is open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775237065806,
+      "relativeTime": 90541,
+      "screenshotPath": "step-4.png",
+      "exactHash": "176f211bfa34be8a5271b9c23e09cdb3",
+      "thumbnailHash": "ad9b333996dbd907fc6967445e2b9150",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          808,
+          558
+        ],
+        "raw": "left_click (808,558)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dialog should appear where I can add/edit network locations.",
+      "surprise": {
+        "score": 1,
+        "expected": "A submenu should appear with options like \"Add Location...\" or \"Edit Locations...\"",
+        "observed": "success left_click (808,558)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Network settings with Locations submenu expanded showing current location \"Automatic\" and \"Edit Locations...\" option.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO there we go",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775237101533,
+      "relativeTime": 126268,
+      "screenshotPath": "step-5.png",
+      "exactHash": "633cc9fc25e152d6530cb3d35428b4f0",
+      "thumbnailHash": "94b6fc6716df2dedca8a0e53eeea52fd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1044,
+          591
+        ],
+        "raw": "left_click (1044,591)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A new location entry should appear, probably with a default name that I can edit.",
+      "surprise": {
+        "score": 1,
+        "expected": "A dialog should appear where I can add/edit network locations.",
+        "observed": "success left_click (1044,591)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Edit Locations dialog showing \"Automatic\" location highlighted, with +/- buttons and a Done button.",
+      "resolvedTarget": null,
+      "assistantIntent": "The Locations submenu appeared",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775237126782,
+      "relativeTime": 151517,
+      "screenshotPath": "step-6.png",
+      "exactHash": "c704ba9877442eecbfde88a443cdd7cb",
+      "thumbnailHash": "4dde8d435a5c381b4e04ec4f5d7825ad",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          431,
+          448
+        ],
+        "raw": "left_click (431,448)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The text field should update with the new name.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new location entry should appear, probably with a default name that I can edit.",
+        "observed": "success left_click (431,448)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Edit Locations dialog showing \"Automatic\" and new \"Untitled\" location (highlighted, editable), with +/- buttons and Done button.",
+      "resolvedTarget": {
+        "label": "Add Location",
+        "role": "Button",
+        "app": "System Settings",
+        "distance": 2
+      },
+      "assistantIntent": "YOOO the Edit Locations dialog popped up",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775237174440,
+      "relativeTime": 199175,
+      "screenshotPath": "step-7.png",
+      "exactHash": "02f79e4bf16c1cd6277b877eb6ba58b0",
+      "thumbnailHash": "b35b28c6685cef5fdad7f436b74ff757",
+      "action": {
+        "type": "type",
+        "text": "Custom DNS",
+        "raw": "type: \"Custom DNS\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The text field should update with the new name.",
+        "observed": "success type: \"custom dns\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "A new location called \"Untitled\" has been added and it's in edit mode - the text field is ready for me to type a name",
+      "resolvedTarget": null,
+      "assistantIntent": "A new location called \"Untitled\" has been added and it's in edit mode - the text field is ready for me to type a name",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "Network",
+        "raw": "type: \"Network\""
+      },
+      "timestamp": 1775236993966
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          266,
+          135
+        ],
+        "raw": "left_click (266,135)"
+      },
+      "timestamp": 1775237015821
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          786,
+          416
+        ],
+        "raw": "left_click (786,416)"
+      },
+      "timestamp": 1775237039681
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          808,
+          558
+        ],
+        "raw": "left_click (808,558)"
+      },
+      "timestamp": 1775237065806
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1044,
+          591
+        ],
+        "raw": "left_click (1044,591)"
+      },
+      "timestamp": 1775237101533
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          431,
+          448
+        ],
+        "raw": "left_click (431,448)"
+      },
+      "timestamp": 1775237126782
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "type",
+        "text": "Custom DNS",
+        "raw": "type: \"Custom DNS\""
+      },
+      "timestamp": 1775237174440
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Network settings pane is open! I can see Wi-Fi (Connected), VPN & Filters, Firewall, and other services.\", tried [type: \"Network\", left_click (266,135), left_click (786,416)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

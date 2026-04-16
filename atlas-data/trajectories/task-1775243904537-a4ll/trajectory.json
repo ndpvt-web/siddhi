@@ -1,0 +1,236 @@
+{
+  "taskId": "task-1775243904537-a4ll",
+  "taskDescription": "Open Keynote and create a new presentation with a title slide",
+  "startTime": 1775243904537,
+  "endTime": 1775244059684,
+  "duration": 155147,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Spotlight search bar is open and ready for input.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "689e3d9ea68a27913ef0ef54e939c246",
+      "semanticState": "Spotlight search bar visible at top center of screen, ready for typing.",
+      "timestamp": 1775243927960
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Keynote via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new presentation using a title slide template",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Add a title to the slide",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775243906303,
+      "relativeTime": 1766,
+      "screenshotPath": "step-0.png",
+      "exactHash": "430b512c8557edd55f389f28887ea3da",
+      "thumbnailHash": "5eca620dad1d8b881a8b92cc8c34da4b",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight search bar appears",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775243920502,
+      "relativeTime": 15965,
+      "screenshotPath": "step-1.png",
+      "exactHash": "689e3d9ea68a27913ef0ef54e939c246",
+      "thumbnailHash": "800cf9d751c4d2b85c1ca2147e1865ae",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar appears",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search bar visible at top center of screen, ready for typing.",
+      "resolvedTarget": {
+        "label": "Where:",
+        "role": "PopUpButton",
+        "app": "Pages",
+        "distance": 16
+      },
+      "assistantIntent": "Alright, I can see Pages is open right now",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775243937300,
+      "relativeTime": 32763,
+      "screenshotPath": "step-2.png",
+      "exactHash": "edaf09ae4bd27919db25eddb0e3cbd73",
+      "thumbnailHash": "1116e3897b31afe5d39df89bf152d14d",
+      "action": {
+        "type": "type",
+        "text": "Keynote",
+        "raw": "type: \"Keynote\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Keynote app opens with a template chooser",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775243951785,
+      "relativeTime": 47248,
+      "screenshotPath": "step-3.png",
+      "exactHash": "8118d3649f60fedf27524612ed74ed3b",
+      "thumbnailHash": "b3241bfcdd04100daf9a156d5f39ea5e",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "I can see Keynote in the results",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see Keynote in the results",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775243981599,
+      "relativeTime": 77062,
+      "screenshotPath": "step-4.png",
+      "exactHash": "0a6b19afcb2d85ce87a7a970f9f744c9",
+      "thumbnailHash": "a3ec6fa6697e3c6c854e5136708cbc11",
+      "action": {
+        "type": "type",
+        "text": "Keynote",
+        "raw": "type: \"Keynote\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Bruh, that opened the Tips app instead of Keynote 😒 It opened the \"Search for anything with Spotlight\" guide",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, that opened the Tips app instead of Keynote 😒 It opened the \"Search for anything with Spotlight\" guide",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+Space",
+        "raw": "key: \"cmd+Space\""
+      },
+      "timestamp": 1775243920502
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Keynote",
+        "raw": "type: \"Keynote\""
+      },
+      "timestamp": 1775243937300
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775243951785
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "Keynote",
+        "raw": "type: \"Keynote\""
+      },
+      "timestamp": 1775243981599
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

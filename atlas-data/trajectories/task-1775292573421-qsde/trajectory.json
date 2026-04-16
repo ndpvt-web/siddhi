@@ -1,0 +1,291 @@
+{
+  "taskId": "task-1775292573421-qsde",
+  "taskDescription": "Open Safari, navigate to wikipedia.org, search for 'Alan Turing', and take a screenshot of the article page",
+  "startTime": 1775292573421,
+  "endTime": 1775292675817,
+  "duration": 102396,
+  "success": true,
+  "finalText": "NAILED IT! 🔥 The Appearance panel is gone and we've got a beautiful clean view of the Alan Turing Wikipedia article!\n\nCHECKPOINT [3]: Clean screenshot of the Alan Turing Wikipedia article captured\nSCENE: Safari showing the full Alan Turing Wikipedia article with his iconic 1951 photo, biographical info, table of contents on the left, and the article text describing his life as a mathematician, computer scientist, cryptanalyst, and father of theoretical computer science.\n\nHere's what we got:\n- ✅ Opened Safari\n- ✅ Navigated to wikipedia.org\n- ✅ Found the Alan Turing article\n- ✅ Screenshot taken of the article page\n\nThe article is looking clean - you can see Alan Turing's portrait from 1951, his birth/death info (23 June 1912 – 7 June 1954), and the intro describing him as an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist who was hugely influential in the development of theoretical computer science. The father of computing himself! 🧠💻\n\nEz clap, task complete! 🎯",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Safari is open and showing example.com",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "eeaf6c2001225d6b246be0c68fc043ea",
+      "semanticState": "Safari browser open, showing the Example Domain page. Address bar shows \"example.com\".",
+      "timestamp": 1775292629138
+    },
+    {
+      "stepNumber": 2,
+      "description": "Successfully navigated to the Alan Turing Wikipedia article",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "e32a82e97183004231a1baff414b7a01",
+      "semanticState": "Alan Turing Wikipedia article is loaded in Safari. The article title, his photo from 1951, and biographical info are visible. There's an \"Appearance\" panel open on the right side.",
+      "timestamp": 1775292650753
+    },
+    {
+      "stepNumber": 3,
+      "description": "Clean screenshot of the Alan Turing Wikipedia article captured",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "493a4c750bc45944d2d291abb5a0cfb6",
+      "semanticState": "Safari showing the full Alan Turing Wikipedia article with his iconic 1951 photo, biographical info, table of contents on the left, and the article text describing his life as a mathematician, computer scientist, cryptanalyst, and father of theoretical computer science.",
+      "timestamp": 1775292675815
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Safari via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate directly to the Alan Turing Wikipedia article",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Take a screenshot of the article page",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775292577255,
+      "relativeTime": 3834,
+      "screenshotPath": "step-0.png",
+      "exactHash": "3c4b754b4634c935e1c3d6d1fe71edaf",
+      "thumbnailHash": "25758b4b5ad46d6b5fd5f91efe7add9f",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Spotlight search bar appears",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775292594460,
+      "relativeTime": 21039,
+      "screenshotPath": "step-1.png",
+      "exactHash": "33926d5e459707641804934fe9b55494",
+      "thumbnailHash": "fbb41879676d30be2b1ab39f7b5202a3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Safari opens",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar appears",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Aight, we're starting from a clean desktop with a beautiful Lake Tahoe wallpaper",
+      "resolvedTarget": null,
+      "assistantIntent": "Aight, we're starting from a clean desktop with a beautiful Lake Tahoe wallpaper",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775292618371,
+      "relativeTime": 44950,
+      "screenshotPath": "step-2.png",
+      "exactHash": "eeaf6c2001225d6b246be0c68fc043ea",
+      "thumbnailHash": "dd1ed4e4d6b4d85ca2eca7a70c927bbe",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          125,
+          817
+        ],
+        "raw": "left_click (125,817)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Address bar gets focused and I can type the URL",
+      "surprise": {
+        "score": 1,
+        "expected": "Safari opens",
+        "observed": "success left_click (125,817)",
+        "expectedKeywords": 2,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser open, showing the Example Domain page. Address bar shows \"example.com\".",
+      "resolvedTarget": null,
+      "assistantIntent": "Ok so Spotlight didn't open - instead we've got VS Code open with some project",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775292641188,
+      "relativeTime": 67767,
+      "screenshotPath": "step-3.png",
+      "exactHash": "e32a82e97183004231a1baff414b7a01",
+      "thumbnailHash": "23338c4b9008e32432a0b938ff2a1c25",
+      "action": {
+        "type": "type",
+        "text": "https://en.wikipedia.org/wiki/Alan_Turing\n",
+        "raw": "type: \"https://en.wikipedia.org/wiki/Alan_Turing\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "The Appearance panel closes, giving us a clean view of the article",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alan Turing Wikipedia article is loaded in Safari. The article title, his photo from 1951, and biographical info are visible. There's an \"Appearance\" panel open on the right side.",
+      "resolvedTarget": null,
+      "assistantIntent": "Safari is open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775292664806,
+      "relativeTime": 91385,
+      "screenshotPath": "step-4.png",
+      "exactHash": "493a4c750bc45944d2d291abb5a0cfb6",
+      "thumbnailHash": "7f9d7b7d68f62ccbb1cf75711f9f208e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1093,
+          193
+        ],
+        "raw": "left_click (1093,193)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The Appearance panel closes, giving us a clean view of the article",
+        "observed": "success left_click (1093,193)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing the full Alan Turing Wikipedia article with his iconic 1951 photo, biographical info, table of contents on the left, and the article text describing his life as a mathematician, computer scientist, cryptanalyst, and father of theoretical computer science.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOOO LET'S GOOOOO",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775292594460
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          125,
+          817
+        ],
+        "raw": "left_click (125,817)"
+      },
+      "timestamp": 1775292618371
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "https://en.wikipedia.org/wiki/Alan_Turing\n",
+        "raw": "type: \"https://en.wikipedia.org/wiki/Alan_Turing\n\""
+      },
+      "timestamp": 1775292641188
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1093,
+          193
+        ],
+        "raw": "left_click (1093,193)"
+      },
+      "timestamp": 1775292664806
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully navigated to the Alan Turing Wikipedia article\", tried [left_click (125,817), type: \"https://en.wikipedia.org/wiki/Alan_Turing\n\", left_click (1093,193)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 4,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

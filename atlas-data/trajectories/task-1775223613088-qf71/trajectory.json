@@ -1,0 +1,426 @@
+{
+  "taskId": "task-1775223613088-qf71",
+  "taskDescription": "Open TextEdit, write a 3-line poem, make the title bold, and save as RTF",
+  "startTime": 1775223613088,
+  "endTime": 1775223922315,
+  "duration": 309227,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 0,
+      "description": "New Rich Text TextEdit document is open with formatting toolbar visible. Title says \"Untitled\" (not .txt). Bold button (B) is visible in the toolbar.",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "fceaf570b960e865dd53b08837d66f12",
+      "semanticState": "TextEdit with a new blank Rich Text document titled \"Untitled\", formatting toolbar showing B/I/U/S buttons, Helvetica font, Regular style, size 12. Finder window visible behind it.",
+      "timestamp": 1775223916086
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click into the TextEdit document and type the poem title",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Make the title bold",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Type the 3 lines of the poem",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save as RTF format",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775223614760,
+      "relativeTime": 1672,
+      "screenshotPath": "step-0.png",
+      "exactHash": "41364f9bfed2096a6214498092d84f9a",
+      "thumbnailHash": "07ff1ac92e22dffbd45128e6947c7f9a",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit is open with a blank \"Untitled.txt\" document. There's also a Finder window behind it. The text cursor appears to be in the TextEdit document already.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775223647268,
+      "relativeTime": 34180,
+      "screenshotPath": "step-1.png",
+      "exactHash": "77a603dc8a7d47649fcdf80f13c766e8",
+      "thumbnailHash": "8f185a1832b34931c6f09bd99da83afc",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "TextEdit will switch to Rich Text mode, enabling bold/formatting options",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "Alright, TextEdit is already open with an untitled document",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775223672773,
+      "relativeTime": 59685,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ba5d3d5d8f34c3932d4058468d26c129",
+      "thumbnailHash": "6e6758591855f6476ea379d6c1767b08",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          100
+        ],
+        "raw": "left_click (265,100)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "TextEdit will switch to Rich Text mode, enabling bold/formatting options",
+        "observed": "success left_click (265,100)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 65
+      },
+      "assistantIntent": "Format menu is open and I can see \"Make Rich Text\" - perfect",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775223699072,
+      "relativeTime": 85984,
+      "screenshotPath": "step-3.png",
+      "exactHash": "d54b9dbfa96836cc712e13fe34a81ac6",
+      "thumbnailHash": "76b4343e0c000ba576629e85e28d338f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "TextEdit document switches to Rich Text mode, title bar changes from .txt",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "Hmm, the document still says \"Untitled",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775223729020,
+      "relativeTime": 115932,
+      "screenshotPath": "step-4.png",
+      "exactHash": "87e201763333df926dda94a545f00029",
+      "thumbnailHash": "df4a1d4a3b659d1a68c628b70dc60f5c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          100
+        ],
+        "raw": "left_click (265,100)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "TextEdit document switches to Rich Text mode, title bar changes from .txt",
+        "observed": "success left_click (265,100)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 65
+      },
+      "assistantIntent": "Format menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775223761368,
+      "relativeTime": 148280,
+      "screenshotPath": "step-5.png",
+      "exactHash": "23097dcdeacd309a9b2fb7df0086a0e7",
+      "thumbnailHash": "26a62f76cd66419e1d6c84e2fe8dfc70",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "The current empty Untitled.txt will be deleted and I'll have a clean TextEdit window",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "Wait, bruh - it still says \"Untitled",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775223784258,
+      "relativeTime": 171170,
+      "screenshotPath": "step-6.png",
+      "exactHash": "89855518c2542e5c45d049c9de859f7f",
+      "thumbnailHash": "43fc1c5a75ef7d45855263287713fa71",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          246,
+          431
+        ],
+        "raw": "left_click (246,431)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A new TextEdit document window opens",
+      "surprise": {
+        "score": 1,
+        "expected": "The current empty Untitled.txt will be deleted and I'll have a clean TextEdit window",
+        "observed": "success left_click (246,431)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder window showing home directory files, TextEdit is the active app in the menu bar but no document window is open.",
+      "resolvedTarget": {
+        "label": "Delete",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 1
+      },
+      "assistantIntent": "There's a save dialog asking to keep or delete the \"Untitled",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775223806755,
+      "relativeTime": 193667,
+      "screenshotPath": "step-7.png",
+      "exactHash": "fceaf570b960e865dd53b08837d66f12",
+      "thumbnailHash": "874910a9e9cff1913a49a2176a110520",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The title text appears in the document",
+      "surprise": {
+        "score": 1,
+        "expected": "A new TextEdit document window opens",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit with a new blank Rich Text document titled \"Untitled\", formatting toolbar showing B/I/U/S buttons, Helvetica font, Regular style, size 12. Finder window visible behind it.",
+      "resolvedTarget": null,
+      "assistantIntent": "OK, the document got deleted and now I'm looking at a Finder window with the home directory",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775223647268
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          100
+        ],
+        "raw": "left_click (265,100)"
+      },
+      "timestamp": 1775223672773
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775223699072
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          100
+        ],
+        "raw": "left_click (265,100)"
+      },
+      "timestamp": 1775223729020
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775223761368
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          246,
+          431
+        ],
+        "raw": "left_click (246,431)"
+      },
+      "timestamp": 1775223784258
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775223806755
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

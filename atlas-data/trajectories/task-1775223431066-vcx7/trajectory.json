@@ -1,0 +1,378 @@
+{
+  "taskId": "task-1775223431066-vcx7",
+  "taskDescription": "Open TextEdit, create a new document, type 'Hello World', and save it to the Desktop as 'hello.txt'",
+  "startTime": 1775223431066,
+  "endTime": 1775223610735,
+  "duration": 179669,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "TextEdit is open with the file picker dialog showing. I can see a \"New Document\" button at the bottom.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "1e41fdd2149e392ba54720b45d0971d5",
+      "semanticState": "TextEdit's open dialog is visible with New Document, Show Options, Cancel, and Open buttons at the bottom.",
+      "timestamp": 1775223477236
+    },
+    {
+      "stepNumber": 2,
+      "description": "New blank \"Untitled\" TextEdit document is open and ready.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "70a43a3b6b709aa91352a1fb33f789c0",
+      "semanticState": "TextEdit with a new blank \"Untitled\" document open, showing rich text formatting toolbar.",
+      "timestamp": 1775223499774
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open TextEdit via Spotlight",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new plain text document",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type 'Hello World'",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save the file to Desktop as 'hello.txt'",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775223432721,
+      "relativeTime": 1655,
+      "screenshotPath": "step-0.png",
+      "exactHash": "d893c06c7aa9668aa4e83aed9c3fdaa5",
+      "thumbnailHash": "38f9fd7d496a03112989a1df23003d46",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775223447735,
+      "relativeTime": 16669,
+      "screenshotPath": "step-1.png",
+      "exactHash": "165463c7098ec046d8d962bf89e74257",
+      "thumbnailHash": "65231214b2728661256f61c0426cda9b",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "TextEdit app should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, let's get this done",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, let's get this done",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775223468409,
+      "relativeTime": 37343,
+      "screenshotPath": "step-2.png",
+      "exactHash": "1e41fdd2149e392ba54720b45d0971d5",
+      "thumbnailHash": "848b760e14007f4ff2e3b626df7ab512",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new blank TextEdit document should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit's open dialog is visible with New Document, Show Options, Cancel, and Open buttons at the bottom.",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight already has \"TextEdit\" typed and TextEdit",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775223490221,
+      "relativeTime": 59155,
+      "screenshotPath": "step-3.png",
+      "exactHash": "70a43a3b6b709aa91352a1fb33f789c0",
+      "thumbnailHash": "e9ef13654c85e91b60d4bc5496dc98f2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          547,
+          504
+        ],
+        "raw": "left_click (547,504)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The formatting toolbar should disappear, indicating plain text mode",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank TextEdit document should open",
+        "observed": "success left_click (547,504)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit with a new blank \"Untitled\" document open, showing rich text formatting toolbar.",
+      "resolvedTarget": {
+        "label": "New Document",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 1
+      },
+      "assistantIntent": "TextEdit opened and showing the Open dialog",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775223513320,
+      "relativeTime": 82254,
+      "screenshotPath": "step-4.png",
+      "exactHash": "b3b9e4892e206c7e150932006e0ac97e",
+      "thumbnailHash": "a7e583c23b84b3b4318ba3acf6a4fbf8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The formatting toolbar should disappear, indicating plain text mode",
+        "observed": "success left_click (219,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked 'this button also has an action to zoom the window' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "New document is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775223538409,
+      "relativeTime": 107343,
+      "screenshotPath": "step-5.png",
+      "exactHash": "97731290771633a49979ac2d64634eff",
+      "thumbnailHash": "5ffb42cfed448b05c023ffc6f4a4a49f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked '(unlabeled)' (MenuButton) in TextEdit",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "TextEdit",
+        "distance": 26
+      },
+      "assistantIntent": "Format menu is open and I can see \"Make Plain Text\" option right there",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775223557988,
+      "relativeTime": 126922,
+      "screenshotPath": "step-6.png",
+      "exactHash": "267ffde9d01980639f36daa7399d21cc",
+      "thumbnailHash": "109789d28d3a139a0fc2b0693deeb037",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked '(unlabeled)' (MenuButton) in TextEdit",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "TextEdit",
+        "distance": 26
+      },
+      "assistantIntent": "A submenu opened instead — the \"Text\" submenu",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775223447735
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775223468409
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          547,
+          504
+        ],
+        "raw": "left_click (547,504)"
+      },
+      "timestamp": 1775223490221
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775223513320
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "timestamp": 1775223538409
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          267,
+          100
+        ],
+        "raw": "left_click (267,100)"
+      },
+      "timestamp": 1775223557988
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"TextEdit is open with the file picker dialog showing. I can see a \"New Document\" button at the bottom.\", tried [key: \"cmd+space\", key: \"Return\", left_click (547,504)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

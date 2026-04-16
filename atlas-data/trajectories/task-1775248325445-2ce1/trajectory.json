@@ -1,0 +1,396 @@
+{
+  "taskId": "task-1775248325445-2ce1",
+  "taskDescription": "Open Notes, create a note with mixed formatting: heading, body text, and a link",
+  "startTime": 1775248325445,
+  "endTime": 1775248529894,
+  "duration": 204449,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "New note created! I can see \"New Note\" in the Today section with the cursor ready in a blank note area.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "95a88c1de81f59b97b1b7eec31e5e9a6",
+      "semanticState": "Notes app with a fresh blank note open, cursor blinking in the content area.",
+      "timestamp": 1775248352165
+    },
+    {
+      "stepNumber": 1,
+      "description": "New note was created successfully - visible in the Today section of Notes.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "393d71b0e0a6fd0a5dd7e4fc842598bf",
+      "semanticState": "Notes app open with folder sidebar visible, note list in middle, and a blank new note on the right side with cursor.",
+      "timestamp": 1775248490941
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a new note with Cmd+N",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Apply Heading format and type the heading text",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Switch to Body format and type body text",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Add a hyperlink using Cmd+K",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775248327140,
+      "relativeTime": 1695,
+      "screenshotPath": "step-0.png",
+      "exactHash": "eb9c17125b8d143762951e0bbb411a3e",
+      "thumbnailHash": "4996a6063c046808d39bbf300f9e8915",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775248343720,
+      "relativeTime": 18275,
+      "screenshotPath": "step-1.png",
+      "exactHash": "95a88c1de81f59b97b1b7eec31e5e9a6",
+      "thumbnailHash": "913f1e89020a6a33065e9c120cfcb9f8",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app with a fresh blank note open, cursor blinking in the content area.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Notes is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775248367366,
+      "relativeTime": 41921,
+      "screenshotPath": "step-2.png",
+      "exactHash": "d35cdbf57ca8d5ba591bc877a57b575b",
+      "thumbnailHash": "15a7dbc6965d7ab4b42bfe17931cb6b2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          206,
+          13
+        ],
+        "raw": "left_click (206,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: New note created",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: New note created",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775248389818,
+      "relativeTime": 64373,
+      "screenshotPath": "step-3.png",
+      "exactHash": "d7a0144befdecebd99ac05c38e723582",
+      "thumbnailHash": "becce9c767c779dc11c56e58472adcb0",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          209,
+          67
+        ],
+        "raw": "left_click (209,67)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Notes",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 65
+      },
+      "assistantIntent": "Format menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775248428167,
+      "relativeTime": 102722,
+      "screenshotPath": "step-4.png",
+      "exactHash": "14e66081687c3239468f7a83ed719b49",
+      "thumbnailHash": "38ab7d583bd206b52e7816b3d66042e4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          918,
+          190
+        ],
+        "raw": "left_click (918,190)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (MenuButton) in Notes",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "MenuButton",
+        "app": "Notes",
+        "distance": 72
+      },
+      "assistantIntent": "Hmm, the Format menu closed but it looks like I accidentally clicked somewhere else - Heading wasn't selected",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775248456388,
+      "relativeTime": 130943,
+      "screenshotPath": "step-5.png",
+      "exactHash": "b3382c0749cf3e4c1d52aeccc9939d0c",
+      "thumbnailHash": "6b78ed3e40e399dc7bf049eb3315dafd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          206,
+          13
+        ],
+        "raw": "left_click (206,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The new note is focused and the cursor is blinking in the note body",
+      "resolvedTarget": null,
+      "assistantIntent": "The new note is focused and the cursor is blinking in the note body",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775248478192,
+      "relativeTime": 152747,
+      "screenshotPath": "step-6.png",
+      "exactHash": "393d71b0e0a6fd0a5dd7e4fc842598bf",
+      "thumbnailHash": "1242de1f7a7a993c4cc042c596a86877",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          209,
+          67
+        ],
+        "raw": "left_click (209,67)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Notes app open with folder sidebar visible, note list in middle, and a blank new note on the right side with cursor.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 65
+      },
+      "assistantIntent": "The Format menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775248507319,
+      "relativeTime": 181874,
+      "screenshotPath": "step-7.png",
+      "exactHash": "71430d348193962f19996575b0bcc5c0",
+      "thumbnailHash": "df869aae7d035b0d7134cfd9c5e2c286",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          900,
+          190
+        ],
+        "raw": "left_click (900,190)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Table' (Button) in Notes",
+      "resolvedTarget": {
+        "label": "Table",
+        "role": "Button",
+        "app": "Notes",
+        "distance": 71
+      },
+      "assistantIntent": "I see the Notes app is showing the new note at the bottom under \"Today\" - \"New Note\" with \"4:34 AM No additional text\"",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775248343720
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          206,
+          13
+        ],
+        "raw": "left_click (206,13)"
+      },
+      "timestamp": 1775248367366
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          209,
+          67
+        ],
+        "raw": "left_click (209,67)"
+      },
+      "timestamp": 1775248389818
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          918,
+          190
+        ],
+        "raw": "left_click (918,190)"
+      },
+      "timestamp": 1775248428167
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          206,
+          13
+        ],
+        "raw": "left_click (206,13)"
+      },
+      "timestamp": 1775248456388
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          209,
+          67
+        ],
+        "raw": "left_click (209,67)"
+      },
+      "timestamp": 1775248478192
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          900,
+          190
+        ],
+        "raw": "left_click (900,190)"
+      },
+      "timestamp": 1775248507319
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

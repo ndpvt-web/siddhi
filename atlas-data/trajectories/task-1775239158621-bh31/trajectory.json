@@ -1,0 +1,428 @@
+{
+  "taskId": "task-1775239158621-bh31",
+  "taskDescription": "Open Mail and set up a mail rule to move emails from test@example.com to a specific folder",
+  "startTime": 1775239158621,
+  "endTime": 1775239357704,
+  "duration": 199083,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "New Mailbox dialog is open, ready to type the name.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "3130684028e6a60eb7a718e8e526835a",
+      "semanticState": "New Mailbox dialog with empty Name field and Location set to iCloud.",
+      "timestamp": 1775239214342
+    },
+    {
+      "stepNumber": 1,
+      "description": "New Mailbox dialog has \"test-example\" typed in the Name field, Location is iCloud.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "8594461e983298bd59a079600154f697",
+      "semanticState": "New Mailbox dialog showing Name: \"test-example\", Location: iCloud, OK button is active.",
+      "timestamp": 1775239262915
+    },
+    {
+      "stepNumber": 2,
+      "description": "Folder \"test-example\" created successfully - visible in the sidebar as \"test-exam...\" under iCloud.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "38b250210d1c76e516207e1d8a79d679",
+      "semanticState": "Mail app showing the inbox with \"test-exam...\" folder now listed in the iCloud section of the sidebar.",
+      "timestamp": 1775239293070
+    },
+    {
+      "stepNumber": 3,
+      "description": "Mail Settings window is open on the General tab.",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "6cb5c67df98018ad0e04f55921e61289",
+      "semanticState": "Mail Settings window showing General preferences with tabs across the top including Rules.",
+      "timestamp": 1775239350978
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "First, create a mailbox/folder to move emails into (let's call it \"test-example\")",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Mail preferences/settings and navigate to Rules",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Create a new rule to move emails from test@example.com to that folder",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775239160339,
+      "relativeTime": 1718,
+      "screenshotPath": "step-0.png",
+      "exactHash": "c1b01e3b2a2da9ea599c154e604d18ff",
+      "thumbnailHash": "f5ed83d5d1964686f0a640c10899dc29",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775239183926,
+      "relativeTime": 25305,
+      "screenshotPath": "step-1.png",
+      "exactHash": "0ea14fb5324eceeac98fbee5cd345c17",
+      "thumbnailHash": "aaff29ebd9356d08df68e136ef389264",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          244,
+          13
+        ],
+        "raw": "left_click (244,13)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'OK' (Button) in Mail",
+      "resolvedTarget": {
+        "label": "OK",
+        "role": "Button",
+        "app": "Mail",
+        "distance": 1
+      },
+      "assistantIntent": "Aight, Mail is already open - let's set up a mail rule",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775239206822,
+      "relativeTime": 48201,
+      "screenshotPath": "step-2.png",
+      "exactHash": "3130684028e6a60eb7a718e8e526835a",
+      "thumbnailHash": "896e04d3958bddc81ff8e46e85d79c18",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          178
+        ],
+        "raw": "left_click (265,178)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "New Mailbox dialog with empty Name field and Location set to iCloud.",
+      "resolvedTarget": {
+        "label": "Filter",
+        "role": "CheckBox",
+        "app": "Mail",
+        "distance": 67
+      },
+      "assistantIntent": "The Mailbox menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775239228358,
+      "relativeTime": 69737,
+      "screenshotPath": "step-3.png",
+      "exactHash": "4d7b040615c85ef040eb2a099b66299f",
+      "thumbnailHash": "f6d023303c2dab5a1b55d3edb87cc383",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          510,
+          530
+        ],
+        "raw": "left_click (510,530)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (PopUpButton) in Mail",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "PopUpButton",
+        "app": "Mail",
+        "distance": 50
+      },
+      "assistantIntent": "The \"New Mailbox\" dialog is open",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775239248353,
+      "relativeTime": 89732,
+      "screenshotPath": "step-4.png",
+      "exactHash": "8594461e983298bd59a079600154f697",
+      "thumbnailHash": "563c72ce6a75877f59301adc098d2842",
+      "action": {
+        "type": "type",
+        "text": "test-example",
+        "raw": "type: \"test-example\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "New Mailbox dialog showing Name: \"test-example\", Location: iCloud, OK button is active.",
+      "resolvedTarget": null,
+      "assistantIntent": "The Name field is focused and ready",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775239278573,
+      "relativeTime": 119952,
+      "screenshotPath": "step-5.png",
+      "exactHash": "38b250210d1c76e516207e1d8a79d679",
+      "thumbnailHash": "766c1228c789bd88cfd51ec7630acffe",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          619,
+          561
+        ],
+        "raw": "left_click (619,561)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Mail menu should open showing preferences/settings option",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Mail app showing the inbox with \"test-exam...\" folder now listed in the iCloud section of the sidebar.",
+      "resolvedTarget": {
+        "label": "OK",
+        "role": "Button",
+        "app": "Mail",
+        "distance": 3
+      },
+      "assistantIntent": "\"test-example\" is typed in the Name field",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775239311561,
+      "relativeTime": 152940,
+      "screenshotPath": "step-6.png",
+      "exactHash": "216045ce9a8403f8a47e8bb74a0d7a0b",
+      "thumbnailHash": "b768c0f12333599c82e6e6215149d91e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          63,
+          13
+        ],
+        "raw": "left_click (63,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Mail Settings window should open",
+      "surprise": {
+        "score": 1,
+        "expected": "Mail menu should open showing preferences/settings option",
+        "observed": "success left_click (63,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "YOOO let's gooo",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO let's gooo",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775239340955,
+      "relativeTime": 182334,
+      "screenshotPath": "step-7.png",
+      "exactHash": "6cb5c67df98018ad0e04f55921e61289",
+      "thumbnailHash": "9a9d1d8d4db77c86ba2c31c18c155bb1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          102,
+          78
+        ],
+        "raw": "left_click (102,78)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Rules pane should show with existing rules and an \"Add Rule\" button",
+      "surprise": {
+        "score": 1,
+        "expected": "Mail Settings window should open",
+        "observed": "success left_click (102,78)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Mail Settings window showing General preferences with tabs across the top including Rules.",
+      "resolvedTarget": null,
+      "assistantIntent": "There we go",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          244,
+          13
+        ],
+        "raw": "left_click (244,13)"
+      },
+      "timestamp": 1775239183926
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          265,
+          178
+        ],
+        "raw": "left_click (265,178)"
+      },
+      "timestamp": 1775239206822
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          510,
+          530
+        ],
+        "raw": "left_click (510,530)"
+      },
+      "timestamp": 1775239228358
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "test-example",
+        "raw": "type: \"test-example\""
+      },
+      "timestamp": 1775239248353
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          619,
+          561
+        ],
+        "raw": "left_click (619,561)"
+      },
+      "timestamp": 1775239278573
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          63,
+          13
+        ],
+        "raw": "left_click (63,13)"
+      },
+      "timestamp": 1775239311561
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          102,
+          78
+        ],
+        "raw": "left_click (102,78)"
+      },
+      "timestamp": 1775239340955
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

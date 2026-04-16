@@ -1,0 +1,641 @@
+{
+  "version": 1,
+  "entities": {
+    "notes": {
+      "displayName": "Notes",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.5,
+          "observations": 3,
+          "lastSeen": 1775248107255
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 21,
+      "firstSeen": 1775147957325,
+      "lastSeen": 1775299064919
+    },
+    "preview": {
+      "displayName": "Preview",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Preview\"",
+          "confidence": 0.625,
+          "observations": 5,
+          "lastSeen": 1775233567645
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 31,
+      "firstSeen": 1775147957325,
+      "lastSeen": 1775304905160
+    },
+    "safari": {
+      "displayName": "Safari",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.5714285714285714,
+          "observations": 4,
+          "lastSeen": 1775302821486
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 99,
+      "firstSeen": 1775148768108,
+      "lastSeen": 1775305164157
+    },
+    "finder": {
+      "displayName": "Finder",
+      "type": "application",
+      "accessMethods": [],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 66,
+      "firstSeen": 1775154165365,
+      "lastSeen": 1775305510578
+    },
+    "console": {
+      "displayName": "Console",
+      "type": "application",
+      "accessMethods": [],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 6,
+      "firstSeen": 1775221087802,
+      "lastSeen": 1775302215956
+    },
+    "xcode": {
+      "displayName": "Xcode",
+      "type": "application",
+      "accessMethods": [],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775221401891,
+      "lastSeen": 1775221401891
+    },
+    "textedit": {
+      "displayName": "Textedit",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.4,
+          "observations": 2,
+          "lastSeen": 1775246990422
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 17,
+      "firstSeen": 1775223291034,
+      "lastSeen": 1775247966927
+    },
+    "calendar": {
+      "displayName": "Calendar",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775226547895
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 11,
+      "firstSeen": 1775226547895,
+      "lastSeen": 1775249095275
+    },
+    "mail": {
+      "displayName": "Mail",
+      "type": "application",
+      "accessMethods": [],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 11,
+      "firstSeen": 1775227697612,
+      "lastSeen": 1775302590868
+    },
+    "reminders": {
+      "displayName": "Reminders",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775227900870
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 6,
+      "firstSeen": 1775227900870,
+      "lastSeen": 1775249249990
+    },
+    "terminal": {
+      "displayName": "Terminal",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.4,
+          "observations": 2,
+          "lastSeen": 1775245186195
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 26,
+      "firstSeen": 1775234340521,
+      "lastSeen": 1775250737742
+    },
+    "system-settings": {
+      "displayName": "System Settings",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.4,
+          "observations": 2,
+          "lastSeen": 1775245631636
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 16,
+      "firstSeen": 1775236391583,
+      "lastSeen": 1775245631636
+    },
+    "messages": {
+      "displayName": "Messages",
+      "type": "application",
+      "accessMethods": [],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 6,
+      "firstSeen": 1775238950993,
+      "lastSeen": 1775294995927
+    },
+    "contacts": {
+      "displayName": "Contacts",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775240084255
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775240084255,
+      "lastSeen": 1775240084255
+    },
+    "visual-studio-code": {
+      "displayName": "Visual Studio Code",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775240904994
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775240904994,
+      "lastSeen": 1775240904994
+    },
+    "numbers": {
+      "displayName": "Numbers",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.5,
+          "observations": 3,
+          "lastSeen": 1775242889734
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 3,
+      "firstSeen": 1775242572068,
+      "lastSeen": 1775242889734
+    },
+    "numbersapp": {
+      "displayName": "Numbers.app",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775242572068
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775242572068,
+      "lastSeen": 1775242572068
+    },
+    "microsoft-excel": {
+      "displayName": "Microsoft Excel",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Microsoft Excel\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775242889734
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775242889734,
+      "lastSeen": 1775242889734
+    },
+    "numbers-/tmp/sales_data.csv": {
+      "displayName": "Numbers /tmp/sales_data.csv",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Numbers /tmp/sales_data.csv\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775243220660
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775243220660,
+      "lastSeen": 1775243220660
+    },
+    "pages": {
+      "displayName": "Pages",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775243362716
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775243362716,
+      "lastSeen": 1775243362716
+    },
+    "keynote": {
+      "displayName": "Keynote",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "spotlight",
+          "confidence": 0.4,
+          "observations": 2,
+          "lastSeen": 1775244334552
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 2,
+      "firstSeen": 1775244069789,
+      "lastSeen": 1775244334552
+    },
+    "microsoft-powerpoint": {
+      "displayName": "Microsoft PowerPoint",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Microsoft PowerPoint\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775244207348
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775244207348,
+      "lastSeen": 1775244207348
+    },
+    "previe": {
+      "displayName": "Previe",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Previe\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775249420058
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775249420058,
+      "lastSeen": 1775249420058
+    },
+    "preview-~/downloads/dead-mens-path_achebe.pdf": {
+      "displayName": "Preview ~/Downloads/dead-mens-path_achebe.pdf",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Preview ~/Downloads/dead-mens-path_achebe.pdf\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775249594159
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775249594159,
+      "lastSeen": 1775249594159
+    },
+    "preview-~/downloads/paper.pdf": {
+      "displayName": "Preview ~/Downloads/paper.pdf",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Preview ~/Downloads/paper.pdf\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775249594159
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775249594159,
+      "lastSeen": 1775249594159
+    },
+    "preview-/users/nivesh/desktop/test_image.png": {
+      "displayName": "Preview /Users/nivesh/Desktop/test_image.png",
+      "type": "application",
+      "accessMethods": [
+        {
+          "method": "bash",
+          "command": "open -a \"Preview /Users/nivesh/Desktop/test_image.png\"",
+          "confidence": 0.25,
+          "observations": 1,
+          "lastSeen": 1775249701034
+        }
+      ],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775249701034,
+      "lastSeen": 1775249701034
+    },
+    "music": {
+      "displayName": "Music",
+      "type": "application",
+      "accessMethods": [],
+      "children": {},
+      "properties": {},
+      "totalInteractions": 1,
+      "firstSeen": 1775299306808,
+      "lastSeen": 1775299306808
+    }
+  },
+  "shortcuts": {
+    "cmd+space": {
+      "action": "Open Spotlight (universal app/file launcher)",
+      "scope": "global",
+      "confidence": 0.9142857142857143,
+      "observations": 32,
+      "lastSeen": 1775302821486
+    },
+    "cmd+d": {
+      "action": "Keyboard shortcut: cmd+d",
+      "scope": "global",
+      "confidence": 0.75,
+      "observations": 9,
+      "lastSeen": 1775304424892
+    },
+    "cmd+,": {
+      "action": "Keyboard shortcut: cmd+,",
+      "scope": "global",
+      "confidence": 0.8571428571428571,
+      "observations": 18,
+      "lastSeen": 1775304720759
+    },
+    "cmd+l": {
+      "action": "Focus address/location bar",
+      "scope": "global",
+      "confidence": 0.5714285714285714,
+      "observations": 4,
+      "lastSeen": 1775302894165
+    },
+    "cmd+p": {
+      "action": "Keyboard shortcut: cmd+p",
+      "scope": "global",
+      "confidence": 0.7692307692307693,
+      "observations": 10,
+      "lastSeen": 1775304905160
+    },
+    "shift+cmd+n": {
+      "action": "Keyboard shortcut: shift+cmd+n",
+      "scope": "global",
+      "confidence": 0.6666666666666666,
+      "observations": 6,
+      "lastSeen": 1775299015372
+    },
+    "cmd+n": {
+      "action": "New window/document",
+      "scope": "global",
+      "confidence": 0.85,
+      "observations": 17,
+      "lastSeen": 1775248693864
+    },
+    "cmd+alt+f": {
+      "action": "Keyboard shortcut: cmd+alt+f",
+      "scope": "global",
+      "confidence": 0.4,
+      "observations": 2,
+      "lastSeen": 1775247582009
+    },
+    "shift+cmd+t": {
+      "action": "Keyboard shortcut: shift+cmd+t",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775224600764
+    },
+    "cmd+shift+h": {
+      "action": "Keyboard shortcut: cmd+shift+h",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775226035284
+    },
+    "cmd+2": {
+      "action": "Keyboard shortcut: cmd+2",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775226817252
+    },
+    "cmd+s": {
+      "action": "Save",
+      "scope": "global",
+      "confidence": 0.5,
+      "observations": 3,
+      "lastSeen": 1775242400559
+    },
+    "cmd+a": {
+      "action": "Select all",
+      "scope": "global",
+      "confidence": 0.5,
+      "observations": 3,
+      "lastSeen": 1775240640119
+    },
+    "alt+cmd+c": {
+      "action": "Keyboard shortcut: alt+cmd+c",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775229556178
+    },
+    "cmd+shift+x": {
+      "action": "Keyboard shortcut: cmd+shift+x",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775241190747
+    },
+    "cmd+shift+o": {
+      "action": "Keyboard shortcut: cmd+shift+o",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775241421249
+    },
+    "cmd+t": {
+      "action": "New tab",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775241914352
+    },
+    "cmd+shift+p": {
+      "action": "Keyboard shortcut: cmd+shift+p",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775241914352
+    },
+    "cmd+h": {
+      "action": "Hide application",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775242729024
+    },
+    "cmd+w": {
+      "action": "Close current window/tab",
+      "scope": "global",
+      "confidence": 0.4,
+      "observations": 2,
+      "lastSeen": 1775294515311
+    },
+    "cmd+shift+3": {
+      "action": "Keyboard shortcut: cmd+shift+3",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775245028774
+    },
+    "cmd+shift+r": {
+      "action": "Keyboard shortcut: cmd+shift+r",
+      "scope": "global",
+      "confidence": 0.5714285714285714,
+      "observations": 4,
+      "lastSeen": 1775300449915
+    },
+    "cmd+shift+.": {
+      "action": "Keyboard shortcut: cmd+shift+.",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775246853713
+    },
+    "cmd+shift+s": {
+      "action": "Keyboard shortcut: cmd+shift+s",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775247157010
+    },
+    "cmd+period": {
+      "action": "Keyboard shortcut: cmd+period",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775247342826
+    },
+    "cmd+alt+i": {
+      "action": "Keyboard shortcut: cmd+alt+i",
+      "scope": "global",
+      "confidence": 0.5,
+      "observations": 3,
+      "lastSeen": 1775304346044
+    },
+    "cmd+delete": {
+      "action": "Keyboard shortcut: cmd+delete",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775299015372
+    },
+    "alt+cmd+i": {
+      "action": "Keyboard shortcut: alt+cmd+i",
+      "scope": "global",
+      "confidence": 0.25,
+      "observations": 1,
+      "lastSeen": 1775302821486
+    }
+  },
+  "conventions": [
+    {
+      "pattern": "Use Spotlight (Cmd+Space -> type name -> Return) to open any application",
+      "confidence": 0.9142857142857143,
+      "observations": 32,
+      "appliesTo": "application"
+    }
+  ],
+  "metadata": {
+    "totalTrajectories": 283,
+    "totalExtractions": 283
+  },
+  "lastUpdated": 1775305510585
+}

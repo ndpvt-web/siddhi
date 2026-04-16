@@ -1,0 +1,243 @@
+{
+  "taskId": "task-1775292676406-u69v",
+  "taskDescription": "Open Safari and create a new bookmark for apple.com in the Favorites folder",
+  "startTime": 1775292676407,
+  "endTime": 1775292746541,
+  "duration": 70134,
+  "success": true,
+  "finalText": "EZ CLAP! ✅\n\nCHECKPOINT [3]: Dialog closed and we're back on the apple.com homepage - bookmark saved successfully!\n\nSCENE: Safari showing apple.com homepage, dialog is gone, page is fully visible with the iPhone lineup.\n\nDone! The bookmark for apple.com has been saved to the **Favourites** folder in Safari. The dialog dismissed cleanly after clicking Add, which means it went through perfectly. You'll now see \"Apple\" in your Favourites whenever you open a new tab or click the Favourites bar. 🍎",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "apple.com loaded successfully! The Apple homepage is showing with the iPhone lineup.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "7d7b42050a450a63fbe8aae4e1ef13b5",
+      "semanticState": "Safari browser showing apple.com homepage with iPhone product showcase.",
+      "timestamp": 1775292707339
+    },
+    {
+      "stepNumber": 2,
+      "description": "Add Bookmark dialog is open, already set to \"Favourites\" folder with the name \"Apple\" pre-filled.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "a4d84e7310f45a4ac6deb24f120ecab1",
+      "semanticState": "Safari showing the \"Add this page to:\" dialog with \"Favourites\" selected as the destination folder and \"Apple\" as the bookmark name.",
+      "timestamp": 1775292725601
+    },
+    {
+      "stepNumber": 3,
+      "description": "Dialog closed and we're back on the apple.com homepage - bookmark saved successfully!",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "b8595cf153812712180ae1c5036099ed",
+      "semanticState": "Safari showing apple.com homepage, dialog is gone, page is fully visible with the iPhone lineup.",
+      "timestamp": 1775292746540
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate to apple.com using the address bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Use Cmd+D to open the Add Bookmark dialog",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Make sure it's set to Favorites folder and confirm",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775292678077,
+      "relativeTime": 1670,
+      "screenshotPath": "step-0.png",
+      "exactHash": "e76a9b0bf12d2b304f33a1d87f5cc3a1",
+      "thumbnailHash": "2ffd942fa30b7b20b390eb65a688e98e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Address bar gets focused and I can type apple.com",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775292700339,
+      "relativeTime": 23932,
+      "screenshotPath": "step-1.png",
+      "exactHash": "7d7b42050a450a63fbe8aae4e1ef13b5",
+      "thumbnailHash": "2d3de2ef48dcd328377005ad75b19c3a",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown dialog appears asking where to save the bookmark, should default to Favorites",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing apple.com homepage with iPhone product showcase.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari's already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775292718088,
+      "relativeTime": 41681,
+      "screenshotPath": "step-2.png",
+      "exactHash": "a4d84e7310f45a4ac6deb24f120ecab1",
+      "thumbnailHash": "bf252831dca5deb273b595c3201cf3a8",
+      "action": {
+        "type": "key",
+        "text": "cmd+d",
+        "raw": "key: \"cmd+d\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Dialog closes and bookmark is saved to Favorites folder",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown dialog appears asking where to save the bookmark, should default to Favorites",
+        "observed": "success key: \"cmd+d\"",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing the \"Add this page to:\" dialog with \"Favourites\" selected as the destination folder and \"Apple\" as the bookmark name.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: apple",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775292739644,
+      "relativeTime": 63237,
+      "screenshotPath": "step-3.png",
+      "exactHash": "b8595cf153812712180ae1c5036099ed",
+      "thumbnailHash": "ae080456fc95481832899fb06cf9a88e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          771,
+          464
+        ],
+        "raw": "left_click (771,464)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes and bookmark is saved to Favorites folder",
+        "observed": "success left_click (771,464)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com homepage, dialog is gone, page is fully visible with the iPhone lineup.",
+      "resolvedTarget": null,
+      "assistantIntent": "The bookmark dialog popped up perfectly",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "timestamp": 1775292700339
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+d",
+        "raw": "key: \"cmd+d\""
+      },
+      "timestamp": 1775292718088
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          771,
+          464
+        ],
+        "raw": "left_click (771,464)"
+      },
+      "timestamp": 1775292739644
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Add Bookmark dialog is open, already set to \"Favourites\" folder with the name \"Apple\" pre-filled.\", tried [type: \"apple.com\n\", key: \"cmd+d\", left_click (771,464)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 3,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

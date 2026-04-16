@@ -1,0 +1,333 @@
+{
+  "taskId": "task-1775244325380-u08s",
+  "taskDescription": "Open Keynote and create a presentation with charts and data tables",
+  "startTime": 1775244325381,
+  "endTime": 1775244486857,
+  "duration": 161476,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Keynote is NOT installed, confirmed via bash. PowerPoint is open and ready with a blank \"Presentation1\". Spotlight is dismissed.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "bb6a843f3f822f6629bd91693df930a1",
+      "semanticState": "PowerPoint is open showing a blank title slide with \"Click to add title\" placeholder. Designer panel visible on the right.",
+      "timestamp": 1775244449352
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Check if Keynote app is installed on this system",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "If Keynote exists, launch it",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Create a new presentation",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Add a slide with a chart",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Add a slide with a data table",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Save the presentation",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775244327070,
+      "relativeTime": 1689,
+      "screenshotPath": "step-0.png",
+      "exactHash": "30e60e7c71e2b147a685def1cd252364",
+      "thumbnailHash": "8d355e98af1b87b1b18891ef70d6a276",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775244355901,
+      "relativeTime": 30520,
+      "screenshotPath": "step-1.png",
+      "exactHash": "abfb75f7fc24f60fcef863a2c6b04a68",
+      "thumbnailHash": "a51340dbad78c90f69fa0b8a7e604b3e",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Bruh, Keynote is NOT installed on this system",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh, Keynote is NOT installed on this system",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775244371847,
+      "relativeTime": 46466,
+      "screenshotPath": "step-2.png",
+      "exactHash": "7d788c2e3ed2c15baa02dd5ae3f0b1da",
+      "thumbnailHash": "3aede54507f259ed3278d54de3543a00",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is still open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775244399063,
+      "relativeTime": 73682,
+      "screenshotPath": "step-3.png",
+      "exactHash": "b017967139f524eeb6b7e969d0b06cd0",
+      "thumbnailHash": "22a2583caea66c838bf090483438997d",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          660,
+          440
+        ],
+        "raw": "left_click (660,440)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is still up",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is still up",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775244417387,
+      "relativeTime": 92006,
+      "screenshotPath": "step-4.png",
+      "exactHash": "b017967139f524eeb6b7e969d0b06cd0",
+      "thumbnailHash": "22a2583caea66c838bf090483438997d",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight is still open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is still open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775244437355,
+      "relativeTime": 111974,
+      "screenshotPath": "step-5.png",
+      "exactHash": "bb6a843f3f822f6629bd91693df930a1",
+      "thumbnailHash": "80be2a859e958b8d72e4d2b24c417869",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          656,
+          660
+        ],
+        "raw": "left_click (656,660)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Clicking the title area should focus it and let me type",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "PowerPoint is open showing a blank title slide with \"Click to add title\" placeholder. Designer panel visible on the right.",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is being stubborn lol",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775244467867,
+      "relativeTime": 142486,
+      "screenshotPath": "step-6.png",
+      "exactHash": "9da853ba0aa0d87c023af4119509e48b",
+      "thumbnailHash": "9d6622c83c322b09b93eb009b59ee648",
+      "action": {
+        "type": "double_click",
+        "coordinates": [
+          656,
+          415
+        ],
+        "raw": "double_click (656,415)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.9,
+        "expected": "Clicking the title area should focus it and let me type",
+        "observed": "success double_click (656,415)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Keynote is NOT installed, confirmed via bash",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Keynote is NOT installed, confirmed via bash",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775244355901
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775244371847
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          660,
+          440
+        ],
+        "raw": "left_click (660,440)"
+      },
+      "timestamp": 1775244399063
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775244417387
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          656,
+          660
+        ],
+        "raw": "left_click (656,660)"
+      },
+      "timestamp": 1775244437355
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "double_click",
+        "coordinates": [
+          656,
+          415
+        ],
+        "raw": "double_click (656,415)"
+      },
+      "timestamp": 1775244467867
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

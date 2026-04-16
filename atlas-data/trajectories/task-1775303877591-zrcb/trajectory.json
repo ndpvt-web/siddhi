@@ -1,0 +1,424 @@
+{
+  "taskId": "task-1775303877591-zrcb",
+  "taskDescription": "Open Finder and create a new Smart Folder that searches for all PDF files",
+  "startTime": 1775303877591,
+  "endTime": 1775304064780,
+  "duration": 187189,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "File menu is open with \"New Smart Folder\" option visible.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "7b1a3b11cd29d6a332d897ceb54d844f",
+      "semanticState": "Finder File menu is open, showing \"New Smart Folder\" option in the dropdown menu.",
+      "timestamp": 1775303912916
+    },
+    {
+      "stepNumber": 1,
+      "description": "File menu is open with \"New Smart Folder\" option visible.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "8b0d9a63ffd0578c80569f3a733f65b9",
+      "semanticState": "Finder File menu is open, showing \"New Smart Folder\" option in the dropdown menu.",
+      "timestamp": 1775303991445
+    },
+    {
+      "stepNumber": 2,
+      "description": "New Smart Folder window is open with \"This Mac\" scope selected.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "a8858e3f0bdaf86f391ee9342fa80106",
+      "semanticState": "Finder showing \"New Smart Folder\" window with search bar focused, \"This Mac\" selected as scope, and a \"+\" button to add search criteria.",
+      "timestamp": 1775304013013
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click File menu → New Smart Folder",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Set search scope to \"This Mac\"",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Add search criteria: Kind = PDF",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Save the Smart Folder",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775303879300,
+      "relativeTime": 1709,
+      "screenshotPath": "step-0.png",
+      "exactHash": "51e53e752a9f2a86085735fd62a3fec6",
+      "thumbnailHash": "5698ebae57767ed5ba19384b72c9f301",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "File menu drops down with \"New Smart Folder\" option visible.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775303906302,
+      "relativeTime": 28711,
+      "screenshotPath": "step-1.png",
+      "exactHash": "7b1a3b11cd29d6a332d897ceb54d844f",
+      "thumbnailHash": "a192c6c00469d46f995d032e19ac1606",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A new Finder window opens in Smart Folder search mode with \"This Mac\" scope and a search bar.",
+      "surprise": {
+        "score": 1,
+        "expected": "File menu drops down with \"New Smart Folder\" option visible.",
+        "observed": "success left_click (119,13)",
+        "expectedKeywords": 9,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder File menu is open, showing \"New Smart Folder\" option in the dropdown menu.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Finder is already open - let's get this Smart Folder created",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775303934506,
+      "relativeTime": 56915,
+      "screenshotPath": "step-2.png",
+      "exactHash": "172217e25d0dabd219f4288384f1787c",
+      "thumbnailHash": "8773db32f0349012f42c54244435864c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          183,
+          112
+        ],
+        "raw": "left_click (183,112)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A new Finder window opens in Smart Folder search mode with \"This Mac\" scope and a search bar.",
+        "observed": "success left_click (183,112)",
+        "expectedKeywords": 12,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "File menu is open and I can see \"New Smart Folder\" - let's click it",
+      "resolvedTarget": null,
+      "assistantIntent": "File menu is open and I can see \"New Smart Folder\" - let's click it",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775303955039,
+      "relativeTime": 77448,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c7703ff939dc007873bb470bdaed2e09",
+      "thumbnailHash": "18aded10ab8feee366e7c4263d98e446",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          206,
+          360
+        ],
+        "raw": "left_click (206,360)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Interesting",
+      "resolvedTarget": null,
+      "assistantIntent": "Interesting",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775303984512,
+      "relativeTime": 106921,
+      "screenshotPath": "step-4.png",
+      "exactHash": "8b0d9a63ffd0578c80569f3a733f65b9",
+      "thumbnailHash": "eace788d703be767a93458913427fbaa",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder File menu is open, showing \"New Smart Folder\" option in the dropdown menu.",
+      "resolvedTarget": null,
+      "assistantIntent": "The Smart Folder is already showing all PDF files",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775304004124,
+      "relativeTime": 126533,
+      "screenshotPath": "step-5.png",
+      "exactHash": "a8858e3f0bdaf86f391ee9342fa80106",
+      "thumbnailHash": "da23ee5a15a9f7e31d6cead7915c1420",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          183,
+          112
+        ],
+        "raw": "left_click (183,112)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "A new row of search criteria should appear below the search bar.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing \"New Smart Folder\" window with search bar focused, \"This Mac\" selected as scope, and a \"+\" button to add search criteria.",
+      "resolvedTarget": null,
+      "assistantIntent": "The File menu is open and I can see \"New Smart Folder\" option",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775304030045,
+      "relativeTime": 152454,
+      "screenshotPath": "step-6.png",
+      "exactHash": "538e9669b2b3fddf9f7297fe91f92d40",
+      "thumbnailHash": "2448fc2a3aad5694eb082c39aacb54cd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1293,
+          146
+        ],
+        "raw": "left_click (1293,146)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A criteria row should appear with \"Kind\" dropdown.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new row of search criteria should appear below the search bar.",
+        "observed": "success left_click (1293,146)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Now we're cooking",
+      "resolvedTarget": null,
+      "assistantIntent": "Now we're cooking",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775304050292,
+      "relativeTime": 172701,
+      "screenshotPath": "step-7.png",
+      "exactHash": "0be5e885df323787224fec54a79e6ef9",
+      "thumbnailHash": "a9c0d6cd349081c32abc0b38047c9f3b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1291,
+          146
+        ],
+        "raw": "left_click (1291,146)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A criteria row should appear with \"Kind\" dropdown.",
+        "observed": "success left_click (1291,146)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Hmm, it looks like I clicked on the search bar instead of the \"+\" button",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, it looks like I clicked on the search bar instead of the \"+\" button",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "timestamp": 1775303906302
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          183,
+          112
+        ],
+        "raw": "left_click (183,112)"
+      },
+      "timestamp": 1775303934506
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          206,
+          360
+        ],
+        "raw": "left_click (206,360)"
+      },
+      "timestamp": 1775303955039
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          119,
+          13
+        ],
+        "raw": "left_click (119,13)"
+      },
+      "timestamp": 1775303984512
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          183,
+          112
+        ],
+        "raw": "left_click (183,112)"
+      },
+      "timestamp": 1775304004124
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1293,
+          146
+        ],
+        "raw": "left_click (1293,146)"
+      },
+      "timestamp": 1775304030045
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1291,
+          146
+        ],
+        "raw": "left_click (1291,146)"
+      },
+      "timestamp": 1775304050292
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

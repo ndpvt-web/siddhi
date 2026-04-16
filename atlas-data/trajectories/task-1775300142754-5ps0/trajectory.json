@@ -1,0 +1,306 @@
+{
+  "taskId": "task-1775300142754-5ps0",
+  "taskDescription": "Open Safari with 3 tabs: apple.com, google.com, and github.com, then close the middle tab",
+  "startTime": 1775300142754,
+  "endTime": 1775300256452,
+  "duration": 113698,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Navigated to apple.com - Apple homepage is showing with iPhone product page.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "d07fa1419db7152ce87a865a3b06a12c",
+      "semanticState": "Safari browser showing apple.com with iPhone display, single tab visible.",
+      "timestamp": 1775300169929
+    },
+    {
+      "stepNumber": 2,
+      "description": "google.com loaded in second tab. I can see 3 tabs in the tab bar - two Apple tabs and the active Google tab.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "ae2e729b00ba6320e468d61497c06cec",
+      "semanticState": "Safari with 3 tabs visible (Apple, Apple, Google), currently showing Google homepage.",
+      "timestamp": 1775300188105
+    },
+    {
+      "stepNumber": 3,
+      "description": "github.com loaded in third tab. I can clearly see 4 tabs - Apple, Apple, Google, GitHub. Wait... there are 4 tabs? Let me look more carefully.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "379bc9d159ed02062db63da5d91abba4",
+      "semanticState": "CHECKPOINT [2]: google",
+      "timestamp": 1775300206565
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate current tab to apple.com",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open new tab and navigate to google.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open new tab and navigate to github.com",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Close the middle tab (google.com)",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775300144460,
+      "relativeTime": 1706,
+      "screenshotPath": "step-0.png",
+      "exactHash": "251f11b1166e8f37ab92784cf522042f",
+      "thumbnailHash": "b75a9e20bc21dfef2eff77b0eecf8fb4",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Address bar gets focused and I can type apple.com",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775300163331,
+      "relativeTime": 20577,
+      "screenshotPath": "step-1.png",
+      "exactHash": "d07fa1419db7152ce87a865a3b06a12c",
+      "thumbnailHash": "e44fe9c1fec37e30c74d5d2589452385",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "New tab opens and google.com loads",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing apple.com with iPhone display, single tab visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775300180445,
+      "relativeTime": 37691,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ae2e729b00ba6320e468d61497c06cec",
+      "thumbnailHash": "2246867166d95ef00ef8633c83aefbb3",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Third tab opens with github.com",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari with 3 tabs visible (Apple, Apple, Google), currently showing Google homepage.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Navigated to apple",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775300197831,
+      "relativeTime": 55077,
+      "screenshotPath": "step-3.png",
+      "exactHash": "379bc9d159ed02062db63da5d91abba4",
+      "thumbnailHash": "b787545c6255441131ee304ce447b880",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Context menu appears with \"Close Tab\" option",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: google",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: google",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775300217044,
+      "relativeTime": 74290,
+      "screenshotPath": "step-4.png",
+      "exactHash": "53662c3d7cdac67ee1b59918fa87903a",
+      "thumbnailHash": "2dd396ff6b7e8338c8e5614482232ee7",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          459,
+          91
+        ],
+        "raw": "right_click (459,91)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Context menu appears with \"Close Tab\" option",
+        "observed": "success right_click (459,91)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [3]: github",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [3]: github",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775300236112,
+      "relativeTime": 93358,
+      "screenshotPath": "step-5.png",
+      "exactHash": "e99ceb77cc96b2828c86976fa19b6d32",
+      "thumbnailHash": "ade31fde2d45305c12d26413f507ae67",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          524,
+          156
+        ],
+        "raw": "left_click (524,156)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Context menu is open on the second Apple tab",
+      "resolvedTarget": null,
+      "assistantIntent": "Context menu is open on the second Apple tab",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "timestamp": 1775300163331
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "timestamp": 1775300180445
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "timestamp": 1775300197831
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          459,
+          91
+        ],
+        "raw": "right_click (459,91)"
+      },
+      "timestamp": 1775300217044
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          524,
+          156
+        ],
+        "raw": "left_click (524,156)"
+      },
+      "timestamp": 1775300236112
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,264 @@
+{
+  "taskId": "task-1773734918751-bt2l",
+  "taskDescription": "Open Safari, navigate to wikipedia.org, search for capybara, and tell me the first sentence of the capybara article.",
+  "startTime": 1773734918752,
+  "endTime": 1773735073530,
+  "duration": 154778,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on Safari (one of the open tabs) to bring it to focus",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to wikipedia.org",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Search for \"capybara\"",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Read the first sentence of the article",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773734920540,
+      "relativeTime": 1788,
+      "screenshotPath": "step-0.png",
+      "exactHash": "26d46d5a6bbf7ea9859d3bc57624e9f0",
+      "thumbnailHash": "6d971ada05359a254c08fa62db61d171",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773734945417,
+      "relativeTime": 26665,
+      "screenshotPath": "step-1.png",
+      "exactHash": "d9ace0fc53d03052bc871130d681e295",
+      "thumbnailHash": "f9587bf556a034d1ea9a087007a0ad81",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          503,
+          64
+        ],
+        "raw": "left_click (503,64)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (503,64) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773734961958,
+      "relativeTime": 43206,
+      "screenshotPath": "step-2.png",
+      "exactHash": "06da6428059772d38c56556f6cf20f25",
+      "thumbnailHash": "281e2b69b98ae3c7d6195a4b224e757c",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+l\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773734982044,
+      "relativeTime": 63292,
+      "screenshotPath": "step-3.png",
+      "exactHash": "4ba8da91a47fdc4a0fc498f820572333",
+      "thumbnailHash": "281e2b69b98ae3c7d6195a4b224e757c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (678,24) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1773735044571,
+      "relativeTime": 125819,
+      "screenshotPath": "step-4.png",
+      "exactHash": "a8d0be26af2978176f0ae7dedd9fc350",
+      "thumbnailHash": "08ed2d144d3b20bebbbf11039bf9a643",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1022,
+          460
+        ],
+        "raw": "left_click (1022,460)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Address bar should become focused/highlighted, ready for typing",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (1022,460) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1773735061855,
+      "relativeTime": 143103,
+      "screenshotPath": "step-5.png",
+      "exactHash": "a8d0be26af2978176f0ae7dedd9fc350",
+      "thumbnailHash": "08ed2d144d3b20bebbbf11039bf9a643",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Address bar should become focused/highlighted, ready for typing",
+        "observed": "success key: \"cmd+l\" stagnation no change",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+l\" -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          503,
+          64
+        ],
+        "raw": "left_click (503,64)"
+      },
+      "timestamp": 1773734945417
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "timestamp": 1773734961958
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "timestamp": 1773734982044
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1022,
+          460
+        ],
+        "raw": "left_click (1022,460)"
+      },
+      "timestamp": 1773735044571
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "timestamp": 1773735061855
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

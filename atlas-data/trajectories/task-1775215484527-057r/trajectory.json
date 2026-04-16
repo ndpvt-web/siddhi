@@ -1,0 +1,95 @@
+{
+  "taskId": "task-1775215484527-057r",
+  "taskDescription": "Click on Documents in Finder sidebar",
+  "startTime": 1775215484527,
+  "endTime": 1775215504676,
+  "duration": 20149,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775215486189,
+      "relativeTime": 1662,
+      "screenshotPath": "step-0.png",
+      "exactHash": "10166e273be2260ce66cd78bae23f8c5",
+      "thumbnailHash": "4198f5b3f4636ac661f6fd679ed1d01e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder is already open and Documents is already selected/highlighted in the sidebar, showing the Documents folder contents with 4 items (Capy Meetings, harris-undergr...otes.pdf, Capy Memory, and Zoom).",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775215504676,
+      "relativeTime": 20149,
+      "screenshotPath": "step-1.png",
+      "exactHash": "92cb5490d2f754e09d046698bdf762b3",
+      "thumbnailHash": "0219a3fde1d92b3b1a9c0770e8c4fbcd",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          243
+        ],
+        "raw": "left_click (124,243)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "SCENE: Finder is already open and Documents is already selected/highlighted in the sidebar, showing the Documents folder",
+      "resolvedTarget": null,
+      "assistantIntent": "SCENE: Finder is already open and Documents is already selected/highlighted in the sidebar, showing the Documents folder",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          243
+        ],
+        "raw": "left_click (124,243)"
+      },
+      "timestamp": 1775215504676
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,185 @@
+{
+  "taskId": "task-1773735313309-z8iw",
+  "taskDescription": "You are looking at Google.com in Safari. Search for \"capybara\" in the Google search box, then click on the Wikipedia link in the results to read about capybaras.",
+  "startTime": 1773735313309,
+  "endTime": 1773735407725,
+  "duration": 94416,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the Google search box and type \"capybara\"",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Hit Enter to search",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Find and click the Wikipedia link in the results",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773735315209,
+      "relativeTime": 1900,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4e7f226d8b06d273a42491f173799bbc",
+      "thumbnailHash": "48fca95ecbd09214b15cb66ae64139f2",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The search box gets focused and I can type in it.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Google.com homepage is open in Safari, dark mode, search box is visible and appears to already be focused.",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773735343738,
+      "relativeTime": 30429,
+      "screenshotPath": "step-1.png",
+      "exactHash": "4e7f226d8b06d273a42491f173799bbc",
+      "thumbnailHash": "48fca95ecbd09214b15cb66ae64139f2",
+      "action": {
+        "type": "type",
+        "text": "capybara",
+        "raw": "type: \"capybara\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.8,
+        "expected": "The search box gets focused and I can type in it.",
+        "observed": "success type: \"capybara\" stagnation no change",
+        "expectedKeywords": 5,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "type: \"capybara\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773735365255,
+      "relativeTime": 51946,
+      "screenshotPath": "step-2.png",
+      "exactHash": "32b8506ae76e687627c0603b553e34fc",
+      "thumbnailHash": "e3158ab0b66f2b1f03a2b9d177b121c3",
+      "action": {
+        "type": "type",
+        "text": "https://www.google.com/search?q=capybara\n",
+        "raw": "type: \"https://www.google.com/search?q=capybara\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "type: \"https://www.google.com/search?q=capybara\n\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773735390401,
+      "relativeTime": 77092,
+      "screenshotPath": "step-3.png",
+      "exactHash": "bccc2b1928fd22079631249da37b58b0",
+      "thumbnailHash": "eecd7d63a958bc19f43583c78f00316c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (678,24) -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "capybara",
+        "raw": "type: \"capybara\""
+      },
+      "timestamp": 1773735343738
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "https://www.google.com/search?q=capybara\n",
+        "raw": "type: \"https://www.google.com/search?q=capybara\n\""
+      },
+      "timestamp": 1773735365255
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          24
+        ],
+        "raw": "left_click (678,24)"
+      },
+      "timestamp": 1773735390401
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

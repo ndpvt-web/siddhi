@@ -1,0 +1,358 @@
+{
+  "taskId": "task-1775298284198-695z",
+  "taskDescription": "Open Safari with 3 tabs: apple.com, google.com, and github.com, then close the middle tab",
+  "startTime": 1775298284198,
+  "endTime": 1775298421191,
+  "duration": 136993,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Apple tab is active and showing apple.com with the iPhone marketing page.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "9238164be2c6904c595f05d11c66de9a",
+      "semanticState": "Safari on apple.com with the iPhone \"Meet the latest iPhone lineup\" page visible. Tab 1 = Apple, Tab 2 = Hacker News.",
+      "timestamp": 1775298330799
+    },
+    {
+      "stepNumber": 2,
+      "description": "Successfully navigated to google.com on the second tab. Tabs are now: Apple (tab 1), Google (tab 2, active).",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "d79c02d725efd420a013cbbc76b457fc",
+      "semanticState": "Safari showing Google homepage with 2 tabs - Apple and Google.",
+      "timestamp": 1775298366562
+    },
+    {
+      "stepNumber": 3,
+      "description": "Successfully opened a third tab and navigated to github.com. Now I have 3 tabs: Apple (tab 1), Google (tab 2), GitHub (tab 3, active).",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "5ea7bc4348533b6bcbe5c15e6354d647",
+      "semanticState": "Safari showing GitHub homepage with \"The future of building happens together\" hero text. Three tabs visible: Apple, Google, GitHub.",
+      "timestamp": 1775298396158
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate the first tab to apple.com",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open a new tab and navigate to google.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open another new tab and navigate to github.com",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Close the middle tab (google.com)",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775298285903,
+      "relativeTime": 1705,
+      "screenshotPath": "step-0.png",
+      "exactHash": "138ebc2937bb23dd3ddb5e9c731d756e",
+      "thumbnailHash": "2e49dea66c8d1e943d8c0ef5a7f77346",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775298293714,
+      "relativeTime": 9516,
+      "screenshotPath": "step-1.png",
+      "exactHash": "138ebc2937bb23dd3ddb5e9c731d756e",
+      "thumbnailHash": "2e49dea66c8d1e943d8c0ef5a7f77346",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The Apple tab becomes active, showing apple.com content.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari is open with 2 tabs - \"Apple\" (tab 1) and \"Hacker News\" (tab 2, currently active showing news.ycombinator.com).",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari is already open showing Hacker News",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775298318765,
+      "relativeTime": 34567,
+      "screenshotPath": "step-2.png",
+      "exactHash": "9238164be2c6904c595f05d11c66de9a",
+      "thumbnailHash": "29eba5618c91074ee107d4b1fbde402e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          312,
+          91
+        ],
+        "raw": "left_click (312,91)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Hacker News tab becomes active.",
+      "surprise": {
+        "score": 1,
+        "expected": "The Apple tab becomes active, showing apple.com content.",
+        "observed": "success left_click (312,91)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari on apple.com with the iPhone \"Meet the latest iPhone lineup\" page visible. Tab 1 = Apple, Tab 2 = Hacker News.",
+      "resolvedTarget": null,
+      "assistantIntent": "SCENE: Safari is open with 2 tabs - \"Apple\" (tab 1) and \"Hacker News\" (tab 2, currently active showing news",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775298342040,
+      "relativeTime": 57842,
+      "screenshotPath": "step-3.png",
+      "exactHash": "ff5037f4486f2cbfdcf525d9d44b4437",
+      "thumbnailHash": "230ba1954d4b3dc56a68d0cfd1659743",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          899,
+          91
+        ],
+        "raw": "left_click (899,91)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Address bar gets focused, then I type google.com and navigate there.",
+      "surprise": {
+        "score": 1,
+        "expected": "Hacker News tab becomes active.",
+        "observed": "success left_click (899,91)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Apple tab is active and showing apple",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Apple tab is active and showing apple",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775298359583,
+      "relativeTime": 75385,
+      "screenshotPath": "step-4.png",
+      "exactHash": "d79c02d725efd420a013cbbc76b457fc",
+      "thumbnailHash": "3a288a98e4ac98d249b53f938957f8a5",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A new empty tab opens, then I navigate to github.com.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari showing Google homepage with 2 tabs - Apple and Google.",
+      "resolvedTarget": null,
+      "assistantIntent": "Hacker News tab is now active",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775298387218,
+      "relativeTime": 103020,
+      "screenshotPath": "step-5.png",
+      "exactHash": "5ea7bc4348533b6bcbe5c15e6354d647",
+      "thumbnailHash": "bf263d509ac3561208098bd4c5b7040c",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A context menu appears with a \"Close Tab\" option.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari showing GitHub homepage with \"The future of building happens together\" hero text. Three tabs visible: Apple, Google, GitHub.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Successfully navigated to google",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775298408185,
+      "relativeTime": 123987,
+      "screenshotPath": "step-6.png",
+      "exactHash": "2fa5933dcb0a05bace16d992b13ec085",
+      "thumbnailHash": "91ebabb5169183c9b446bc06635b33e9",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          608,
+          92
+        ],
+        "raw": "right_click (608,92)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The Google tab closes, leaving only Apple and GitHub tabs.",
+      "surprise": {
+        "score": 1,
+        "expected": "A context menu appears with a \"Close Tab\" option.",
+        "observed": "success right_click (608,92)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "CHECKPOINT [3]: Successfully opened a third tab and navigated to github",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [3]: Successfully opened a third tab and navigated to github",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          312,
+          91
+        ],
+        "raw": "left_click (312,91)"
+      },
+      "timestamp": 1775298318765
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          899,
+          91
+        ],
+        "raw": "left_click (899,91)"
+      },
+      "timestamp": 1775298342040
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "timestamp": 1775298359583
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "timestamp": 1775298387218
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          608,
+          92
+        ],
+        "raw": "right_click (608,92)"
+      },
+      "timestamp": 1775298408185
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Apple tab is active and showing apple.com with the iPhone marketing page.\", tried [left_click (312,91), left_click (899,91)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

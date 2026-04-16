@@ -1,0 +1,348 @@
+{
+  "taskId": "task-1775223122825-b9h0",
+  "taskDescription": "Open Finder, create a new folder, then create 3 text files inside it using TextEdit",
+  "startTime": 1775223122825,
+  "endTime": 1775223279512,
+  "duration": 156687,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Finder Settings closed. Clean Finder window showing Desktop — Local.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "2eea6c2c4c0134c96f213003708c9a46",
+      "semanticState": "Finder window showing Desktop with various files and folders visible. Desktop is selected in the sidebar.",
+      "timestamp": 1775223155085
+    },
+    {
+      "stepNumber": 2,
+      "description": "New folder \"MyTextFiles\" created on the Desktop!",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "87c11189538e0cd459b6bc8902e3695a",
+      "semanticState": "Finder window showing Desktop with \"MyTextFiles\" folder visible and selected (highlighted blue) in the bottom right area of the file grid.",
+      "timestamp": 1775223228735
+    },
+    {
+      "stepNumber": 3,
+      "description": "Inside the MyTextFiles folder - it's empty and ready for files!",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "8242e8fc108afed40b440fe9e2516434",
+      "semanticState": "Finder window showing \"MyTextFiles\" folder (empty) with the title bar confirming we're inside it.",
+      "timestamp": 1775223252848
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Finder Settings dialog",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Navigate to a good location (Desktop or Documents) in Finder",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Create a new folder",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Open TextEdit and create 3 text files, saving them inside the new folder",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775223124486,
+      "relativeTime": 1661,
+      "screenshotPath": "step-0.png",
+      "exactHash": "1ce08e87592bb3779758d85c74191ec7",
+      "thumbnailHash": "926a71250755f9c1560c53cc5b0b99f5",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775223146867,
+      "relativeTime": 24042,
+      "screenshotPath": "step-1.png",
+      "exactHash": "2eea6c2c4c0134c96f213003708c9a46",
+      "thumbnailHash": "8815879041a9210fe47afd90c978cfc0",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          26,
+          381
+        ],
+        "raw": "left_click (26,381)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Context menu should appear with \"New Folder\" option.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder window showing Desktop with various files and folders visible. Desktop is selected in the sidebar.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Finder",
+        "distance": 2
+      },
+      "assistantIntent": "Alright, Finder is already open and I can see the Desktop",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775223175658,
+      "relativeTime": 52833,
+      "screenshotPath": "step-2.png",
+      "exactHash": "d9728928c11e9be3a32003be062c9898",
+      "thumbnailHash": "2a5cbcda2418c6619b4ec312e9811b74",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          900,
+          600
+        ],
+        "raw": "right_click (900,600)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A new folder will be created with an editable name field.",
+      "surprise": {
+        "score": 1,
+        "expected": "Context menu should appear with \"New Folder\" option.",
+        "observed": "success right_click (900,600)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [1]: Finder Settings closed",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Finder Settings closed",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775223196254,
+      "relativeTime": 73429,
+      "screenshotPath": "step-3.png",
+      "exactHash": "14227800309532e975bf15fb64cb8c06",
+      "thumbnailHash": "bf5185500aa77c881900e153473133b8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          967,
+          568
+        ],
+        "raw": "left_click (967,568)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The folder will be renamed to \"MyTextFiles\".",
+      "surprise": {
+        "score": 1,
+        "expected": "A new folder will be created with an editable name field.",
+        "observed": "success left_click (967,568)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Context menu appeared with \"New Folder\" option",
+      "resolvedTarget": null,
+      "assistantIntent": "Context menu appeared with \"New Folder\" option",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775223218903,
+      "relativeTime": 96078,
+      "screenshotPath": "step-4.png",
+      "exactHash": "87c11189538e0cd459b6bc8902e3695a",
+      "thumbnailHash": "f90ea16530fc1bb75a28bc803fb1ae3f",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Finder navigates into the MyTextFiles folder (empty folder view).",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Finder window showing Desktop with \"MyTextFiles\" folder visible and selected (highlighted blue) in the bottom right area of the file grid.",
+      "resolvedTarget": null,
+      "assistantIntent": "YOOO new folder created and it's in rename mode (blue highlight on \"untitled folder\")",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775223242425,
+      "relativeTime": 119600,
+      "screenshotPath": "step-5.png",
+      "exactHash": "8242e8fc108afed40b440fe9e2516434",
+      "thumbnailHash": "780e93762d673d7b9dbdef63e46e15bf",
+      "action": {
+        "type": "double_click",
+        "coordinates": [
+          899,
+          607
+        ],
+        "raw": "double_click (899,607)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Spotlight opens, I type TextEdit, and the app launches.",
+      "surprise": {
+        "score": 1,
+        "expected": "Finder navigates into the MyTextFiles folder (empty folder view).",
+        "observed": "success double_click (899,607)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Finder window showing \"MyTextFiles\" folder (empty) with the title bar confirming we're inside it.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: New folder \"MyTextFiles\" created on the Desktop",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          26,
+          381
+        ],
+        "raw": "left_click (26,381)"
+      },
+      "timestamp": 1775223146867
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "right_click",
+        "coordinates": [
+          900,
+          600
+        ],
+        "raw": "right_click (900,600)"
+      },
+      "timestamp": 1775223175658
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          967,
+          568
+        ],
+        "raw": "left_click (967,568)"
+      },
+      "timestamp": 1775223196254
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775223218903
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "double_click",
+        "coordinates": [
+          899,
+          607
+        ],
+        "raw": "double_click (899,607)"
+      },
+      "timestamp": 1775223242425
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Finder Settings closed. Clean Finder window showing Desktop — Local.\", tried [left_click (26,381), right_click (900,600), left_click (967,568)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 1,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,228 @@
+{
+  "taskId": "task-1775294215667-i1k3",
+  "taskDescription": "Open Safari and create a new bookmark for apple.com in the Favorites folder",
+  "startTime": 1775294215668,
+  "endTime": 1775294276707,
+  "duration": 61039,
+  "success": true,
+  "finalText": "CHECKPOINT [2]: Bookmark saved! The dialog is gone and we're back on apple.com - that's the success signal!\nSCENE: Safari showing apple.com homepage with iPhone lineup content, dialog has closed confirming the bookmark was saved.\n\nEZ CLAP! 🎉 The bookmark for apple.com has been successfully created in the **Favourites** folder! The dialog closed and we're back on the Apple homepage - that's exactly what happens when a bookmark saves successfully. You're all set - apple.com is now bookmarked in your Favorites in Safari! 🍎",
+  "totalSteps": 4,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Successfully navigated to apple.com - Apple homepage is visible with iPhone ad.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "2fe9ccacfb9ccb7fb6894d318e272af2",
+      "semanticState": "Safari showing apple.com homepage with \"iPhone - Meet the latest iPhone lineup\" content.",
+      "timestamp": 1775294242835
+    },
+    {
+      "stepNumber": 2,
+      "description": "Bookmark saved! The dialog is gone and we're back on apple.com - that's the success signal!",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "0c93475fa57cc9f9316e0eed8d78eb36",
+      "semanticState": "Safari showing apple.com homepage with iPhone lineup content, dialog has closed confirming the bookmark was saved.",
+      "timestamp": 1775294276706
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate to apple.com using the address bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Use Cmd+D to open the Add Bookmark dialog and save it to Favorites folder",
+        "done": true
+      }
+    ],
+    "totalSteps": 2
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775294217362,
+      "relativeTime": 1694,
+      "screenshotPath": "step-0.png",
+      "exactHash": "a57a4d9b56882e4ee3625d41847b7a59",
+      "thumbnailHash": "a2e0de267ee595c1a838b0dd20d0693e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Address bar will get focused and I can type apple.com",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775294236115,
+      "relativeTime": 20447,
+      "screenshotPath": "step-1.png",
+      "exactHash": "2fe9ccacfb9ccb7fb6894d318e272af2",
+      "thumbnailHash": "77b05d5728f7cbac43c3ff9c9d1a09ec",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A dialog box pops up asking where to save the bookmark, defaulting to Favorites",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com homepage with \"iPhone - Meet the latest iPhone lineup\" content.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari's already open - I can see it's on a Wikipedia page about Alan Turing",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775294248113,
+      "relativeTime": 32445,
+      "screenshotPath": "step-2.png",
+      "exactHash": "265352c32fc91b04df498137f4f24f09",
+      "thumbnailHash": "d88b9e59378bdc819dca1cc680a10741",
+      "action": {
+        "type": "key",
+        "text": "cmd+d",
+        "raw": "key: \"cmd+d\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Dialog closes and bookmark is saved to Favorites",
+      "surprise": {
+        "score": 1,
+        "expected": "A dialog box pops up asking where to save the bookmark, defaulting to Favorites",
+        "observed": "success key: \"cmd+d\"",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "com is loaded",
+      "resolvedTarget": null,
+      "assistantIntent": "com is loaded",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775294266763,
+      "relativeTime": 51095,
+      "screenshotPath": "step-3.png",
+      "exactHash": "0c93475fa57cc9f9316e0eed8d78eb36",
+      "thumbnailHash": "9f924ab51b6a8a81b98b1e2fa76638b3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          771,
+          464
+        ],
+        "raw": "left_click (771,464)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes and bookmark is saved to Favorites",
+        "observed": "success left_click (771,464)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com homepage with iPhone lineup content, dialog has closed confirming the bookmark was saved.",
+      "resolvedTarget": null,
+      "assistantIntent": "The Add Bookmark dialog is open and it's already set to **Favourites** with the name \"Apple\" pre-filled",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "timestamp": 1775294236115
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "cmd+d",
+        "raw": "key: \"cmd+d\""
+      },
+      "timestamp": 1775294248113
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          771,
+          464
+        ],
+        "raw": "left_click (771,464)"
+      },
+      "timestamp": 1775294266763
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Successfully navigated to apple.com - Apple homepage is visible with iPhone ad.\", tried [type: \"apple.com\n\", key: \"cmd+d\", left_click (771,464)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 1,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 3,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

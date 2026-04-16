@@ -1,0 +1,114 @@
+{
+  "taskId": "task-1775228288664-ty6p",
+  "taskDescription": "Open Reminders and mark the first reminder as completed",
+  "startTime": 1775228288664,
+  "endTime": 1775228319675,
+  "duration": 31011,
+  "success": true,
+  "finalText": "LETS GOOO! 🎉 \n\nCHECKPOINT [1]: \"Milk\" has been marked as completed! The Shopping list now shows **1 Completed** at the top, the count dropped from 3 to 2, and \"Milk\" is no longer visible in the active list. Ez clap!\n\nSCENE: Reminders app showing the Shopping list with the counter now at 2 (was 3), and \"1 Completed • Clear\" indicator is visible, confirming Milk was successfully checked off.\n\nDone! The first reminder \"Milk\" is now marked as completed. You can click \"Show\" to see it in the completed section if you wanna double-check. 🥛✅",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "\"Milk\" has been marked as completed! The Shopping list now shows **1 Completed** at the top, the count dropped from 3 to 2, and \"Milk\" is no longer visible in the active list. Ez clap!",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "31928a35098e27cdd2f78e1fad24545a",
+      "semanticState": "Reminders app showing the Shopping list with the counter now at 2 (was 3), and \"1 Completed • Clear\" indicator is visible, confirming Milk was successfully checked off.",
+      "timestamp": 1775228319675
+    }
+  ],
+  "taskPlan": null,
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775228290375,
+      "relativeTime": 1711,
+      "screenshotPath": "step-0.png",
+      "exactHash": "26e71759b255f4fa7c747b96d3ad5cab",
+      "thumbnailHash": "4dcc62e35599e1417cab39e0cfd26591",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The checkbox next to \"Milk\" should get a checkmark and the item should be marked as done.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Reminders app is open showing the Shopping list with 3 reminders: Milk, Bread, and Pick up package. All are unchecked.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775228310938,
+      "relativeTime": 22274,
+      "screenshotPath": "step-1.png",
+      "exactHash": "31928a35098e27cdd2f78e1fad24545a",
+      "thumbnailHash": "ea796748b2792800b7e5ca75602eedc4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          517,
+          306
+        ],
+        "raw": "left_click (517,306)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The checkbox next to \"Milk\" should get a checkmark and the item should be marked as done.",
+        "observed": "success left_click (517,306)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Reminders app showing the Shopping list with the counter now at 2 (was 3), and \"1 Completed • Clear\" indicator is visible, confirming Milk was successfully checked off.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Reminders is already open and I can see the Shopping list with 3 reminders",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          517,
+          306
+        ],
+        "raw": "left_click (517,306)"
+      },
+      "timestamp": 1775228310938
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

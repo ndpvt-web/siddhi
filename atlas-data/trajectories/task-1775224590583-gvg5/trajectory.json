@@ -1,0 +1,458 @@
+{
+  "taskId": "task-1775224590583-gvg5",
+  "taskDescription": "Open TextEdit, create a table with 3 rows and 2 columns in rich text mode",
+  "startTime": 1775224590583,
+  "endTime": 1775224877167,
+  "duration": 286584,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "The Untitled.rtf document is now in focus and active, showing rich text mode with the formatting toolbar visible (bold, italic, font options, etc.)",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "5f7bf5806f85e8b7d7373e630a407e38",
+      "semanticState": "Untitled.rtf is open in rich text mode with the text \"The quick brown fox jumps over the lazy dog...\" visible and the formatting toolbar at the top.",
+      "timestamp": 1775224630136
+    },
+    {
+      "stepNumber": 2,
+      "description": "Clicked inside the document area, cursor is now positioned in the text. The document is active and focused.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "1c8c25360324f3d57ebd88d6a44c7009",
+      "semanticState": "Untitled.rtf is focused with cursor placed in the document body. Rich text formatting toolbar is visible.",
+      "timestamp": 1775224653073
+    },
+    {
+      "stepNumber": 3,
+      "description": "Format menu is open showing all options including \"Table...\" at the bottom.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "d706d8d7db4dfa51fd579554250fbd11",
+      "semanticState": "Format menu is displayed with options: Font, Text, Make Plain Text, Prevent Editing, Wrap to Page, Allow Hyphenation, Make Layout Vertical, List..., and Table...",
+      "timestamp": 1775224677366
+    },
+    {
+      "stepNumber": 4,
+      "description": "Table dialog is open showing Rows=2, Columns=3 with a table already inserted in the document.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "4c2fc602636de747d14660e6408bf0fc",
+      "semanticState": "Untitled.rtf has a table inserted with 2 rows and 3 columns. The Table configuration panel is visible at the bottom left showing Rows=2, Columns=3, with Merge Cells, Split Cells, Nest Table buttons, Alignment options, Cell Border, and Cell Background settings.",
+      "timestamp": 1775224770090
+    },
+    {
+      "stepNumber": 5,
+      "description": "Rows updated to 3 successfully. Table now shows 3 rows. Columns still at 3, need to change to 2.",
+      "nodeId": "step-6",
+      "nodeIndex": 6,
+      "screenshotHash": "b26ebe720019649ce650af35eb5151e5",
+      "semanticState": "Table in document has 3 rows and 3 columns. Table config panel shows Rows=3 (selected), Columns=3.",
+      "timestamp": 1775224861425
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on the Untitled.rtf document (already in rich text mode) or create a new rich text document",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Make sure we're in rich text mode",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Insert a table via Format menu → Table",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Configure it for 3 rows and 2 columns",
+        "done": true
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775224592258,
+      "relativeTime": 1675,
+      "screenshotPath": "step-0.png",
+      "exactHash": "a6a8d3291e93bd8178c0b7ff7eb58954",
+      "thumbnailHash": "62742eafedf94d8fdc15510c69a05877",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775224599731,
+      "relativeTime": 9148,
+      "screenshotPath": "step-1.png",
+      "exactHash": "ed020be036555ef6e7bf919f82af5e9e",
+      "thumbnailHash": "526bad2a299edff2ac52e4fb5a1e3e16",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The Untitled.rtf window should come to the front and be active.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit is open with two documents - \"Untitled.rtf\" (rich text) and \"Untitled 2.txt\" (plain text). The Untitled 2.txt document is currently focused in the foreground. I can see the Untitled.rtf in the background - that's the one I need since it's already in rich text mode.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see TextEdit is already open with some documents",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775224620829,
+      "relativeTime": 30246,
+      "screenshotPath": "step-2.png",
+      "exactHash": "5f7bf5806f85e8b7d7373e630a407e38",
+      "thumbnailHash": "18b9d6b07488bab6e14babb2397e1067",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          263,
+          75
+        ],
+        "raw": "left_click (263,75)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Format menu should show a \"Table...\" option.",
+      "surprise": {
+        "score": 1,
+        "expected": "The Untitled.rtf window should come to the front and be active.",
+        "observed": "success left_click (263,75)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Untitled.rtf is open in rich text mode with the text \"The quick brown fox jumps over the lazy dog...\" visible and the formatting toolbar at the top.",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 55
+      },
+      "assistantIntent": "SCENE: TextEdit is open with two documents - \"Untitled",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775224645692,
+      "relativeTime": 55109,
+      "screenshotPath": "step-3.png",
+      "exactHash": "1c8c25360324f3d57ebd88d6a44c7009",
+      "thumbnailHash": "98f1d113442f19cf157de6dea5d89b17",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          410,
+          300
+        ],
+        "raw": "left_click (410,300)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Format menu drops down with a \"Table...\" option visible.",
+      "surprise": {
+        "score": 1,
+        "expected": "Format menu should show a \"Table...\" option.",
+        "observed": "success left_click (410,300)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Untitled.rtf is focused with cursor placed in the document body. Rich text formatting toolbar is visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: The Untitled",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775224667046,
+      "relativeTime": 76463,
+      "screenshotPath": "step-4.png",
+      "exactHash": "d706d8d7db4dfa51fd579554250fbd11",
+      "thumbnailHash": "d78caa0e64ef05000fdee5049e6afd59",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A table dialog/panel should appear where I can set rows to 3 and columns to 2.",
+      "surprise": {
+        "score": 1,
+        "expected": "Format menu drops down with a \"Table...\" option visible.",
+        "observed": "success left_click (219,13)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Format menu is displayed with options: Font, Text, Make Plain Text, Prevent Editing, Wrap to Page, Allow Hyphenation, Make Layout Vertical, List..., and Table...",
+      "resolvedTarget": {
+        "label": "this button also has an action to zoom the window",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 72
+      },
+      "assistantIntent": "CHECKPOINT [2]: Clicked inside the document area, cursor is now positioned in the text",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775224704188,
+      "relativeTime": 113605,
+      "screenshotPath": "step-5.png",
+      "exactHash": "4c2fc602636de747d14660e6408bf0fc",
+      "thumbnailHash": "82f4a16b357b3fdc1349330921ef4c5a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          243,
+          247
+        ],
+        "raw": "left_click (243,247)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The Rows value changes to 3 and the table updates to show 3 rows.",
+      "surprise": {
+        "score": 1,
+        "expected": "A table dialog/panel should appear where I can set rows to 3 and columns to 2.",
+        "observed": "success left_click (243,247)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Untitled.rtf has a table inserted with 2 rows and 3 columns. The Table configuration panel is visible at the bottom left showing Rows=2, Columns=3, with Merge Cells, Split Cells, Nest Table buttons, Alignment options, Cell Border, and Cell Background settings.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the Format menu is open and there's \"Table",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775224810598,
+      "relativeTime": 220015,
+      "screenshotPath": "step-6.png",
+      "exactHash": "b26ebe720019649ce650af35eb5151e5",
+      "thumbnailHash": "4f6e8d612becee1571e550e96da188e0",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Columns value changes to 2 and table updates to 3 rows × 2 columns.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Table in document has 3 rows and 3 columns. Table config panel shows Rows=3 (selected), Columns=3.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Incrementor",
+        "app": "TextEdit",
+        "distance": 25
+      },
+      "assistantIntent": "A table was inserted AND the Table configuration panel appeared",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775224877166,
+      "relativeTime": 286583,
+      "screenshotPath": "step-7.png",
+      "exactHash": "58e24e6dada79df894ffdccb7e6d1b81",
+      "thumbnailHash": "01bcc98a5dd04bae18c825ac9f9ca544",
+      "action": {
+        "type": "triple_click",
+        "coordinates": [
+          189,
+          522
+        ],
+        "raw": "triple_click (189,522)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Columns value changes to 2 and table updates to 3 rows × 2 columns.",
+        "observed": "success triple_click (189,522)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Interacted with '(unlabeled)' (Incrementor) in TextEdit",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Incrementor",
+        "app": "TextEdit",
+        "distance": 25
+      },
+      "assistantIntent": "Hmm, that might have clicked the wrong field",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          263,
+          75
+        ],
+        "raw": "left_click (263,75)"
+      },
+      "timestamp": 1775224620829
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          410,
+          300
+        ],
+        "raw": "left_click (410,300)"
+      },
+      "timestamp": 1775224645692
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          219,
+          13
+        ],
+        "raw": "left_click (219,13)"
+      },
+      "timestamp": 1775224667046
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          243,
+          247
+        ],
+        "raw": "left_click (243,247)"
+      },
+      "timestamp": 1775224704188
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775224810598
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "triple_click",
+        "coordinates": [
+          189,
+          522
+        ],
+        "raw": "triple_click (189,522)"
+      },
+      "timestamp": 1775224877166
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"The Untitled.rtf document is now in focus and active, showing rich text mode with the formatting toolbar visible (bold, italic, font options, etc.)\", tried [left_click (263,75), left_click (410,300)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

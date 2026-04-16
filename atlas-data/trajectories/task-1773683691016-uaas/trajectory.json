@@ -1,0 +1,251 @@
+{
+  "taskId": "task-1773683691016-uaas",
+  "taskDescription": "1. Open Safari using Spotlight (Cmd+Space, type Safari, press Enter). 2. Press Cmd+L to focus the address bar. 3. Type en.wikipedia.org and press Enter. 4. Wait for the page to load, then tell me the ",
+  "startTime": 1773683691017,
+  "endTime": 1773683786274,
+  "duration": 95257,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Focus the address bar with Cmd+L",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Type en.wikipedia.org and press Enter",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Wait for page to load",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Report the main heading",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773683693179,
+      "relativeTime": 2162,
+      "screenshotPath": "step-0.png",
+      "exactHash": "a52c96308a83fd24b10f6600ec1547dd",
+      "thumbnailHash": "27c250dcaf7d990ea0c3dbad91eafcb7",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Wikipedia English homepage should load",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1773683721817,
+      "relativeTime": 30800,
+      "screenshotPath": "step-1.png",
+      "exactHash": "f46dd5b3d27be36bc785d69b0e7be061",
+      "thumbnailHash": "04ac774d7939ada4b584303fd19ebcf4",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"Return\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1773683737409,
+      "relativeTime": 46392,
+      "screenshotPath": "step-2.png",
+      "exactHash": "4be90f4d99b5fd9a3f021d83090a50d7",
+      "thumbnailHash": "e84553decb19e80f54680aadbb4f4203",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1284,
+          64
+        ],
+        "raw": "left_click (1284,64)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (1284,64) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1773683752701,
+      "relativeTime": 61684,
+      "screenshotPath": "step-3.png",
+      "exactHash": "0c6c674dce5a0493611ae158de85937a",
+      "thumbnailHash": "445fc2bc9ee7a4d695bbc543fcc4987e",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+space\" -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1773683771348,
+      "relativeTime": 80331,
+      "screenshotPath": "step-4.png",
+      "exactHash": "bc7ca4e4b059807ae8b217b50294dd6c",
+      "thumbnailHash": "4497babb3781667987a8f1027acdec01",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          25
+        ],
+        "raw": "left_click (678,25)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "left_click (678,25) -> success",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1773683786267,
+      "relativeTime": 95250,
+      "screenshotPath": "step-5.png",
+      "exactHash": "fd5ae563eb342d9514d59dc5af54be39",
+      "thumbnailHash": "d40e44b1a46c9de11628d09867a0689d",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "key: \"cmd+l\" -> success",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1773683721818
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          1284,
+          64
+        ],
+        "raw": "left_click (1284,64)"
+      },
+      "timestamp": 1773683737409
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1773683752701
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          678,
+          25
+        ],
+        "raw": "left_click (678,25)"
+      },
+      "timestamp": 1773683771348
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+l",
+        "raw": "key: \"cmd+l\""
+      },
+      "timestamp": 1773683786267
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,70 @@
+{
+  "taskId": "task-1774420795437-kpol",
+  "taskDescription": "take a screenshot",
+  "startTime": 1774420795437,
+  "endTime": 1774420813974,
+  "duration": 18537,
+  "success": true,
+  "finalText": "Yo, here's your screenshot! 📸\n\nSCENE: You've got a Terminal window open (looks like iTerm2 with multiple tabs) showing what appears to be a log of a previous AI agent session — bunch of steps with actions like `screenshot`, `left_click`, `key`, etc. The active tab is the middle `-zsh` one. At the bottom you can see the shell prompt at `nivesh@niveshdeMacBook-Pro ~ %` — looks like the previous task wrapped up and it ran something with `nano /tmp/capy-learning/`. Clean state, ready for whatever's next! 🤙",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1774420797378,
+      "relativeTime": 1941,
+      "screenshotPath": "step-0.png",
+      "exactHash": "39921a4b7019dd499f85a8a56c3894db",
+      "thumbnailHash": "1c600504250da6e619dd89a588ea092d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1774420803312,
+      "relativeTime": 7875,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5b56bac9a442481316c4618f9658f0d3",
+      "thumbnailHash": "1c600504250da6e619dd89a588ea092d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "You've got a Terminal window open (looks like iTerm2 with multiple tabs) showing what appears to be a log of a previous AI agent session — bunch of steps with actions like `screenshot`, `left_click`, `key`, etc. The active tab is the middle `-zsh` one. At the bottom you can see the shell prompt at `nivesh@niveshdeMacBook-Pro ~ %` — looks like the previous task wrapped up and it ran something with `nano /tmp/capy-learning/`. Clean state, ready for whatever's next! 🤙",
+      "axContext": null
+    }
+  ],
+  "edges": [],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

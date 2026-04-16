@@ -1,0 +1,359 @@
+{
+  "taskId": "task-1775221966908-wy19",
+  "taskDescription": "Open Finder, connect to a server using Go > Connect to Server (smb://localhost)",
+  "startTime": 1775221966908,
+  "endTime": 1775222171156,
+  "duration": 204248,
+  "success": true,
+  "finalText": "CHECKPOINT [4]: The connection attempt was made! It shows an error dialog: \"There was a problem connecting to the server 'localhost'. The server may not exist or it is unavailable at this time.\"\n\nSCENE: Error dialog over Finder saying the server \"localhost\" couldn't be reached, with an OK button.\n\nThat's totally expected behavior — there's no SMB server running on localhost, so it can't connect. But we successfully completed the task:\n\n1. ✅ Opened Finder\n2. ✅ Used Go > Connect to Server\n3. ✅ Typed `smb://localhost`\n4. ✅ Hit Connect (via Return)\n\nThe connection was attempted and macOS responded with the expected error since there's no SMB share running locally. Task done! 🎉\n\nWant me to click OK to dismiss the error, or do anything else with this?",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Go menu is open and I can see \"Connect to Server...\" at the bottom. LET'S GO!",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "ad9ef48464b14db30d181f95ba6d22ba",
+      "semanticState": "Finder with the Go menu dropped down, showing all navigation options including \"Connect to Server...\" at the bottom.",
+      "timestamp": 1775222005091
+    },
+    {
+      "stepNumber": 2,
+      "description": "\"Connect to Server\" dialog is open! I can see the Server Address field. Now let me type the address.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "9247bb0d4c888a55f11c5dc246c4d61c",
+      "semanticState": "\"Connect to Server\" dialog box is open with a \"Server Address\" text field ready for input.",
+      "timestamp": 1775222025644
+    },
+    {
+      "stepNumber": 3,
+      "description": "The Server Address field now shows \"smb://localhost\" — perfect! Now I need to scroll down to find the Connect button and click it.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "3bf84052fd9e5570f216356f6997bd17",
+      "semanticState": "\"Connect to Server\" dialog with \"smb://localhost\" typed in the Server Address field.",
+      "timestamp": 1775222061791
+    },
+    {
+      "stepNumber": 4,
+      "description": "The connection attempt was made! It shows an error dialog: \"There was a problem connecting to the server 'localhost'. The server may not exist or it is unavailable at this time.\"",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "b2cdf33bd8112449c1eab8341efec4e0",
+      "semanticState": "Error dialog over Finder saying the server \"localhost\" couldn't be reached, with an OK button.",
+      "timestamp": 1775222171155
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click on \"Go\" in the menu bar",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click \"Connect to Server...\"",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type `smb://localhost` and hit Connect",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775221968604,
+      "relativeTime": 1696,
+      "screenshotPath": "step-0.png",
+      "exactHash": "13e5777043dedb27affc6a554a85b917",
+      "thumbnailHash": "26518eea4c8200ae3d003a4f287e0502",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The \"Go\" menu should drop down showing options including \"Connect to Server...\"",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775221996889,
+      "relativeTime": 29981,
+      "screenshotPath": "step-1.png",
+      "exactHash": "ad9ef48464b14db30d181f95ba6d22ba",
+      "thumbnailHash": "0eb5d2eac004a8177a47bc9ab0862e8f",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          244,
+          13
+        ],
+        "raw": "left_click (244,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A \"Connect to Server\" dialog box should pop up with a text field to enter the server address.",
+      "surprise": {
+        "score": 1,
+        "expected": "The \"Go\" menu should drop down showing options including \"Connect to Server...\"",
+        "observed": "success left_click (244,13)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder with the Go menu dropped down, showing all navigation options including \"Connect to Server...\" at the bottom.",
+      "resolvedTarget": {
+        "label": "back",
+        "role": "Button",
+        "app": "Finder",
+        "distance": 80
+      },
+      "assistantIntent": "EXPECT: The \"Go\" menu should drop down showing options including \"Connect to Server",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775222017856,
+      "relativeTime": 50948,
+      "screenshotPath": "step-2.png",
+      "exactHash": "9247bb0d4c888a55f11c5dc246c4d61c",
+      "thumbnailHash": "bd610a49a2e79ee7ec6883af91eafd94",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          318,
+          460
+        ],
+        "raw": "left_click (318,460)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The Server Address field should show \"smb://localhost\" typed in.",
+      "surprise": {
+        "score": 1,
+        "expected": "A \"Connect to Server\" dialog box should pop up with a text field to enter the server address.",
+        "observed": "success left_click (318,460)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "\"Connect to Server\" dialog box is open with a \"Server Address\" text field ready for input.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: A \"Connect to Server\" dialog box should pop up with a text field to enter the server address",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775222052319,
+      "relativeTime": 85411,
+      "screenshotPath": "step-3.png",
+      "exactHash": "3bf84052fd9e5570f216356f6997bd17",
+      "thumbnailHash": "ed1a60beef4c0e2650124ce5617d015f",
+      "action": {
+        "type": "type",
+        "text": "smb://localhost",
+        "raw": "type: \"smb://localhost\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Clicking Connect should attempt to connect to smb://localhost. It may show a login dialog or an error if no SMB server is running.",
+      "surprise": {
+        "score": 0.6428571428571428,
+        "expected": "The Server Address field should show \"smb://localhost\" typed in.",
+        "observed": "success type: \"smb://localhost\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 2.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "\"Connect to Server\" dialog with \"smb://localhost\" typed in the Server Address field.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: The Server Address field should show \"smb://localhost\" typed in",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775222085900,
+      "relativeTime": 118992,
+      "screenshotPath": "step-4.png",
+      "exactHash": "41403f70ef39d45736a49332080a245f",
+      "thumbnailHash": "56532e3af5647691d73733ad371e47f0",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          905,
+          374
+        ],
+        "raw": "left_click (905,374)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Pressing Return should trigger the Connect action, same as clicking the Connect button.",
+      "surprise": {
+        "score": 0.9615384615384616,
+        "expected": "Clicking Connect should attempt to connect to smb://localhost. It may show a login dialog or an error if no SMB server is running.",
+        "observed": "success left_click (905,374)",
+        "expectedKeywords": 13,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Clicked 'Connect' (Button) in Finder",
+      "resolvedTarget": {
+        "label": "Connect",
+        "role": "Button",
+        "app": "Finder",
+        "distance": 61
+      },
+      "assistantIntent": "CHECKPOINT [3]: The Server Address field now shows \"smb://localhost\" — perfect",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775222159968,
+      "relativeTime": 193060,
+      "screenshotPath": "step-5.png",
+      "exactHash": "b2cdf33bd8112449c1eab8341efec4e0",
+      "thumbnailHash": "a396df680062d69da201cdad1742591b",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Error dialog over Finder saying the server \"localhost\" couldn't be reached, with an OK button.",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, looks like my click missed the Connect button - it landed in the wrong spot",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          244,
+          13
+        ],
+        "raw": "left_click (244,13)"
+      },
+      "timestamp": 1775221996889
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          318,
+          460
+        ],
+        "raw": "left_click (318,460)"
+      },
+      "timestamp": 1775222017856
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "smb://localhost",
+        "raw": "type: \"smb://localhost\""
+      },
+      "timestamp": 1775222052319
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          905,
+          374
+        ],
+        "raw": "left_click (905,374)"
+      },
+      "timestamp": 1775222085900
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775222159968
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 0.64)",
+      "lesson": "After \"\"Connect to Server\" dialog is open! I can see the Server Address field. Now let me type the address.\", tried [left_click (244,13), left_click (318,460), type: \"smb://localhost\"] but unexpected result (surprise score: 0.64)"
+    },
+    {
+      "id": "branch-1-attempt-1-type",
+      "name": "attempt-1-type",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 5,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 0.64)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

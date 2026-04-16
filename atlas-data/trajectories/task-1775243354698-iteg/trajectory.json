@@ -1,0 +1,284 @@
+{
+  "taskId": "task-1775243354698-iteg",
+  "taskDescription": "Open Pages and insert an image from the Desktop, resize it, and add a caption",
+  "startTime": 1775243354698,
+  "endTime": 1775243519367,
+  "duration": 164669,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "App Store is open showing Pages 14.5 with a download button (cloud icon) visible.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "c857cfad0875fbe18da5943c110fb4cd",
+      "semanticState": "Mac App Store showing Pages 14.5 page with download button, 4.6 stars, 686.2MB size.",
+      "timestamp": 1775243480533
+    },
+    {
+      "stepNumber": 2,
+      "description": "Pages is downloading/installing - the download button changed to a pause button icon, confirming the download started.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "9248d95b85676c7e4cf5f458226bd4cb",
+      "semanticState": "App Store showing Pages 14.5 with a pause/loading button, indicating active download.",
+      "timestamp": 1775243502515
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open Pages app",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Create a new document",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Find an image on the Desktop",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Insert the image into Pages",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Resize the image",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Add a caption to the image",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775243356372,
+      "relativeTime": 1674,
+      "screenshotPath": "step-0.png",
+      "exactHash": "cbf7381dce05dc53ce31f2641fa1c4e3",
+      "thumbnailHash": "d061d632df0e7510f6194069df5c8587",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775243366303,
+      "relativeTime": 11605,
+      "screenshotPath": "step-1.png",
+      "exactHash": "cbf7381dce05dc53ce31f2641fa1c4e3",
+      "thumbnailHash": "d061d632df0e7510f6194069df5c8587",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see Spotlight is open with \"Pages\" searched",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see Spotlight is open with \"Pages\" searched",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775243387436,
+      "relativeTime": 32738,
+      "screenshotPath": "step-2.png",
+      "exactHash": "ef5ffd0580f7d009f7c39107090378fb",
+      "thumbnailHash": "51db99b743499d4b533b1f23113866b9",
+      "action": {
+        "type": "key",
+        "text": "super+space",
+        "raw": "key: \"super+space\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "I see this is actually a VS Code extension search, not Spotlight",
+      "resolvedTarget": null,
+      "assistantIntent": "I see this is actually a VS Code extension search, not Spotlight",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775243471055,
+      "relativeTime": 116357,
+      "screenshotPath": "step-3.png",
+      "exactHash": "c857cfad0875fbe18da5943c110fb4cd",
+      "thumbnailHash": "1579ba05bcc56d76686868a90bf73a3e",
+      "action": {
+        "type": "bash",
+        "command": "open \"macappstore://apps.apple.com/app/pages/id409201541\"",
+        "raw": "bash: open \"macappstore://apps.apple.com/app/pages/id409201541\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Pages will start downloading/installing",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Mac App Store showing Pages 14.5 page with download button, 4.6 stars, 686.2MB size.",
+      "resolvedTarget": null,
+      "assistantIntent": "Pages is legit not installed",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775243493979,
+      "relativeTime": 139281,
+      "screenshotPath": "step-4.png",
+      "exactHash": "9248d95b85676c7e4cf5f458226bd4cb",
+      "thumbnailHash": "ce0a2a0938845d0872726c8064826581",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          527,
+          191
+        ],
+        "raw": "left_click (527,191)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Pages will start downloading/installing",
+        "observed": "success left_click (527,191)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "App Store showing Pages 14.5 with a pause/loading button, indicating active download.",
+      "resolvedTarget": {
+        "label": "Re-download",
+        "role": "Button",
+        "app": "App Store",
+        "distance": 16
+      },
+      "assistantIntent": "The App Store is showing Pages 14",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775243519367,
+      "relativeTime": 164669,
+      "screenshotPath": "step-5.png",
+      "exactHash": "12e13f37f2daf46d3744673eb5c3885f",
+      "thumbnailHash": "91b25f1dad7825509ce6b84b83e88f1e",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Pages is downloading",
+      "resolvedTarget": null,
+      "assistantIntent": "Pages is downloading",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "super+space",
+        "raw": "key: \"super+space\""
+      },
+      "timestamp": 1775243387436
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "bash",
+        "command": "open \"macappstore://apps.apple.com/app/pages/id409201541\"",
+        "raw": "bash: open \"macappstore://apps.apple.com/app/pages/id409201541\""
+      },
+      "timestamp": 1775243471055
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          527,
+          191
+        ],
+        "raw": "left_click (527,191)"
+      },
+      "timestamp": 1775243493979
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1775243519367
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

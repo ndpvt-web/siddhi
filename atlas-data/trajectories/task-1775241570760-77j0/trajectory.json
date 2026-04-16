@@ -1,0 +1,369 @@
+{
+  "taskId": "task-1775241570760-77j0",
+  "taskDescription": "Open VS Code, write a Python function, and use the debugger to set a breakpoint and step through",
+  "startTime": 1775241570760,
+  "endTime": 1775241754208,
+  "duration": 183448,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Python file `debug_demo.py` was created on the Desktop via terminal. Terminal shows the heredoc completed successfully with the `~$` prompt back.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "18b4122e607ff2fad7f9ac5fa77ca910",
+      "semanticState": "VS Code showing Extensions panel and terminal with the file creation commands completed.",
+      "timestamp": 1775241666702
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a new Python file",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Write a Python function with some interesting logic",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Save the file",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Set a breakpoint by clicking in the gutter",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Launch the debugger and step through the code",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775241572443,
+      "relativeTime": 1683,
+      "screenshotPath": "step-0.png",
+      "exactHash": "22e8d6ee3a2269f494283f8b3cc33ce6",
+      "thumbnailHash": "f9e3703c906b13b5d901bf4bcc50e75d",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "A new untitled file editor should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775241592634,
+      "relativeTime": 21874,
+      "screenshotPath": "step-1.png",
+      "exactHash": "8137859c56137b9d50a08dd79e5fee92",
+      "thumbnailHash": "4905ead5b392b4c9ad2dff4728f11cf1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          141,
+          44
+        ],
+        "raw": "left_click (141,44)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A new untitled file editor should open",
+        "observed": "success left_click (141,44)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Code",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Code",
+        "distance": 15
+      },
+      "assistantIntent": "Yo, VS Code is already open and the File menu is showing",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775241614294,
+      "relativeTime": 43534,
+      "screenshotPath": "step-2.png",
+      "exactHash": "42a37f9f06ec41be1eeb157f95fd2006",
+      "thumbnailHash": "60ab5efd9aa5731a325b05412276903a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          670,
+          617
+        ],
+        "raw": "left_click (670,617)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Ok the menu closed and now showing Extensions panel",
+      "resolvedTarget": null,
+      "assistantIntent": "Ok the menu closed and now showing Extensions panel",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775241656601,
+      "relativeTime": 85841,
+      "screenshotPath": "step-3.png",
+      "exactHash": "18b4122e607ff2fad7f9ac5fa77ca910",
+      "thumbnailHash": "6c3452c39caa1128f930ee93216b08b1",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "A file picker dialog should open",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "VS Code showing Extensions panel and terminal with the file creation commands completed.",
+      "resolvedTarget": null,
+      "assistantIntent": "Terminal is focused (cursor is blinking)",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775241679837,
+      "relativeTime": 109077,
+      "screenshotPath": "step-4.png",
+      "exactHash": "16543898bc0a9fa0efb5806ef3b8e8ce",
+      "thumbnailHash": "2cb9dfb2babaac785dd3565e308c5a9e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          110,
+          13
+        ],
+        "raw": "left_click (110,13)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A file picker dialog should open",
+        "observed": "success left_click (110,13)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '(unlabeled)' (Button) in Code",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Code",
+        "distance": 48
+      },
+      "assistantIntent": "File created",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775241699867,
+      "relativeTime": 129107,
+      "screenshotPath": "step-5.png",
+      "exactHash": "55cdb1e973816f599dbc5a6be4d836fe",
+      "thumbnailHash": "1cb2779f6868d6dda678787739170054",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          122,
+          145
+        ],
+        "raw": "left_click (122,145)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "File menu is open",
+      "resolvedTarget": null,
+      "assistantIntent": "File menu is open",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775241720150,
+      "relativeTime": 149390,
+      "screenshotPath": "step-6.png",
+      "exactHash": "228ec54d2d032af48ea292204c10cffa",
+      "thumbnailHash": "a1de7d03faa3f64b6cafc0d3c8389cd1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          319,
+          355
+        ],
+        "raw": "left_click (319,355)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "File picker is open",
+      "resolvedTarget": null,
+      "assistantIntent": "File picker is open",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          141,
+          44
+        ],
+        "raw": "left_click (141,44)"
+      },
+      "timestamp": 1775241592634
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          670,
+          617
+        ],
+        "raw": "left_click (670,617)"
+      },
+      "timestamp": 1775241614294
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775241656601
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          110,
+          13
+        ],
+        "raw": "left_click (110,13)"
+      },
+      "timestamp": 1775241679837
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          122,
+          145
+        ],
+        "raw": "left_click (122,145)"
+      },
+      "timestamp": 1775241699867
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          319,
+          355
+        ],
+        "raw": "left_click (319,355)"
+      },
+      "timestamp": 1775241720150
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Python file `debug_demo.py` was created on the Desktop via terminal. Terminal shows the heredoc completed successfully with the `~$` prompt back.\", tried [left_click (670,617), key: \"Return\", left_click (110,13)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

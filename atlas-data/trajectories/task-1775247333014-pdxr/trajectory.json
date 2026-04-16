@@ -1,0 +1,448 @@
+{
+  "taskId": "task-1775247333014-pdxr",
+  "taskDescription": "Open TextEdit, paste a paragraph of text, then use Find & Replace to change 'the' to 'THE'",
+  "startTime": 1775247333014,
+  "endTime": 1775247574410,
+  "duration": 241396,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 5,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "New TextEdit document \"Untitled 3\" is open and ready! I can see the blank document with the toolbar and text cursor.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "fa10d54088d2b17df290ad48eb4f1954",
+      "semanticState": "TextEdit document \"Untitled 3\" open and empty, cursor blinking in the text area. Finder window visible in background.",
+      "timestamp": 1775247362015
+    },
+    {
+      "stepNumber": 2,
+      "description": "Text has been typed successfully! I can see the paragraph with multiple occurrences of 'the' in the document.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "887cab1569aeac29c92bc69d4163664d",
+      "semanticState": "TextEdit document \"Untitled 3.rtf\" showing the paragraph about the fox and dog with multiple instances of 'the'.",
+      "timestamp": 1775247395792
+    },
+    {
+      "stepNumber": 3,
+      "description": "Find & Replace panel is open! I can see the Find field already has \"the\" in it (from the previous attempt), and the Replace field is empty and focused. The Replace checkbox is checked.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "0f383e83add936b6354287462cdd8fde",
+      "semanticState": "TextEdit with Find & Replace bar visible. Find field shows \"the\", Replace field is empty and focused, with Replace/All buttons visible.",
+      "timestamp": 1775247412380
+    },
+    {
+      "stepNumber": 4,
+      "description": "\"THE\" is now in the Replace field! Find field shows \"the\", Replace field shows \"THE\". Both fields are properly populated. Now I just need to click \"All\" to replace all instances.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "2837642d4e3809f15fdaf322a7e96b6a",
+      "semanticState": "TextEdit with Find & Replace bar. Find field = \"the\", Replace field = \"THE\". Replace and All buttons visible.",
+      "timestamp": 1775247458564
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Open a new TextEdit document (Cmd+N since TextEdit is already the active app... wait, actually the menu bar shows TextEdit but the window is Finder. Let me click on TextEdit in the dock or use the menu)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Paste/type a paragraph of text with multiple occurrences of 'the'",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open Find & Replace (Cmd+Option+F)",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Type 'the' in Find field, 'THE' in Replace field",
+        "done": true
+      },
+      {
+        "n": 5,
+        "desc": "Click Replace All and verify",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775247334593,
+      "relativeTime": 1579,
+      "screenshotPath": "step-0.png",
+      "exactHash": "856fc2e54947df76775bc8d1ac1d43ad",
+      "thumbnailHash": "3cd0c0a2a3961d970ed519283a17fb67",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "A new blank TextEdit document should open.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775247352348,
+      "relativeTime": 19334,
+      "screenshotPath": "step-1.png",
+      "exactHash": "fa10d54088d2b17df290ad48eb4f1954",
+      "thumbnailHash": "9c57e8e438f3c82a4a243d59b6e77c60",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The text cursor should be active in the document and text should appear.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank TextEdit document should open.",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit document \"Untitled 3\" open and empty, cursor blinking in the text area. Finder window visible in background.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see TextEdit is already in the menu bar but there's a Finder window open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775247387976,
+      "relativeTime": 54962,
+      "screenshotPath": "step-2.png",
+      "exactHash": "887cab1569aeac29c92bc69d4163664d",
+      "thumbnailHash": "054e2c3b62bc1c4e6b6477f40b4c95e8",
+      "action": {
+        "type": "type",
+        "text": "The quick brown fox jumps over the lazy dog. The dog was sleeping near the river, unaware of the fox watching from the shadows. By the end of the day, the fox had crossed the bridge and disappeared into the forest.",
+        "raw": "type: \"The quick brown fox jumps over the lazy dog. The d\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A Find & Replace bar should appear at the bottom or top of the document.",
+      "surprise": {
+        "score": 1,
+        "expected": "The text cursor should be active in the document and text should appear.",
+        "observed": "success type: \"the quick brown fox jumps over the lazy dog. the d\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit document \"Untitled 3.rtf\" showing the paragraph about the fox and dog with multiple instances of 'the'.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: New TextEdit document \"Untitled 3\" is open and ready",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775247402881,
+      "relativeTime": 69867,
+      "screenshotPath": "step-3.png",
+      "exactHash": "0f383e83add936b6354287462cdd8fde",
+      "thumbnailHash": "d84c70a2d75278ef60558d3e0b969f5a",
+      "action": {
+        "type": "key",
+        "text": "cmd+alt+f",
+        "raw": "key: \"cmd+alt+f\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "\"THE\" should appear in the Replace field.",
+      "surprise": {
+        "score": 1,
+        "expected": "A Find & Replace bar should appear at the bottom or top of the document.",
+        "observed": "success key: \"cmd+alt+f\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit with Find & Replace bar visible. Find field shows \"the\", Replace field is empty and focused, with Replace/All buttons visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: Text has been typed successfully",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775247421832,
+      "relativeTime": 88818,
+      "screenshotPath": "step-4.png",
+      "exactHash": "2837642d4e3809f15fdaf322a7e96b6a",
+      "thumbnailHash": "23a82c6aa7ab5d73a2aa28e3f26b2659",
+      "action": {
+        "type": "type",
+        "text": "THE",
+        "raw": "type: \"THE\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "All instances of 'the' in the text should be replaced with 'THE'.",
+      "surprise": {
+        "score": 1,
+        "expected": "\"THE\" should appear in the Replace field.",
+        "observed": "success type: \"the\"",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "TextEdit with Find & Replace bar. Find field = \"the\", Replace field = \"THE\". Replace and All buttons visible.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [3]: Find & Replace panel is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775247484375,
+      "relativeTime": 151361,
+      "screenshotPath": "step-5.png",
+      "exactHash": "cbae9b4649a3f76ca01c6f31fdcd9195",
+      "thumbnailHash": "c026b2874e65c4e27d353da0db74e622",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          601,
+          192
+        ],
+        "raw": "left_click (601,192)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "All instances of 'the' in the text should be replaced with 'THE'.",
+        "observed": "success left_click (601,192)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Clicked 'All' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "All",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 1
+      },
+      "assistantIntent": "Hmm, let me take a screenshot to see what happened",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775247536910,
+      "relativeTime": 203896,
+      "screenshotPath": "step-6.png",
+      "exactHash": "7cc373da58cec12eff54147cc2992e9e",
+      "thumbnailHash": "826643bb9f50e65ecd274b9393e7999c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          601,
+          192
+        ],
+        "raw": "left_click (601,192)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Clicked 'All' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "All",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 1
+      },
+      "assistantIntent": "Hmm, looks like the text still shows lowercase 'the' - the Replace All didn't fire",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775247574410,
+      "relativeTime": 241396,
+      "screenshotPath": "step-7.png",
+      "exactHash": "e4da7ae08039c0a8b45c1068f68c707b",
+      "thumbnailHash": "80055c917343719ab3ac5a89909a7dad",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          602,
+          193
+        ],
+        "raw": "left_click (602,193)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Clicked 'All' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "All",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 0
+      },
+      "assistantIntent": "Same thing - the grounding model keeps redirecting to (475, 180)",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775247352348
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "The quick brown fox jumps over the lazy dog. The dog was sleeping near the river, unaware of the fox watching from the shadows. By the end of the day, the fox had crossed the bridge and disappeared into the forest.",
+        "raw": "type: \"The quick brown fox jumps over the lazy dog. The d\""
+      },
+      "timestamp": 1775247387976
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+alt+f",
+        "raw": "key: \"cmd+alt+f\""
+      },
+      "timestamp": 1775247402881
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "THE",
+        "raw": "type: \"THE\""
+      },
+      "timestamp": 1775247421832
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          601,
+          192
+        ],
+        "raw": "left_click (601,192)"
+      },
+      "timestamp": 1775247484375
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          601,
+          192
+        ],
+        "raw": "left_click (601,192)"
+      },
+      "timestamp": 1775247536910
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          602,
+          193
+        ],
+        "raw": "left_click (602,193)"
+      },
+      "timestamp": 1775247574410
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Text has been typed successfully! I can see the paragraph with multiple occurrences of 'the' in the document.\", tried [key: \"cmd+n\", type: \"The quick brown fox jumps over the lazy dog. The d\", key: \"cmd+alt+f\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

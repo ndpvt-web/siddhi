@@ -1,0 +1,360 @@
+{
+  "taskId": "task-1775245465191-gj5r",
+  "taskDescription": "Open System Settings to check Wi-Fi status, then open Safari to verify internet connectivity by navigating to example.com",
+  "startTime": 1775245465191,
+  "endTime": 1775245623732,
+  "duration": 158541,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Search overlay dismissed! Now I can see Safari with the Wikipedia Capybara Talk page. Clean state, ready to rock!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "a8c3409029cfa14fe8a775757802664c",
+      "semanticState": "Safari browser showing Wikipedia's Talk:Capybara page. The overlay is gone and the browser is in focus.",
+      "timestamp": 1775245513448
+    },
+    {
+      "stepNumber": 2,
+      "description": "Spotlight search bar is open and ready for input.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "7ea78dc4095ed85bc133dd4175164311",
+      "semanticState": "Spotlight search overlay is visible with \"Numbers\" pre-filled. Filter buttons visible including \"System Settings\".",
+      "timestamp": 1775245529365
+    },
+    {
+      "stepNumber": 3,
+      "description": "System Settings is open, showing \"General\" pane with sidebar visible. I can see Wi-Fi in the sidebar.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "f15e3a71e43bc091add0d961de92faa3",
+      "semanticState": "System Settings app open, showing General pane. Sidebar shows Wi-Fi, Bluetooth, Network, VPN, Battery, General (selected), Accessibility, etc.",
+      "timestamp": 1775245579497
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the current search overlay",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open System Settings and check Wi-Fi status",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open Safari and navigate to example.com",
+        "done": true
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 2,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775245466877,
+      "relativeTime": 1686,
+      "screenshotPath": "step-0.png",
+      "exactHash": "fe6fa35742147e804910884b82f63bf9",
+      "thumbnailHash": "c54dc5f98f3dae94c76a06403d00e7e3",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775245482156,
+      "relativeTime": 16965,
+      "screenshotPath": "step-1.png",
+      "exactHash": "fe6fa35742147e804910884b82f63bf9",
+      "thumbnailHash": "c54dc5f98f3dae94c76a06403d00e7e3",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see there's a search/Spotlight-like overlay open with \"Numbers\" typed in it",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see there's a search/Spotlight-like overlay open with \"Numbers\" typed in it",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775245503808,
+      "relativeTime": 38617,
+      "screenshotPath": "step-2.png",
+      "exactHash": "a8c3409029cfa14fe8a775757802664c",
+      "thumbnailHash": "44b4e38e68eed41d5c37295a5f3e2e20",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          130,
+          400
+        ],
+        "raw": "left_click (130,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Spotlight search bar should appear in the center of the screen.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser showing Wikipedia's Talk:Capybara page. The overlay is gone and the browser is in focus.",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, the overlay is still there",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775245520212,
+      "relativeTime": 55021,
+      "screenshotPath": "step-3.png",
+      "exactHash": "7ea78dc4095ed85bc133dd4175164311",
+      "thumbnailHash": "9071811ac230cd0367c39637ad1abfa5",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The search will update to show System Settings as a result.",
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar should appear in the center of the screen.",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Spotlight search overlay is visible with \"Numbers\" pre-filled. Filter buttons visible including \"System Settings\".",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Search overlay dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775245543065,
+      "relativeTime": 77874,
+      "screenshotPath": "step-4.png",
+      "exactHash": "1e877feb8459d80faf749d3514402a42",
+      "thumbnailHash": "ad117a89ec02d908f8b77076b671ae38",
+      "action": {
+        "type": "type",
+        "text": "System Settings",
+        "raw": "type: \"System Settings\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "System Settings window should open with sidebar visible.",
+      "surprise": {
+        "score": 0.6666666666666667,
+        "expected": "The search will update to show System Settings as a result.",
+        "observed": "success type: \"system settings\"",
+        "expectedKeywords": 6,
+        "matchedKeywords": 2
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Spotlight is open",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775245569944,
+      "relativeTime": 104753,
+      "screenshotPath": "step-5.png",
+      "exactHash": "f15e3a71e43bc091add0d961de92faa3",
+      "thumbnailHash": "a3c93b34209bf1f5fce90d26797ee7b3",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Wi-Fi settings pane should open showing whether Wi-Fi is on/off and connection status.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "System Settings app open, showing General pane. Sidebar shows Wi-Fi, Bluetooth, Network, VPN, Battery, General (selected), Accessibility, etc.",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight found \"System Settings",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775245593473,
+      "relativeTime": 128282,
+      "screenshotPath": "step-6.png",
+      "exactHash": "8c96c336c23516d23d3fe60e19b3c31c",
+      "thumbnailHash": "25f550f21fa7b7c6d27eec79416b9c2c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          259,
+          191
+        ],
+        "raw": "left_click (259,191)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Wi-Fi settings pane should open showing whether Wi-Fi is on/off and connection status.",
+        "observed": "success left_click (259,191)",
+        "expectedKeywords": 8,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Hmm, that click might have gone to the wrong spot",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, that click might have gone to the wrong spot",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775245482156
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          130,
+          400
+        ],
+        "raw": "left_click (130,400)"
+      },
+      "timestamp": 1775245503808
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775245520212
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "System Settings",
+        "raw": "type: \"System Settings\""
+      },
+      "timestamp": 1775245543065
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1775245569944
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          259,
+          191
+        ],
+        "raw": "left_click (259,191)"
+      },
+      "timestamp": 1775245593473
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Search overlay dismissed! Now I can see Safari with the Wikipedia Capybara Talk page. Clean state, ready to rock!\", tried [key: \"Escape\", left_click (130,400), key: \"cmd+space\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

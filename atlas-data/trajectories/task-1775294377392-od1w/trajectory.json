@@ -1,0 +1,360 @@
+{
+  "taskId": "task-1775294377392-od1w",
+  "taskDescription": "Open Safari with 3 tabs: apple.com, google.com, and github.com, then close the middle tab",
+  "startTime": 1775294377392,
+  "endTime": 1775294502948,
+  "duration": 125556,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "apple.com is loaded! Apple homepage showing iPhone lineup. Tab bar shows 2 tabs both labeled \"Apple\".",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "5b02ccddabf00bb0b2c72ce9fa0d25df",
+      "semanticState": "Safari showing apple.com homepage with iPhone advertisement. Two tabs visible in tab bar.",
+      "timestamp": 1775294402712
+    },
+    {
+      "stepNumber": 2,
+      "description": "google.com loaded perfectly! Now I can see 3 tabs in the tab bar: Apple, Apple, and Google (currently active).",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "134b8fe0729a7609365369314a0bd8a2",
+      "semanticState": "Safari showing Google homepage. Tab bar shows 3 tabs: two \"Apple\" tabs and one \"Google\" tab (active).",
+      "timestamp": 1775294430055
+    },
+    {
+      "stepNumber": 3,
+      "description": "github.com loaded successfully. Tab bar shows 3 tabs in order: Apple, Google, GitHub (active).",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "16e639b8c4e16e4156d8c22f6d836eae",
+      "semanticState": "Safari showing GitHub homepage with purple hero section. Tab bar shows Apple (tab1), Google (tab2), GitHub (tab3 - active).",
+      "timestamp": 1775294497360
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Navigate the current tab to apple.com",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open a new tab and navigate to google.com",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open another new tab and navigate to github.com",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Close the middle tab (google.com)",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775294379096,
+      "relativeTime": 1704,
+      "screenshotPath": "step-0.png",
+      "exactHash": "1dc40981eaac617dbeca76dfda9e8a83",
+      "thumbnailHash": "8917e3ac4306678d07a9a4b647b91928",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Address bar should become focused and editable",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari is open with Hacker News loaded. There are 2 tabs visible in the tab bar.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775294397020,
+      "relativeTime": 19628,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5b02ccddabf00bb0b2c72ce9fa0d25df",
+      "thumbnailHash": "9a4121ced332d26e3eebb4d58bcd50ed",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "New empty tab opens, then google.com loads",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing apple.com homepage with iPhone advertisement. Two tabs visible in tab bar.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Safari's already open showing Hacker News",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775294413528,
+      "relativeTime": 36136,
+      "screenshotPath": "step-2.png",
+      "exactHash": "134b8fe0729a7609365369314a0bd8a2",
+      "thumbnailHash": "ee658e16e5ddcec1587daef8e27735f9",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "4th tab opens (but we'll only have 3 needed), wait - I need to check current tab order. I see 2 Apple tabs + 1 Google. I need to open one more for github.com, giving us 4 tabs total? Wait no - let me re-read the task. We need 3 tabs: apple.com, google.com, github.com. The original Safari had 2 tabs. I navigated one to apple.com, opened a new one for google.com. Now I need one more for github.com. That'll give us 3 tabs total (the original 2nd tab was also an Apple page that I replaced... wait let me check).",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Safari showing Google homepage. Tab bar shows 3 tabs: two \"Apple\" tabs and one \"Google\" tab (active).",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: apple",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775294441984,
+      "relativeTime": 64592,
+      "screenshotPath": "step-3.png",
+      "exactHash": "3e4ca1fd6761b68e02303bf42da5e70b",
+      "thumbnailHash": "9cabf3a5d73d24b4b8a8e7385572e281",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          604,
+          91
+        ],
+        "raw": "left_click (604,91)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "4th tab opens (but we'll only have 3 needed), wait - I need to check current tab order. I see 2 Apple tabs + 1 Google. I need to open one more for github.com, giving us 4 tabs total? Wait no - let me re-read the task. We need 3 tabs: apple.com, google.com, github.com. The original Safari had 2 tabs. I navigated one to apple.com, opened a new one for google.com. Now I need one more for github.com. That'll give us 3 tabs total (the original 2nd tab was also an Apple page that I replaced... wait let me check).",
+        "observed": "success left_click (604,91)",
+        "expectedKeywords": 60,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "CHECKPOINT [2]: google",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [2]: google",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775294469535,
+      "relativeTime": 92143,
+      "screenshotPath": "step-4.png",
+      "exactHash": "e7354405fae957349a2961adc32ecd1b",
+      "thumbnailHash": "6d96f6d1726c0023f2a1ce631e2e7714",
+      "action": {
+        "type": "key",
+        "text": "cmd+w",
+        "raw": "key: \"cmd+w\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "New tab opens and github.com loads, giving us Apple | Google | GitHub",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "I can see the second Apple tab is now active and showing apple",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the second Apple tab is now active and showing apple",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775294487166,
+      "relativeTime": 109774,
+      "screenshotPath": "step-5.png",
+      "exactHash": "16e639b8c4e16e4156d8c22f6d836eae",
+      "thumbnailHash": "d3762570b948504ba134a825df4d33b5",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": "Google tab closes, leaving just Apple and GitHub tabs.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari showing GitHub homepage with purple hero section. Tab bar shows Apple (tab1), Google (tab2), GitHub (tab3 - active).",
+      "resolvedTarget": null,
+      "assistantIntent": "Closed the second Apple tab",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775294502947,
+      "relativeTime": 125555,
+      "screenshotPath": "step-6.png",
+      "exactHash": "7a5712848fceb23a7b9ccd79219efe5f",
+      "thumbnailHash": "fa1c02644625b69d4446b5c7394bb868",
+      "action": {
+        "type": "mouse_move",
+        "coordinates": [
+          600,
+          92
+        ],
+        "raw": "mouse_move (600,92)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Google tab closes, leaving just Apple and GitHub tabs.",
+        "observed": "success mouse_move (600,92)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "🔥 Now I've got 3 tabs in the perfect order: Apple | Google | GitHub (currently active)",
+      "resolvedTarget": null,
+      "assistantIntent": "🔥 Now I've got 3 tabs in the perfect order: Apple | Google | GitHub (currently active)",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "type",
+        "text": "apple.com\n",
+        "raw": "type: \"apple.com\n\""
+      },
+      "timestamp": 1775294397020
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "google.com\n",
+        "raw": "type: \"google.com\n\""
+      },
+      "timestamp": 1775294413528
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          604,
+          91
+        ],
+        "raw": "left_click (604,91)"
+      },
+      "timestamp": 1775294441984
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "cmd+w",
+        "raw": "key: \"cmd+w\""
+      },
+      "timestamp": 1775294469535
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "github.com\n",
+        "raw": "type: \"github.com\n\""
+      },
+      "timestamp": 1775294487166
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "mouse_move",
+        "coordinates": [
+          600,
+          92
+        ],
+        "raw": "mouse_move (600,92)"
+      },
+      "timestamp": 1775294502947
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"google.com loaded perfectly! Now I can see 3 tabs in the tab bar: Apple, Apple, and Google (currently active).\", tried [type: \"apple.com\n\", type: \"google.com\n\", left_click (604,91)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,189 @@
+{
+  "taskId": "task-1775302208205-49yu",
+  "taskDescription": "Open Finder and create a new folder called 'BenchmarkTest' on the Desktop",
+  "startTime": 1775302208205,
+  "endTime": 1775302315364,
+  "duration": 107159,
+  "success": true,
+  "finalText": "CHECKPOINT [2]: The 'BenchmarkTest' folder is now selected/highlighted on the Desktop in Finder. It's clearly visible with the name \"BenchmarkTest\" displayed below the folder icon.\n\nSCENE: Finder window showing Desktop — Local with the BenchmarkTest folder selected and highlighted in blue.\n\nLETS GOOO! ✅ Done! The **BenchmarkTest** folder already existed on the Desktop, and I've confirmed it in Finder. You can see it right there — selected and highlighted. Finder is open, Desktop is showing, and the folder is present. Ez clap! 🎉",
+  "totalSteps": 3,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Finder is open and showing Desktop — Local. I can see the 'BenchmarkTest' folder already exists (partially visible as \"Benchma...\" in the icon view), along with BenchmarkTest.zip.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "05e95ad6d22ded21b8003ca9c2628c9c",
+      "semanticState": "Finder window open showing Desktop — Local with various files and folders. The BenchmarkTest folder is already present.",
+      "timestamp": 1775302283462
+    },
+    {
+      "stepNumber": 2,
+      "description": "The 'BenchmarkTest' folder is now selected/highlighted on the Desktop in Finder. It's clearly visible with the name \"BenchmarkTest\" displayed below the folder icon.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "1b0f78201b74324d8fcaf9f037a0b132",
+      "semanticState": "Finder window showing Desktop — Local with the BenchmarkTest folder selected and highlighted in blue.",
+      "timestamp": 1775302315364
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Check if 'BenchmarkTest' folder already exists on Desktop",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Finder",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Navigate to Desktop",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Create new folder called 'BenchmarkTest'",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775302209932,
+      "relativeTime": 1727,
+      "screenshotPath": "step-0.png",
+      "exactHash": "9ad32caa73bbce88fcac75175430d96c",
+      "thumbnailHash": "0ceeeeca678f6ff3a8667065ce524c67",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Finder window should open.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775302274476,
+      "relativeTime": 66271,
+      "screenshotPath": "step-1.png",
+      "exactHash": "05e95ad6d22ded21b8003ca9c2628c9c",
+      "thumbnailHash": "8a35d3061c7ae880a099a4a650c5f6fe",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          52,
+          819
+        ],
+        "raw": "left_click (52,819)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Finder window should open.",
+        "observed": "success left_click (52,819)",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder window open showing Desktop — Local with various files and folders. The BenchmarkTest folder is already present.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Finder window should open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775302305807,
+      "relativeTime": 97602,
+      "screenshotPath": "step-2.png",
+      "exactHash": "1b0f78201b74324d8fcaf9f037a0b132",
+      "thumbnailHash": "70d322f5a9a7c5c6034a291e3cf18340",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          477,
+          478
+        ],
+        "raw": "left_click (477,478)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder window showing Desktop — Local with the BenchmarkTest folder selected and highlighted in blue.",
+      "resolvedTarget": null,
+      "assistantIntent": "The 'BenchmarkTest' folder is already there on the Desktop as a proper directory",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          52,
+          819
+        ],
+        "raw": "left_click (52,819)"
+      },
+      "timestamp": 1775302274476
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          477,
+          478
+        ],
+        "raw": "left_click (477,478)"
+      },
+      "timestamp": 1775302305807
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 2,
+      "status": "succeeded",
+      "approach": "initial attempt",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

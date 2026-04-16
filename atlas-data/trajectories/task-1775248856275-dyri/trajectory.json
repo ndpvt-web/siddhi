@@ -1,0 +1,477 @@
+{
+  "taskId": "task-1775248856275-dyri",
+  "taskDescription": "Open Calendar, create an event with a 15-minute reminder alert and a specific location",
+  "startTime": 1775248856275,
+  "endTime": 1775249081710,
+  "duration": 225435,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 9,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 7,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Date picker dismissed. Event form is now clean showing \"Weekly Monday Meeting\" with fields for Location, Date/Time (7 Apr 2026 10:00AM - 11:00AM), \"Add Alert, Repeat or Travel Time\", \"Add Invitees\", and \"Add Notes, URL or Attachments\".",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "039123369db9bebb1e6109fe08f15c60",
+      "semanticState": "Calendar event creation popup for \"Weekly Monday Meeting\" with clean form visible. Fields shown: title, location, date/time, alert/repeat, invitees, and notes.",
+      "timestamp": 1775248920317
+    },
+    {
+      "stepNumber": 2,
+      "description": "Location \"Conference Room B, Building 5\" has been added to the event. Location permission dialog dismissed. The event form is visible with all fields.",
+      "nodeId": "step-7",
+      "nodeIndex": 7,
+      "screenshotHash": "36bc6525114a8b7ae053e9da3e03cb31",
+      "semanticState": "Calendar event creation popup showing \"Weekly Monday Meeting\" at \"Conference Room B, Building 5\", date 7 Apr 2026, 10:00AM-11:00AM. \"Add Alert, Repeat or Travel Time\" link visible below the date/time.",
+      "timestamp": 1775249066474
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "First, close that date picker by clicking elsewhere, then add a location to the event",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Set the Alert to 15 minutes",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Save the event",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775248857969,
+      "relativeTime": 1694,
+      "screenshotPath": "step-0.png",
+      "exactHash": "c56c73da7da838477dfab3eea3ef3801",
+      "thumbnailHash": "7ab48c6334b5a14e2d64ddee1084b3a9",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app is open in Week view showing April 2026. There's an event creation popup for \"Weekly Monday Meeting\" with fields visible including Alert and a date picker calendar is showing.",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775248867335,
+      "relativeTime": 11060,
+      "screenshotPath": "step-1.png",
+      "exactHash": "6cad1d04c441de69f53fcf921e60bbda",
+      "thumbnailHash": "df38c04ccdf830cbb8db1395f8b9db21",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "The date picker calendar should close and I should see the clean event form.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, I can see Calendar is already open and there's even a new event creation form visible",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, I can see Calendar is already open and there's even a new event creation form visible",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775248884009,
+      "relativeTime": 27734,
+      "screenshotPath": "step-2.png",
+      "exactHash": "6cad1d04c441de69f53fcf921e60bbda",
+      "thumbnailHash": "df38c04ccdf830cbb8db1395f8b9db21",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation",
+        "surprise"
+      ],
+      "expectation": "Date picker closes, clean form visible.",
+      "surprise": {
+        "score": 1,
+        "expected": "The date picker calendar should close and I should see the clean event form.",
+        "observed": "success key: \"escape\" stagnation no change",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Ok so there's a Calendar event creation popup open for \"Weekly Monday Meeting\" and there's a date picker overlay showing",
+      "resolvedTarget": null,
+      "assistantIntent": "Ok so there's a Calendar event creation popup open for \"Weekly Monday Meeting\" and there's a date picker overlay showing",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775248908110,
+      "relativeTime": 51835,
+      "screenshotPath": "step-3.png",
+      "exactHash": "039123369db9bebb1e6109fe08f15c60",
+      "thumbnailHash": "937aa6c1d785c25370f6a63f31add539",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          666,
+          235
+        ],
+        "raw": "left_click (666,235)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A text field should appear where I can type a location.",
+      "surprise": {
+        "score": 1,
+        "expected": "Date picker closes, clean form visible.",
+        "observed": "success left_click (666,235)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar event creation popup for \"Weekly Monday Meeting\" with clean form visible. Fields shown: title, location, date/time, alert/repeat, invitees, and notes.",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 56
+      },
+      "assistantIntent": "The date picker is still showing - Escape didn't close it",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775248933933,
+      "relativeTime": 77658,
+      "screenshotPath": "step-4.png",
+      "exactHash": "616068f0d71225d608da50e8a0b6dbb9",
+      "thumbnailHash": "c0d6819785f52cac41e5a62a02a349dc",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          649,
+          439
+        ],
+        "raw": "left_click (649,439)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A text field should appear to type the location.",
+      "surprise": {
+        "score": 1,
+        "expected": "A text field should appear where I can type a location.",
+        "observed": "success left_click (649,439)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked '7 Apr 2026  10:00AM – 11:00AM' (Button) in Calendar",
+      "resolvedTarget": {
+        "label": "7 Apr 2026  10:00AM – 11:00AM",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 72
+      },
+      "assistantIntent": "The date picker is gone and I can see the clean event form now",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775248956221,
+      "relativeTime": 99946,
+      "screenshotPath": "step-5.png",
+      "exactHash": "0ff799d75184c44f037b4b66b0c2298f",
+      "thumbnailHash": "d6c7f5f9e7f5fd16baf2a68d75e99cc1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          650,
+          439
+        ],
+        "raw": "left_click (650,439)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The location text should appear in the field.",
+      "surprise": {
+        "score": 1,
+        "expected": "A text field should appear to type the location.",
+        "observed": "success left_click (650,439)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked '7 Apr 2026  10:00AM – 11:00AM' (Button) in Calendar",
+      "resolvedTarget": {
+        "label": "7 Apr 2026  10:00AM – 11:00AM",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 71
+      },
+      "assistantIntent": "Hmm, the \"Add Location or Video Call\" text is still showing but it doesn't look like a text field opened",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775248994056,
+      "relativeTime": 137781,
+      "screenshotPath": "step-6.png",
+      "exactHash": "5536f2e50763fbdcff05aad136fb53a6",
+      "thumbnailHash": "a5bd55c306204708ba155d3de7e31334",
+      "action": {
+        "type": "type",
+        "text": "Conference Room B, Building 5",
+        "raw": "type: \"Conference Room B, Building 5\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The dialog should close and the event form should be visible again with the location filled in.",
+      "surprise": {
+        "score": 1,
+        "expected": "The location text should appear in the field.",
+        "observed": "success type: \"conference room b, building 5\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "OK I can see the cursor is now in the \"Add Location or Video Call\" field - it looks like it's a text field now (I can se",
+      "resolvedTarget": null,
+      "assistantIntent": "OK I can see the cursor is now in the \"Add Location or Video Call\" field - it looks like it's a text field now (I can se",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775249018718,
+      "relativeTime": 162443,
+      "screenshotPath": "step-7.png",
+      "exactHash": "36bc6525114a8b7ae053e9da3e03cb31",
+      "thumbnailHash": "85c2bb23501fde56a9f798cf5de1ae74",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          619,
+          367
+        ],
+        "raw": "left_click (619,367)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Alert/Repeat/Travel Time fields should appear, with an Alert dropdown where I can select \"15 minutes before\".",
+      "surprise": {
+        "score": 1,
+        "expected": "The dialog should close and the event form should be visible again with the location filled in.",
+        "observed": "success left_click (619,367)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Calendar event creation popup showing \"Weekly Monday Meeting\" at \"Conference Room B, Building 5\", date 7 Apr 2026, 10:00AM-11:00AM. \"Add Alert, Repeat or Travel Time\" link visible below the date/time.",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 16
+      },
+      "assistantIntent": "YOOO the location was typed successfully",
+      "axContext": null
+    },
+    {
+      "id": "step-8",
+      "index": 8,
+      "parentId": "step-7",
+      "timestamp": 1775249081710,
+      "relativeTime": 225435,
+      "screenshotPath": "step-8.png",
+      "exactHash": "958dd64a584d2f90eb2eebaf5f2ff684",
+      "thumbnailHash": "21fb0c5d0bb190502cc4656f2c06330c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          669,
+          508
+        ],
+        "raw": "left_click (669,508)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Alert/Repeat/Travel Time fields should appear, with an Alert dropdown where I can select \"15 minutes before\".",
+        "observed": "success left_click (669,508)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Clicked '(unlabeled)' (CheckBox) in Calendar",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "CheckBox",
+        "app": "Calendar",
+        "distance": 65
+      },
+      "assistantIntent": "The location permission dialog is dismissed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775248884009
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          666,
+          235
+        ],
+        "raw": "left_click (666,235)"
+      },
+      "timestamp": 1775248908110
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          649,
+          439
+        ],
+        "raw": "left_click (649,439)"
+      },
+      "timestamp": 1775248933933
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          650,
+          439
+        ],
+        "raw": "left_click (650,439)"
+      },
+      "timestamp": 1775248956221
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "type",
+        "text": "Conference Room B, Building 5",
+        "raw": "type: \"Conference Room B, Building 5\""
+      },
+      "timestamp": 1775248994056
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          619,
+          367
+        ],
+        "raw": "left_click (619,367)"
+      },
+      "timestamp": 1775249018718
+    },
+    {
+      "from": "step-7",
+      "to": "step-8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          669,
+          508
+        ],
+        "raw": "left_click (669,508)"
+      },
+      "timestamp": 1775249081710
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Date picker dismissed. Event form is now clean showing \"Weekly Monday Meeting\" with fields for Location, Date/Time (7 Apr 2026 10:00AM - 11:00AM), \"Add Alert, Repeat or Travel Time\", \"Add Invitees\", and \"Add Notes, URL or Attachments\".\", tried [key: \"Escape\", left_click (666,235), left_click (649,439)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 3,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 8,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

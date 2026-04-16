@@ -1,0 +1,52 @@
+{
+  "taskId": "task-1773601777501-sq2d",
+  "taskDescription": "[Capy] the tabs are not open in the same window, you cannot see the new tab",
+  "startTime": 1773601777501,
+  "endTime": 1773601832311,
+  "duration": 54810,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 1,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1773601779150,
+      "relativeTime": 1649,
+      "screenshotPath": "step-0.png",
+      "exactHash": "254a98652b06cdd62a600aa97079c802",
+      "thumbnailHash": "70c68d4453ce2a88902767c39378b4c5",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "axContext": null
+    }
+  ],
+  "edges": [],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 0,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

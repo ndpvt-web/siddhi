@@ -1,0 +1,95 @@
+{
+  "taskId": "task-1775215033379-26nm",
+  "taskDescription": "Click on Documents in Finder sidebar",
+  "startTime": 1775215033379,
+  "endTime": 1775215054851,
+  "duration": 21472,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": null,
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775215035087,
+      "relativeTime": 1708,
+      "screenshotPath": "step-0.png",
+      "exactHash": "72d053af970f637ffd0b562aa462dd8c",
+      "thumbnailHash": "c29b225938300eeaf902affd5dcc3818",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775215054851,
+      "relativeTime": 21472,
+      "screenshotPath": "step-1.png",
+      "exactHash": "209c5eae195bf0fd2d15f28365114225",
+      "thumbnailHash": "0da33160f8b759644787faf9d56274fc",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          242
+        ],
+        "raw": "left_click (124,242)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked at (124, 242)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          124,
+          242
+        ],
+        "raw": "left_click (124,242)"
+      },
+      "timestamp": 1775215054851
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

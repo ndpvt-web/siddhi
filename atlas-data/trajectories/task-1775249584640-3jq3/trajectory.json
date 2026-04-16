@@ -1,0 +1,128 @@
+{
+  "taskId": "task-1775249584640-3jq3",
+  "taskDescription": "Open an image in Preview and crop it to a specific region",
+  "startTime": 1775249584640,
+  "endTime": 1775249692074,
+  "duration": 107434,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 2,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 0,
+  "checkpoints": [],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Find an image file on the system to open in Preview",
+        "done": false
+      },
+      {
+        "n": 2,
+        "desc": "Open the image in Preview",
+        "done": false
+      },
+      {
+        "n": 3,
+        "desc": "Activate the Markup toolbar",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Select the Rectangular Selection tool",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Draw a selection rectangle on the image",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Crop using Tools > Crop (Cmd+K)",
+        "done": false
+      },
+      {
+        "n": 7,
+        "desc": "Verify the crop worked",
+        "done": false
+      }
+    ],
+    "totalSteps": 7
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775249586372,
+      "relativeTime": 1732,
+      "screenshotPath": "step-0.png",
+      "exactHash": "01a3200851694bb4f12899eecf088ecf",
+      "thumbnailHash": "4fd1ca434a2386dce16f290e3b598d7b",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775249692074,
+      "relativeTime": 107434,
+      "screenshotPath": "step-1.png",
+      "exactHash": "8ce29b9c03fb947708c3ad20d2fab108",
+      "thumbnailHash": "0e694b52d600f8b5c668cdbdafe3abae",
+      "action": {
+        "type": "bash",
+        "command": "open -a Preview /Users/nivesh/Desktop/test_image.png",
+        "raw": "bash: open -a Preview /Users/nivesh/Desktop/test_image.png"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "STEP 1: Opening the test image - let me take a screenshot to see what happened",
+      "resolvedTarget": null,
+      "assistantIntent": "STEP 1: Opening the test image - let me take a screenshot to see what happened",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "bash",
+        "command": "open -a Preview /Users/nivesh/Desktop/test_image.png",
+        "raw": "bash: open -a Preview /Users/nivesh/Desktop/test_image.png"
+      },
+      "timestamp": 1775249692074
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 1,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

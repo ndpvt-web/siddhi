@@ -1,0 +1,305 @@
+{
+  "taskId": "task-1775239478498-3g94",
+  "taskDescription": "Open Mail, create an email with an attachment from the Desktop",
+  "startTime": 1775239478498,
+  "endTime": 1775239634227,
+  "duration": 155729,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "New compose window is open! The To: field is focused and ready for input.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "5cccc4ec028dd60fd8a11642f14e9418",
+      "semanticState": "New Mail compose window open with To:, Cc:, Subject: fields visible, From shows ndpvt72@icloud.com.",
+      "timestamp": 1775239504312
+    },
+    {
+      "stepNumber": 2,
+      "description": "Got the Desktop file list. Tons of files - `capybara-facts.txt`, `hn-report.txt`, `system-report.txt`, screenshots, etc.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "5cccc4ec028dd60fd8a11642f14e9418",
+      "semanticState": "Bash output showing Desktop contents with various .txt, .png, .md files.",
+      "timestamp": 1775239513750
+    },
+    {
+      "stepNumber": 3,
+      "description": "Email fields filled in perfectly! To: test@example.com, Subject: \"Check out this report!\", Body: written. Looking crisp!",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "5d4bd0bb3e1482e38196aa9eb075eab1",
+      "semanticState": "Mail compose window showing To: test@example.com, Subject: \"Check out this report!\", body text visible, compose is ready for attachment.",
+      "timestamp": 1775239580637
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click \"New Message\" button in Mail to open compose window",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Check what files are on the Desktop to pick one to attach",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Fill in the email (To, Subject, Body)",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Attach a file from the Desktop",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Verify the attachment is there",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775239480198,
+      "relativeTime": 1700,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4277865fac08448085a44276d10fdbff",
+      "thumbnailHash": "60ef4bc0357b28da9f944e0218c5acd8",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "A new compose window should pop up.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775239495728,
+      "relativeTime": 17230,
+      "screenshotPath": "step-1.png",
+      "exactHash": "5cccc4ec028dd60fd8a11642f14e9418",
+      "thumbnailHash": "09e52bc4a5d41a2cd073294a5fe4e010",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint",
+        "checkpoint"
+      ],
+      "expectation": "The To: field gets the email address typed in.",
+      "surprise": {
+        "score": 1,
+        "expected": "A new compose window should pop up.",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Bash output showing Desktop contents with various .txt, .png, .md files.",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Mail is already open and I can see the Inbox",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775239570713,
+      "relativeTime": 92215,
+      "screenshotPath": "step-2.png",
+      "exactHash": "5d4bd0bb3e1482e38196aa9eb075eab1",
+      "thumbnailHash": "b3427c50b7d17c7606f2f029bab26850",
+      "action": {
+        "type": "type",
+        "text": "Hey! I'm attaching the HN report from the Desktop for you to check out. Let me know what you think!",
+        "raw": "type: \"Hey! I'm attaching the HN report from the Desktop \""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A file picker dialog should open.",
+      "surprise": {
+        "score": 0.9,
+        "expected": "The To: field gets the email address typed in.",
+        "observed": "success type: \"hey! i'm attaching the hn report from the desktop \"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Mail compose window showing To: test@example.com, Subject: \"Check out this report!\", body text visible, compose is ready for attachment.",
+      "resolvedTarget": null,
+      "assistantIntent": "Now Tab to body and type a message:",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775239594990,
+      "relativeTime": 116492,
+      "screenshotPath": "step-3.png",
+      "exactHash": "6f34d8c45874e15a660e898d73385f2d",
+      "thumbnailHash": "003515202a4fa60f73c715f98e08abf2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          601,
+          55
+        ],
+        "raw": "left_click (601,55)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "A file picker dialog should open where I can navigate to Desktop.",
+      "surprise": {
+        "score": 1,
+        "expected": "A file picker dialog should open.",
+        "observed": "success left_click (601,55)",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Attach' (MenuButton) in Mail",
+      "resolvedTarget": {
+        "label": "Attach",
+        "role": "MenuButton",
+        "app": "Mail",
+        "distance": 6
+      },
+      "assistantIntent": "CHECKPOINT [3]: Email fields filled in perfectly",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775239619256,
+      "relativeTime": 140758,
+      "screenshotPath": "step-4.png",
+      "exactHash": "445ecdd4fbec7781c401d3578a14d36b",
+      "thumbnailHash": "0381ac703d3e98a9b941eef4a893b51b",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          656,
+          87
+        ],
+        "raw": "left_click (656,87)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The file picker should show Desktop contents including hn-report.txt.",
+      "surprise": {
+        "score": 1,
+        "expected": "A file picker dialog should open where I can navigate to Desktop.",
+        "observed": "success left_click (656,87)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Attach Files…' (MenuItem) in Mail",
+      "resolvedTarget": {
+        "label": "Attach Files…",
+        "role": "MenuItem",
+        "app": "Mail",
+        "distance": 16
+      },
+      "assistantIntent": "A dropdown appeared with \"Attach Files",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775239495728
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "type",
+        "text": "Hey! I'm attaching the HN report from the Desktop for you to check out. Let me know what you think!",
+        "raw": "type: \"Hey! I'm attaching the HN report from the Desktop \""
+      },
+      "timestamp": 1775239570713
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          601,
+          55
+        ],
+        "raw": "left_click (601,55)"
+      },
+      "timestamp": 1775239594990
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          656,
+          87
+        ],
+        "raw": "left_click (656,87)"
+      },
+      "timestamp": 1775239619256
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

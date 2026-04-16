@@ -1,0 +1,321 @@
+{
+  "taskId": "task-1775234865619-3cxs",
+  "taskDescription": "Open Terminal and check disk usage of the home directory with du -sh",
+  "startTime": 1775234865619,
+  "endTime": 1775235133229,
+  "duration": 267610,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 7,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Dialog is gone! Terminal window is visible and there's a cursor ready at the prompt.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "fbbc278938a554a0250f3995bde6a62d",
+      "semanticState": "Terminal window is open and focused, showing previous command history with a blinking cursor at the bottom ready for input.",
+      "timestamp": 1775234908804
+    },
+    {
+      "stepNumber": 2,
+      "description": "Terminal is focused and I can see a prompt cursor ready. The left Terminal window has focus.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "5db18b710c11edbfea80b7a4e06c3948",
+      "semanticState": "Terminal window in focus, cursor blinking at bottom left, ready to accept commands.",
+      "timestamp": 1775234935664
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click \"Allow\" on the permission dialog",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click on the Terminal window to focus it",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Run `du -sh ~` to check disk usage of home directory",
+        "done": false
+      }
+    ],
+    "totalSteps": 3
+  },
+  "recoveryLevel": 0,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775234867312,
+      "relativeTime": 1693,
+      "screenshotPath": "step-0.png",
+      "exactHash": "1ec1ce29081aca52f4fb018a1df85ce3",
+      "thumbnailHash": "d778f970bd0d3d73ec15ed8aaa05172c",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Dialog dismisses, Terminal window is in focus",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775234891387,
+      "relativeTime": 25768,
+      "screenshotPath": "step-1.png",
+      "exactHash": "fbbc278938a554a0250f3995bde6a62d",
+      "thumbnailHash": "0e8993652b563d730071c7b508efb957",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          733,
+          348
+        ],
+        "raw": "left_click (733,348)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog dismisses, Terminal window is in focus",
+        "observed": "success left_click (733,348)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Terminal window is open and focused, showing previous command history with a blinking cursor at the bottom ready for input.",
+      "resolvedTarget": {
+        "label": "Allow",
+        "role": "Button",
+        "app": "UserNotificationCenter",
+        "distance": 2
+      },
+      "assistantIntent": "EXPECT: Dialog dismisses, Terminal window is in focus",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775234923000,
+      "relativeTime": 57381,
+      "screenshotPath": "step-2.png",
+      "exactHash": "5db18b710c11edbfea80b7a4e06c3948",
+      "thumbnailHash": "6c4d81c17c4a3ce859b1daf59550640a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          450,
+          340
+        ],
+        "raw": "left_click (450,340)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Command runs and shows something like \"X.XG /Users/nivesh\" as output",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Terminal window in focus, cursor blinking at bottom left, ready to accept commands.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Dialog is gone",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775234943709,
+      "relativeTime": 78090,
+      "screenshotPath": "step-3.png",
+      "exactHash": "0767757e123b573f3815ecf27bbcfcb7",
+      "thumbnailHash": "18c0218d7e7da4e8bf9e3d86546500e1",
+      "action": {
+        "type": "type",
+        "text": "du -sh ~\n",
+        "raw": "type: \"du -sh ~\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "EXPECT: Command runs and shows something like \"X",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Command runs and shows something like \"X",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775234972333,
+      "relativeTime": 106714,
+      "screenshotPath": "step-4.png",
+      "exactHash": "92c3f68a02e6eb78f50f7ade669d375e",
+      "thumbnailHash": "df65d82db71499265ab47cf0c099c3aa",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "OK so `du -sh ~` is running - I can see it in the terminal",
+      "resolvedTarget": null,
+      "assistantIntent": "OK so `du -sh ~` is running - I can see it in the terminal",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775235002257,
+      "relativeTime": 136638,
+      "screenshotPath": "step-5.png",
+      "exactHash": "4f4ca66ea27c66e62aca17e0d7f79153",
+      "thumbnailHash": "079643ad9a795520a5a655ccd61a91fe",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Still running",
+      "resolvedTarget": null,
+      "assistantIntent": "Still running",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775235107715,
+      "relativeTime": 242096,
+      "screenshotPath": "step-6.png",
+      "exactHash": "d5491877025a5f7bc1a740ac96ba83c4",
+      "thumbnailHash": "35508c92b5eadd6d1c7e8dee3ce3de32",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Bruh this home directory is CHONKY",
+      "resolvedTarget": null,
+      "assistantIntent": "Bruh this home directory is CHONKY",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          733,
+          348
+        ],
+        "raw": "left_click (733,348)"
+      },
+      "timestamp": 1775234891387
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          450,
+          340
+        ],
+        "raw": "left_click (450,340)"
+      },
+      "timestamp": 1775234923000
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "du -sh ~\n",
+        "raw": "type: \"du -sh ~\n\""
+      },
+      "timestamp": 1775234943709
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1775234972333
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1775235002257
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "wait",
+        "raw": "wait"
+      },
+      "timestamp": 1775235107715
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 6,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 0
+}

@@ -1,0 +1,432 @@
+{
+  "taskId": "task-1775224201564-w7f9",
+  "taskDescription": "Open TextEdit, create a document with a bulleted list of 5 items, change font to Helvetica 14pt",
+  "startTime": 1775224201564,
+  "endTime": 1775224369312,
+  "duration": 167748,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 3,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Find/Replace bar is closed! The document is now showing cleanly with just the text content visible.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "bb72b580a9355d6ee5d3586ce957e3dd",
+      "semanticState": "TextEdit open with \"Untitled.rtf\" document, showing existing text. Find/Replace bar is gone.",
+      "timestamp": 1775224293743
+    },
+    {
+      "stepNumber": 2,
+      "description": "New blank TextEdit document \"Untitled 2\" is open and ready for input.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "15f5f42b4d803611aaa63d27c71ee8ec",
+      "semanticState": "A new empty TextEdit document titled \"Untitled 2\" is open with blank body. Font toolbar shows Helvetica, Regular, 12pt.",
+      "timestamp": 1775224311765
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Find/Replace bar and create a new document",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Enable bulleted list formatting",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Type 5 bullet items",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Select all text and change font to Helvetica 14pt",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775224203273,
+      "relativeTime": 1709,
+      "screenshotPath": "step-0.png",
+      "exactHash": "4381cd499cb88f85fc680e1cd7e40068",
+      "thumbnailHash": "ae5d7e184504ab35aa4ccc058b009d51",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775224223090,
+      "relativeTime": 21526,
+      "screenshotPath": "step-1.png",
+      "exactHash": "6dbb75ed41ae5d6031ddd372cba4e9f3",
+      "thumbnailHash": "91ece3b95fc2027e0edcab822216bdee",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          591,
+          168
+        ],
+        "raw": "left_click (591,168)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Done' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 2
+      },
+      "assistantIntent": "Alright, I can see TextEdit is already open with an existing document",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775224243824,
+      "relativeTime": 42260,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f2bdd0c66cd9e65b8009d570e6eb2b63",
+      "thumbnailHash": "79d9fe7d40033883abc5c00fe947897a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          591,
+          168
+        ],
+        "raw": "left_click (591,168)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Done' (Button) in TextEdit",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 2
+      },
+      "assistantIntent": "Still showing, let me click the \"Done\" button more precisely:",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775224257257,
+      "relativeTime": 55693,
+      "screenshotPath": "step-3.png",
+      "exactHash": "f2bdd0c66cd9e65b8009d570e6eb2b63",
+      "thumbnailHash": "79d9fe7d40033883abc5c00fe947897a",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "The \"Done\" button is still visible",
+      "resolvedTarget": null,
+      "assistantIntent": "The \"Done\" button is still visible",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775224280745,
+      "relativeTime": 79181,
+      "screenshotPath": "step-4.png",
+      "exactHash": "bb72b580a9355d6ee5d3586ce957e3dd",
+      "thumbnailHash": "a0426f3d6c6d19a58d5d9cbab6951f41",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          590,
+          168
+        ],
+        "raw": "left_click (590,168)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "A fresh empty document window opens",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit open with \"Untitled.rtf\" document, showing existing text. Find/Replace bar is gone.",
+      "resolvedTarget": {
+        "label": "Done",
+        "role": "Button",
+        "app": "TextEdit",
+        "distance": 2
+      },
+      "assistantIntent": "Let me click directly on the \"Done\" button:",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775224303038,
+      "relativeTime": 101474,
+      "screenshotPath": "step-5.png",
+      "exactHash": "15f5f42b4d803611aaa63d27c71ee8ec",
+      "thumbnailHash": "6283ffb89d3b3b0d622a006c4dc1e7c4",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown appears with list style options including bullets.",
+      "surprise": {
+        "score": 1,
+        "expected": "A fresh empty document window opens",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "A new empty TextEdit document titled \"Untitled 2\" is open with blank body. Font toolbar shows Helvetica, Regular, 12pt.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Find/Replace bar is closed",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775224331979,
+      "relativeTime": 130415,
+      "screenshotPath": "step-6.png",
+      "exactHash": "37b3a24287a04b8b79f2edd5bcad5349",
+      "thumbnailHash": "9e6b9896dec6e75b3b35b15153d97d64",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          612,
+          134
+        ],
+        "raw": "left_click (612,134)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The bullet style will be applied and I'll be ready to type bulleted items.",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown appears with list style options including bullets.",
+        "observed": "success left_click (612,134)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Clicked 'list style' (MenuButton) in TextEdit",
+      "resolvedTarget": {
+        "label": "list style",
+        "role": "MenuButton",
+        "app": "TextEdit",
+        "distance": 2
+      },
+      "assistantIntent": "New document \"Untitled 2\" opened",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775224353488,
+      "relativeTime": 151924,
+      "screenshotPath": "step-7.png",
+      "exactHash": "198da4afaf723677f02485b40a5d35f9",
+      "thumbnailHash": "57dabc4ccc4e2a3ead725be581ebe4e0",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          611,
+          184
+        ],
+        "raw": "left_click (611,184)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "The bullet style will be applied and I'll be ready to type bulleted items.",
+        "observed": "success left_click (611,184)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Clicked '•' (MenuItem) in TextEdit",
+      "resolvedTarget": {
+        "label": "•",
+        "role": "MenuItem",
+        "app": "TextEdit",
+        "distance": 24
+      },
+      "assistantIntent": "Hmm, it snapped to the numbered list option instead of the bullet",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          591,
+          168
+        ],
+        "raw": "left_click (591,168)"
+      },
+      "timestamp": 1775224223090
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          591,
+          168
+        ],
+        "raw": "left_click (591,168)"
+      },
+      "timestamp": 1775224243824
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775224257257
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          590,
+          168
+        ],
+        "raw": "left_click (590,168)"
+      },
+      "timestamp": 1775224280745
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775224303038
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          612,
+          134
+        ],
+        "raw": "left_click (612,134)"
+      },
+      "timestamp": 1775224331979
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          611,
+          184
+        ],
+        "raw": "left_click (611,184)"
+      },
+      "timestamp": 1775224353488
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 5,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Find/Replace bar is closed! The document is now showing cleanly with just the text content visible.\", tried [key: \"Escape\", left_click (590,168), key: \"cmd+n\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 4,
+      "startFrameIndex": 6,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

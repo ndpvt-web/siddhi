@@ -1,0 +1,308 @@
+{
+  "taskId": "task-1775304810556-e50b",
+  "taskDescription": "Open Safari, navigate to a webpage, and save the page as a PDF to the Desktop",
+  "startTime": 1775304810556,
+  "endTime": 1775304898423,
+  "duration": 87867,
+  "success": true,
+  "finalText": "LETS GOOO! 🎉 Ez clap! The PDF is right there on the Desktop — \"Example Domain.pdf\", 17.5KB, saved just now at 8:14 PM. \n\nHere's what we did:\n1. ✅ Safari was already open with example.com loaded\n2. ✅ Used Cmd+P to open the print dialog\n3. ✅ Clicked the PDF button → Save as PDF\n4. ✅ Saved \"Example Domain.pdf\" to the Desktop (replaced the existing one from a previous attempt)\n\nThe file's chilling on the Desktop, ready to go. Mission accomplished! 💪",
+  "totalSteps": 5,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 4,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Print dialog is open! I can see the print dialog with a preview of example.com, and there's the PDF button in the bottom-left corner.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "79316b5522c50db626cd802bc86a01c9",
+      "semanticState": "macOS print dialog open over Safari showing example.com preview, with PDF dropdown button visible in bottom-left.",
+      "timestamp": 1775304834083
+    },
+    {
+      "stepNumber": 2,
+      "description": "Save as PDF dialog is open with filename \"Example Domain.pdf\" and location already set to Desktop.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "a90608e4794ea2998021a935b71554c9",
+      "semanticState": "Save as PDF dialog showing filename \"Example Domain.pdf\", location set to Desktop, with Save and Cancel buttons.",
+      "timestamp": 1775304853670
+    },
+    {
+      "stepNumber": 3,
+      "description": "PDF saved successfully! Dialog closed and we're back to Safari showing example.com.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "4e75a64186ab736f9e4ca02efdf4c8a0",
+      "semanticState": "Safari browser showing example.com with \"Example Domain\" heading. Three tabs visible: Apple, Google, Example Domain.",
+      "timestamp": 1775304890710
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Use Cmd+P to open the print dialog",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Click the PDF dropdown in the bottom-left",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Select \"Save as PDF...\"",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Set the save location to Desktop and save",
+        "done": false
+      }
+    ],
+    "totalSteps": 4
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775304812244,
+      "relativeTime": 1688,
+      "screenshotPath": "step-0.png",
+      "exactHash": "3c26fce98686ef1b1917b92f7cd10c18",
+      "thumbnailHash": "3a61b3a413af3ae986325a85c3439ff3",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "Print dialog should appear",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775304826313,
+      "relativeTime": 15757,
+      "screenshotPath": "step-1.png",
+      "exactHash": "79316b5522c50db626cd802bc86a01c9",
+      "thumbnailHash": "df722322951781cc45a6a956427cc923",
+      "action": {
+        "type": "key",
+        "text": "cmd+p",
+        "raw": "key: \"cmd+p\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A dropdown menu should appear with \"Save as PDF...\" option",
+      "surprise": {
+        "score": 1,
+        "expected": "Print dialog should appear",
+        "observed": "success key: \"cmd+p\"",
+        "expectedKeywords": 3,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "macOS print dialog open over Safari showing example.com preview, with PDF dropdown button visible in bottom-left.",
+      "resolvedTarget": null,
+      "assistantIntent": "Ayyyy, Safari's already open and example",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775304845597,
+      "relativeTime": 35041,
+      "screenshotPath": "step-2.png",
+      "exactHash": "a90608e4794ea2998021a935b71554c9",
+      "thumbnailHash": "1ce531c67870b76db362d197e73aafd4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          570,
+          652
+        ],
+        "raw": "left_click (570,652)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Dialog closes and PDF is saved to Desktop",
+      "surprise": {
+        "score": 1,
+        "expected": "A dropdown menu should appear with \"Save as PDF...\" option",
+        "observed": "success left_click (570,652)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Save as PDF dialog showing filename \"Example Domain.pdf\", location set to Desktop, with Save and Cancel buttons.",
+      "resolvedTarget": null,
+      "assistantIntent": "CHECKPOINT [1]: Print dialog is open",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775304863818,
+      "relativeTime": 53262,
+      "screenshotPath": "step-3.png",
+      "exactHash": "d9bcbabf0c13e4ce2c59a6d2acf2c4ac",
+      "thumbnailHash": "f75d19d054c237f167a3824ac773e76e",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          724,
+          565
+        ],
+        "raw": "left_click (724,565)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Dialog closes, PDF saved to Desktop, back to Safari showing example.com",
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes and PDF is saved to Desktop",
+        "observed": "success left_click (724,565)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "HOLY MOLY, it literally skipped right to the Save as PDF dialog AND it's already set to Desktop",
+      "resolvedTarget": null,
+      "assistantIntent": "HOLY MOLY, it literally skipped right to the Save as PDF dialog AND it's already set to Desktop",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775304883641,
+      "relativeTime": 73085,
+      "screenshotPath": "step-4.png",
+      "exactHash": "4e75a64186ab736f9e4ca02efdf4c8a0",
+      "thumbnailHash": "e56904b366ec0a9b725bf0a6ef9a30f7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          660,
+          499
+        ],
+        "raw": "left_click (660,499)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Dialog closes, PDF saved to Desktop, back to Safari showing example.com",
+        "observed": "success left_click (660,499)",
+        "expectedKeywords": 10,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Safari browser showing example.com with \"Example Domain\" heading. Three tabs visible: Apple, Google, Example Domain.",
+      "resolvedTarget": null,
+      "assistantIntent": "Oh it's asking if we want to replace the existing file — looks like we already saved one before (from a previous attempt",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "cmd+p",
+        "raw": "key: \"cmd+p\""
+      },
+      "timestamp": 1775304826313
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          570,
+          652
+        ],
+        "raw": "left_click (570,652)"
+      },
+      "timestamp": 1775304845597
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          724,
+          565
+        ],
+        "raw": "left_click (724,565)"
+      },
+      "timestamp": 1775304863818
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          660,
+          499
+        ],
+        "raw": "left_click (660,499)"
+      },
+      "timestamp": 1775304883641
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Save as PDF dialog is open with filename \"Example Domain.pdf\" and location already set to Desktop.\", tried [key: \"cmd+p\", left_click (570,652), left_click (724,565)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 4,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

@@ -1,0 +1,346 @@
+{
+  "taskId": "task-1775244640501-rbiw",
+  "taskDescription": "Open Safari, copy text from a webpage, switch to TextEdit, and paste it into a new document",
+  "startTime": 1775244640501,
+  "endTime": 1775244819003,
+  "duration": 178502,
+  "success": true,
+  "finalText": "Task completed after extended run",
+  "totalSteps": 6,
+  "loopsDetected": 0,
+  "stagnationsDetected": 1,
+  "surprisesDetected": 1,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Format menu is dismissed. I can see TextEdit with \"Untitled 2.rtf\" open showing \"Hello from CAPY! This file was created on the Desktop.\" - and there's a PowerPoint presentation in the background. The TextEdit window is in dark mode overlaid on it.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "1f216325d5fbe78cef3423a3de0c0724",
+      "semanticState": "TextEdit document \"Untitled 2.rtf\" is open in dark mode with existing text, overlaid on a PowerPoint presentation \"Presentation1\" in the background.",
+      "timestamp": 1775244692227
+    },
+    {
+      "stepNumber": 2,
+      "description": "Safari is open! The browser is showing the new tab page with Favourites and Suggestions. The address bar is already focused and ready for input.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "6d9a637f353c087de47a3216db653f90",
+      "semanticState": "Safari browser open with new tab page showing favourites (Apple, iCloud, Google, Yahoo, etc.) and recent suggestions. Search bar is focused and ready.",
+      "timestamp": 1775244719572
+    },
+    {
+      "stepNumber": 3,
+      "description": "Successfully navigated to the Wikipedia Capybara page. The page is fully loaded with text content visible.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "b3b3456a5caac8f5441f960f4e3df39d",
+      "semanticState": "Wikipedia page about Capybara loaded in Safari, showing the article title, intro paragraph, and a photo of a capybara in Brazil.",
+      "timestamp": 1775244756084
+    },
+    {
+      "stepNumber": 4,
+      "description": "Text from the Wikipedia Capybara page is selected and copied to clipboard. The first paragraph about capybaras being the largest living rodent is now in the clipboard.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "6245616f5d2242443c4bd5413b594790",
+      "semanticState": "Wikipedia Capybara page with the first paragraph highlighted/selected in Safari.",
+      "timestamp": 1775244805529
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Close the Format menu (press Escape)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Open Safari and navigate to a webpage",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Copy some text from the webpage",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Switch to TextEdit and create a new document",
+        "done": true
+      },
+      {
+        "n": 5,
+        "desc": "Paste the copied text into the new document",
+        "done": false
+      }
+    ],
+    "totalSteps": 5
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775244642185,
+      "relativeTime": 1684,
+      "screenshotPath": "step-0.png",
+      "exactHash": "6a4c2d0773daa16c402abb4fbb21e221",
+      "thumbnailHash": "996dc0aee46bcdc3db2e0d1a45426aba",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775244657157,
+      "relativeTime": 16656,
+      "screenshotPath": "step-1.png",
+      "exactHash": "6a4c2d0773daa16c402abb4fbb21e221",
+      "thumbnailHash": "996dc0aee46bcdc3db2e0d1a45426aba",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "stagnation"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "STEP 1: Dismissing the Format menu - now let me open Safari",
+      "resolvedTarget": null,
+      "assistantIntent": "STEP 1: Dismissing the Format menu - now let me open Safari",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775244682666,
+      "relativeTime": 42165,
+      "screenshotPath": "step-2.png",
+      "exactHash": "1f216325d5fbe78cef3423a3de0c0724",
+      "thumbnailHash": "d3c88b55f981802b1cfcef52c38ca893",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          650,
+          400
+        ],
+        "raw": "left_click (650,400)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": "Safari should open and show the browser window.",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "TextEdit document \"Untitled 2.rtf\" is open in dark mode with existing text, overlaid on a PowerPoint presentation \"Presentation1\" in the background.",
+      "resolvedTarget": null,
+      "assistantIntent": "Ugh, menu's still up",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775244709550,
+      "relativeTime": 69049,
+      "screenshotPath": "step-3.png",
+      "exactHash": "6d9a637f353c087de47a3216db653f90",
+      "thumbnailHash": "8e30cbb62ba6f4b21a8979c3889c298a",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          117,
+          819
+        ],
+        "raw": "left_click (117,819)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "Safari should navigate to the Wikipedia page about Capybaras.",
+      "surprise": {
+        "score": 1,
+        "expected": "Safari should open and show the browser window.",
+        "observed": "success left_click (117,819)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Safari browser open with new tab page showing favourites (Apple, iCloud, Google, Yahoo, etc.) and recent suggestions. Search bar is focused and ready.",
+      "resolvedTarget": null,
+      "assistantIntent": "EXPECT: Safari should open and show the browser window",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775244740403,
+      "relativeTime": 99902,
+      "screenshotPath": "step-4.png",
+      "exactHash": "b3b3456a5caac8f5441f960f4e3df39d",
+      "thumbnailHash": "d24a893dc12fa57e70dadfc26bf00924",
+      "action": {
+        "type": "type",
+        "text": "https://en.wikipedia.org/wiki/Capybara\n",
+        "raw": "type: \"https://en.wikipedia.org/wiki/Capybara\n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Wikipedia page about Capybara loaded in Safari, showing the article title, intro paragraph, and a photo of a capybara in Brazil.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Toolbar",
+        "app": "Safari",
+        "distance": 1
+      },
+      "assistantIntent": "EXPECT: Safari should navigate to the Wikipedia page about Capybaras",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775244786702,
+      "relativeTime": 146201,
+      "screenshotPath": "step-5.png",
+      "exactHash": "6245616f5d2242443c4bd5413b594790",
+      "thumbnailHash": "27c039b8e4c4148f6ef54738ac134e93",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          356,
+          419
+        ],
+        "text": "shift",
+        "raw": "left_click (356,419): \"shift\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-1-attempt-1-left-click",
+      "semanticState": "Wikipedia Capybara page with the first paragraph highlighted/selected in Safari.",
+      "resolvedTarget": null,
+      "assistantIntent": "Now I'll hold shift and click at the end of the paragraph to select it all:",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "Escape",
+        "raw": "key: \"Escape\""
+      },
+      "timestamp": 1775244657157
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          650,
+          400
+        ],
+        "raw": "left_click (650,400)"
+      },
+      "timestamp": 1775244682666
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          117,
+          819
+        ],
+        "raw": "left_click (117,819)"
+      },
+      "timestamp": 1775244709550
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "type",
+        "text": "https://en.wikipedia.org/wiki/Capybara\n",
+        "raw": "type: \"https://en.wikipedia.org/wiki/Capybara\n\""
+      },
+      "timestamp": 1775244740403
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          356,
+          419
+        ],
+        "text": "shift",
+        "raw": "left_click (356,419): \"shift\""
+      },
+      "timestamp": 1775244786702
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Format menu is dismissed. I can see TextEdit with \"Untitled 2.rtf\" open showing \"Hello from CAPY! This file was created on the Desktop.\" - and there's a PowerPoint presentation in the background. The TextEdit window is in dark mode overlaid on it.\", tried [key: \"Escape\", left_click (650,400), left_click (117,819)] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-left-click",
+      "name": "attempt-1-left_click",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 5,
+      "status": "succeeded",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task completed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

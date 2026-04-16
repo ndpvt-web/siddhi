@@ -1,0 +1,486 @@
+{
+  "taskId": "task-1775226812779-pif7",
+  "taskDescription": "Open Calendar, create an event with a 15-minute reminder alert and a specific location",
+  "startTime": 1775226812779,
+  "endTime": 1775227066968,
+  "duration": 254189,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 7,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Add Event button clicked - dropdown menu appeared with \"New Event\", \"New Reminder\", and a \"Create Quick Event\" text field.",
+      "nodeId": "step-1",
+      "nodeIndex": 1,
+      "screenshotHash": "0a69e875781971229ae7ad2ad273d6c6",
+      "semanticState": "Calendar app showing a dropdown from the + button with options for \"New Event\", \"New Reminder\", and a \"Create Quick Event\" input field.",
+      "timestamp": 1775226847018
+    },
+    {
+      "stepNumber": 2,
+      "description": "Full event creation form is open with all fields visible - title, location, date/time, alert/repeat options.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "edc758836406cb41f1445f21eb1033d0",
+      "semanticState": "Calendar app showing a new event creation popup form with fields for title, location, date/time, and alert options.",
+      "timestamp": 1775226870690
+    },
+    {
+      "stepNumber": 3,
+      "description": "Event title \"Team Meeting\" successfully entered in the title field.",
+      "nodeId": "step-3",
+      "nodeIndex": 3,
+      "screenshotHash": "5d65c8266c6563030947703c8ddc226f",
+      "semanticState": "Calendar event creation form showing \"Team Meeting\" as the title, with location, date/time, and other fields visible below.",
+      "timestamp": 1775226929542
+    },
+    {
+      "stepNumber": 4,
+      "description": "Location \"Conference Room B\" successfully entered in the location field. A location permission dialog appeared.",
+      "nodeId": "step-5",
+      "nodeIndex": 5,
+      "screenshotHash": "d3db70d65607f25caef8dcfbfd08b780",
+      "semanticState": "Calendar event form showing \"Team Meeting\" title and \"Conference Room B\" location. A system dialog asking for location permission is shown.",
+      "timestamp": 1775227012638
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Click the \"+\" (Add Event) button to create a new event",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Fill in the event title",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Set the date/time",
+        "done": true
+      },
+      {
+        "n": 4,
+        "desc": "Add a location",
+        "done": true
+      },
+      {
+        "n": 5,
+        "desc": "Add a 15-minute reminder alert",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Save the event",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 3,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775226814468,
+      "relativeTime": 1689,
+      "screenshotPath": "step-0.png",
+      "exactHash": "3abe070c6f313e804081bdb9817eda52",
+      "thumbnailHash": "f101fac596044925caba5b3542f71f2e",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": "A quick event creation popup or modal should appear",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775226838223,
+      "relativeTime": 25444,
+      "screenshotPath": "step-1.png",
+      "exactHash": "0a69e875781971229ae7ad2ad273d6c6",
+      "thumbnailHash": "315168633e255425f59aaf4da68784ab",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          381,
+          105
+        ],
+        "raw": "left_click (381,105)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "A full event creation form/modal should open with fields for title, date, time, location, and alerts.",
+      "surprise": {
+        "score": 1,
+        "expected": "A quick event creation popup or modal should appear",
+        "observed": "success left_click (381,105)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app showing a dropdown from the + button with options for \"New Event\", \"New Reminder\", and a \"Create Quick Event\" input field.",
+      "resolvedTarget": {
+        "label": "Add Event",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 1
+      },
+      "assistantIntent": "EXPECT: A quick event creation popup or modal should appear",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775226860502,
+      "relativeTime": 47723,
+      "screenshotPath": "step-2.png",
+      "exactHash": "edc758836406cb41f1445f21eb1033d0",
+      "thumbnailHash": "6dc4114c684ea69fb9f849686e12dcf2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          325,
+          178
+        ],
+        "raw": "left_click (325,178)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The \"New Event\" title field should be focused and I can type a name.",
+      "surprise": {
+        "score": 1,
+        "expected": "A full event creation form/modal should open with fields for title, date, time, location, and alerts.",
+        "observed": "success left_click (325,178)",
+        "expectedKeywords": 12,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar app showing a new event creation popup form with fields for title, location, date/time, and alert options.",
+      "resolvedTarget": {
+        "label": "(unlabeled)",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 9
+      },
+      "assistantIntent": "A dropdown appeared with \"New Event\" and \"New Reminder\" options, plus a quick event field",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775226890513,
+      "relativeTime": 77734,
+      "screenshotPath": "step-3.png",
+      "exactHash": "5d65c8266c6563030947703c8ddc226f",
+      "thumbnailHash": "8b6567b53b2118d3d0efcc531b8cea02",
+      "action": {
+        "type": "type",
+        "text": "Team Meeting",
+        "raw": "type: \"Team Meeting\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The location field should become editable so I can type a location.",
+      "surprise": {
+        "score": 0.8571428571428572,
+        "expected": "The \"New Event\" title field should be focused and I can type a name.",
+        "observed": "success type: \"team meeting\"",
+        "expectedKeywords": 7,
+        "matchedKeywords": 1
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Calendar event creation form showing \"Team Meeting\" as the title, with location, date/time, and other fields visible below.",
+      "resolvedTarget": {
+        "label": "Event",
+        "role": "RadioButton",
+        "app": "Calendar",
+        "distance": 44
+      },
+      "assistantIntent": "YOOO we got the full event creation form",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775226943236,
+      "relativeTime": 130457,
+      "screenshotPath": "step-4.png",
+      "exactHash": "85c2fe7cfbccf02a8f71e484beba2d20",
+      "thumbnailHash": "7fe26154d2595c321c7345996973c36c",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          466,
+          545
+        ],
+        "raw": "left_click (466,545)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "The text should appear in the location field.",
+      "surprise": {
+        "score": 1,
+        "expected": "The location field should become editable so I can type a location.",
+        "observed": "success left_click (466,545)",
+        "expectedKeywords": 6,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Clicked '12 Apr 2026  10:00PM – 11:00PM' (Button) in Calendar",
+      "resolvedTarget": {
+        "label": "12 Apr 2026  10:00PM – 11:00PM",
+        "role": "Button",
+        "app": "Calendar",
+        "distance": 71
+      },
+      "assistantIntent": "The title \"Team Meeting\" is set",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775226969537,
+      "relativeTime": 156758,
+      "screenshotPath": "step-5.png",
+      "exactHash": "d3db70d65607f25caef8dcfbfd08b780",
+      "thumbnailHash": "384345a6f6d793c65536062085617e59",
+      "action": {
+        "type": "type",
+        "text": "Conference Room B",
+        "raw": "type: \"Conference Room B\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": "The dialog should dismiss and I'll be back at the event form.",
+      "surprise": {
+        "score": 1,
+        "expected": "The text should appear in the location field.",
+        "observed": "success type: \"conference room b\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Calendar event form showing \"Team Meeting\" title and \"Conference Room B\" location. A system dialog asking for location permission is shown.",
+      "resolvedTarget": null,
+      "assistantIntent": "I can see the cursor is now in the \"Add Location or Video Call\" field",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775227034281,
+      "relativeTime": 221502,
+      "screenshotPath": "step-6.png",
+      "exactHash": "c690d923d843ddde9d682c24583a5e14",
+      "thumbnailHash": "b026792ce94bd0e8bb9b82879e3ebf42",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          621,
+          365
+        ],
+        "raw": "left_click (621,365)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": "Clicking on the event should open its details so I can edit it and add an alert.",
+      "surprise": {
+        "score": 1,
+        "expected": "The dialog should dismiss and I'll be back at the event form.",
+        "observed": "success left_click (621,365)",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "\"Conference Room B\" is now in the location field",
+      "resolvedTarget": null,
+      "assistantIntent": "\"Conference Room B\" is now in the location field",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775227066968,
+      "relativeTime": 254189,
+      "screenshotPath": "step-7.png",
+      "exactHash": "f3ea57c7ffe48c1488f783fb2c940592",
+      "thumbnailHash": "42a579b9336192fc06dfaa7b80b95535",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          289,
+          581
+        ],
+        "raw": "left_click (289,581)"
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 0.9285714285714286,
+        "expected": "Clicking on the event should open its details so I can edit it and add an alert.",
+        "observed": "success left_click (289,581)",
+        "expectedKeywords": 7,
+        "matchedKeywords": 0.5
+      },
+      "branch": "branch-1-attempt-1-type",
+      "semanticState": "Hmm, looks like the dialog and the event form both closed",
+      "resolvedTarget": null,
+      "assistantIntent": "Hmm, looks like the dialog and the event form both closed",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          381,
+          105
+        ],
+        "raw": "left_click (381,105)"
+      },
+      "timestamp": 1775226838223
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          325,
+          178
+        ],
+        "raw": "left_click (325,178)"
+      },
+      "timestamp": 1775226860502
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "type",
+        "text": "Team Meeting",
+        "raw": "type: \"Team Meeting\""
+      },
+      "timestamp": 1775226890513
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          466,
+          545
+        ],
+        "raw": "left_click (466,545)"
+      },
+      "timestamp": 1775226943236
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "Conference Room B",
+        "raw": "type: \"Conference Room B\""
+      },
+      "timestamp": 1775226969537
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          621,
+          365
+        ],
+        "raw": "left_click (621,365)"
+      },
+      "timestamp": 1775227034281
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          289,
+          581
+        ],
+        "raw": "left_click (289,581)"
+      },
+      "timestamp": 1775227066968
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 3,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 0.86)",
+      "lesson": "After \"Full event creation form is open with all fields visible - title, location, date/time, alert/repeat options.\", tried [left_click (381,105), left_click (325,178), type: \"Team Meeting\"] but unexpected result (surprise score: 0.86)"
+    },
+    {
+      "id": "branch-1-attempt-1-type",
+      "name": "attempt-1-type",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 4,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 0.86)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}

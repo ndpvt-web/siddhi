@@ -1,0 +1,391 @@
+{
+  "taskId": "task-1775246840482-z2pl",
+  "taskDescription": "Open Finder, create a new folder, then create 3 text files inside it using TextEdit",
+  "startTime": 1775246840482,
+  "endTime": 1775246977343,
+  "duration": 136861,
+  "success": false,
+  "finalText": "Task incomplete - max iterations reached",
+  "totalSteps": 8,
+  "loopsDetected": 0,
+  "stagnationsDetected": 0,
+  "surprisesDetected": 2,
+  "checkpoints": [
+    {
+      "stepNumber": 1,
+      "description": "Folder \"MyTextFiles\" created in Downloads — visible at the top of the file list.",
+      "nodeId": "step-2",
+      "nodeIndex": 2,
+      "screenshotHash": "f8e40bc7528f9cb8615eee1b7b4694a1",
+      "semanticState": "Finder showing Downloads folder with \"MyTextFiles\" folder at the top. A VS Code permission dialog is in the way.",
+      "timestamp": 1775246890013
+    },
+    {
+      "stepNumber": 2,
+      "description": "Folder \"MyTextFiles\" is visible in Downloads at top, Spotlight is open.",
+      "nodeId": "step-4",
+      "nodeIndex": 4,
+      "screenshotHash": "ed0099503c5f4b8adc1a2c7b305cd7fd",
+      "semanticState": "Finder showing Downloads with MyTextFiles folder, Spotlight search bar open and focused.",
+      "timestamp": 1775246932817
+    }
+  ],
+  "taskPlan": {
+    "steps": [
+      {
+        "n": 1,
+        "desc": "Create a new folder in the Downloads directory (using File > New Folder or Shift+Cmd+N)",
+        "done": true
+      },
+      {
+        "n": 2,
+        "desc": "Name the folder something sensible",
+        "done": true
+      },
+      {
+        "n": 3,
+        "desc": "Open TextEdit and create text file 1, save it to the new folder",
+        "done": false
+      },
+      {
+        "n": 4,
+        "desc": "Create text file 2 in TextEdit, save to the new folder",
+        "done": false
+      },
+      {
+        "n": 5,
+        "desc": "Create text file 3 in TextEdit, save to the new folder",
+        "done": false
+      },
+      {
+        "n": 6,
+        "desc": "Verify all 3 files are in the folder",
+        "done": false
+      }
+    ],
+    "totalSteps": 6
+  },
+  "recoveryLevel": 1,
+  "nodes": [
+    {
+      "id": "step-0",
+      "index": 0,
+      "parentId": null,
+      "timestamp": 1775246842181,
+      "relativeTime": 1699,
+      "screenshotPath": "step-0.png",
+      "exactHash": "9693570c04327242617a11943cf56357",
+      "thumbnailHash": "f2ec366fe307a3713549522450b8677c",
+      "action": null,
+      "toolResult": null,
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "initial state (no action)",
+      "resolvedTarget": null,
+      "assistantIntent": null,
+      "axContext": null
+    },
+    {
+      "id": "step-1",
+      "index": 1,
+      "parentId": "step-0",
+      "timestamp": 1775246859222,
+      "relativeTime": 18740,
+      "screenshotPath": "step-1.png",
+      "exactHash": "3a3d2b3596c26fb39ecf6d70f88dec60",
+      "thumbnailHash": "61ce1314c33188e9812841755e3c45f0",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+n",
+        "raw": "key: \"shift+cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Alright, Finder is already open",
+      "resolvedTarget": null,
+      "assistantIntent": "Alright, Finder is already open",
+      "axContext": null
+    },
+    {
+      "id": "step-2",
+      "index": 2,
+      "parentId": "step-1",
+      "timestamp": 1775246880072,
+      "relativeTime": 39590,
+      "screenshotPath": "step-2.png",
+      "exactHash": "f8e40bc7528f9cb8615eee1b7b4694a1",
+      "thumbnailHash": "09bca138b1842c3ff3d3b53fc5294d2e",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Downloads folder with \"MyTextFiles\" folder at the top. A VS Code permission dialog is in the way.",
+      "resolvedTarget": null,
+      "assistantIntent": "New folder created at the top of Downloads, and the name is editable (showing \"untitled folder\" highlighted)",
+      "axContext": null
+    },
+    {
+      "id": "step-3",
+      "index": 3,
+      "parentId": "step-2",
+      "timestamp": 1775246906180,
+      "relativeTime": 65698,
+      "screenshotPath": "step-3.png",
+      "exactHash": "a6d8c08cab3997c65126b9187a342091",
+      "thumbnailHash": "e7b1a33e89ad6008689c7ff959e335b8",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          621,
+          310
+        ],
+        "raw": "left_click (621,310)"
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "Spotlight search bar appears",
+      "surprise": null,
+      "branch": "branch-0-main",
+      "semanticState": "Clicked 'Don’t Allow' (Button) in UserNotificationCenter",
+      "resolvedTarget": {
+        "label": "Don’t Allow",
+        "role": "Button",
+        "app": "UserNotificationCenter",
+        "distance": 2
+      },
+      "assistantIntent": "Folder \"MyTextFiles\" is created",
+      "axContext": null
+    },
+    {
+      "id": "step-4",
+      "index": 4,
+      "parentId": "step-3",
+      "timestamp": 1775246924341,
+      "relativeTime": 83859,
+      "screenshotPath": "step-4.png",
+      "exactHash": "ed0099503c5f4b8adc1a2c7b305cd7fd",
+      "thumbnailHash": "bb7805905338a3a14e6b514662922a40",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise",
+        "checkpoint"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "Spotlight search bar appears",
+        "observed": "success key: \"cmd+space\"",
+        "expectedKeywords": 4,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-0-main",
+      "semanticState": "Finder showing Downloads with MyTextFiles folder, Spotlight search bar open and focused.",
+      "resolvedTarget": null,
+      "assistantIntent": "Dialog dismissed",
+      "axContext": null
+    },
+    {
+      "id": "step-5",
+      "index": 5,
+      "parentId": "step-4",
+      "timestamp": 1775246940858,
+      "relativeTime": 100376,
+      "screenshotPath": "step-5.png",
+      "exactHash": "2ebcb279ebc131c614811d6804b46f39",
+      "thumbnailHash": "dac1ad4c8d674860e1902f0f7221f650",
+      "action": {
+        "type": "type",
+        "text": "TextEdit",
+        "raw": "type: \"TextEdit\""
+      },
+      "toolResult": "success",
+      "flags": [],
+      "expectation": "TextEdit opens with a new blank document ready to type in.",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Spotlight is open and focused",
+      "resolvedTarget": null,
+      "assistantIntent": "Spotlight is open and focused",
+      "axContext": null
+    },
+    {
+      "id": "step-6",
+      "index": 6,
+      "parentId": "step-5",
+      "timestamp": 1775246954815,
+      "relativeTime": 114333,
+      "screenshotPath": "step-6.png",
+      "exactHash": "10adb2c490735b6b2d2f18d28b99ba2f",
+      "thumbnailHash": "b4ca898faba188ea842a3cae69f14d35",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "navigation"
+      ],
+      "expectation": "A new blank \"Untitled\" document opens",
+      "surprise": null,
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "app is the top result",
+      "resolvedTarget": null,
+      "assistantIntent": "app is the top result",
+      "axContext": null
+    },
+    {
+      "id": "step-7",
+      "index": 7,
+      "parentId": "step-6",
+      "timestamp": 1775246977343,
+      "relativeTime": 136861,
+      "screenshotPath": "step-7.png",
+      "exactHash": "7304d948896ba1034f7ccb495594edd1",
+      "thumbnailHash": "d366f965858bd311259ae83aa82751a1",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "toolResult": "success",
+      "flags": [
+        "surprise"
+      ],
+      "expectation": null,
+      "surprise": {
+        "score": 1,
+        "expected": "A new blank \"Untitled\" document opens",
+        "observed": "success key: \"cmd+n\"",
+        "expectedKeywords": 5,
+        "matchedKeywords": 0
+      },
+      "branch": "branch-1-attempt-1-key",
+      "semanticState": "Okay TextEdit is open but it's showing \"Untitled 2",
+      "resolvedTarget": null,
+      "assistantIntent": "Okay TextEdit is open but it's showing \"Untitled 2",
+      "axContext": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "step-0",
+      "to": "step-1",
+      "action": {
+        "type": "key",
+        "text": "shift+cmd+n",
+        "raw": "key: \"shift+cmd+n\""
+      },
+      "timestamp": 1775246859222
+    },
+    {
+      "from": "step-1",
+      "to": "step-2",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775246880072
+    },
+    {
+      "from": "step-2",
+      "to": "step-3",
+      "action": {
+        "type": "left_click",
+        "coordinates": [
+          621,
+          310
+        ],
+        "raw": "left_click (621,310)"
+      },
+      "timestamp": 1775246906180
+    },
+    {
+      "from": "step-3",
+      "to": "step-4",
+      "action": {
+        "type": "key",
+        "text": "cmd+space",
+        "raw": "key: \"cmd+space\""
+      },
+      "timestamp": 1775246924341
+    },
+    {
+      "from": "step-4",
+      "to": "step-5",
+      "action": {
+        "type": "type",
+        "text": "TextEdit",
+        "raw": "type: \"TextEdit\""
+      },
+      "timestamp": 1775246940858
+    },
+    {
+      "from": "step-5",
+      "to": "step-6",
+      "action": {
+        "type": "key",
+        "text": "Return",
+        "raw": "key: \"Return\""
+      },
+      "timestamp": 1775246954815
+    },
+    {
+      "from": "step-6",
+      "to": "step-7",
+      "action": {
+        "type": "key",
+        "text": "cmd+n",
+        "raw": "key: \"cmd+n\""
+      },
+      "timestamp": 1775246977343
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-0-main",
+      "name": "main",
+      "index": 0,
+      "baseFrameIndex": 0,
+      "startFrameIndex": 0,
+      "tipFrameIndex": 4,
+      "status": "failed",
+      "approach": "initial attempt",
+      "outcome": "unexpected result (surprise score: 1.00)",
+      "lesson": "After \"Folder \"MyTextFiles\" created in Downloads — visible at the top of the file list.\", tried [key: \"Return\", left_click (621,310), key: \"cmd+space\"] but unexpected result (surprise score: 1.00)"
+    },
+    {
+      "id": "branch-1-attempt-1-key",
+      "name": "attempt-1-key",
+      "index": 1,
+      "baseFrameIndex": 2,
+      "startFrameIndex": 5,
+      "tipFrameIndex": 7,
+      "status": "failed",
+      "approach": "retry after: unexpected result (surprise score: 1.00)",
+      "outcome": "Task failed",
+      "lesson": null
+    }
+  ],
+  "activeBranchIndex": 1
+}
