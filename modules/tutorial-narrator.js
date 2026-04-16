@@ -2,8 +2,8 @@
 
 /**
  * tutorial-narrator.js
- * Handles TTS via Kokoro and subtitle delivery via WebSocket broadcast.
- * Part of the Atlas Tutorial System.
+ * Non-blocking TTS with pre-generation cache.
+ * Subtitle delivery is immediate and independent of audio generation.
  */
 
 const http = require('http');
@@ -11,63 +11,64 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
+const bus = require('./tutorial-bus');
 
-// Module-level state for audio process tracking
-let _currentAudioPid = null;
+// ── Module state ─────────────────────────────────────────────────────────────
+
 let _currentAudioProcess = null;
 let _currentTempFile = null;
 
-/**
- * Build an EngineResult object.
- * @param {boolean} ok
- * @param {*} data
- * @param {string|null} error
- * @param {number} durationMs
- * @returns {{ ok: boolean, data: *, error: string|null, durationMs: number }}
- */
-function makeResult(ok, data, error, durationMs) {
-  return { ok, data, error: error || null, durationMs: durationMs || 0 };
+/** @type {Map<number, { wavPath: string|null, promise: Promise|null }>} */
+const _ttsCache = new Map();
+
+// ── Markdown stripping ─────────────────────────────────────────────────────
+
+function stripMarkdown(text) {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/`(.+?)`/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#+\s*/gm, '')
+    .replace(/[*_~`]/g, '')
+    .trim();
 }
 
-/**
- * Estimate subtitle display duration from text length.
- * ~60ms per character, min 2000ms, max 10000ms.
- * @param {string} text
- * @returns {number} milliseconds
- */
+// ── Subtitle duration estimate ──────────────────────────────────────────────
+
 function estimateDuration(text) {
   const raw = (text || '').length * 60;
   return Math.min(Math.max(raw, 2000), 10000);
 }
 
-/**
- * Make an HTTP POST request, returning response body as Buffer.
- * @param {string} url
- * @param {object} body - JSON-serializable payload
- * @returns {Promise<Buffer>}
- */
+// ── HTTP helper ─────────────────────────────────────────────────────────────
+
 function httpPost(url, body) {
   return new Promise((resolve, reject) => {
     const parsed = new URL(url);
     const isHttps = parsed.protocol === 'https:';
     const lib = isHttps ? https : http;
-
     const payload = JSON.stringify(body);
 
-    const options = {
+    const headers = {
+      'Content-Type': 'application/json',
+      'Content-Length': Buffer.byteLength(payload),
+    };
+
+    const token = process.env.CAPY_BRIDGE_TOKEN;
+    if (token && parsed.hostname === 'localhost') {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
+
+    const req = lib.request({
       hostname: parsed.hostname,
       port: parsed.port || (isHttps ? 443 : 80),
       path: parsed.pathname + (parsed.search || ''),
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(payload),
-      },
-    };
-
-    const req = lib.request(options, (res) => {
+      headers,
+    }, (res) => {
       const chunks = [];
-      res.on('data', (chunk) => chunks.push(chunk));
+      res.on('data', c => chunks.push(c));
       res.on('end', () => {
         const buf = Buffer.concat(chunks);
         if (res.statusCode >= 200 && res.statusCode < 300) {
@@ -79,223 +80,164 @@ function httpPost(url, body) {
     });
 
     req.on('error', reject);
-    req.setTimeout(30000, () => {
-      req.destroy(new Error('HTTP request timed out after 30s'));
-    });
-
+    req.setTimeout(30000, () => req.destroy(new Error('TTS request timed out')));
     req.write(payload);
     req.end();
   });
 }
 
-/**
- * Clean up a temp WAV file silently.
- * @param {string} filePath
- */
+// ── File cleanup ────────────────────────────────────────────────────────────
+
 function cleanupTempFile(filePath) {
   if (!filePath) return;
-  try {
-    if (fs.existsSync(filePath)) {
-      fs.unlinkSync(filePath);
-    }
-  } catch (_) {
-    // Ignore cleanup errors
-  }
+  try { if (fs.existsSync(filePath)) fs.unlinkSync(filePath); } catch (_) {}
 }
 
-/**
- * Play a WAV file via afplay (macOS). Non-blocking spawn.
- * Tracks PID in module-level state. Cleans up temp file on completion.
- * @param {string} wavPath
- */
+// ── Audio playback ──────────────────────────────────────────────────────────
+
 function playWav(wavPath) {
+  if (!wavPath || !fs.existsSync(wavPath)) return;
+
+  // Stop any currently playing audio
+  stopCurrentAudio();
+
   let proc;
   try {
-    proc = spawn('afplay', [wavPath], {
-      stdio: 'ignore',
-      detached: false,
-    });
-  } catch (err) {
-    // afplay not available (e.g., Linux dev environment) -- clean up and move on
+    proc = spawn('afplay', [wavPath], { stdio: 'ignore', detached: false });
+  } catch (_) {
     cleanupTempFile(wavPath);
     return;
   }
 
   _currentAudioProcess = proc;
-  _currentAudioPid = proc.pid;
   _currentTempFile = wavPath;
 
   proc.on('close', () => {
-    if (_currentAudioPid === proc.pid) {
-      _currentAudioPid = null;
+    if (_currentAudioProcess === proc) {
       _currentAudioProcess = null;
     }
     cleanupTempFile(wavPath);
-    if (_currentTempFile === wavPath) {
-      _currentTempFile = null;
-    }
+    if (_currentTempFile === wavPath) _currentTempFile = null;
   });
 
   proc.on('error', () => {
-    if (_currentAudioPid === proc.pid) {
-      _currentAudioPid = null;
+    if (_currentAudioProcess === proc) {
       _currentAudioProcess = null;
     }
     cleanupTempFile(wavPath);
-    if (_currentTempFile === wavPath) {
-      _currentTempFile = null;
-    }
+    if (_currentTempFile === wavPath) _currentTempFile = null;
   });
 }
 
+function stopCurrentAudio() {
+  if (_currentAudioProcess) {
+    try { _currentAudioProcess.kill('SIGTERM'); } catch (_) {}
+    _currentAudioProcess = null;
+  }
+}
+
+// ── Public API ──────────────────────────────────────────────────────────────
+
 /**
- * narrate(opts) → Promise<EngineResult>
- *
- * Sends subtitle to overlay and optionally plays TTS audio via Kokoro.
- *
- * @param {{ text: string, step?: object, broadcastFn?: function, kokoroUrl?: string, skipTTS?: boolean }} opts
- * @returns {Promise<{ ok: boolean, data: null, error: string|null, durationMs: number }>}
+ * Send subtitle to overlay immediately. Synchronous, never blocks.
+ * @param {string} text
+ * @param {function} broadcastFn
  */
-async function narrate(opts) {
-  const start = Date.now();
-  const {
-    text = '',
-    broadcastFn,
-    kokoroUrl = 'http://localhost:7892/v1/audio/speech',
-    skipTTS = false,
-  } = opts || {};
-
+function broadcastSubtitle(text, broadcastFn) {
+  if (typeof broadcastFn !== 'function') return;
   const duration = estimateDuration(text);
-
-  // 1. Send subtitle to overlay
-  if (typeof broadcastFn === 'function') {
-    try {
-      broadcastFn({ type: 'narrate', text, duration });
-    } catch (broadcastErr) {
-      // Non-fatal: log and continue
-      console.error('[tutorial-narrator] broadcastFn error:', broadcastErr.message);
-    }
+  try {
+    broadcastFn({ type: 'narrate', text, duration });
+  } catch (err) {
+    console.log(`[Narrator] broadcastSubtitle error: ${err.message}`);
   }
-
-  // 2. TTS via Kokoro (if not skipped)
-  if (!skipTTS && text) {
-    try {
-      const wavBuffer = await httpPost(kokoroUrl, {
-        model: 'kokoro',
-        voice: 'af_heart',
-        input: text,
-        response_format: 'wav',
-      });
-
-      const tmpPath = `/tmp/atlas-tutorial-tts-${Date.now()}.wav`;
-      fs.writeFileSync(tmpPath, wavBuffer);
-      playWav(tmpPath);
-    } catch (ttsErr) {
-      // Degrade gracefully: subtitle already sent, just log the TTS failure
-      console.error('[tutorial-narrator] TTS error (subtitle shown):', ttsErr.message);
-    }
-  }
-
-  return makeResult(true, null, null, Date.now() - start);
 }
 
 /**
- * stopAudio() → void
+ * Enqueue TTS generation for a step. Non-blocking -- returns immediately.
+ * When TTS completes, emits 'tts_ready' on the bus.
+ * Results are cached by stepIndex for pre-generation.
  *
- * Kills the current afplay process (if any) and cleans up temp WAV files.
+ * @param {object} step - TutorialStep (needs step.action)
+ * @param {number} index - step index (-1 for completion message)
+ */
+function enqueue(step, index) {
+  const text = stripMarkdown(step.action || step.text || '');
+  if (!text) return;
+
+  // Already generating or cached?
+  if (_ttsCache.has(index)) return;
+
+  const kokoroUrl = process.env.KOKORO_URL || 'http://localhost:7892/tts';
+
+  const promise = httpPost(kokoroUrl, {
+    text,
+    voice: 'af_heart',
+    stream: false,
+  }).then((wavBuffer) => {
+    const tmpPath = `/tmp/atlas-tts-${Date.now()}-${index}.wav`;
+    fs.writeFileSync(tmpPath, wavBuffer);
+
+    const entry = _ttsCache.get(index);
+    if (entry) entry.wavPath = tmpPath;
+
+    bus.emit('tts_ready', { index, wavPath: tmpPath });
+    return tmpPath;
+  }).catch((err) => {
+    console.log(`[Narrator] TTS error for step ${index}: ${err.message}`);
+    _ttsCache.delete(index);
+    bus.emit('tts_error', { index, message: err.message });
+    return null;
+  });
+
+  _ttsCache.set(index, { wavPath: null, promise });
+}
+
+/**
+ * Play pre-generated TTS for a step if it's ready.
+ * If still generating, the bus 'tts_ready' event will trigger playback.
+ *
+ * @param {number} index
+ */
+function playIfReady(index) {
+  const entry = _ttsCache.get(index);
+  if (!entry) return;
+  if (entry.wavPath) {
+    playWav(entry.wavPath);
+    _ttsCache.delete(index);
+  }
+  // If not ready yet, tts_ready bus event will handle it (engine listens)
+}
+
+/**
+ * Stop all audio and clear TTS cache.
  */
 function stopAudio() {
-  // Kill current audio process
-  if (_currentAudioProcess && _currentAudioPid) {
-    try {
-      _currentAudioProcess.kill('SIGTERM');
-    } catch (_) {
-      // Process may already be dead
-    }
-  }
-  _currentAudioPid = null;
-  _currentAudioProcess = null;
+  stopCurrentAudio();
 
-  // Clean up current tracked temp file
+  // Clean up temp files
   if (_currentTempFile) {
     cleanupTempFile(_currentTempFile);
     _currentTempFile = null;
   }
 
-  // Clean up any leftover temp WAV files
-  try {
-    const tmpFiles = fs.readdirSync('/tmp').filter(
-      (f) => f.startsWith('atlas-tutorial-tts-') && f.endsWith('.wav')
-    );
-    for (const f of tmpFiles) {
-      cleanupTempFile(path.join('/tmp', f));
-    }
-  } catch (_) {
-    // /tmp scan failed -- non-fatal
+  // Clean cached WAV files
+  for (const [, entry] of _ttsCache) {
+    if (entry.wavPath) cleanupTempFile(entry.wavPath);
   }
+  _ttsCache.clear();
+
+  // Sweep any leftover temp files
+  try {
+    const files = fs.readdirSync('/tmp').filter(f => f.startsWith('atlas-tts-') && f.endsWith('.wav'));
+    for (const f of files) cleanupTempFile(path.join('/tmp', f));
+  } catch (_) {}
 }
 
-/**
- * generateNarration(opts) → Promise<EngineResult>
- *
- * Calls the Brain/LLM to generate natural narration text for a tutorial step.
- * Falls back to step.action if LLM call fails.
- *
- * @param {{ step: object, stepIndex: number, context?: string, brainUrl?: string }} opts
- * @returns {Promise<{ ok: boolean, data: string, error: string|null, durationMs: number }>}
- */
-async function generateNarration(opts) {
-  const start = Date.now();
-  const {
-    step = {},
-    stepIndex = 0,
-    context = '',
-    brainUrl = 'http://localhost:7888/brain/query',
-  } = opts || {};
-
-  const fallback = step.action || step.description || `Step ${stepIndex + 1}`;
-
-  const promptParts = [
-    `You are narrating a desktop tutorial for the user.`,
-    `Generate a brief, conversational narration (1-2 sentences) for the following tutorial step.`,
-    `Be natural and encouraging. Do not include any markdown or formatting.`,
-    ``,
-    `Step index: ${stepIndex}`,
-    `Step action: ${step.action || '(none)'}`,
-    step.description ? `Step description: ${step.description}` : null,
-    step.target ? `Target element: ${step.target}` : null,
-    context ? `Additional context: ${context}` : null,
-  ]
-    .filter(Boolean)
-    .join('\n');
-
-  try {
-    const responseBuffer = await httpPost(brainUrl, {
-      query: promptParts,
-      context: 'tutorial_narration',
-    });
-
-    const responseText = responseBuffer.toString('utf8');
-    let narrationText = fallback;
-
-    try {
-      const parsed = JSON.parse(responseText);
-      // Brain may return { response: "..." } or { answer: "..." } or { text: "..." }
-      narrationText =
-        parsed.response || parsed.answer || parsed.text || parsed.result || fallback;
-    } catch (_) {
-      // Response was plain text
-      narrationText = responseText.trim() || fallback;
-    }
-
-    // Sanitize: trim and collapse excessive whitespace
-    narrationText = narrationText.replace(/\s+/g, ' ').trim() || fallback;
-
-    return makeResult(true, narrationText, null, Date.now() - start);
-  } catch (err) {
-    console.error('[tutorial-narrator] generateNarration LLM error, using fallback:', err.message);
-    return makeResult(false, fallback, err.message, Date.now() - start);
-  }
-}
-
-module.exports = { narrate, stopAudio, generateNarration };
+module.exports = {
+  broadcastSubtitle,
+  enqueue,
+  playIfReady,
+  playWav,
+  stopAudio,
+};
