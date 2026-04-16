@@ -1,0 +1,13 @@
+{
+  "sessionId": "5e80d0e3-1c25-4721-bc30-bb77b759dd4a",
+  "userRequest": "Open Safari",
+  "state": "IDLE",
+  "steps": [],
+  "currentStep": 0,
+  "startedAt": "2026-04-07T18:27:17.907Z",
+  "completedAt": null,
+  "cancelReason": null,
+  "errorCount": 0,
+  "planningContext": null,
+  "transcription": "Open Safari"
+}

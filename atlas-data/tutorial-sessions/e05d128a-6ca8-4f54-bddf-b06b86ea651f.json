@@ -1,0 +1,62 @@
+{
+  "sessionId": "e05d128a-6ca8-4f54-bddf-b06b86ea651f",
+  "userRequest": "Open Safari",
+  "state": "GUIDING",
+  "steps": [
+    {
+      "index": 0,
+      "action": "Look at the bottom of the screen",
+      "targetDesc": "The Dock — the bar of app icons at the screen's bottom edge",
+      "expectedState": "The Dock is visible with application icons displayed in a row",
+      "why": "Locating the Dock is the entry point to launching any app quickly",
+      "pitfall": "Don't confuse the Dock with the Menu Bar at the very top of the screen",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 1,
+      "action": "Locate the Safari icon",
+      "targetDesc": "A blue compass-style circular icon labeled \"Safari\" in the Dock",
+      "expectedState": "The icon highlights or shows a tooltip with the app name on hover",
+      "why": "Identifying the correct icon prevents accidentally opening the wrong browser",
+      "pitfall": "Don't mistake Chrome or Firefox for Safari — Safari's icon is a compass with a blue/white design",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 2,
+      "action": "Click the Safari icon",
+      "targetDesc": "Single left-click on the Safari compass icon in the Dock",
+      "expectedState": "The icon bounces briefly and Safari launches, opening a new browser window",
+      "why": "A single click is all that's needed to launch a Dock app",
+      "pitfall": "Avoid double-clicking — this may open two Safari windows simultaneously",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 3,
+      "action": "Wait for Safari to fully load",
+      "targetDesc": "The Safari window with an address bar, tab bar, and start page",
+      "expectedState": "Safari's start page (or your homepage) is visible and interactive",
+      "why": "Waiting ensures Safari is ready before you interact with it",
+      "pitfall": "Don't click repeatedly if it seems slow — it just needs a moment to initialize",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    }
+  ],
+  "currentStep": 0,
+  "startedAt": "2026-04-07T18:35:00.861Z",
+  "completedAt": null,
+  "cancelReason": null,
+  "errorCount": 0,
+  "planningContext": null,
+  "transcription": "Open Safari"
+}
