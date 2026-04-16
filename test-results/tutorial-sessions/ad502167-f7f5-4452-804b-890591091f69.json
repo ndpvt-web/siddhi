@@ -1,0 +1,62 @@
+{
+  "sessionId": "ad502167-f7f5-4452-804b-890591091f69",
+  "userRequest": "Open Safari",
+  "state": "GUIDING",
+  "steps": [
+    {
+      "index": 0,
+      "action": "**Look**",
+      "targetDesc": "macOS Dock — the bar of icons at the bottom of the screen",
+      "expectedState": "The Dock is visible with app icons displayed",
+      "why": "The Dock is the fastest way to launch Safari",
+      "pitfall": "Pitfall: If the Dock is hidden, move your mouse to the bottom edge to reveal it",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 1,
+      "action": "**Locate**",
+      "targetDesc": "Safari icon — blue compass rose icon in the Dock",
+      "expectedState": "The icon appears highlighted/zoomed as you hover over it",
+      "why": "Confirms you're targeting the correct app before clicking",
+      "pitfall": "Pitfall: Don't confuse Safari with other browsers (Chrome = colorful circle, Firefox = orange fox)",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 2,
+      "action": "**Click**",
+      "targetDesc": "Safari icon in the Dock (single click)",
+      "expectedState": "Safari launches and a new browser window opens",
+      "why": "Single-click is all that's needed to open an app from the Dock",
+      "pitfall": "Pitfall: Double-clicking may open two Safari windows; one click is sufficient",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 3,
+      "action": "**Verify**",
+      "targetDesc": "Safari window with address bar at the top and a homepage or Start Page",
+      "expectedState": "The window is in the foreground and ready for input",
+      "why": "Confirms Safari opened successfully and is active",
+      "pitfall": "Pitfall: If nothing happens, Safari may already be open but behind other windows — check the Dock for a dot beneath the icon",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    }
+  ],
+  "currentStep": 0,
+  "startedAt": "2026-04-07T18:30:47.582Z",
+  "completedAt": null,
+  "cancelReason": null,
+  "errorCount": 3,
+  "planningContext": null,
+  "transcription": "Open Safari"
+}

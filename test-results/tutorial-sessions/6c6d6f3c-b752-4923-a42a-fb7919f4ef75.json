@@ -1,0 +1,56 @@
+{
+  "sessionId": "6c6d6f3c-b752-4923-a42a-fb7919f4ef75",
+  "userRequest": "Open Safari",
+  "state": "GUIDING",
+  "steps": [
+    {
+      "index": 0,
+      "action": "Locate",
+      "targetDesc": "the Dock at the bottom of the screen",
+      "expectedState": "the Dock becomes visible with app icons",
+      "why": "the Dock is the fastest launcher for pinned apps",
+      "pitfall": "if the Dock is hidden, move your cursor to the bottom edge to reveal it",
+      "axRole": "",
+      "axTitle": "",
+      "targetX": 640,
+      "targetY": 400,
+      "targetW": 120,
+      "targetH": 40
+    },
+    {
+      "index": 1,
+      "action": "Click",
+      "targetDesc": "the Safari icon (blue compass rose) in the Dock",
+      "expectedState": "Safari launches and a new browser window opens",
+      "why": "single-clicking a Dock icon is the primary way to open pinned apps",
+      "pitfall": "double-clicking is not needed and may open a second instance if Safari is already running",
+      "axRole": "",
+      "axTitle": "",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 2,
+      "action": "Wait",
+      "targetDesc": "for the Safari window to fully load",
+      "expectedState": "the address/search bar at the top becomes active and ready for input",
+      "why": "Safari may take a moment on first launch or after a restart",
+      "pitfall": "if nothing happens, check if a Safari window opened behind other apps by clicking the Safari icon again to bring it to focus",
+      "axRole": "",
+      "axTitle": "",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    }
+  ],
+  "currentStep": 0,
+  "startedAt": "2026-04-07T20:59:05.520Z",
+  "completedAt": null,
+  "cancelReason": null,
+  "errorCount": 1,
+  "planningContext": null,
+  "transcription": "Open Safari"
+}

@@ -5,3 +5,10 @@ node_modules/
 /tmp/
 *.log
 .DS_Store
+
+# Swift build artifacts
+atlas-tutorial-overlay/.build/
+atlas-tutorial-overlay-bin
+
+# macOS
+.DS_Store

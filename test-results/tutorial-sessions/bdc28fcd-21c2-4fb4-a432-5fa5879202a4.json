@@ -1,0 +1,74 @@
+{
+  "sessionId": "bdc28fcd-21c2-4fb4-a432-5fa5879202a4",
+  "userRequest": "Open Safari",
+  "state": "GUIDING",
+  "steps": [
+    {
+      "index": 0,
+      "action": "**Look**",
+      "targetDesc": "macOS Dock — the bar of icons at the bottom of the screen",
+      "expectedState": "Dock becomes visible if it was hidden",
+      "why": "The Dock is the fastest way to launch Safari",
+      "pitfall": "Don't confuse the Dock with the Menu Bar at the top",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 1,
+      "action": "**Locate**",
+      "targetDesc": "Safari icon — a blue compass rose icon labeled \"Safari\" in the Dock",
+      "expectedState": "Icon highlights/bounces slightly when hovered",
+      "why": "Identifying the correct icon prevents opening the wrong browser",
+      "pitfall": "Chrome and Firefox icons look different but sit nearby; don't click those",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 2,
+      "action": "**Click**",
+      "targetDesc": "Safari icon in the Dock (single left-click)",
+      "expectedState": "Safari launches; its icon bounces in the Dock and a dot appears beneath it",
+      "why": "A single click is all that's needed to open an app from the Dock",
+      "pitfall": "Don't double-click — that opens two Safari windows",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 3,
+      "action": "**Wait**",
+      "targetDesc": "Safari splash/loading sequence",
+      "expectedState": "Safari's window appears with your homepage or a new tab page",
+      "why": "Allows the app to fully initialize before interacting",
+      "pitfall": "Don't click repeatedly if it's slow; duplicate windows may open",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    },
+    {
+      "index": 4,
+      "action": "**Confirm**",
+      "targetDesc": "Menu Bar at the top-left of the screen",
+      "expectedState": "The word **\"Safari\"** appears in bold next to the Apple () menu",
+      "why": "Verifies Safari is the active foreground application",
+      "pitfall": "If another app name shows, click anywhere inside the Safari window to focus it",
+      "targetX": null,
+      "targetY": null,
+      "targetW": null,
+      "targetH": null
+    }
+  ],
+  "currentStep": 0,
+  "startedAt": "2026-04-07T18:29:40.676Z",
+  "completedAt": null,
+  "cancelReason": null,
+  "errorCount": 0,
+  "planningContext": null,
+  "transcription": "Open Safari"
+}
