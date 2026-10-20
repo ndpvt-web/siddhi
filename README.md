@@ -23,6 +23,16 @@ JC STEM Lab of Cyber Security, The University of Hong Kong
   <img src="https://img.shields.io/badge/Tools-45+-orange?style=for-the-badge" />
 </p>
 
+<p align="center">
+  <a href="assets/siddhi-poster.pdf">
+    <img src="assets/poster.jpg" alt="SIDDHI Eureka Project Poster - full project overview" width="720" />
+  </a>
+</p>
+
+<p align="center">
+  <sub>HKU Eureka Program project poster (ID: 2526Eng1001). Click the poster for the full-resolution PDF.</sub>
+</p>
+
 ---
 
 Every computer-use agent today -- Anthropic CUA, OpenAI Operator, Google Mariner -- starts from a blank slate every session. They burn the same tokens re-discovering the same workflows, paying the same cost, making the same mistakes. **Siddhi breaks this cycle.** It is a fully autonomous macOS desktop agent that watches itself work, extracts patterns from its own behavior, graduates successful patterns into reusable strategies, and even forges entirely new tools from repeated workflows -- all at runtime, stored as inspectable JSON, with **zero model fine-tuning**. After just a few tasks, Siddhi completes familiar workflows in 2 iterations instead of 8, at 1/14th the cost, in 1/3rd the time. It doesn't just use your computer. It masters it.
